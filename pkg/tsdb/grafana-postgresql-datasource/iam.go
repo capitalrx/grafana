@@ -107,7 +107,7 @@ func (m *iamManager) getIAMAuthToken(ctx context.Context, settings *backend.Data
 func (m *iamManager) newIAMAuth(ctx context.Context, settings *backend.DataSourceInstanceSettings) (*iamAuth, error) {
 	awsSettings := &AWSDatesourceSettings{}
 	if err := json.Unmarshal(settings.JSONData, awsSettings); err != nil {
-		return nil, fmt.Errorf("coudl not unmarshal aws settings: %w", err)
+		return nil, fmt.Errorf("could not unmarshal aws settings: %w", err)
 	}
 	sess, err := newAWSSession(awsSettings)
 	if err != nil {
@@ -155,7 +155,6 @@ func (auth *iamAuth) refreshToken(ctx context.Context, tokenLifeTime time.Durati
 }
 
 func isIAMAuth(settings *backend.DataSourceInstanceSettings) bool {
-	print("isIAMAuth called")
 	if settings == nil || settings.JSONData == nil {
 		return false
 	}
