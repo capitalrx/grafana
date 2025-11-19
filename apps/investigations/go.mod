@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/apps/investigations
+module github.com/capitalrx/grafana/apps/investigations
 
 go 1.25.3
 

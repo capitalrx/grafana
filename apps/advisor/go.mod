@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/apps/advisor
+module github.com/capitalrx/grafana/apps/advisor
 
 go 1.25.3
 

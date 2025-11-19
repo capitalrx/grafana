@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/pkg/apiserver
+module github.com/capitalrx/grafana/pkg/apiserver
 
 go 1.25.3
 

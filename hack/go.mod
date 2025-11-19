@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/hack
+module github.com/capitalrx/grafana/hack
 
 go 1.25.3
 

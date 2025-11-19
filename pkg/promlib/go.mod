@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/pkg/promlib
+module github.com/capitalrx/grafana/pkg/promlib
 
 go 1.25.3
 

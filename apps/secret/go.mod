@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/apps/secret
+module github.com/capitalrx/grafana/apps/secret
 
 go 1.25.3
 

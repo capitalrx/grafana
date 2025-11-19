@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/apps/dashboard
+module github.com/capitalrx/grafana/apps/dashboard
 
 go 1.25.3
 
