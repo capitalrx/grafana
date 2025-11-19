@@ -115,7 +115,7 @@ func (e *DataSourceHandler) TransformQueryError(logger log.Logger, err error) er
 }
 
 func NewQueryDataHandler(userFacingDefaultError string, db *sql.DB, config DataPluginConfiguration, queryResultTransformer SqlQueryResultTransformer,
-	macroEngine SQLMacroEngine, log log.Logger) (*DataSourceHandler, error) {
+	macroEngine SQLMacroEngine, log log.Logger, cleanup func() (*DataSourceHandler, error) {
 	queryDataHandler := DataSourceHandler{
 		queryResultTransformer: queryResultTransformer,
 		macroEngine:            macroEngine,
@@ -124,6 +124,7 @@ func NewQueryDataHandler(userFacingDefaultError string, db *sql.DB, config DataP
 		dsInfo:                 config.DSInfo,
 		rowLimit:               config.RowLimit,
 		userError:              userFacingDefaultError,
+		cleanup:				cleanup,
 	}
 
 	if len(config.TimeColumnNames) > 0 {
@@ -149,6 +150,9 @@ func (e *DataSourceHandler) Dispose() {
 		if err := e.db.Close(); err != nil {
 			e.log.Error("Failed to dispose db", "error", err)
 		}
+	}
+	if e.cleanup != nil {
+		e.cleanup()
 	}
 	e.log.Debug("DB disposed")
 }

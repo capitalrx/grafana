@@ -216,7 +216,7 @@ func TestIntegrationPostgres(t *testing.T) {
 
 	cnnstr := postgresTestDBConnString()
 
-	db, exe, err := newPostgres(context.Background(), "error", 10000, dsInfo, cnnstr, logger, backend.DataSourceInstanceSettings{})
+	db, exe, err := newPostgres(context.Background(), "error", 10000, dsInfo, cnnstr, logger, backend.DataSourceInstanceSettings{}, nil)
 
 	require.NoError(t, err)
 
@@ -1270,7 +1270,7 @@ func TestIntegrationPostgres(t *testing.T) {
 
 		t.Run("When row limit set to 1", func(t *testing.T) {
 			dsInfo := sqleng.DataSourceInfo{}
-			_, handler, err := newPostgres(context.Background(), "error", 1, dsInfo, cnnstr, logger, backend.DataSourceInstanceSettings{})
+			_, handler, err := newPostgres(context.Background(), "error", 1, dsInfo, cnnstr, logger, backend.DataSourceInstanceSettings{}, nil)
 
 			require.NoError(t, err)
 

@@ -29,6 +29,7 @@ func ProvideService(cfg *setting.Cfg, features featuremgmt.FeatureToggles) *Serv
 	s := &Service{
 		tlsManager:    newTLSManager(logger, cfg.DataPath),
 		pgxTlsManager: newPgxTlsManager(logger),
+		iamManager:    newIAMManager(),
 		logger:        logger,
 		features:      features,
 	}
@@ -39,6 +40,7 @@ func ProvideService(cfg *setting.Cfg, features featuremgmt.FeatureToggles) *Serv
 type Service struct {
 	tlsManager    tlsSettingsProvider
 	pgxTlsManager *pgxTlsManager
+	iamManager	  *iamManager
 	im            instancemgmt.InstanceManager
 	logger        log.Logger
 	features      featuremgmt.FeatureToggles
@@ -66,7 +68,7 @@ func (s *Service) QueryData(ctx context.Context, req *backend.QueryDataRequest) 
 	return dsInfo.QueryData(ctx, req)
 }
 
-func newPostgres(ctx context.Context, userFacingDefaultError string, rowLimit int64, dsInfo sqleng.DataSourceInfo, cnnstr string, logger log.Logger, settings backend.DataSourceInstanceSettings) (*sql.DB, *sqleng.DataSourceHandler, error) {
+func newPostgres(ctx context.Context, userFacingDefaultError string, rowLimit int64, dsInfo sqleng.DataSourceInfo, cnnstr string, logger log.Logger, settings backend.DataSourceInstanceSettings, cleanup func()) (*sql.DB, *sqleng.DataSourceHandler, error) {
 	connector, err := pq.NewConnector(cnnstr)
 	if err != nil {
 		logger.Error("postgres connector creation failed", "error", err)
@@ -105,7 +107,7 @@ func newPostgres(ctx context.Context, userFacingDefaultError string, rowLimit in
 	db.SetConnMaxLifetime(time.Duration(config.DSInfo.JsonData.ConnMaxLifetime) * time.Second)
 
 	handler, err := sqleng.NewQueryDataHandler(userFacingDefaultError, db, config, &queryResultTransformer, newPostgresMacroEngine(dsInfo.JsonData.Timescaledb),
-		logger)
+		logger, cleanup)
 	if err != nil {
 		logger.Error("Failed connecting to Postgres", "err", err)
 		return nil, nil, err
@@ -115,7 +117,7 @@ func newPostgres(ctx context.Context, userFacingDefaultError string, rowLimit in
 	return db, handler, nil
 }
 
-func newPostgresPGX(ctx context.Context, userFacingDefaultError string, rowLimit int64, dsInfo sqleng.DataSourceInfo, cnnstr string, logger log.Logger, settings backend.DataSourceInstanceSettings) (*pgxpool.Pool, *sqleng.DataSourceHandler, error) {
+func newPostgresPGX(ctx context.Context, userFacingDefaultError string, rowLimit int64, dsInfo sqleng.DataSourceInfo, cnnstr string, logger log.Logger, settings backend.DataSourceInstanceSettings, cleanup func()) (*pgxpool.Pool, *sqleng.DataSourceHandler, error) {
 	pgxConf, err := pgxpool.ParseConfig(cnnstr)
 	if err != nil {
 		logger.Error("postgres config creation failed", "error", err)
@@ -161,7 +163,7 @@ func newPostgresPGX(ctx context.Context, userFacingDefaultError string, rowLimit
 	}
 
 	handler, err := sqleng.NewQueryDataHandlerPGX(userFacingDefaultError, p, config, &queryResultTransformer, newPostgresMacroEngine(dsInfo.JsonData.Timescaledb),
-		logger)
+		logger, cleanup)
 	if err != nil {
 		logger.Error("Failed connecting to Postgres", "err", err)
 		return nil, nil, err
@@ -199,6 +201,21 @@ func (s *Service) newInstanceSettings() datasource.InstanceFactoryFunc {
 			database = settings.Database
 		}
 
+		var cleanup func()
+		if isIAMAuth(&settings) {
+			token, err := s.iamManager.getIAMAuthToken(ctx, &settings)
+			if err != nil {
+				return nil, err
+			}
+			if settings.DecryptedSecureJSONData == nil {
+				settings.DecryptedSecureJSONData = make(map[string]string)
+			}
+			settings.DecryptedSecureJSONData["password"] = token
+			cleanup = func() {
+				s.iamManager.Dispose(settings.UID)
+			}
+		}
+
 		dsInfo := sqleng.DataSourceInfo{
 			JsonData:                jsonData,
 			URL:                     settings.URL,
@@ -230,7 +247,7 @@ func (s *Service) newInstanceSettings() datasource.InstanceFactoryFunc {
 			if err != nil {
 				return "", err
 			}
-			_, handler, err = newPostgresPGX(ctx, userFacingDefaultError, sqlCfg.RowLimit, dsInfo, cnnstr, logger, settings)
+			_, handler, err = newPostgresPGX(ctx, userFacingDefaultError, sqlCfg.RowLimit, dsInfo, cnnstr, logger, settings, cleanup)
 			if err != nil {
 				logger.Error("Failed connecting to Postgres", "err", err)
 				return nil, err
@@ -244,7 +261,7 @@ func (s *Service) newInstanceSettings() datasource.InstanceFactoryFunc {
 			if err != nil {
 				return nil, err
 			}
-			_, handler, err = newPostgres(ctx, userFacingDefaultError, sqlCfg.RowLimit, dsInfo, cnnstr, logger, settings)
+			_, handler, err = newPostgres(ctx, userFacingDefaultError, sqlCfg.RowLimit, dsInfo, cnnstr, logger, settings, cleanup)
 			if err != nil {
 				logger.Error("Failed connecting to Postgres", "err", err)
 				return nil, err

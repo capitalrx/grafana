@@ -165,7 +165,7 @@ func TestIntegrationPostgresPGXSnapshots(t *testing.T) {
 
 			cnnstr := getCnnStr()
 
-			p, handler, err := newPostgresPGX(context.Background(), "error", 10000, dsInfo, cnnstr, logger, backend.DataSourceInstanceSettings{})
+			p, handler, err := newPostgresPGX(context.Background(), "error", 10000, dsInfo, cnnstr, logger, backend.DataSourceInstanceSettings{}, nil)
 
 			t.Cleanup((func() {
 				_, err := p.Exec(context.Background(), "DROP TABLE tbl")

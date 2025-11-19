@@ -20,7 +20,7 @@ import (
 )
 
 func NewQueryDataHandlerPGX(userFacingDefaultError string, p *pgxpool.Pool, config DataPluginConfiguration, queryResultTransformer SqlQueryResultTransformer,
-	macroEngine SQLMacroEngine, log log.Logger) (*DataSourceHandler, error) {
+	macroEngine SQLMacroEngine, log log.Logger, cleanup func() (*DataSourceHandler, error) {
 	queryDataHandler := DataSourceHandler{
 		queryResultTransformer: queryResultTransformer,
 		macroEngine:            macroEngine,
@@ -29,6 +29,7 @@ func NewQueryDataHandlerPGX(userFacingDefaultError string, p *pgxpool.Pool, conf
 		dsInfo:                 config.DSInfo,
 		rowLimit:               config.RowLimit,
 		userError:              userFacingDefaultError,
+		cleanup:				cleanup,
 	}
 
 	if len(config.TimeColumnNames) > 0 {
@@ -48,6 +49,9 @@ func (e *DataSourceHandler) DisposePGX() {
 
 	if e.pool != nil {
 		e.pool.Close()
+	}
+	if e.cleanup != nil {
+		e.cleanup()
 	}
 
 	e.log.Debug("DB disposed")
