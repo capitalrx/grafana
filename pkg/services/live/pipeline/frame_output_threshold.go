@@ -13,7 +13,7 @@ type ThresholdOutputConfig struct {
 	Channel   string `json:"channel"`
 }
 
-//go:generate mockgen -destination=frame_output_threshold_mock.go -package=pipeline github.com/grafana/grafana/pkg/services/live/pipeline FrameGetSetter
+//go:generate mockgen -destination=frame_output_threshold_mock.go -package=pipeline github.com/capitalrx/grafana/pkg/services/live/pipeline FrameGetSetter
 
 type FrameGetSetter interface {
 	Get(orgID int64, channel string) (*data.Frame, bool, error)

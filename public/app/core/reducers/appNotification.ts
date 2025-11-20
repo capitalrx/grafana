@@ -112,7 +112,7 @@ function serializeNotifications(notifs: Record<string, StoredNotification>) {
         traceId: cur.traceId,
         timestamp: cur.timestamp,
         // we don't care about still showing toasts after refreshing
-        // https://github.com/grafana/grafana/issues/71932
+        // https://github.com/capitalrx/grafana/issues/71932
         showing: false,
       };
 

@@ -22,7 +22,7 @@ These packages live in the `/packages` folder and contain packages like:
 - `@grafana/data`
 - `@grafana/runtime`
 - `@grafana/ui`
-- [(more packages...)](https://github.com/grafana/grafana/tree/main/packages)
+- [(more packages...)](https://github.com/capitalrx/grafana/tree/main/packages)
 
 Any change that causes dependent software to behave differently is considered to be breaking.
 

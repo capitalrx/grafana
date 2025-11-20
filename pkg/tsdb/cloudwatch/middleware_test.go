@@ -10,7 +10,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models"
 )
 
 func Test_Middleware(t *testing.T) {

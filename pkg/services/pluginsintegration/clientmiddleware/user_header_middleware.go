@@ -6,8 +6,8 @@ import (
 	claims "github.com/grafana/authlib/types"
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 
-	"github.com/grafana/grafana/pkg/services/contexthandler"
-	"github.com/grafana/grafana/pkg/util/proxyutil"
+	"github.com/capitalrx/grafana/pkg/services/contexthandler"
+	"github.com/capitalrx/grafana/pkg/util/proxyutil"
 )
 
 // NewUserHeaderMiddleware creates a new backend.HandlerMiddleware that will

@@ -13,7 +13,7 @@ import (
 
 	"github.com/dolthub/go-mysql-server/sql/analyzer"
 	"github.com/grafana/grafana-plugin-sdk-go/data"
-	"github.com/grafana/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
 )
 
 // DB is a database that can execute SQL queries against a set of Frames.

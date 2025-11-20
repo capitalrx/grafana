@@ -25,7 +25,7 @@ Welcome to Grafana 11.0! This release contains some major improvements: most not
 
 {{< youtube id="96ZXShRyMB8" >}}
 
-For even more detail about all the changes in this release, refer to the [changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md). For the specific steps we recommend when you upgrade to v11.0, check out our [Upgrade Guide](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/upgrade-guide/upgrade-v11.0/).
+For even more detail about all the changes in this release, refer to the [changelog](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md). For the specific steps we recommend when you upgrade to v11.0, check out our [Upgrade Guide](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/upgrade-guide/upgrade-v11.0/).
 
 ## Breaking changes
 
@@ -104,7 +104,7 @@ It can be difficult to efficiently navigate through the visually cluttered optio
 
 #### Fixed positioning of template variables and time picker
 
-We moved the time picker into the dashboard canvas and now, together with template variables, it will stick to the top as you scroll through your dashboard. This has historically been a very [requested feature](https://github.com/grafana/grafana/issues/11166) that we're very happy to be able to finally roll out!
+We moved the time picker into the dashboard canvas and now, together with template variables, it will stick to the top as you scroll through your dashboard. This has historically been a very [requested feature](https://github.com/capitalrx/grafana/issues/11166) that we're very happy to be able to finally roll out!
 
 #### Known limitations
 

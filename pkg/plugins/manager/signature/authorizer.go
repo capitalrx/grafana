@@ -1,8 +1,8 @@
 package signature
 
 import (
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/config"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/config"
 )
 
 func ProvideOSSAuthorizer(cfg *config.PluginManagementCfg) *UnsignedPluginAuthorizer {

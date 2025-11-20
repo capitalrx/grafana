@@ -3,7 +3,7 @@
   enabledManagers: ["npm"],
   ignoreDeps: [
     // ignoring these until we can upgrade to react 19
-    // see epic here: https://github.com/grafana/grafana/issues/98813
+    // see epic here: https://github.com/capitalrx/grafana/issues/98813
     '@types/react',
     '@types/react-dom',
     'eslint-plugin-react-hooks',
@@ -13,9 +13,9 @@
 
     "@types/history", // this can be removed entirely when we upgrade history since v5 exposes types directly
     "cypress", // cypress use is deprecated, we should not bump it anymore
-    "history", // we should bump this together with react-router-dom (see https://github.com/grafana/grafana/issues/76744)
+    "history", // we should bump this together with react-router-dom (see https://github.com/capitalrx/grafana/issues/76744)
     "react-router", // we should bump this together with history and react-router-dom
-    "react-router-dom", // we should bump this together with history (see https://github.com/grafana/grafana/issues/76744)
+    "react-router-dom", // we should bump this together with history (see https://github.com/capitalrx/grafana/issues/76744)
     "monaco-editor", // due to us exposing this via @grafana/ui/CodeEditor's props bumping can break plugins
     "@fingerprintjs/fingerprintjs", // we don't want to bump to v4 due to licensing changes
     "slate", // we don't want to continue using this on the long run, use Monaco editor instead of Slate

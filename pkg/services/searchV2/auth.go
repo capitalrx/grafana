@@ -3,12 +3,12 @@ package searchV2
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/folder"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/folder"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 // ResourceFilter checks if a given a uid (resource identifier) check if we have the requested permission

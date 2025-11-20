@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/log"
 )
 
 func TestContext_RemoteAddr(t *testing.T) {

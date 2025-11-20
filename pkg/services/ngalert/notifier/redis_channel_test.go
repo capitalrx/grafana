@@ -29,7 +29,7 @@ func TestNewRedisChannel(t *testing.T) {
 }
 
 func TestBroadcastAndHandleMessages(t *testing.T) {
-	t.Skip() // TODO fix the flaky test https://github.com/grafana/grafana/issues/94037
+	t.Skip() // TODO fix the flaky test https://github.com/capitalrx/grafana/issues/94037
 
 	const channelName = "testChannel"
 

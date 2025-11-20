@@ -4,12 +4,12 @@ import (
 	"context"
 	"errors"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginaccesscontrol"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginaccesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 type fullAccessControl interface {

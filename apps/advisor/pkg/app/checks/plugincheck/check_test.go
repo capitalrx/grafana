@@ -5,13 +5,13 @@ import (
 	"testing"
 
 	"github.com/grafana/grafana-app-sdk/logging"
-	advisor "github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/repo"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/managedplugins"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginchecker"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginstore"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/provisionedplugins"
+	advisor "github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/repo"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/managedplugins"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginchecker"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginstore"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/provisionedplugins"
 	"github.com/stretchr/testify/assert"
 )
 

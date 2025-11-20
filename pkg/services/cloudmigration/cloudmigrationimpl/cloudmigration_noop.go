@@ -3,9 +3,9 @@ package cloudmigrationimpl
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/authapi"
-	"github.com/grafana/grafana/pkg/services/cloudmigration"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/services/authapi"
+	"github.com/capitalrx/grafana/pkg/services/cloudmigration"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 // NoopServiceImpl Define the Service Implementation.

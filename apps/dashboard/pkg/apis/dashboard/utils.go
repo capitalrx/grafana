@@ -3,7 +3,7 @@ package dashboard
 import (
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
 )
 
 // SetPluginIDMeta sets the repo name to "plugin" and the path to the plugin ID

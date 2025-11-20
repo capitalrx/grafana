@@ -14,7 +14,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus/testutil"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/infra/log/logtest"
+	"github.com/capitalrx/grafana/pkg/infra/log/logtest"
 )
 
 func TestTicker(t *testing.T) {

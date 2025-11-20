@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/grafana/grafana/pkg/api/response"
-	"github.com/grafana/grafana/pkg/apimachinery/errutil"
-	"github.com/grafana/grafana/pkg/services/datasources"
-	apimodels "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	"github.com/capitalrx/grafana/pkg/apimachinery/errutil"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
+	apimodels "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 var (

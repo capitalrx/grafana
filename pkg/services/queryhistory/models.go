@@ -3,7 +3,7 @@ package queryhistory
 import (
 	"errors"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
 )
 
 var (

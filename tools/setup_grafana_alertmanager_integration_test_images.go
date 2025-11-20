@@ -6,7 +6,7 @@ import (
 	"os/exec"
 	"sync"
 
-	amtests "github.com/grafana/grafana/pkg/tests/alertmanager"
+	amtests "github.com/capitalrx/grafana/pkg/tests/alertmanager"
 )
 
 func docker(args []string) {

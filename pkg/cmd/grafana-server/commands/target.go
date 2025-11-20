@@ -7,15 +7,15 @@ import (
 	"runtime/debug"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
 	"github.com/urfave/cli/v2"
 
-	"github.com/grafana/grafana/pkg/api"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/metrics"
-	"github.com/grafana/grafana/pkg/server"
-	"github.com/grafana/grafana/pkg/services/apiserver/standalone"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/api"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/metrics"
+	"github.com/capitalrx/grafana/pkg/server"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/standalone"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func TargetCommand(version, commit, buildBranch, buildstamp string) *cli.Command {

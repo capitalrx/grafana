@@ -281,7 +281,7 @@ export class ElasticDatasource
     // normally we would write this code as
     // try-the-new-place-then-try-the-old-place,
     // but we had the bug at
-    // https://github.com/grafana/grafana/issues/61107
+    // https://github.com/capitalrx/grafana/issues/61107
     // that may have stored annotations where
     // both the old and the new place are set,
     // and in that scenario the old place needs

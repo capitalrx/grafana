@@ -3,8 +3,8 @@ package eval_mocks
 import (
 	"errors"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/eval"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/eval"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 type fakeEvaluatorFactory struct {

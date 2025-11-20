@@ -10,10 +10,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	apimodels "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	"github.com/grafana/grafana/pkg/tests/alertmanager"
-	"github.com/grafana/grafana/pkg/tests/testinfra"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	apimodels "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/tests/alertmanager"
+	"github.com/capitalrx/grafana/pkg/tests/testinfra"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 // TestIntegrationRemoteAlertmanagerConfigUpload tests that when we post an alertmanager

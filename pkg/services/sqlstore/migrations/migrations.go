@@ -1,15 +1,15 @@
 package migrations
 
 import (
-	dashboardFolderMigrations "github.com/grafana/grafana/pkg/services/dashboards/database/migrations"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrations/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrations/anonservice"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrations/externalsession"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrations/signingkeys"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrations/ssosettings"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrations/ualert"
-	. "github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+	dashboardFolderMigrations "github.com/capitalrx/grafana/pkg/services/dashboards/database/migrations"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrations/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrations/anonservice"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrations/externalsession"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrations/signingkeys"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrations/ssosettings"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrations/ualert"
+	. "github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 )
 
 // --- Migration Guide line ---

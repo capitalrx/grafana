@@ -7,7 +7,7 @@ import (
 
 	"github.com/bradfitz/gomemcache/memcache"
 
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 const memcachedCacheType = "memcached"

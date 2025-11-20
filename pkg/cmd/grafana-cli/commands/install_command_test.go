@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/commands/commandstest"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/utils"
-	"github.com/grafana/grafana/pkg/tests/testinfra"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/commands/commandstest"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/utils"
+	"github.com/capitalrx/grafana/pkg/tests/testinfra"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 )

@@ -11,19 +11,19 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
 	_ "github.com/grafana/pyroscope-go/godeltaprof/http/pprof"
 
 	"github.com/urfave/cli/v2"
 
-	"github.com/grafana/grafana/pkg/api"
-	gcli "github.com/grafana/grafana/pkg/cmd/grafana-cli/commands"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/metrics"
-	"github.com/grafana/grafana/pkg/infra/process"
-	"github.com/grafana/grafana/pkg/server"
-	"github.com/grafana/grafana/pkg/services/apiserver/standalone"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/api"
+	gcli "github.com/capitalrx/grafana/pkg/cmd/grafana-cli/commands"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/metrics"
+	"github.com/capitalrx/grafana/pkg/infra/process"
+	"github.com/capitalrx/grafana/pkg/server"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/standalone"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func ServerCommand(version, commit, enterpriseCommit, buildBranch, buildstamp string) *cli.Command {

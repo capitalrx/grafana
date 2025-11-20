@@ -6,7 +6,7 @@ import (
 	"crypto/cipher"
 	"errors"
 
-	"github.com/grafana/grafana/pkg/services/encryption"
+	"github.com/capitalrx/grafana/pkg/services/encryption"
 )
 
 type aesDecipher struct {

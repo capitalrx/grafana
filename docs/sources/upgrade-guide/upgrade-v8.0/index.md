@@ -45,7 +45,7 @@ Refer to [Grafana Live configuration](../../setup-grafana/set-up-grafana-live/) 
 Grafana v8.0 changes the underlying data structure to [data frames](https://grafana.com/developers/plugin-tools/key-concepts/data-frames) for the Postgres, MySQL, Microsoft SQL Server data sources. As a result, a _Time series_ query result gets returned in a [wide format](https://grafana.com/developers/plugin-tools/key-concepts/data-frames#wide-format). To make the visualizations work as they did before, you might have to do some manual migrations.
 
 For any existing panels/visualizations using a _Time series_ query, where the time column is only needed for filtering the time range, for example, using the bar gauge or pie chart panel, we recommend that you use a _Table query_ instead and exclude the time column as a field in the response.
-Refer to this [issue comment](https://github.com/grafana/grafana/issues/35534#issuecomment-861519658) for detailed instructions and workarounds.
+Refer to this [issue comment](https://github.com/capitalrx/grafana/issues/35534#issuecomment-861519658) for detailed instructions and workarounds.
 
 #### Prefix added to series names
 

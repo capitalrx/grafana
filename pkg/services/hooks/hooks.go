@@ -1,8 +1,8 @@
 package hooks
 
 import (
-	"github.com/grafana/grafana/pkg/api/dtos"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/api/dtos"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
 )
 
 type IndexDataHook func(indexData *dtos.IndexViewData, req *contextmodel.ReqContext)

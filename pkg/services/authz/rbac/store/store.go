@@ -6,9 +6,9 @@ import (
 
 	claims "github.com/grafana/authlib/types"
 
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/storage/legacysql"
-	"github.com/grafana/grafana/pkg/storage/unified/sql/sqltemplate"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/storage/legacysql"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/sqltemplate"
 )
 
 type Store interface {

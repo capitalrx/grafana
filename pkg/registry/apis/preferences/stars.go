@@ -10,8 +10,8 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apiserver/pkg/registry/rest"
 
-	preferences "github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1"
-	"github.com/grafana/grafana/pkg/registry/apis/preferences/legacy"
+	preferences "github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1"
+	"github.com/capitalrx/grafana/pkg/registry/apis/preferences/legacy"
 )
 
 type starItem struct {

@@ -29,15 +29,15 @@ import (
 	"go.opentelemetry.io/otel/trace"
 	"k8s.io/apimachinery/pkg/selection"
 
-	"github.com/grafana/grafana/pkg/services/dashboards/dashboardaccess"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/services/dashboards/dashboardaccess"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 
 	authlib "github.com/grafana/authlib/types"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
 )
 
 const (

@@ -11,13 +11,13 @@ import (
 
 	alertingModels "github.com/grafana/alerting/models"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	ac "github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/utils"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	ac "github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/utils"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 var orgID = rand.Int63()

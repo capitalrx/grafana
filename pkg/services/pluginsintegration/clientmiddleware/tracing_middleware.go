@@ -10,9 +10,9 @@ import (
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/services/contexthandler"
-	"github.com/grafana/grafana/pkg/services/query"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/services/contexthandler"
+	"github.com/capitalrx/grafana/pkg/services/query"
 )
 
 // NewTracingMiddleware returns a new middleware that creates a new span on every method call.

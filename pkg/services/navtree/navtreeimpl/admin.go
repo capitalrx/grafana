@@ -1,18 +1,18 @@
 package navtreeimpl
 
 import (
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/login/social"
-	ac "github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/accesscontrol/ssoutils"
-	"github.com/grafana/grafana/pkg/services/cloudmigration"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/correlations"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/navtree"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginaccesscontrol"
-	"github.com/grafana/grafana/pkg/services/serviceaccounts"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/login/social"
+	ac "github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol/ssoutils"
+	"github.com/capitalrx/grafana/pkg/services/cloudmigration"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/correlations"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/navtree"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginaccesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/serviceaccounts"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 // nolint: gocyclo

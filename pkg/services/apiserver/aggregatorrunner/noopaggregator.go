@@ -6,8 +6,8 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	genericapiserver "k8s.io/apiserver/pkg/server"
 
-	"github.com/grafana/grafana/pkg/services/apiserver/builder"
-	"github.com/grafana/grafana/pkg/services/apiserver/options"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/builder"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/options"
 )
 
 type NoopAggregatorConfigurator struct {

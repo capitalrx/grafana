@@ -3,10 +3,10 @@ package migrations
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func MigrateResourceStore(ctx context.Context, engine *xorm.Engine, cfg *setting.Cfg) error {

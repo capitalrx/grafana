@@ -5,7 +5,7 @@ package orgtest
 import (
 	context "context"
 
-	org "github.com/grafana/grafana/pkg/services/org"
+	org "github.com/capitalrx/grafana/pkg/services/org"
 	mock "github.com/stretchr/testify/mock"
 )
 

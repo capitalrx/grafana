@@ -7,9 +7,9 @@ package v0alpha1
 import (
 	context "context"
 
-	servicev0alpha1 "github.com/grafana/grafana/pkg/apis/service/v0alpha1"
-	applyconfigurationservicev0alpha1 "github.com/grafana/grafana/pkg/generated/applyconfiguration/service/v0alpha1"
-	scheme "github.com/grafana/grafana/pkg/generated/clientset/versioned/scheme"
+	servicev0alpha1 "github.com/capitalrx/grafana/pkg/apis/service/v0alpha1"
+	applyconfigurationservicev0alpha1 "github.com/capitalrx/grafana/pkg/generated/applyconfiguration/service/v0alpha1"
+	scheme "github.com/capitalrx/grafana/pkg/generated/clientset/versioned/scheme"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"

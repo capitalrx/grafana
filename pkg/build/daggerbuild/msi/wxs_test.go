@@ -3,7 +3,7 @@ package msi_test
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/build/daggerbuild/msi"
+	"github.com/capitalrx/grafana/pkg/build/daggerbuild/msi"
 )
 
 func TestVersion(t *testing.T) {

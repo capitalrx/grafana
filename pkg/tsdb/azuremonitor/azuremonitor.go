@@ -20,12 +20,12 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/resource/httpadapter"
 
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/azmoncredentials"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/loganalytics"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/metrics"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/resourcegraph"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/types"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/utils"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/azmoncredentials"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/loganalytics"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/metrics"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/resourcegraph"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/types"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/utils"
 )
 
 func ProvideService(httpClientProvider *httpclient.Provider) *Service {

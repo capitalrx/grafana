@@ -7,7 +7,7 @@ import (
 
 	backend "github.com/grafana/grafana-plugin-sdk-go/backend"
 
-	eval "github.com/grafana/grafana/pkg/services/ngalert/eval"
+	eval "github.com/capitalrx/grafana/pkg/services/ngalert/eval"
 
 	mock "github.com/stretchr/testify/mock"
 

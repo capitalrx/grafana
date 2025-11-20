@@ -13,7 +13,7 @@ var _ Requester = (*StaticRequester)(nil)
 // StaticRequester allows creating requester values explicitly.
 // It is helpful in tests!
 // This is mostly copied from:
-// https://github.com/grafana/grafana/blob/v11.0.0/pkg/services/user/identity.go#L16
+// https://github.com/capitalrx/grafana/blob/v11.0.0/pkg/services/user/identity.go#L16
 type StaticRequester struct {
 	Type            claims.IdentityType
 	UserID          int64

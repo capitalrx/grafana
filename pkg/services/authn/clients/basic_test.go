@@ -9,8 +9,8 @@ import (
 
 	claims "github.com/grafana/authlib/types"
 
-	"github.com/grafana/grafana/pkg/services/authn"
-	"github.com/grafana/grafana/pkg/services/authn/authntest"
+	"github.com/capitalrx/grafana/pkg/services/authn"
+	"github.com/capitalrx/grafana/pkg/services/authn/authntest"
 )
 
 func TestBasic_Authenticate(t *testing.T) {

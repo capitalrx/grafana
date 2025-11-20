@@ -3,7 +3,7 @@ package v0alpha1_test
 import (
 	"testing"
 
-	"github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
 )
 
 func TestRepositoryType_IsGit(t *testing.T) {

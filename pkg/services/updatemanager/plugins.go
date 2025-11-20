@@ -15,14 +15,14 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend/httpclient"
 	"go.opentelemetry.io/otel/codes"
 
-	"github.com/grafana/grafana/pkg/infra/httpclient/httpclientprovider"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginchecker"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginstore"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/httpclient/httpclientprovider"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginchecker"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginstore"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type availableUpdate struct {

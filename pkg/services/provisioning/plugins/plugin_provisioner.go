@@ -4,10 +4,10 @@ import (
 	"context"
 	"errors"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginsettings"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginstore"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginsettings"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginstore"
 )
 
 // Provision scans a directory for provisioning config files

@@ -8,11 +8,11 @@ import (
 
 	"go.opentelemetry.io/otel"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
 )
 
-var tracer = otel.Tracer("github.com/grafana/grafana/pkg/services/accesscontrol/database")
+var tracer = otel.Tracer("github.com/capitalrx/grafana/pkg/services/accesscontrol/database")
 
 const (
 	// userAssignsSQL is a query to select all users assignments.

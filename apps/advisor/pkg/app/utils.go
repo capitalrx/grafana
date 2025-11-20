@@ -11,9 +11,9 @@ import (
 
 	"github.com/grafana/grafana-app-sdk/logging"
 	"github.com/grafana/grafana-app-sdk/resource"
-	advisorv0alpha1 "github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1"
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checks"
-	"github.com/grafana/grafana/pkg/services/contexthandler"
+	advisorv0alpha1 "github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checks"
+	"github.com/capitalrx/grafana/pkg/services/contexthandler"
 )
 
 var retryAnnotationPollingInterval = 1 * time.Second

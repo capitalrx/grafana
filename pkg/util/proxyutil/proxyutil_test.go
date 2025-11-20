@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/require"
 
 	claims "github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 func TestPrepareProxyRequest(t *testing.T) {

@@ -4,7 +4,7 @@ import (
 	"context"
 
 	googletokenprovider "github.com/grafana/grafana-google-sdk-go/pkg/tokenprovider"
-	"github.com/grafana/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins"
 )
 
 type jwtAccessTokenProvider struct {

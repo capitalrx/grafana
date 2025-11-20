@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/grafana/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 )
 
 // typeKey is a vendored migration.typeKey.

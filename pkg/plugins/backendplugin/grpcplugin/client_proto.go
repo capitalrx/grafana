@@ -9,9 +9,9 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/genproto/pluginv2"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/backendplugin"
-	"github.com/grafana/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/backendplugin"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
 )
 
 var (

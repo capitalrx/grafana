@@ -6,11 +6,11 @@ import (
 	"net/http"
 	"net/mail"
 
-	"github.com/grafana/grafana/pkg/api/response"
-	"github.com/grafana/grafana/pkg/middleware/cookies"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/login"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	"github.com/capitalrx/grafana/pkg/middleware/cookies"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/login"
+	"github.com/capitalrx/grafana/pkg/services/user"
 	"go.opentelemetry.io/otel/trace"
 )
 

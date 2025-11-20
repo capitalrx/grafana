@@ -3,7 +3,7 @@ package mathexp
 import (
 	"math/rand"
 
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 func GenerateNumber(value *float64) Number {

@@ -13,11 +13,11 @@ import (
 	traceNoop "go.opentelemetry.io/otel/trace/noop"
 	ini "gopkg.in/ini.v1"
 
-	"github.com/grafana/grafana/pkg/bus"
-	infraDB "github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/services/sqlstore"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/bus"
+	infraDB "github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type (
@@ -105,7 +105,7 @@ func newTestInfraDB(t *testing.T, m cfgMap) infraDB.DB {
 		newCfgFromIniMap(t, m), // *setting.Cfg
 		featureTogglesNop{},    // featuremgmt.FeatureToggles
 		nil,                    // registry.DatabaseMigrator
-		nopBus{},               // github.com/grafana/grafana/pkg/bus.Bus
+		nopBus{},               // github.com/capitalrx/grafana/pkg/bus.Bus
 		newNopTestGrafanaTracer(),
 	)
 	require.NoError(t, err)

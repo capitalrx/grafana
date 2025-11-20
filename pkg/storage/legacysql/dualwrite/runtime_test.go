@@ -11,9 +11,9 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	"github.com/grafana/grafana/pkg/apiserver/rest"
-	"github.com/grafana/grafana/pkg/infra/kvstore"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/apiserver/rest"
+	"github.com/capitalrx/grafana/pkg/infra/kvstore"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
 )
 
 var kind = schema.GroupResource{Group: "g", Resource: "r"}

@@ -20,7 +20,7 @@ import (
 	"github.com/prometheus/prometheus/config"
 	"github.com/prometheus/prometheus/model/labels"
 
-	"github.com/grafana/grafana/pkg/util/httpclient"
+	"github.com/capitalrx/grafana/pkg/util/httpclient"
 )
 
 func do(ctx context.Context, client *http.Client, req *http.Request) (*http.Response, error) {

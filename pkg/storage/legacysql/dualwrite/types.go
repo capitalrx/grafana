@@ -5,7 +5,7 @@ import (
 
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	grafanarest "github.com/grafana/grafana/pkg/apiserver/rest"
+	grafanarest "github.com/capitalrx/grafana/pkg/apiserver/rest"
 )
 
 // For *legacy* services, this will indicate if we have transitioned to Unified storage yet

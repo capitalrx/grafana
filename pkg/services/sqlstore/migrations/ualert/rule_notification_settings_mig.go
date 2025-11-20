@@ -1,7 +1,7 @@
 package ualert
 
 import (
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 )
 
 // AddRuleNotificationSettingsColumns creates a column for notification settings in the alert_rule and alert_rule_version tables.

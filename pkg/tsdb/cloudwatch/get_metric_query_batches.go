@@ -4,7 +4,7 @@ import (
 	"regexp"
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models"
 )
 
 // nonWordRegex is for spliting the expressions to just functions and ids

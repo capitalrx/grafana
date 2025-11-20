@@ -7,18 +7,18 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/services/authn"
-	"github.com/grafana/grafana/pkg/services/authn/authntest"
+	"github.com/capitalrx/grafana/pkg/services/authn"
+	"github.com/capitalrx/grafana/pkg/services/authn/authntest"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/accesscontrol/actest"
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/services/user/usertest"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/web/webtest"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol/actest"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/services/user/usertest"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/web/webtest"
 )
 
 var (

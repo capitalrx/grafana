@@ -8,7 +8,7 @@ import (
 	"os/signal"
 
 	"dagger.io/dagger"
-	"github.com/grafana/grafana/pkg/build/e2eutil"
+	"github.com/capitalrx/grafana/pkg/build/e2eutil"
 	"github.com/urfave/cli/v3"
 )
 

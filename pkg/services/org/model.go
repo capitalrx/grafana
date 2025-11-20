@@ -5,9 +5,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/grafana/grafana/pkg/apimachinery/errutil"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/services/search/model"
+	"github.com/capitalrx/grafana/pkg/apimachinery/errutil"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/services/search/model"
 )
 
 // Typed errors

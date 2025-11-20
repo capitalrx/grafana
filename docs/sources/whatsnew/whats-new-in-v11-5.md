@@ -57,6 +57,6 @@ We've also made it more secure to run third-party apps and data sources, and imp
 
 {{< youtube id="RGiktzfhRd0" >}}
 
-For even more detail about all the changes in this release, refer to the [changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md). For the specific steps we recommend when you upgrade to v11.5, check out our [Upgrade Guide](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/upgrade-guide/upgrade-v11.5/).
+For even more detail about all the changes in this release, refer to the [changelog](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md). For the specific steps we recommend when you upgrade to v11.5, check out our [Upgrade Guide](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/upgrade-guide/upgrade-v11.5/).
 
 {{< docs/whats-new  >}}

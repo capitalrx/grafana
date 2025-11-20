@@ -3,12 +3,12 @@ package provider
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/backendplugin"
-	"github.com/grafana/grafana/pkg/plugins/backendplugin/coreplugin"
-	"github.com/grafana/grafana/pkg/plugins/backendplugin/grpcplugin"
-	"github.com/grafana/grafana/pkg/plugins/backendplugin/pluginextensionv2"
-	"github.com/grafana/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/backendplugin"
+	"github.com/capitalrx/grafana/pkg/plugins/backendplugin/coreplugin"
+	"github.com/capitalrx/grafana/pkg/plugins/backendplugin/grpcplugin"
+	"github.com/capitalrx/grafana/pkg/plugins/backendplugin/pluginextensionv2"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
 )
 
 // PluginBackendProvider is a function type for initializing a Plugin backend.

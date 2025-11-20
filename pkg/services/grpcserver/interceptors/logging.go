@@ -7,7 +7,7 @@ import (
 	"github.com/grpc-ecosystem/go-grpc-middleware/v2/interceptors/logging"
 	"google.golang.org/grpc"
 
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/log"
 )
 
 func InterceptorLogger(l log.Logger, enabled bool) logging.Logger {

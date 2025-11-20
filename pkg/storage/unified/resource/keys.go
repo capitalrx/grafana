@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 )
 
 func verifyRequestKey(key *resourcepb.ResourceKey) *resourcepb.ErrorResult {

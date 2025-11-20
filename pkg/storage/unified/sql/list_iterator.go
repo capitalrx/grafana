@@ -1,8 +1,8 @@
 package sql
 
 import (
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
-	"github.com/grafana/grafana/pkg/storage/unified/sql/db"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/db"
 )
 
 var _ resource.ListIterator = (*listIter)(nil)

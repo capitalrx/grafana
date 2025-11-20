@@ -14,19 +14,19 @@ import (
 
 	claims "github.com/grafana/authlib/types"
 
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/services/accesscontrol/acimpl"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginsettings"
-	"github.com/grafana/grafana/pkg/services/secrets"
-	"github.com/grafana/grafana/pkg/services/secrets/fakes"
-	secretsManager "github.com/grafana/grafana/pkg/services/secrets/manager"
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol/acimpl"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginsettings"
+	"github.com/capitalrx/grafana/pkg/services/secrets"
+	"github.com/capitalrx/grafana/pkg/services/secrets/fakes"
+	secretsManager "github.com/capitalrx/grafana/pkg/services/secrets/manager"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 func TestPluginProxy(t *testing.T) {

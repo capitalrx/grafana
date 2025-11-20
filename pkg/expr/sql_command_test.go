@@ -10,8 +10,8 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
 	"github.com/grafana/grafana-plugin-sdk-go/data"
-	"github.com/grafana/grafana/pkg/expr/mathexp"
-	"github.com/grafana/grafana/pkg/expr/metrics"
+	"github.com/capitalrx/grafana/pkg/expr/mathexp"
+	"github.com/capitalrx/grafana/pkg/expr/metrics"
 	"github.com/prometheus/client_golang/prometheus/testutil"
 	"github.com/stretchr/testify/require"
 	"go.opentelemetry.io/otel/attribute"

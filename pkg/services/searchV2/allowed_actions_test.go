@@ -11,14 +11,14 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/experimental"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	ac "github.com/grafana/grafana/pkg/services/accesscontrol"
-	accesscontrolmock "github.com/grafana/grafana/pkg/services/accesscontrol/mock"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/datasources"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	ac "github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	accesscontrolmock "github.com/capitalrx/grafana/pkg/services/accesscontrol/mock"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 var (

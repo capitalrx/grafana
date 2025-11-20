@@ -7,9 +7,9 @@ import (
 	"github.com/grafana/grafana-app-sdk/app"
 	"github.com/grafana/grafana-app-sdk/logging"
 	"github.com/grafana/grafana-app-sdk/simple"
-	foldersKind "github.com/grafana/grafana/apps/folder/pkg/apis/folder/v1beta1"
-	"github.com/grafana/grafana/apps/iam/pkg/reconcilers"
-	"github.com/grafana/grafana/pkg/services/authz"
+	foldersKind "github.com/capitalrx/grafana/apps/folder/pkg/apis/folder/v1beta1"
+	"github.com/capitalrx/grafana/apps/iam/pkg/reconcilers"
+	"github.com/capitalrx/grafana/pkg/services/authz"
 )
 
 var appManifestData = app.ManifestData{

@@ -6,11 +6,11 @@ import (
 	sysruntime "runtime"
 
 	"github.com/grafana/grafana-app-sdk/logging"
-	advisor "github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1"
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checks"
-	"github.com/grafana/grafana/pkg/plugins/repo"
-	"github.com/grafana/grafana/pkg/services/datasources"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginstore"
+	advisor "github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checks"
+	"github.com/capitalrx/grafana/pkg/plugins/repo"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginstore"
 )
 
 type missingPluginStep struct {

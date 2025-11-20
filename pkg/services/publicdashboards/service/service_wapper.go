@@ -3,9 +3,9 @@ package service
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/publicdashboards"
-	. "github.com/grafana/grafana/pkg/services/publicdashboards/models"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/publicdashboards"
+	. "github.com/capitalrx/grafana/pkg/services/publicdashboards/models"
 )
 
 // PublicDashboardServiceWrapperImpl Define the Service Implementation. We're generating mock implementation

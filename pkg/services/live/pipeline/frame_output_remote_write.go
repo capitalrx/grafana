@@ -12,7 +12,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 	"github.com/prometheus/prometheus/prompb"
 
-	"github.com/grafana/grafana/pkg/services/live/remotewrite"
+	"github.com/capitalrx/grafana/pkg/services/live/remotewrite"
 )
 
 const flushInterval = 15 * time.Second

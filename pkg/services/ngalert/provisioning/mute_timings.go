@@ -13,11 +13,11 @@ import (
 	"github.com/prometheus/alertmanager/timeinterval"
 	"golang.org/x/exp/maps"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/ngalert/notifier/legacy_storage"
-	"github.com/grafana/grafana/pkg/services/ngalert/provisioning/validation"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/notifier/legacy_storage"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/provisioning/validation"
 )
 
 type MuteTimingService struct {

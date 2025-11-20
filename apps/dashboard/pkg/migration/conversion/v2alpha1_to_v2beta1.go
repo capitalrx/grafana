@@ -3,8 +3,8 @@ package conversion
 import (
 	"k8s.io/apimachinery/pkg/conversion"
 
-	dashv2alpha1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v2alpha1"
-	dashv2beta1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v2beta1"
+	dashv2alpha1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v2alpha1"
+	dashv2beta1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v2beta1"
 )
 
 // Schema Migration: v2alpha1 → v2beta1

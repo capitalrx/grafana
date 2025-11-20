@@ -11,13 +11,13 @@ import (
 	"go.opentelemetry.io/otel/trace"
 	"go.opentelemetry.io/otel/trace/noop"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/auth"
-	"github.com/grafana/grafana/pkg/plugins/backendplugin"
-	"github.com/grafana/grafana/pkg/plugins/log"
-	"github.com/grafana/grafana/pkg/plugins/pluginassets"
-	"github.com/grafana/grafana/pkg/plugins/repo"
-	"github.com/grafana/grafana/pkg/plugins/storage"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/auth"
+	"github.com/capitalrx/grafana/pkg/plugins/backendplugin"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins/pluginassets"
+	"github.com/capitalrx/grafana/pkg/plugins/repo"
+	"github.com/capitalrx/grafana/pkg/plugins/storage"
 )
 
 type FakePluginInstaller struct {

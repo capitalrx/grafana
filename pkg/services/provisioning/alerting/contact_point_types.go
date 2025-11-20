@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/ngalert/provisioning"
-	"github.com/grafana/grafana/pkg/services/provisioning/values"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/provisioning"
+	"github.com/capitalrx/grafana/pkg/services/provisioning/values"
 )
 
 type DeleteContactPointV1 struct {

@@ -7,7 +7,7 @@ import (
 	"crypto/rand"
 	"io"
 
-	"github.com/grafana/grafana/pkg/registry/apis/secret/encryption/cipher"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/encryption/cipher"
 )
 
 const (

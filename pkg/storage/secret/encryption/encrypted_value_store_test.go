@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/testutils"
-	"github.com/grafana/grafana/pkg/storage/secret/encryption"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/testutils"
+	"github.com/capitalrx/grafana/pkg/storage/secret/encryption"
 	"github.com/stretchr/testify/require"
 	"pgregory.net/rapid"
 )

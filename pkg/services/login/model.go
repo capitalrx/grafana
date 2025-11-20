@@ -6,10 +6,10 @@ import (
 
 	"golang.org/x/oauth2"
 
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/setting"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type UserAuth struct {

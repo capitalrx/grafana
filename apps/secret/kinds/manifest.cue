@@ -1,6 +1,6 @@
 package kinds
 
-import "github.com/grafana/grafana/apps/secret/kinds/v1beta1"
+import "github.com/capitalrx/grafana/apps/secret/kinds/v1beta1"
 
 manifest: {
 	appName:       "secret"

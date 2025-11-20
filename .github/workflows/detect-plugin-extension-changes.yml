@@ -149,7 +149,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "*What to do?*\nMake sure that:\n- All extension point ids start with `grafana/`\n- All extension point ids are exposed via <https://github.com/grafana/grafana/blob/main/packages/grafana-data/src/types/pluginExtensions.ts#L183|the `PluginExtensionPoints` enum in grafana-data>\n- Core Grafana is not registering extensions to extension points offered by plugins"
+                    "text": "*What to do?*\nMake sure that:\n- All extension point ids start with `grafana/`\n- All extension point ids are exposed via <https://github.com/capitalrx/grafana/blob/main/packages/grafana-data/src/types/pluginExtensions.ts#L183|the `PluginExtensionPoints` enum in grafana-data>\n- Core Grafana is not registering extensions to extension points offered by plugins"
                   }
                 }
               ]

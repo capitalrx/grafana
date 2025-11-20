@@ -3,9 +3,9 @@ package ngalert
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/quota"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/quota"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type RuleUsageReader interface {

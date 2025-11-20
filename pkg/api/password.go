@@ -5,13 +5,13 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/api/response"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/login"
-	"github.com/grafana/grafana/pkg/services/notifications"
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/api/dtos"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/login"
+	"github.com/capitalrx/grafana/pkg/services/notifications"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 func (hs *HTTPServer) SendResetPasswordEmail(c *contextmodel.ReqContext) response.Response {

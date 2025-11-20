@@ -9,11 +9,11 @@ import (
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
-	provisioningv0alpha1 "github.com/grafana/grafana/apps/provisioning/pkg/generated/clientset/versioned/typed/provisioning/v0alpha1"
-	"github.com/grafana/grafana/apps/provisioning/pkg/repository"
-	"github.com/grafana/grafana/apps/provisioning/pkg/safepath"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	provisioningv0alpha1 "github.com/capitalrx/grafana/apps/provisioning/pkg/generated/clientset/versioned/typed/provisioning/v0alpha1"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/repository"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/safepath"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
 )
 
 //go:generate mockery --name RepositoryResourcesFactory --structname MockRepositoryResourcesFactory --inpackage --filename repository_resources_factory_mock.go --with-expecter

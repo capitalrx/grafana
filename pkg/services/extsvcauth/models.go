@@ -3,7 +3,7 @@ package extsvcauth
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
 )
 
 const (

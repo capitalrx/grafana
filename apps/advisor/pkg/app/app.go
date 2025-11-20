@@ -9,12 +9,12 @@ import (
 	"github.com/grafana/grafana-app-sdk/logging"
 	"github.com/grafana/grafana-app-sdk/resource"
 	"github.com/grafana/grafana-app-sdk/simple"
-	advisorv0alpha1 "github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1"
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checkregistry"
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checks"
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checkscheduler"
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checktyperegisterer"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
+	advisorv0alpha1 "github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checkregistry"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checks"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checkscheduler"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checktyperegisterer"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 

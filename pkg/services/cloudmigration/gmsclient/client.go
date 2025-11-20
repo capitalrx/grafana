@@ -3,7 +3,7 @@ package gmsclient
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/cloudmigration"
+	"github.com/capitalrx/grafana/pkg/services/cloudmigration"
 )
 
 type Client interface {

@@ -3,7 +3,7 @@ package registry
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins"
 )
 
 // Service is responsible for the internal storing and retrieval of plugins.

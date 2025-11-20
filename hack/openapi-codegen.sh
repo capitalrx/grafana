@@ -151,7 +151,7 @@ function grafana::codegen::gen_openapi() {
         --output-file zz_generated.openapi.go \
         --go-header-file "${boilerplate}" \
         --output-dir "${root}" \
-        --output-pkg "github.com/grafana/grafana/${in_pkg_single}" \
+        --output-pkg "github.com/capitalrx/grafana/${in_pkg_single}" \
         --report-filename "${new_report}" \
         ${COMMON_INPUT_DIRS} \
         "${input_pkgs[@]}"

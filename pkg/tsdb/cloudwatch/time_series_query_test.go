@@ -12,10 +12,10 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/features"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/kinds/dataquery"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/mocks"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/features"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/mocks"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"

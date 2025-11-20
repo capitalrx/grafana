@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
-	"github.com/grafana/grafana/apps/provisioning/pkg/repository"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/repository"
 	"github.com/grafana/nanogit"
 	"github.com/grafana/nanogit/mocks"
 	"github.com/grafana/nanogit/protocol/hash"

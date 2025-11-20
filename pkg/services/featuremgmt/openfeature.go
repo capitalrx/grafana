@@ -6,8 +6,8 @@ import (
 	"net/url"
 	"time"
 
-	clientauthmiddleware "github.com/grafana/grafana/pkg/clientauth/middleware"
-	"github.com/grafana/grafana/pkg/setting"
+	clientauthmiddleware "github.com/capitalrx/grafana/pkg/clientauth/middleware"
+	"github.com/capitalrx/grafana/pkg/setting"
 
 	sdkhttpclient "github.com/grafana/grafana-plugin-sdk-go/backend/httpclient"
 	"github.com/open-feature/go-sdk/openfeature"

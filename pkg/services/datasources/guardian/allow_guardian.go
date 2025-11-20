@@ -1,7 +1,7 @@
 package guardian
 
 import (
-	"github.com/grafana/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
 )
 
 var _ DatasourceGuardian = new(AllowGuardian)

@@ -11,13 +11,13 @@ import (
 	metainternalversion "k8s.io/apimachinery/pkg/apis/meta/internalversion"
 	"k8s.io/apimachinery/pkg/labels"
 
-	folderv1 "github.com/grafana/grafana/apps/folder/pkg/apis/folder/v1beta1"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/services/folder"
-	"github.com/grafana/grafana/pkg/services/folder/foldertest"
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/services/user"
+	folderv1 "github.com/capitalrx/grafana/apps/folder/pkg/apis/folder/v1beta1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/services/folder"
+	"github.com/capitalrx/grafana/pkg/services/folder/foldertest"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 func TestLegacyStorageList(t *testing.T) {

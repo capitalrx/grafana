@@ -13,15 +13,15 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/infra/filestorage"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/quota/quotatest"
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/tests/testsuite"
-	testdatasource "github.com/grafana/grafana/pkg/tsdb/grafana-testdata-datasource"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/filestorage"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/quota/quotatest"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/tests/testsuite"
+	testdatasource "github.com/capitalrx/grafana/pkg/tsdb/grafana-testdata-datasource"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 var (

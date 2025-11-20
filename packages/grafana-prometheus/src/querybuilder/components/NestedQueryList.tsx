@@ -1,4 +1,4 @@
-// Core Grafana history https://github.com/grafana/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/querybuilder/components/NestedQueryList.tsx
+// Core Grafana history https://github.com/capitalrx/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/querybuilder/components/NestedQueryList.tsx
 import { Stack } from '@grafana/ui';
 
 import { PrometheusDatasource } from '../../datasource';

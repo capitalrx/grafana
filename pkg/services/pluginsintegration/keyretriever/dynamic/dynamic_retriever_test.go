@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/kvstore"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/keystore"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/kvstore"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/keystore"
+	"github.com/capitalrx/grafana/pkg/setting"
 	"github.com/stretchr/testify/require"
 )
 

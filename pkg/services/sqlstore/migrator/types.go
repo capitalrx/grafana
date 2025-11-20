@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 )
 
 const (

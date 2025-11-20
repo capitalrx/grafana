@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/infra/localcache"
-	"github.com/grafana/grafana/pkg/services/live/database"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/localcache"
+	"github.com/capitalrx/grafana/pkg/services/live/database"
 )
 
 // SetupTestStorage initializes a storage to used by the integration tests.

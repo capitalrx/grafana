@@ -4,9 +4,9 @@ import (
 	"testing"
 	"text/template"
 
-	"github.com/grafana/grafana/pkg/storage/legacysql"
-	"github.com/grafana/grafana/pkg/storage/unified/sql/sqltemplate"
-	"github.com/grafana/grafana/pkg/storage/unified/sql/sqltemplate/mocks"
+	"github.com/capitalrx/grafana/pkg/storage/legacysql"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/sqltemplate"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/sqltemplate/mocks"
 )
 
 func TestStarsQueries(t *testing.T) {

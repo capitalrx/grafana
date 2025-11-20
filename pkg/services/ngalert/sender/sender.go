@@ -21,8 +21,8 @@ import (
 	"github.com/prometheus/prometheus/discovery"
 	"github.com/prometheus/prometheus/model/labels"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	apimodels "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	apimodels "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
 )
 
 const (

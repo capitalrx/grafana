@@ -3,9 +3,9 @@ package routing
 import (
 	"net/http"
 
-	"github.com/grafana/grafana/pkg/api/response"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 var (

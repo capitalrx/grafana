@@ -12,10 +12,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/mock/gomock"
 
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/rendering"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/models"
+	"github.com/capitalrx/grafana/pkg/services/rendering"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 )
 
 func setupTempFile(t *testing.T) (string, func()) {

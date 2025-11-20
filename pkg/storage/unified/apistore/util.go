@@ -14,8 +14,8 @@ import (
 	"k8s.io/apimachinery/pkg/selection"
 	"k8s.io/apiserver/pkg/storage"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 )
 
 func toListRequest(k *resourcepb.ResourceKey, opts storage.ListOptions) (*resourcepb.ListRequest, storage.SelectionPredicate, error) {

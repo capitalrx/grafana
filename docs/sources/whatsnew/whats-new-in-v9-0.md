@@ -27,7 +27,7 @@ A big focus for Grafana is making observability and data visualization and analy
 
 The release also includes a brand-new powerful and fast heatmap visualization, a more accessible navigation menu, improvements to dashboard search, advanced security and authentication features, and more.
 
-We’ve summarized what’s new in the release here. If you’d like all the details you can check out the complete [changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md).
+We’ve summarized what’s new in the release here. If you’d like all the details you can check out the complete [changelog](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md).
 
 ## Prometheus query builder
 
@@ -216,7 +216,7 @@ In the InfluxDB data source, browser access mode was deprecated in grafana 8.0.0
 
 ### Transformations: Allow more complex regex expressions in rename by regex
 
-The rename by regex transformation has been improved to allow global patterns of the form `/<stringToReplace>/g`. Depending on the regex match used, this may cause some transformations to behave slightly differently. You can guarantee the same behavior as before by wrapping the match string in forward slashes (`/`), for example, `(.*)` would become `/(.*)/`. ([Github Issue #48179](https://github.com/grafana/grafana/pull/48179))
+The rename by regex transformation has been improved to allow global patterns of the form `/<stringToReplace>/g`. Depending on the regex match used, this may cause some transformations to behave slightly differently. You can guarantee the same behavior as before by wrapping the match string in forward slashes (`/`), for example, `(.*)` would become `/(.*)/`. ([Github Issue #48179](https://github.com/capitalrx/grafana/pull/48179))
 
 ### Clock Panel
 
@@ -228,11 +228,11 @@ We have updated [polystat panel](/grafana/plugins/grafana-polystat-panel/) to ve
 
 ### Plugins: Most relevant breaking changes
 
-- `getColorForTheme` was removed, use `theme.visualization.getColorByName` instead [PR #49519](https://github.com/grafana/grafana/pull/49519)
-- `TextDisplayOptions` was removed, use `VizTextDisplayOptions` instead [PR #49705](https://github.com/grafana/grafana/pull/49705)
-- We have changed the internals of `backendSrv.fetch()` to throw an error when the response is an incorrect JSON. Make sure to handle possible errors on the callsite where using `backendSrv.fetch()` (or any other `backendSrv` methods) [PR #47493](https://github.com/grafana/grafana/pull/47493)
-- We have removed the deprecated `getFormStyles` function from [grafana-ui](https://www.npmjs.com/package/@grafana/ui). Use `GrafanaTheme2` and the `useStyles2` hook instead [PR #49945](https://github.com/grafana/grafana/pull/49945)
-- We have removed the deprecated `/api/tsdb/query` metrics endpoint. Use `/api/ds/query` instead [PR #49916](https://github.com/grafana/grafana/pull/49916)
+- `getColorForTheme` was removed, use `theme.visualization.getColorByName` instead [PR #49519](https://github.com/capitalrx/grafana/pull/49519)
+- `TextDisplayOptions` was removed, use `VizTextDisplayOptions` instead [PR #49705](https://github.com/capitalrx/grafana/pull/49705)
+- We have changed the internals of `backendSrv.fetch()` to throw an error when the response is an incorrect JSON. Make sure to handle possible errors on the callsite where using `backendSrv.fetch()` (or any other `backendSrv` methods) [PR #47493](https://github.com/capitalrx/grafana/pull/47493)
+- We have removed the deprecated `getFormStyles` function from [grafana-ui](https://www.npmjs.com/package/@grafana/ui). Use `GrafanaTheme2` and the `useStyles2` hook instead [PR #49945](https://github.com/capitalrx/grafana/pull/49945)
+- We have removed the deprecated `/api/tsdb/query` metrics endpoint. Use `/api/ds/query` instead [PR #49916](https://github.com/capitalrx/grafana/pull/49916)
 
 You can find the complete list of breaking changes in the links below. Please check them out for more details and see if there is anything affecting your plugin
 

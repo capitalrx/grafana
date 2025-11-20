@@ -7,7 +7,7 @@ import (
 	alertingNotify "github.com/grafana/alerting/notify"
 	v2 "github.com/prometheus/alertmanager/api/v2"
 
-	apimodels "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
+	apimodels "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
 )
 
 func (am *alertmanager) TestReceivers(ctx context.Context, c apimodels.TestReceiversConfigBodyParams) (*alertingNotify.TestReceiversResult, int, error) {

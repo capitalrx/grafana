@@ -7,11 +7,11 @@ import (
 	"k8s.io/apiserver/pkg/authorization/authorizer"
 
 	authlib "github.com/grafana/authlib/types"
-	iamv0 "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/registry/apis/iam/legacy"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	gfauthorizer "github.com/grafana/grafana/pkg/services/apiserver/auth/authorizer"
+	iamv0 "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/registry/apis/iam/legacy"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	gfauthorizer "github.com/capitalrx/grafana/pkg/services/apiserver/auth/authorizer"
 )
 
 type iamAuthorizer struct {

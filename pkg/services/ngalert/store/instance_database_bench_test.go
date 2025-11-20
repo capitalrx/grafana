@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/ngalert/tests"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/tests"
 )
 
 var saveStateCompressed = flag.Bool("save-state-compressed", false, "Save state compressed")

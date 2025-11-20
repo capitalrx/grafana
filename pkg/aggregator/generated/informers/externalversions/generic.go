@@ -7,7 +7,7 @@ package externalversions
 import (
 	fmt "fmt"
 
-	v0alpha1 "github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
+	v0alpha1 "github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	cache "k8s.io/client-go/tools/cache"
 )

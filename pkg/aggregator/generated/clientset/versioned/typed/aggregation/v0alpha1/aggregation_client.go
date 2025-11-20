@@ -7,8 +7,8 @@ package v0alpha1
 import (
 	http "net/http"
 
-	aggregationv0alpha1 "github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
-	scheme "github.com/grafana/grafana/pkg/aggregator/generated/clientset/versioned/scheme"
+	aggregationv0alpha1 "github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
+	scheme "github.com/capitalrx/grafana/pkg/aggregator/generated/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 

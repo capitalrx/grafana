@@ -10,16 +10,16 @@ import (
 
 	"github.com/gchaincl/sqlhooks"
 	"github.com/go-sql-driver/mysql"
-	"github.com/grafana/grafana/pkg/util/sqlite"
-	"github.com/grafana/grafana/pkg/util/xorm/core"
+	"github.com/capitalrx/grafana/pkg/util/sqlite"
+	"github.com/capitalrx/grafana/pkg/util/xorm/core"
 	"github.com/lib/pq"
 	"github.com/prometheus/client_golang/prometheus"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 )
 
 var (

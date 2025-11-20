@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/expr"
-	"github.com/grafana/grafana/pkg/services/dashboardimport"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/expr"
+	"github.com/capitalrx/grafana/pkg/services/dashboardimport"
 )
 
 var varRegex = regexp.MustCompile(`(\$\{.+?\})`)

@@ -23,17 +23,17 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/httpclient"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/expr"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/datasources"
-	dsfakes "github.com/grafana/grafana/pkg/services/datasources/fakes"
-	"github.com/grafana/grafana/pkg/services/ngalert/metrics"
-	models "github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/ngalert/writer"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/expr"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
+	dsfakes "github.com/capitalrx/grafana/pkg/services/datasources/fakes"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/metrics"
+	models "github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/writer"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 func TestRecordingRule(t *testing.T) {

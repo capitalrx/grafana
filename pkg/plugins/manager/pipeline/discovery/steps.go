@@ -4,7 +4,7 @@ import (
 	"context"
 	"slices"
 
-	"github.com/grafana/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins"
 )
 
 // PermittedPluginTypesFilter is a filter step that will filter out any plugins that are not of a permitted type.

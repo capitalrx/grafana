@@ -14,7 +14,7 @@
 
 package bar
 
-import "github.com/grafana/grafana/pkg/build/wire"
+import "github.com/capitalrx/grafana/pkg/build/wire"
 
 var Value = wire.Value(PublicMsg)
 

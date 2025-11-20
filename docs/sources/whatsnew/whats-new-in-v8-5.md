@@ -23,7 +23,7 @@ weight: -33
 
 We’re excited to announce Grafana v8.5, with a variety of improvements that focus on Grafana’s usability, performance, and security.
 
-We’ve summarized what’s new in the release here, but you might also be interested in the announcement blog post as well. If you’d like all the details you can check out the complete [changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md).
+We’ve summarized what’s new in the release here, but you might also be interested in the announcement blog post as well. If you’d like all the details you can check out the complete [changelog](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md).
 
 ## OSS
 

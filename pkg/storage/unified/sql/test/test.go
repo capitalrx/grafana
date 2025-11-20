@@ -10,9 +10,9 @@ import (
 	sqlmock "github.com/DATA-DOG/go-sqlmock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/storage/unified/sql/db"
-	"github.com/grafana/grafana/pkg/storage/unified/sql/db/dbimpl"
-	"github.com/grafana/grafana/pkg/storage/unified/sql/sqltemplate"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/db"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/db/dbimpl"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/sqltemplate"
 )
 
 // TestDBProvider is a stub for db.ResourceDBInterface.

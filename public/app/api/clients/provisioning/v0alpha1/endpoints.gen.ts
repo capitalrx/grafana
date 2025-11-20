@@ -1342,10 +1342,10 @@ export type ResourceType = {
   /** For non-k8s native formats, what did this start as
     
     Possible enum values:
-     - `"access-control"` Access control https://github.com/grafana/grafana/blob/v11.3.1/conf/provisioning/access-control/sample.yaml
-     - `"alerting"` Alert configuration https://github.com/grafana/grafana/blob/v11.3.1/conf/provisioning/alerting/sample.yaml
+     - `"access-control"` Access control https://github.com/capitalrx/grafana/blob/v11.3.1/conf/provisioning/access-control/sample.yaml
+     - `"alerting"` Alert configuration https://github.com/capitalrx/grafana/blob/v11.3.1/conf/provisioning/alerting/sample.yaml
      - `"dashboard"` Dashboard JSON
-     - `"datasources"` Datasource definitions eg: https://github.com/grafana/grafana/blob/v11.3.1/conf/provisioning/datasources/sample.yaml */
+     - `"datasources"` Datasource definitions eg: https://github.com/capitalrx/grafana/blob/v11.3.1/conf/provisioning/datasources/sample.yaml */
   classic?: 'access-control' | 'alerting' | 'dashboard' | 'datasources';
   group?: string;
   kind?: string;

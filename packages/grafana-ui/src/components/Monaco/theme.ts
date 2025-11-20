@@ -22,7 +22,7 @@ function getColors(theme?: GrafanaTheme2): monacoTypes.editor.IColors {
 
 function normalizeColorForMonaco(color?: string): string {
   // monaco needs 6char hex colors
-  // see https://github.com/grafana/grafana/issues/43158
+  // see https://github.com/capitalrx/grafana/issues/43158
   return tinycolor(color).toHexString();
 }
 

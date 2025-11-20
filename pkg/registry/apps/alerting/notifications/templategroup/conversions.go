@@ -5,12 +5,12 @@ import (
 	"k8s.io/apimachinery/pkg/fields"
 	"k8s.io/apimachinery/pkg/types"
 
-	model "github.com/grafana/grafana/apps/alerting/notifications/pkg/apis/alerting/v0alpha1"
-	gapiutil "github.com/grafana/grafana/pkg/services/apiserver/utils"
+	model "github.com/capitalrx/grafana/apps/alerting/notifications/pkg/apis/alerting/v0alpha1"
+	gapiutil "github.com/capitalrx/grafana/pkg/services/apiserver/utils"
 
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	"github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	ngmodels "github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	ngmodels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 func convertToK8sResources(orgID int64, list []definitions.NotificationTemplate, namespacer request.NamespaceMapper, selector fields.Selector) (*model.TemplateGroupList, error) {

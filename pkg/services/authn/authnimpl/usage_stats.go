@@ -3,7 +3,7 @@ package authnimpl
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/authn"
+	"github.com/capitalrx/grafana/pkg/services/authn"
 )
 
 func (s *Service) getUsageStats(ctx context.Context) (map[string]any, error) {

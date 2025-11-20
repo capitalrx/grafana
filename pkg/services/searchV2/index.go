@@ -17,15 +17,15 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/folder"
-	"github.com/grafana/grafana/pkg/services/store"
-	"github.com/grafana/grafana/pkg/services/store/entity"
-	kdash "github.com/grafana/grafana/pkg/services/store/kind/dashboard"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/folder"
+	"github.com/capitalrx/grafana/pkg/services/store"
+	"github.com/capitalrx/grafana/pkg/services/store/entity"
+	kdash "github.com/capitalrx/grafana/pkg/services/store/kind/dashboard"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type dashboardLoader interface {
@@ -268,7 +268,7 @@ func (i *searchIndex) run(ctx context.Context, orgIDs []int64, reIndexSignalCh c
 			// entity events non-atomically (outside of transaction) and do not cover all possible dashboard
 			// change places, so periodic re-indexing fixes possibly broken state. But ideally we should
 			// come to an approach which does not require periodic re-indexing at all. One possible way
-			// is to use DB triggers, see https://github.com/grafana/grafana/pull/47712.
+			// is to use DB triggers, see https://github.com/capitalrx/grafana/pull/47712.
 			lastIndexedEventID := lastEventID
 			go func() {
 				defer span.End()

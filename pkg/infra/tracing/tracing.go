@@ -29,8 +29,8 @@ import (
 
 	"github.com/go-kit/log/level"
 
-	"github.com/grafana/grafana/pkg/apimachinery/errutil"
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/apimachinery/errutil"
+	"github.com/capitalrx/grafana/pkg/infra/log"
 )
 
 const (
@@ -417,7 +417,7 @@ func Errorf(span trace.Span, format string, args ...any) error {
 	return Error(span, err)
 }
 
-var instrumentationScope = "github.com/grafana/grafana/pkg/infra/tracing"
+var instrumentationScope = "github.com/capitalrx/grafana/pkg/infra/tracing"
 
 // Start only creates an OpenTelemetry span if the incoming context already includes a span.
 func Start(ctx context.Context, name string, attributes ...attribute.KeyValue) (context.Context, trace.Span) {

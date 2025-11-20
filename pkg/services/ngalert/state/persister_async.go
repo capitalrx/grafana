@@ -7,9 +7,9 @@ import (
 	"github.com/benbjohnson/clock"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/ngalert/metrics"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/metrics"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 type AlertInstancesProvider interface {

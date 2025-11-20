@@ -9,10 +9,10 @@ import (
 
 	authtypes "github.com/grafana/authlib/types"
 
-	"github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 )
 
 func TestAfterCreatePermissionCreator(t *testing.T) {

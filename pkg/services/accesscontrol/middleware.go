@@ -14,17 +14,17 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/middleware/cookies"
-	"github.com/grafana/grafana/pkg/models/usertoken"
-	"github.com/grafana/grafana/pkg/services/authn"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/dashboards/dashboardaccess"
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/middleware/cookies"
+	"github.com/capitalrx/grafana/pkg/models/usertoken"
+	"github.com/capitalrx/grafana/pkg/services/authn"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/dashboards/dashboardaccess"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 func Middleware(ac AccessControl) func(Evaluator) web.Handler {

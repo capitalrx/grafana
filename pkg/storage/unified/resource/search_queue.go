@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 )
 
 // indexQueueProcessor manages queue-based operations for a specific index

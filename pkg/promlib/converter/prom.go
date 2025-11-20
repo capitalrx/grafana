@@ -218,7 +218,7 @@ l1Fields:
 		case "result":
 			// for some rare cases resultType is coming after the result.
 			// when that happens we save the bytes and parse them after reading resultType
-			// see: https://github.com/grafana/grafana/issues/64693
+			// see: https://github.com/capitalrx/grafana/issues/64693
 			if resultTypeFound {
 				rsp = readResult(resultType, rsp, iter, opt, encodingFlags)
 			} else {

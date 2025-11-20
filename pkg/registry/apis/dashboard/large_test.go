@@ -10,9 +10,9 @@ import (
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime"
 
-	dashv1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
-	dashv2alpha1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v2alpha1"
-	dashv2beta1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v2beta1"
+	dashv1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
+	dashv2alpha1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v2alpha1"
+	dashv2beta1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v2beta1"
 )
 
 func TestLargeDashboardSupportV1(t *testing.T) {

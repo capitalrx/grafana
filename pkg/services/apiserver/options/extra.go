@@ -11,8 +11,8 @@ import (
 	"k8s.io/component-base/logs"
 	"k8s.io/klog/v2"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/log/slogadapter"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/log/slogadapter"
 )
 
 type ExtraOptions struct {

@@ -19,7 +19,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
 	"github.com/grafana/grafana-plugin-sdk-go/experimental/featuretoggles"
 
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/types"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/types"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -4,7 +4,7 @@ import (
 	"context"
 	"regexp"
 
-	"github.com/grafana/grafana/apps/dashboard/pkg/migration/utils"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/migration/utils"
 )
 
 // V20 migrates legacy variable syntax in data links and field options.

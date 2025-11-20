@@ -11,12 +11,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/components/imguploader"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/ngalert/store"
-	"github.com/grafana/grafana/pkg/services/screenshot"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/components/imguploader"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/store"
+	"github.com/capitalrx/grafana/pkg/services/screenshot"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 func TestScreenshotImageService(t *testing.T) {

@@ -8,26 +8,26 @@ import (
 	"sort"
 	"time"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/lokiclient"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/lokiclient"
 	"golang.org/x/exp/constraints"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/services/annotations/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/services/annotations/accesscontrol"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	ngmetrics "github.com/grafana/grafana/pkg/services/ngalert/metrics"
-	ngmodels "github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/ngalert/state"
-	"github.com/grafana/grafana/pkg/services/ngalert/state/historian"
-	historymodel "github.com/grafana/grafana/pkg/services/ngalert/state/historian/model"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	ngmetrics "github.com/capitalrx/grafana/pkg/services/ngalert/metrics"
+	ngmodels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/state"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/state/historian"
+	historymodel "github.com/capitalrx/grafana/pkg/services/ngalert/state/historian/model"
 
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/grafana/grafana/pkg/apimachinery/errutil"
-	"github.com/grafana/grafana/pkg/services/annotations"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/apimachinery/errutil"
+	"github.com/capitalrx/grafana/pkg/services/annotations"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 const (

@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	"github.com/grafana/grafana/pkg/services/playlist"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	"github.com/capitalrx/grafana/pkg/services/playlist"
 )
 
 func TestPlaylistConversion(t *testing.T) {

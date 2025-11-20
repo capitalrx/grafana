@@ -4,11 +4,11 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/registry"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
-	"github.com/grafana/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/registry"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 )
 
 const (

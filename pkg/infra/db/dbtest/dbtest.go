@@ -3,13 +3,13 @@ package dbtest
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/util/xorm"
-	"github.com/grafana/grafana/pkg/util/xorm/core"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/util/xorm/core"
 
-	"github.com/grafana/grafana/pkg/services/sqlstore"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
-	"github.com/grafana/grafana/pkg/services/sqlstore/session"
-	tempuser "github.com/grafana/grafana/pkg/services/temp_user"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/session"
+	tempuser "github.com/capitalrx/grafana/pkg/services/temp_user"
 )
 
 type FakeDB struct {

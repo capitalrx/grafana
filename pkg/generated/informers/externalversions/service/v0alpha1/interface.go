@@ -5,7 +5,7 @@
 package v0alpha1
 
 import (
-	internalinterfaces "github.com/grafana/grafana/pkg/generated/informers/externalversions/internalinterfaces"
+	internalinterfaces "github.com/capitalrx/grafana/pkg/generated/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to all the informers in this group version.

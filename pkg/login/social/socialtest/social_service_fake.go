@@ -3,7 +3,7 @@ package socialtest
 import (
 	"net/http"
 
-	"github.com/grafana/grafana/pkg/login/social"
+	"github.com/capitalrx/grafana/pkg/login/social"
 )
 
 type FakeSocialService struct {

@@ -15,7 +15,7 @@
 package grafanaplugin
 
 import (
-	"github.com/grafana/grafana/packages/grafana-schema/src/common"
+	"github.com/capitalrx/grafana/packages/grafana-schema/src/common"
 )
 
 composableKinds: PanelCfg: {

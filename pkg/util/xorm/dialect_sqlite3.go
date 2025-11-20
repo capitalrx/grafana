@@ -11,8 +11,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/util/sqlite"
-	"github.com/grafana/grafana/pkg/util/xorm/core"
+	"github.com/capitalrx/grafana/pkg/util/sqlite"
+	"github.com/capitalrx/grafana/pkg/util/xorm/core"
 )
 
 var (

@@ -2,7 +2,7 @@
 package backendplugin
 
 import (
-	"github.com/grafana/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
 	"go.opentelemetry.io/otel/trace"
 )
 

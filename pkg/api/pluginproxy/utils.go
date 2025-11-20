@@ -10,7 +10,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/grafana/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins"
 )
 
 // interpolateString accepts template data and return a string with substitutions

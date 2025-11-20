@@ -5,7 +5,7 @@
 package fake
 
 import (
-	v0alpha1 "github.com/grafana/grafana/pkg/aggregator/generated/clientset/versioned/typed/aggregation/v0alpha1"
+	v0alpha1 "github.com/capitalrx/grafana/pkg/aggregator/generated/clientset/versioned/typed/aggregation/v0alpha1"
 	rest "k8s.io/client-go/rest"
 	testing "k8s.io/client-go/testing"
 )

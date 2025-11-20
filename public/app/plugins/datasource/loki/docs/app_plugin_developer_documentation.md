@@ -181,7 +181,7 @@ try {
 }
 ```
 
-If you find that there are methods missing or have ideas for new features, please don't hesitate to inform us. You can submit your suggestions and feature requests through the [Grafana repository](https://github.com/grafana/grafana/issues/new?assignees=&labels=type%2Ffeature-request&projects=&template=1-feature_requests.md). Your feedback is essential to help us improve and enhance the Loki data source and Grafana as a whole. We appreciate your contributions and look forward to hearing your ideas!
+If you find that there are methods missing or have ideas for new features, please don't hesitate to inform us. You can submit your suggestions and feature requests through the [Grafana repository](https://github.com/capitalrx/grafana/issues/new?assignees=&labels=type%2Ffeature-request&projects=&template=1-feature_requests.md). Your feedback is essential to help us improve and enhance the Loki data source and Grafana as a whole. We appreciate your contributions and look forward to hearing your ideas!
 
 ## Recommended components
 

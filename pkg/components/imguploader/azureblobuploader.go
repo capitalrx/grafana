@@ -20,9 +20,9 @@ import (
 	"time"
 
 	"github.com/Azure/azure-storage-blob-go/azblob"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/util"
-	"github.com/grafana/grafana/pkg/util/httpclient"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/util/httpclient"
 )
 
 type AzureBlobUploader struct {

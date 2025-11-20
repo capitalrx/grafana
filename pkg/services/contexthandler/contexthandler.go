@@ -12,20 +12,20 @@ import (
 	claims "github.com/grafana/authlib/types"
 	"github.com/open-feature/go-sdk/openfeature"
 
-	authnClients "github.com/grafana/grafana/pkg/services/authn/clients"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
+	authnClients "github.com/capitalrx/grafana/pkg/services/authn/clients"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
 
-	"github.com/grafana/grafana/pkg/api/response"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/services/authn"
-	"github.com/grafana/grafana/pkg/services/contexthandler/ctxkey"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/login"
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/services/authn"
+	"github.com/capitalrx/grafana/pkg/services/contexthandler/ctxkey"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/login"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 func ProvideService(cfg *setting.Cfg, authenticator authn.Authenticator, features featuremgmt.FeatureToggles,

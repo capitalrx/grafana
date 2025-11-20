@@ -26,8 +26,8 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/grafana/grafana/pkg/apimachinery/errutil"
-	"github.com/grafana/grafana/pkg/util/errhttp"
+	"github.com/capitalrx/grafana/pkg/apimachinery/errutil"
+	"github.com/capitalrx/grafana/pkg/util/errhttp"
 )
 
 // Context represents the runtime context of current request of Macaron instance.

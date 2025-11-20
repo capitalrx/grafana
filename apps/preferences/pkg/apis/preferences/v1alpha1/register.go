@@ -7,7 +7,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
 )
 
 var PreferencesResourceInfo = utils.NewResourceInfo(APIGroup, APIVersion,

@@ -5,12 +5,12 @@ import (
 
 	openfgav1 "github.com/openfga/api/proto/openfga/v1"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/infra/db"
-	authzextv1 "github.com/grafana/grafana/pkg/services/authz/proto/v1"
-	"github.com/grafana/grafana/pkg/services/authz/zanzana"
-	"github.com/grafana/grafana/pkg/services/folder"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	authzextv1 "github.com/capitalrx/grafana/pkg/services/authz/proto/v1"
+	"github.com/capitalrx/grafana/pkg/services/authz/zanzana"
+	"github.com/capitalrx/grafana/pkg/services/folder"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func teamMembershipCollector(store db.DB) legacyTupleCollector {

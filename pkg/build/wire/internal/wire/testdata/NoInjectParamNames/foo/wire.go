@@ -20,7 +20,7 @@ package main
 import (
 	stdcontext "context"
 
-	"github.com/grafana/grafana/pkg/build/wire"
+	"github.com/capitalrx/grafana/pkg/build/wire"
 )
 
 // The notable characteristic of this test is that there are no

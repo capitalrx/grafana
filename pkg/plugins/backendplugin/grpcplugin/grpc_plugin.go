@@ -9,10 +9,10 @@ import (
 	"github.com/hashicorp/go-plugin"
 	trace "go.opentelemetry.io/otel/trace"
 
-	"github.com/grafana/grafana/pkg/infra/process"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/backendplugin"
-	"github.com/grafana/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/infra/process"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/backendplugin"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
 )
 
 type grpcPlugin struct {

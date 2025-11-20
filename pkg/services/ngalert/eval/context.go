@@ -5,7 +5,7 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
 )
 
 // AlertingResultsReader provides fingerprints of results that are in alerting state.

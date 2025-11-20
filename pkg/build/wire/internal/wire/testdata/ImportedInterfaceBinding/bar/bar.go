@@ -18,7 +18,7 @@ import (
 	"fmt"
 
 	"example.com/foo"
-	"github.com/grafana/grafana/pkg/build/wire"
+	"github.com/capitalrx/grafana/pkg/build/wire"
 )
 
 func main() {

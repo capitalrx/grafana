@@ -23,11 +23,11 @@ import (
 	_ "github.com/microsoft/go-mssqldb/integratedauth/krb5"
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/tsdb/mssql/kerberos"
-	"github.com/grafana/grafana/pkg/tsdb/mssql/sqleng"
-	"github.com/grafana/grafana/pkg/tsdb/mssql/utils"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/tsdb/mssql/kerberos"
+	"github.com/capitalrx/grafana/pkg/tsdb/mssql/sqleng"
+	"github.com/capitalrx/grafana/pkg/tsdb/mssql/utils"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 type Service struct {

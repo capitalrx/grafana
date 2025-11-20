@@ -9,9 +9,9 @@ import (
 	"github.com/google/uuid"
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 
-	"github.com/grafana/grafana/pkg/infra/log/logtest"
-	"github.com/grafana/grafana/pkg/services/ngalert/eval"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/infra/log/logtest"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/eval"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 func BenchmarkCreateAndPatch(b *testing.B) {

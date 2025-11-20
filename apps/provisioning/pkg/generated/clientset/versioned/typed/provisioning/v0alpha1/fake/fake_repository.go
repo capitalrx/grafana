@@ -5,9 +5,9 @@
 package fake
 
 import (
-	v0alpha1 "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
-	provisioningv0alpha1 "github.com/grafana/grafana/apps/provisioning/pkg/generated/applyconfiguration/provisioning/v0alpha1"
-	typedprovisioningv0alpha1 "github.com/grafana/grafana/apps/provisioning/pkg/generated/clientset/versioned/typed/provisioning/v0alpha1"
+	v0alpha1 "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	provisioningv0alpha1 "github.com/capitalrx/grafana/apps/provisioning/pkg/generated/applyconfiguration/provisioning/v0alpha1"
+	typedprovisioningv0alpha1 "github.com/capitalrx/grafana/apps/provisioning/pkg/generated/clientset/versioned/typed/provisioning/v0alpha1"
 	gentype "k8s.io/client-go/gentype"
 )
 

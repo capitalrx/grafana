@@ -20,11 +20,11 @@ import (
 
 	authlib "github.com/grafana/authlib/types"
 	"github.com/grafana/dskit/services"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
-	"github.com/grafana/grafana/pkg/util/scheduler"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/util/scheduler"
 )
 
 func TestSimpleServer(t *testing.T) {

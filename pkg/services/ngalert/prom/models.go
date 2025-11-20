@@ -3,7 +3,7 @@ package prom
 import (
 	prommodel "github.com/prometheus/common/model"
 
-	"github.com/grafana/grafana/pkg/apimachinery/errutil"
+	"github.com/capitalrx/grafana/pkg/apimachinery/errutil"
 )
 
 var (

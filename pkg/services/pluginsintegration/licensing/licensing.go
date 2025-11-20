@@ -3,8 +3,8 @@ package licensing
 import (
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/services/licensing"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/services/licensing"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type Service struct {

@@ -17,16 +17,16 @@ import (
 
 	"github.com/go-jose/go-jose/v3"
 
-	"github.com/grafana/grafana/pkg/api/response"
-	"github.com/grafana/grafana/pkg/api/routing"
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/infra/localcache"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/remotecache"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/secrets"
-	"github.com/grafana/grafana/pkg/services/signingkeys"
-	"github.com/grafana/grafana/pkg/services/signingkeys/signingkeystore"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	"github.com/capitalrx/grafana/pkg/api/routing"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/localcache"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/remotecache"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/secrets"
+	"github.com/capitalrx/grafana/pkg/services/signingkeys"
+	"github.com/capitalrx/grafana/pkg/services/signingkeys/signingkeystore"
 )
 
 var _ signingkeys.Service = new(Service)

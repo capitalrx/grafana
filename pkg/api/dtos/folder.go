@@ -3,8 +3,8 @@ package dtos
 import (
 	"time"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
 )
 
 type Folder struct {

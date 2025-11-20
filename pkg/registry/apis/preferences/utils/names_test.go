@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/registry/apis/preferences/utils"
+	"github.com/capitalrx/grafana/pkg/registry/apis/preferences/utils"
 )
 
 func TestLegacyAuthorizer(t *testing.T) {

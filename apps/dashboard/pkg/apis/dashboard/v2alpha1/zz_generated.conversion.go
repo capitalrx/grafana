@@ -11,7 +11,7 @@ import (
 	url "net/url"
 	unsafe "unsafe"
 
-	dashboard "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard"
+	dashboard "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard"
 	conversion "k8s.io/apimachinery/pkg/conversion"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 )

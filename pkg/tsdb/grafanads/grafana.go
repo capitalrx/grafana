@@ -12,13 +12,13 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/data"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/datasources"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/searchV2"
-	"github.com/grafana/grafana/pkg/services/store"
-	testdatasource "github.com/grafana/grafana/pkg/tsdb/grafana-testdata-datasource"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/searchV2"
+	"github.com/capitalrx/grafana/pkg/services/store"
+	testdatasource "github.com/capitalrx/grafana/pkg/tsdb/grafana-testdata-datasource"
 )
 
 // DatasourceName is the string constant used as the datasource name in requests

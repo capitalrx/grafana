@@ -12,12 +12,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/services/datasources"
-	"github.com/grafana/grafana/pkg/tests/testinfra"
-	"github.com/grafana/grafana/pkg/tests/testsuite"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/api/dtos"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/pkg/tests/testinfra"
+	"github.com/capitalrx/grafana/pkg/tests/testsuite"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 func TestMain(m *testing.M) {

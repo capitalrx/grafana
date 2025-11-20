@@ -5,7 +5,7 @@
 package v0alpha1
 
 import (
-	servicev0alpha1 "github.com/grafana/grafana/pkg/apis/service/v0alpha1"
+	servicev0alpha1 "github.com/capitalrx/grafana/pkg/apis/service/v0alpha1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	listers "k8s.io/client-go/listers"
 	cache "k8s.io/client-go/tools/cache"

@@ -6,8 +6,8 @@ This guide explains how to implement new checks in the Grafana Advisor system. T
 
 A check in Grafana Advisor consists of two main components:
 
-1. A main check struct that implements the [`checks.Check`](https://github.com/grafana/grafana/blob/269226cb50b970ad9f692f1fdd220e9822e90db8/apps/advisor/pkg/app/checks/ifaces.go#L11-L25) interface
-2. One or more step structs that implement the [`checks.Step`](https://github.com/grafana/grafana/blob/269226cb50b970ad9f692f1fdd220e9822e90db8/apps/advisor/pkg/app/checks/ifaces.go#L28-L39) interface
+1. A main check struct that implements the [`checks.Check`](https://github.com/capitalrx/grafana/blob/269226cb50b970ad9f692f1fdd220e9822e90db8/apps/advisor/pkg/app/checks/ifaces.go#L11-L25) interface
+2. One or more step structs that implement the [`checks.Step`](https://github.com/capitalrx/grafana/blob/269226cb50b970ad9f692f1fdd220e9822e90db8/apps/advisor/pkg/app/checks/ifaces.go#L28-L39) interface
 
 ## Implementing a New Check
 

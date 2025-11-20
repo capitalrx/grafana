@@ -5,9 +5,9 @@ import (
 	"k8s.io/apiserver/pkg/registry/generic"
 	genericregistry "k8s.io/apiserver/pkg/registry/generic/registry"
 
-	userstorage "github.com/grafana/grafana/pkg/apis/userstorage/v0alpha1"
-	grafanaregistry "github.com/grafana/grafana/pkg/apiserver/registry/generic"
-	grafanarest "github.com/grafana/grafana/pkg/apiserver/rest"
+	userstorage "github.com/capitalrx/grafana/pkg/apis/userstorage/v0alpha1"
+	grafanaregistry "github.com/capitalrx/grafana/pkg/apiserver/registry/generic"
+	grafanarest "github.com/capitalrx/grafana/pkg/apiserver/rest"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

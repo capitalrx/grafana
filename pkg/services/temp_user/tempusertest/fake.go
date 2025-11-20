@@ -3,7 +3,7 @@ package tempusertest
 import (
 	"context"
 
-	tempuser "github.com/grafana/grafana/pkg/services/temp_user"
+	tempuser "github.com/capitalrx/grafana/pkg/services/temp_user"
 )
 
 var _ tempuser.Service = (*FakeTempUserService)(nil)

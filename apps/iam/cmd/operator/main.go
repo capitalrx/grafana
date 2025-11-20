@@ -10,7 +10,7 @@ import (
 	"github.com/grafana/grafana-app-sdk/logging"
 	"github.com/grafana/grafana-app-sdk/operator"
 	"github.com/grafana/grafana-app-sdk/simple"
-	"github.com/grafana/grafana/apps/iam/pkg/app"
+	"github.com/capitalrx/grafana/apps/iam/pkg/app"
 )
 
 func main() {

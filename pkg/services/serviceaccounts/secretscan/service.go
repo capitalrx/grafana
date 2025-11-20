@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/apikey"
-	"github.com/grafana/grafana/pkg/services/serviceaccounts"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/apikey"
+	"github.com/capitalrx/grafana/pkg/services/serviceaccounts"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 const defaultURL = "https://secret-scanning.grafana.net"

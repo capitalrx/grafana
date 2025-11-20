@@ -1,6 +1,6 @@
 package supportbundlestest
 
-import "github.com/grafana/grafana/pkg/services/supportbundles"
+import "github.com/capitalrx/grafana/pkg/services/supportbundles"
 
 type FakeBundleService struct {
 	Collectors []supportbundles.Collector

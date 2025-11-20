@@ -2,11 +2,11 @@ package iam
 
 import (
 	"github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/pkg/registry/apis/iam/legacy"
-	"github.com/grafana/grafana/pkg/registry/apis/iam/user"
-	"github.com/grafana/grafana/pkg/services/apiserver/builder"
-	"github.com/grafana/grafana/pkg/services/ssosettings"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/registry/apis/iam/legacy"
+	"github.com/capitalrx/grafana/pkg/registry/apis/iam/user"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/builder"
+	"github.com/capitalrx/grafana/pkg/services/ssosettings"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
 	"github.com/prometheus/client_golang/prometheus"
 	"k8s.io/apiserver/pkg/authorization/authorizer"
 )

@@ -11,23 +11,23 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/api/response"
-	"github.com/grafana/grafana/pkg/apimachinery/errutil"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/infra/metrics"
-	"github.com/grafana/grafana/pkg/infra/network"
-	"github.com/grafana/grafana/pkg/middleware"
-	"github.com/grafana/grafana/pkg/middleware/cookies"
-	"github.com/grafana/grafana/pkg/services/auth"
-	"github.com/grafana/grafana/pkg/services/authn"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	loginservice "github.com/grafana/grafana/pkg/services/login"
-	pref "github.com/grafana/grafana/pkg/services/preference"
-	"github.com/grafana/grafana/pkg/services/secrets"
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	"github.com/capitalrx/grafana/pkg/apimachinery/errutil"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/infra/metrics"
+	"github.com/capitalrx/grafana/pkg/infra/network"
+	"github.com/capitalrx/grafana/pkg/middleware"
+	"github.com/capitalrx/grafana/pkg/middleware/cookies"
+	"github.com/capitalrx/grafana/pkg/services/auth"
+	"github.com/capitalrx/grafana/pkg/services/authn"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	loginservice "github.com/capitalrx/grafana/pkg/services/login"
+	pref "github.com/capitalrx/grafana/pkg/services/preference"
+	"github.com/capitalrx/grafana/pkg/services/secrets"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 const (
@@ -471,7 +471,7 @@ func getFirstPublicErrorMessage(err *errutil.Error) string {
 // isExternalySynced is used to tell if the user roles are externally synced
 // true means that the org role sync is handled by Grafana
 // Note: currently the users authinfo is overridden each time the user logs in
-// https://github.com/grafana/grafana/blob/4181acec72f76df7ad02badce13769bae4a1f840/pkg/services/login/authinfoservice/database/database.go#L61
+// https://github.com/capitalrx/grafana/blob/4181acec72f76df7ad02badce13769bae4a1f840/pkg/services/login/authinfoservice/database/database.go#L61
 // this means that if the user has multiple auth providers and one of them is set to sync org roles
 // then isExternallySynced will be true for this one provider and false for the others
 func (hs *HTTPServer) isExternallySynced(cfg *setting.Cfg, authModule string) bool {

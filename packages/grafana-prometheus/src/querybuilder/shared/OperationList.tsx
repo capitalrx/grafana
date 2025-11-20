@@ -1,4 +1,4 @@
-// Core Grafana history https://github.com/grafana/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/querybuilder/shared/OperationList.tsx
+// Core Grafana history https://github.com/capitalrx/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/querybuilder/shared/OperationList.tsx
 import { css } from '@emotion/css';
 import { DragDropContext, Droppable, DropResult } from '@hello-pangea/dnd';
 import { useState } from 'react';

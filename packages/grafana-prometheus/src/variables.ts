@@ -1,4 +1,4 @@
-// Core Grafana history https://github.com/grafana/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/variables.ts
+// Core Grafana history https://github.com/capitalrx/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/variables.ts
 import { from, Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 

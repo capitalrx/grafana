@@ -24,7 +24,7 @@ Welcome to Grafana 11.2! We've made a number of improvements in this release, in
 
 {{< youtube id="s6IYpILVDSM" >}}
 
-For even more detail about all the changes in this release, refer to the [changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md). For the specific steps we recommend when you upgrade to v11.2, check out our [Upgrade Guide](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/upgrade-guide/upgrade-v11.2/).
+For even more detail about all the changes in this release, refer to the [changelog](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md). For the specific steps we recommend when you upgrade to v11.2, check out our [Upgrade Guide](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/upgrade-guide/upgrade-v11.2/).
 
 ## Grafana Cloud Migration Assistant is in public preview
 
@@ -64,7 +64,7 @@ We've made a number of exciting updates to transformations!
 
 **You can now use variables in some transformations**
 
-Template variables are now supported for the **Limit**, **Sort by**, **Filter data by values**, **Grouping to matrix** ([a community contribution](https://github.com/grafana/grafana/pull/88551) ⭐️), **Heatmap**, and **Histogram** transformations. This enables dynamic transformation configurations based on panel data and dashboard variables.
+Template variables are now supported for the **Limit**, **Sort by**, **Filter data by values**, **Grouping to matrix** ([a community contribution](https://github.com/capitalrx/grafana/pull/88551) ⭐️), **Heatmap**, and **Histogram** transformations. This enables dynamic transformation configurations based on panel data and dashboard variables.
 
 **New transpose transformation**
 
@@ -74,7 +74,7 @@ For more information, refer to the [documentation](https://grafana.com/docs/graf
 
 {{< figure src="/media/docs/grafana/transformations/screenshot-grafana-11-2-transpose-transformation.png" alt="Transpose transformation in action" >}}
 
-This feature is [a community contribution](https://github.com/grafana/grafana/pull/88963) ❤️
+This feature is [a community contribution](https://github.com/capitalrx/grafana/pull/88963) ❤️
 
 **Group to nested tables is now generally available**
 
@@ -132,7 +132,7 @@ With paginated results, the visualization displays a subset of all series on eac
 
 Pagination is especially useful if you're running a query on a dynamic data source. It's also helpful regardless of whether you have many data frames with just two fields (time + value) or few frames with many fields (time + many values).
 
-This feature is [a community contribution](https://github.com/grafana/grafana/pull/89586) ❤️
+This feature is [a community contribution](https://github.com/capitalrx/grafana/pull/89586) ❤️
 
 {{< youtube id="mgkjWJvYoHk" >}}
 

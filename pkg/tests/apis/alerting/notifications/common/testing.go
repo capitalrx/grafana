@@ -3,12 +3,12 @@ package common
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/tests/apis"
+	"github.com/capitalrx/grafana/pkg/tests/apis"
 	"github.com/stretchr/testify/require"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/client-go/dynamic"
 
-	"github.com/grafana/grafana/apps/alerting/notifications/pkg/apis/alerting/v0alpha1"
+	"github.com/capitalrx/grafana/apps/alerting/notifications/pkg/apis/alerting/v0alpha1"
 )
 
 func NewReceiverClient(t *testing.T, user apis.User) *apis.TypedClient[v0alpha1.Receiver, v0alpha1.ReceiverList] {

@@ -3,8 +3,8 @@ package configchecks
 import (
 	"context"
 
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checks"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checks"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 var _ checks.Check = (*check)(nil)

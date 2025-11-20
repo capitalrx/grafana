@@ -7,10 +7,10 @@ import (
 	genericapiserver "k8s.io/apiserver/pkg/server"
 	serverstorage "k8s.io/apiserver/pkg/server/storage"
 
-	"github.com/grafana/grafana/pkg/aggregator/apis/aggregation"
-	"github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
-	aggregatorscheme "github.com/grafana/grafana/pkg/aggregator/apiserver/scheme"
-	dataplaneservicestorage "github.com/grafana/grafana/pkg/aggregator/registry/dataplaneservice/storage"
+	"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation"
+	"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
+	aggregatorscheme "github.com/capitalrx/grafana/pkg/aggregator/apiserver/scheme"
+	dataplaneservicestorage "github.com/capitalrx/grafana/pkg/aggregator/registry/dataplaneservice/storage"
 )
 
 // NewRESTStorage returns an APIGroupInfo object that will work against dataplaneservice.

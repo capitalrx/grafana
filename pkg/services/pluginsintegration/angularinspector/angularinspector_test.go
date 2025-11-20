@@ -6,12 +6,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/infra/kvstore"
-	"github.com/grafana/grafana/pkg/plugins/manager/loader/angular/angulardetector"
-	"github.com/grafana/grafana/pkg/plugins/manager/loader/angular/angularinspector"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/angulardetectorsprovider"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/angularpatternsstore"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/kvstore"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/loader/angular/angulardetector"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/loader/angular/angularinspector"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/angulardetectorsprovider"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/angularpatternsstore"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func TestProvideService(t *testing.T) {

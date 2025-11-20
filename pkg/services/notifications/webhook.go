@@ -12,7 +12,7 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 type Webhook struct {

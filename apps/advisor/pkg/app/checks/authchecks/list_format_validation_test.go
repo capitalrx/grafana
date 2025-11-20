@@ -7,10 +7,10 @@ import (
 	"testing"
 
 	"github.com/grafana/grafana-app-sdk/logging"
-	advisor "github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1"
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checks"
-	"github.com/grafana/grafana/pkg/services/login"
-	"github.com/grafana/grafana/pkg/services/ssosettings/models"
+	advisor "github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checks"
+	"github.com/capitalrx/grafana/pkg/services/login"
+	"github.com/capitalrx/grafana/pkg/services/ssosettings/models"
 	"github.com/stretchr/testify/require"
 )
 

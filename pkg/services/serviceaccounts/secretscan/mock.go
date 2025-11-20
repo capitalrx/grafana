@@ -3,8 +3,8 @@ package secretscan
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/apikey"
-	"github.com/grafana/grafana/pkg/services/serviceaccounts"
+	"github.com/capitalrx/grafana/pkg/services/apikey"
+	"github.com/capitalrx/grafana/pkg/services/serviceaccounts"
 )
 
 type MockTokenRetriever struct {

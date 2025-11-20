@@ -3,7 +3,7 @@ package datasource
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
 	"k8s.io/apimachinery/pkg/apis/meta/internalversion"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"

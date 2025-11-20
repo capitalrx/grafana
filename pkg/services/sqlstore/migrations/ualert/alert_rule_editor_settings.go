@@ -1,6 +1,6 @@
 package ualert
 
-import "github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+import "github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 
 // AddRuleMetadata adds column to store alerting rule metadata, such as editor settings for the UI.
 func AddRuleMetadata(mg *migrator.Migrator) {

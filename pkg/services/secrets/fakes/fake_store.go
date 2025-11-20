@@ -3,7 +3,7 @@ package fakes
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/secrets"
+	"github.com/capitalrx/grafana/pkg/services/secrets"
 )
 
 type FakeSecretsStore struct {

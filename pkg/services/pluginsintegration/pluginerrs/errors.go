@@ -3,8 +3,8 @@ package pluginerrs
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
 )
 
 var _ plugins.ErrorResolver = (*Store)(nil)

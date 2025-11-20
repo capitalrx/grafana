@@ -10,15 +10,15 @@ import (
 	claims "github.com/grafana/authlib/types"
 	"github.com/grafana/dskit/concurrency"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/metrics"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/folder"
-	"github.com/grafana/grafana/pkg/services/sqlstore"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/metrics"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/folder"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 const DEFAULT_BATCH_SIZE = 999

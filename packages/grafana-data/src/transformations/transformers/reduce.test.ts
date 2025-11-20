@@ -411,7 +411,7 @@ describe('Reducer Transformer', () => {
     `);
   });
 
-  it('reduces multiple data frames with decimal display name (https://github.com/grafana/grafana/issues/31580)', async () => {
+  it('reduces multiple data frames with decimal display name (https://github.com/capitalrx/grafana/issues/31580)', async () => {
     const cfg = {
       id: DataTransformerID.reduce,
       options: {
@@ -458,7 +458,7 @@ describe('Reducer Transformer', () => {
     });
   });
 
-  it('reduces multiple data frames with decimal fields name (https://github.com/grafana/grafana/issues/31580)', async () => {
+  it('reduces multiple data frames with decimal fields name (https://github.com/capitalrx/grafana/issues/31580)', async () => {
     const cfg = {
       id: DataTransformerID.reduce,
       options: {

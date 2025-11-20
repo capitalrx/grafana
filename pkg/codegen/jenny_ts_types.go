@@ -4,7 +4,7 @@ import (
 	"github.com/grafana/codejen"
 	"github.com/grafana/cuetsy"
 	"github.com/grafana/cuetsy/ts/ast"
-	"github.com/grafana/grafana/pkg/codegen/generators"
+	"github.com/capitalrx/grafana/pkg/codegen/generators"
 )
 
 type ApplyFunc func(sfg SchemaForGen, file *ast.File)

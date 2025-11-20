@@ -6,11 +6,11 @@ import (
 
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/grafana/grafana/pkg/apimachinery/errutil"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/authn"
-	"github.com/grafana/grafana/pkg/services/loginattempt"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/apimachinery/errutil"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/authn"
+	"github.com/capitalrx/grafana/pkg/services/loginattempt"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 var (

@@ -4,7 +4,7 @@ import (
 	"github.com/grafana/dataplane/sdata/numeric"
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 
-	"github.com/grafana/grafana/pkg/expr/mathexp/parse"
+	"github.com/capitalrx/grafana/pkg/expr/mathexp/parse"
 )
 
 // Results is a container for Value interfaces.

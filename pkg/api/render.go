@@ -7,12 +7,12 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/models"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/rendering"
-	"github.com/grafana/grafana/pkg/util"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/models"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/rendering"
+	"github.com/capitalrx/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 func (hs *HTTPServer) RenderHandler(c *contextmodel.ReqContext) {

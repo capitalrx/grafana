@@ -6,9 +6,9 @@ import (
 
 	"golang.org/x/time/rate"
 
-	"github.com/grafana/grafana/pkg/api/frontendlogging"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/api/frontendlogging"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 var frontendLogger = log.New("frontend")

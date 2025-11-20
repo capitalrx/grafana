@@ -66,7 +66,7 @@ You can define and configure the data source in YAML files as part of Grafana's 
 For more information about provisioning, and for available configuration options, refer to [Provisioning Grafana](ref:provisioning-grafana).
 
 {{< admonition type="note" >}}
-The previously used `database` field has now been [deprecated](https://github.com/grafana/grafana/pull/58647).
+The previously used `database` field has now been [deprecated](https://github.com/capitalrx/grafana/pull/58647).
 You should now use the `index` field in `jsonData` to store the index name.
 Please see the examples below.
 {{< /admonition >}}

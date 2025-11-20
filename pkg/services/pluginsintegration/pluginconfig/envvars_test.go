@@ -12,13 +12,13 @@ import (
 
 	"github.com/grafana/grafana-azure-sdk-go/v2/azsettings"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/auth"
-	"github.com/grafana/grafana/pkg/plugins/config"
-	"github.com/grafana/grafana/pkg/plugins/envvars"
-	"github.com/grafana/grafana/pkg/plugins/manager/fakes"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/auth"
+	"github.com/capitalrx/grafana/pkg/plugins/config"
+	"github.com/capitalrx/grafana/pkg/plugins/envvars"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/fakes"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func TestPluginEnvVarsProvider_PluginEnvVars(t *testing.T) {

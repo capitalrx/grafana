@@ -3,9 +3,9 @@ package validation
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/config"
-	"github.com/grafana/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/config"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
 )
 
 // Validator is responsible for the Validation stage of the plugin loader pipeline.

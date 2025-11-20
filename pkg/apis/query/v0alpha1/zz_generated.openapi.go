@@ -14,12 +14,12 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/grafana/grafana/pkg/apis/query/v0alpha1.DataSourceApiServer":     schema_pkg_apis_query_v0alpha1_DataSourceApiServer(ref),
-		"github.com/grafana/grafana/pkg/apis/query/v0alpha1.DataSourceApiServerList": schema_pkg_apis_query_v0alpha1_DataSourceApiServerList(ref),
-		"github.com/grafana/grafana/pkg/apis/query/v0alpha1.QueryDataRequest":        schema_pkg_apis_query_v0alpha1_QueryDataRequest(ref),
-		"github.com/grafana/grafana/pkg/apis/query/v0alpha1.QueryDataResponse":       schema_pkg_apis_query_v0alpha1_QueryDataResponse(ref),
-		"github.com/grafana/grafana/pkg/apis/query/v0alpha1.QueryTypeDefinition":     schema_pkg_apis_query_v0alpha1_QueryTypeDefinition(ref),
-		"github.com/grafana/grafana/pkg/apis/query/v0alpha1.QueryTypeDefinitionList": schema_pkg_apis_query_v0alpha1_QueryTypeDefinitionList(ref),
+		"github.com/capitalrx/grafana/pkg/apis/query/v0alpha1.DataSourceApiServer":     schema_pkg_apis_query_v0alpha1_DataSourceApiServer(ref),
+		"github.com/capitalrx/grafana/pkg/apis/query/v0alpha1.DataSourceApiServerList": schema_pkg_apis_query_v0alpha1_DataSourceApiServerList(ref),
+		"github.com/capitalrx/grafana/pkg/apis/query/v0alpha1.QueryDataRequest":        schema_pkg_apis_query_v0alpha1_QueryDataRequest(ref),
+		"github.com/capitalrx/grafana/pkg/apis/query/v0alpha1.QueryDataResponse":       schema_pkg_apis_query_v0alpha1_QueryDataResponse(ref),
+		"github.com/capitalrx/grafana/pkg/apis/query/v0alpha1.QueryTypeDefinition":     schema_pkg_apis_query_v0alpha1_QueryTypeDefinition(ref),
+		"github.com/capitalrx/grafana/pkg/apis/query/v0alpha1.QueryTypeDefinitionList": schema_pkg_apis_query_v0alpha1_QueryTypeDefinitionList(ref),
 	}
 }
 
@@ -131,7 +131,7 @@ func schema_pkg_apis_query_v0alpha1_DataSourceApiServerList(ref common.Reference
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/pkg/apis/query/v0alpha1.DataSourceApiServer"),
+										Ref:     ref("github.com/capitalrx/grafana/pkg/apis/query/v0alpha1.DataSourceApiServer"),
 									},
 								},
 							},
@@ -142,7 +142,7 @@ func schema_pkg_apis_query_v0alpha1_DataSourceApiServerList(ref common.Reference
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/apis/query/v0alpha1.DataSourceApiServer", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/pkg/apis/query/v0alpha1.DataSourceApiServer", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -150,7 +150,7 @@ func schema_pkg_apis_query_v0alpha1_QueryDataRequest(ref common.ReferenceCallbac
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "Generic query request with shared time across all values Copied from: https://github.com/grafana/grafana/blob/main/pkg/api/dtos/models.go#L62",
+				Description: "Generic query request with shared time across all values Copied from: https://github.com/capitalrx/grafana/blob/main/pkg/api/dtos/models.go#L62",
 				Type:        []string{"object"},
 				Properties: map[string]spec.Schema{
 					"kind": {
@@ -331,7 +331,7 @@ func schema_pkg_apis_query_v0alpha1_QueryTypeDefinitionList(ref common.Reference
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/pkg/apis/query/v0alpha1.QueryTypeDefinition"),
+										Ref:     ref("github.com/capitalrx/grafana/pkg/apis/query/v0alpha1.QueryTypeDefinition"),
 									},
 								},
 							},
@@ -342,6 +342,6 @@ func schema_pkg_apis_query_v0alpha1_QueryTypeDefinitionList(ref common.Reference
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/apis/query/v0alpha1.QueryTypeDefinition", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/pkg/apis/query/v0alpha1.QueryTypeDefinition", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }

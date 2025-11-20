@@ -6,7 +6,7 @@ import (
 
 // A rate limiter restricts the number of screenshots that can be taken in parallel.
 //
-//go:generate mockgen -destination=ratelimit_mock.go -package=screenshot github.com/grafana/grafana/pkg/services/screenshot RateLimiter
+//go:generate mockgen -destination=ratelimit_mock.go -package=screenshot github.com/capitalrx/grafana/pkg/services/screenshot RateLimiter
 type RateLimiter interface {
 	// Do restricts the rate at which screenshots can be taken in parallel via screenshotFunc.
 	// It returns the result of screenshotFunc, or an error if either the context deadline

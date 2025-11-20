@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"slices"
 
-	"github.com/grafana/grafana/pkg/api/response"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/ngalert/notifier/channels_config"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/notifier/channels_config"
 )
 
 func (hs *HTTPServer) GetAlertNotifiers() func(*contextmodel.ReqContext) response.Response {

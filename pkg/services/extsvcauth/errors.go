@@ -1,6 +1,6 @@
 package extsvcauth
 
-import "github.com/grafana/grafana/pkg/apimachinery/errutil"
+import "github.com/capitalrx/grafana/pkg/apimachinery/errutil"
 
 var (
 	ErrUnknownProvider = errutil.BadRequest("extsvcauth.unknown-provider")

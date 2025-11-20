@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/grafana/grafana/pkg/api/response"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
 )
 
 func (hs *HTTPServer) AdminRotateDataEncryptionKeys(c *contextmodel.ReqContext) response.Response {

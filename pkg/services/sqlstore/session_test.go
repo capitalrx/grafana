@@ -8,9 +8,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
-	"github.com/grafana/grafana/pkg/util/sqlite"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/util/sqlite"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 func TestIntegration_RetryingDisabled(t *testing.T) {

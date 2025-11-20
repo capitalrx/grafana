@@ -12,8 +12,8 @@ import (
 	jsoniter "github.com/json-iterator/go"
 	"github.com/modern-go/reflect2"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 // ContactPointFromContactPointExport parses the database model of the contact point (group of integrations) where settings are represented in JSON,

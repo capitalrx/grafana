@@ -5,9 +5,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/grafana/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 )
 
 // KVNamespace is a vendored migration.KVNamespace.

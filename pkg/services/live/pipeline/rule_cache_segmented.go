@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/grafana/grafana/pkg/services/live/pipeline/tree"
+	"github.com/capitalrx/grafana/pkg/services/live/pipeline/tree"
 )
 
 // CacheSegmentedTree provides a fast access to channel rule configuration.

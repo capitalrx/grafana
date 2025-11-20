@@ -10,10 +10,10 @@ import (
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	"github.com/grafana/grafana/pkg/tests/apis"
-	"github.com/grafana/grafana/pkg/tests/testinfra"
-	"github.com/grafana/grafana/pkg/tests/testsuite"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/tests/apis"
+	"github.com/capitalrx/grafana/pkg/tests/testinfra"
+	"github.com/capitalrx/grafana/pkg/tests/testsuite"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 var gvrPluginInstalls = schema.GroupVersionResource{

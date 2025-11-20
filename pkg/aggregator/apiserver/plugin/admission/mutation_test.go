@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
-	"github.com/grafana/grafana/pkg/aggregator/apiserver/plugin/admission"
+	"github.com/capitalrx/grafana/pkg/aggregator/apiserver/plugin/admission"
 	"github.com/stretchr/testify/require"
 	admissionv1 "k8s.io/api/admission/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

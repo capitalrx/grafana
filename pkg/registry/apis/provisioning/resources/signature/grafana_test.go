@@ -9,8 +9,8 @@ import (
 	"github.com/stretchr/testify/require"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	"github.com/grafana/grafana/apps/provisioning/pkg/repository"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/repository"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
 )
 
 func TestNewGrafanaSigner(t *testing.T) {

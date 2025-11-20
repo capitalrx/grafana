@@ -12,7 +12,7 @@ import (
 	"github.com/grafana/grafana-app-sdk/app"
 	"github.com/grafana/grafana-app-sdk/resource"
 
-	v1beta1 "github.com/grafana/grafana/apps/folder/pkg/apis/folder/v1beta1"
+	v1beta1 "github.com/capitalrx/grafana/apps/folder/pkg/apis/folder/v1beta1"
 )
 
 var appManifestData = app.ManifestData{

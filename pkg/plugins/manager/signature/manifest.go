@@ -21,10 +21,10 @@ import (
 	"github.com/ProtonMail/go-crypto/openpgp/packet"
 	"github.com/gobwas/glob"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/config"
-	"github.com/grafana/grafana/pkg/plugins/log"
-	"github.com/grafana/grafana/pkg/plugins/manager/signature/statickey"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/config"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/signature/statickey"
 )
 
 var (

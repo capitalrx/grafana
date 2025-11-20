@@ -3,8 +3,8 @@ package kmsproviders
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/registry/apis/secret/encryption"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/encryption/cipher"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/encryption"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/encryption/cipher"
 )
 
 type secretKeyProvider struct {

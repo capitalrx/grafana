@@ -1,4 +1,4 @@
-// Core grafana history https://github.com/grafana/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/components/monaco-query-field/monaco-completion-provider/completions.ts
+// Core grafana history https://github.com/capitalrx/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/components/monaco-query-field/monaco-completion-provider/completions.ts
 import UFuzzy from '@leeoniya/ufuzzy';
 import { languages } from 'monaco-editor';
 
@@ -20,7 +20,7 @@ export type CompletionType = 'HISTORY' | 'FUNCTION' | 'METRIC_NAME' | 'DURATION'
 
 // We cannot use languages.CompletionItemInsertTextRule.InsertAsSnippet because grafana-prometheus package isn't compatible
 // It should first change the moduleResolution to bundler for TS to correctly resolve the types
-// https://github.com/grafana/grafana/pull/96450
+// https://github.com/capitalrx/grafana/pull/96450
 const InsertAsSnippet = 4;
 
 type Completion = {

@@ -5,8 +5,8 @@
 package provisioning
 
 import (
-	internalinterfaces "github.com/grafana/grafana/apps/provisioning/pkg/generated/informers/externalversions/internalinterfaces"
-	v0alpha1 "github.com/grafana/grafana/apps/provisioning/pkg/generated/informers/externalversions/provisioning/v0alpha1"
+	internalinterfaces "github.com/capitalrx/grafana/apps/provisioning/pkg/generated/informers/externalversions/internalinterfaces"
+	v0alpha1 "github.com/capitalrx/grafana/apps/provisioning/pkg/generated/informers/externalversions/provisioning/v0alpha1"
 )
 
 // Interface provides access to each of this group's versions.

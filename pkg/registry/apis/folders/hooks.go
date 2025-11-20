@@ -8,7 +8,7 @@ import (
 	"k8s.io/apiserver/pkg/registry/generic/registry"
 
 	"github.com/grafana/grafana-app-sdk/logging"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
 )
 
 // "Almost nobody should use this hook" but we do because we need ctx and AfterCreate doesn't have it.

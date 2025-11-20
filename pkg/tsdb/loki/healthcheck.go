@@ -10,7 +10,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
 
-	"github.com/grafana/grafana/pkg/tsdb/loki/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/loki/kinds/dataquery"
 )
 
 const (

@@ -63,7 +63,7 @@ Input with type `text` (that is, the default type value) has a role of `textbox`
 
 ### Pull requests that introduce accessibility errors:
 
-We use [pa11y-ci](https://github.com/pa11y/pa11y-ci) to collect accessibility errors on [some URLs in the project](https://github.com/grafana/grafana/issues/36555). The thresholds of accessibility errors are specified per URL.
+We use [pa11y-ci](https://github.com/pa11y/pa11y-ci) to collect accessibility errors on [some URLs in the project](https://github.com/capitalrx/grafana/issues/36555). The thresholds of accessibility errors are specified per URL.
 
 If the contribution introduces new a11y errors, our continuous integration will fail, preventing you from merging to the main branch. In those cases there are two alternatives for moving forward:
 

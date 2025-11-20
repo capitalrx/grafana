@@ -6,8 +6,8 @@ import (
 	"log/slog"
 
 	"dagger.io/dagger"
-	"github.com/grafana/grafana/pkg/build/daggerbuild/containers"
-	"github.com/grafana/grafana/pkg/build/daggerbuild/golang"
+	"github.com/capitalrx/grafana/pkg/build/daggerbuild/containers"
+	"github.com/capitalrx/grafana/pkg/build/daggerbuild/golang"
 )
 
 // BuildOpts are general options that can change the way Grafana is compiled regardless of distribution.

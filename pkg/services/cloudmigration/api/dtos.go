@@ -3,7 +3,7 @@ package api
 import (
 	"time"
 
-	"github.com/grafana/grafana/pkg/services/cloudmigration"
+	"github.com/capitalrx/grafana/pkg/services/cloudmigration"
 )
 
 // swagger:parameters getCloudMigrationToken

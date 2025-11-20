@@ -25,7 +25,7 @@ The following video guides you through the steps and common commands for install
 
 {{< youtube id="f-x_p2lvz8s" >}}
 
-Grafana relies on other open source software to operate. For a list of open source software that Grafana uses, refer to [package.json](https://github.com/grafana/grafana/blob/main/package.json).
+Grafana relies on other open source software to operate. For a list of open source software that Grafana uses, refer to [package.json](https://github.com/capitalrx/grafana/blob/main/package.json).
 
 ## Supported operating systems
 
@@ -81,7 +81,7 @@ Grafana binaries and images might not work with unsupported databases, even if t
 Binaries and images built with [BoringCrypto](https://pkg.go.dev/crypto/internal/boring) may have different problems than other distributions of Grafana.
 {{< /admonition >}}
 
-> Grafana can report errors when relying on read-only MySQL servers, such as in high-availability failover scenarios or serverless AWS Aurora MySQL. This is a known issue; for more information, see [issue #13399](https://github.com/grafana/grafana/issues/13399).
+> Grafana can report errors when relying on read-only MySQL servers, such as in high-availability failover scenarios or serverless AWS Aurora MySQL. This is a known issue; for more information, see [issue #13399](https://github.com/capitalrx/grafana/issues/13399).
 
 ## Supported web browsers
 

@@ -3,8 +3,8 @@ package routingtree
 import (
 	"k8s.io/apiserver/pkg/registry/rest"
 
-	grafanarest "github.com/grafana/grafana/pkg/apiserver/rest"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
+	grafanarest "github.com/capitalrx/grafana/pkg/apiserver/rest"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
 )
 
 func NewStorage(legacySvc RouteService, namespacer request.NamespaceMapper) grafanarest.Storage {

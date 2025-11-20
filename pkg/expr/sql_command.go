@@ -15,11 +15,11 @@ import (
 	"go.opentelemetry.io/otel/trace"
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
-	"github.com/grafana/grafana/pkg/expr/mathexp"
-	"github.com/grafana/grafana/pkg/expr/metrics"
-	"github.com/grafana/grafana/pkg/expr/sql"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/expr/mathexp"
+	"github.com/capitalrx/grafana/pkg/expr/metrics"
+	"github.com/capitalrx/grafana/pkg/expr/sql"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 const SQLLoggerName = "expr.sql"

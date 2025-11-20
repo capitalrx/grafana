@@ -3,10 +3,10 @@ package service_test
 import (
 	"testing"
 
-	secretv1beta1 "github.com/grafana/grafana/apps/secret/pkg/apis/secret/v1beta1"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/testutils"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/xkube"
+	secretv1beta1 "github.com/capitalrx/grafana/apps/secret/pkg/apis/secret/v1beta1"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/testutils"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/xkube"
 	"github.com/stretchr/testify/require"
 	"k8s.io/utils/ptr"
 )

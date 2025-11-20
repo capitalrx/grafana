@@ -21,12 +21,12 @@ import (
 	"github.com/grafana/authlib/grpcutils"
 	"github.com/grafana/authlib/types"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	authnGrpcUtils "github.com/grafana/grafana/pkg/services/authn/grpcutils"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/setting"
-	grpcUtils "github.com/grafana/grafana/pkg/storage/unified/resource/grpc"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	authnGrpcUtils "github.com/capitalrx/grafana/pkg/services/authn/grpcutils"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/setting"
+	grpcUtils "github.com/capitalrx/grafana/pkg/storage/unified/resource/grpc"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 )
 
 //go:generate mockery --name ResourceClient --structname MockResourceClient --inpackage --filename client_mock.go --with-expecter
@@ -89,7 +89,7 @@ func NewLegacyResourceClient(channel grpc.ClientConnInterface, indexChannel grpc
 func NewLocalResourceClient(server ResourceServer) ResourceClient {
 	// scenario: local in-proc
 	channel := &inprocgrpc.Channel{}
-	tracer := otel.Tracer("github.com/grafana/grafana/pkg/storage/unified/resource")
+	tracer := otel.Tracer("github.com/capitalrx/grafana/pkg/storage/unified/resource")
 
 	grpcAuthInt := grpcutils.NewUnsafeAuthenticator(tracer)
 	for _, desc := range []*grpc.ServiceDesc{

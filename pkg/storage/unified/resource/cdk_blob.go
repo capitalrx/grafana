@@ -15,8 +15,8 @@ import (
 	"go.opentelemetry.io/otel/trace/noop"
 	"gocloud.dev/blob"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 
 	// Supported drivers
 	_ "gocloud.dev/blob/azureblob"

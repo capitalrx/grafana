@@ -11,10 +11,10 @@ import (
 	"github.com/stretchr/testify/require"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	v0alpha1 "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
-	"github.com/grafana/grafana/apps/provisioning/pkg/repository"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/jobs"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/resources"
+	v0alpha1 "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/repository"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/jobs"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/resources"
 )
 
 func TestExportWorker_IsSupported(t *testing.T) {
@@ -577,9 +577,9 @@ func TestExportWorker_RefURLsSetWithBranch(t *testing.T) {
 
 	// Mock RefURLs method to return expected URLs
 	expectedRefURLs := &v0alpha1.RepositoryURLs{
-		SourceURL:         "https://github.com/grafana/grafana/tree/feature-branch",
-		CompareURL:        "https://github.com/grafana/grafana/compare/main...feature-branch",
-		NewPullRequestURL: "https://github.com/grafana/grafana/compare/main...feature-branch?quick_pull=1&labels=grafana",
+		SourceURL:         "https://github.com/capitalrx/grafana/tree/feature-branch",
+		CompareURL:        "https://github.com/capitalrx/grafana/compare/main...feature-branch",
+		NewPullRequestURL: "https://github.com/capitalrx/grafana/compare/main...feature-branch?quick_pull=1&labels=grafana",
 	}
 	mockRepoWithURLs.On("RefURLs", mock.Anything, "feature-branch").Return(expectedRefURLs, nil)
 

@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	commonv1 "github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
+	commonv1 "github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/apis/meta/internalversion"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -14,10 +14,10 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/apiserver/pkg/registry/rest"
 
-	iamv0 "github.com/grafana/grafana/pkg/apis/iam/v0alpha1"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	"github.com/grafana/grafana/pkg/services/ssosettings"
-	ssomodels "github.com/grafana/grafana/pkg/services/ssosettings/models"
+	iamv0 "github.com/capitalrx/grafana/pkg/apis/iam/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	"github.com/capitalrx/grafana/pkg/services/ssosettings"
+	ssomodels "github.com/capitalrx/grafana/pkg/services/ssosettings/models"
 )
 
 var (

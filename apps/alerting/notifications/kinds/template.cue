@@ -1,7 +1,7 @@
 package kinds
 
 import (
-	"github.com/grafana/grafana/apps/alerting/notifications/kinds/v0alpha1"
+	"github.com/capitalrx/grafana/apps/alerting/notifications/kinds/v0alpha1"
 )
 
 templateGroup: {

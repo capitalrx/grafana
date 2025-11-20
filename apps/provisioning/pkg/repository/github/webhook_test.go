@@ -20,8 +20,8 @@ import (
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
-	common "github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	common "github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1"
 )
 
 func TestParseWebhooks(t *testing.T) {
@@ -394,7 +394,7 @@ func TestGitHubRepository_Webhook(t *testing.T) {
 				payload := `{
 					"action": "opened",
 					"pull_request": {
-						"html_url": "https://github.com/grafana/grafana/pull/123",
+						"html_url": "https://github.com/capitalrx/grafana/pull/123",
 						"number": 123,
 						"head": {
 							"ref": "feature-branch",
@@ -427,7 +427,7 @@ func TestGitHubRepository_Webhook(t *testing.T) {
 					Repository: "test-repo",
 					Action:     provisioning.JobActionPullRequest,
 					PullRequest: &provisioning.PullRequestJobOptions{
-						URL:  "https://github.com/grafana/grafana/pull/123",
+						URL:  "https://github.com/capitalrx/grafana/pull/123",
 						PR:   123,
 						Ref:  "feature-branch",
 						Hash: "abcdef1234567890",
@@ -454,7 +454,7 @@ func TestGitHubRepository_Webhook(t *testing.T) {
 				payload := `{
 					"action": "synchronize",
 					"pull_request": {
-						"html_url": "https://github.com/grafana/grafana/pull/123",
+						"html_url": "https://github.com/capitalrx/grafana/pull/123",
 						"number": 123,
 						"head": {
 							"ref": "feature-branch",
@@ -487,7 +487,7 @@ func TestGitHubRepository_Webhook(t *testing.T) {
 					Repository: "test-repo",
 					Action:     provisioning.JobActionPullRequest,
 					PullRequest: &provisioning.PullRequestJobOptions{
-						URL:  "https://github.com/grafana/grafana/pull/123",
+						URL:  "https://github.com/capitalrx/grafana/pull/123",
 						PR:   123,
 						Ref:  "feature-branch",
 						Hash: "abcdef1234567890",
@@ -511,7 +511,7 @@ func TestGitHubRepository_Webhook(t *testing.T) {
 				payload := `{
 					"action": "opened",
 					"pull_request": {
-						"html_url": "https://github.com/grafana/grafana/pull/123",
+						"html_url": "https://github.com/capitalrx/grafana/pull/123",
 						"number": 123,
 						"head": {
 							"ref": "feature-branch",
@@ -558,7 +558,7 @@ func TestGitHubRepository_Webhook(t *testing.T) {
 				payload := `{
 					"action": "closed",
 					"pull_request": {
-						"html_url": "https://github.com/grafana/grafana/pull/123",
+						"html_url": "https://github.com/capitalrx/grafana/pull/123",
 						"number": 123,
 						"head": {
 							"ref": "feature-branch",
@@ -605,7 +605,7 @@ func TestGitHubRepository_Webhook(t *testing.T) {
 				payload := `{
 					"action": "opened",
 					"pull_request": {
-						"html_url": "https://github.com/grafana/grafana/pull/123",
+						"html_url": "https://github.com/capitalrx/grafana/pull/123",
 						"number": 123,
 						"head": {
 							"ref": "feature-branch",
@@ -644,7 +644,7 @@ func TestGitHubRepository_Webhook(t *testing.T) {
 				payload := `{
 					"action": "opened",
 					"pull_request": {
-						"html_url": "https://github.com/grafana/grafana/pull/123",
+						"html_url": "https://github.com/capitalrx/grafana/pull/123",
 						"number": 123,
 						"head": {
 							"ref": "feature-branch",

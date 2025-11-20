@@ -71,7 +71,7 @@ export function sortDataFrameByTime(frame: DataFrame, dir: SortDirection): DataF
 
   // we use the approach used in @grafana/data/sortDataframe.
   // we cannot use it directly, because it does not take `.nanos` into account
-  // (see https://github.com/grafana/grafana/issues/72351).
+  // (see https://github.com/capitalrx/grafana/issues/72351).
   // we can switch to to @grafana/data/sortDataframe when the issue is fixed.
 
   const timeField = fields.find((field) => field.type === FieldType.time);

@@ -1,4 +1,4 @@
-// Core Grafana history https://github.com/grafana/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/promql.ts
+// Core Grafana history https://github.com/capitalrx/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/promql.ts
 import { Grammar } from 'prismjs';
 
 import { t } from '@grafana/i18n';

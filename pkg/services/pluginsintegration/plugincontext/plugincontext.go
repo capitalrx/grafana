@@ -9,16 +9,16 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/infra/localcache"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/services/datasources"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/adapters"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginconfig"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginsettings"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginstore"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/infra/localcache"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/adapters"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginconfig"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginsettings"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginstore"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 const (

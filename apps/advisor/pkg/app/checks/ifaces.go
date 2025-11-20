@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/grafana/grafana-app-sdk/logging"
-	advisorv0alpha1 "github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1"
+	advisorv0alpha1 "github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1"
 )
 
 // Check returns metadata about the check being executed and the list of Steps

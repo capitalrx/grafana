@@ -3,7 +3,7 @@
 package settingtest
 
 import (
-	setting "github.com/grafana/grafana/pkg/setting"
+	setting "github.com/capitalrx/grafana/pkg/setting"
 	mock "github.com/stretchr/testify/mock"
 )
 

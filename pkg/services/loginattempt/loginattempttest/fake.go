@@ -3,7 +3,7 @@ package loginattempttest
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/loginattempt"
+	"github.com/capitalrx/grafana/pkg/services/loginattempt"
 )
 
 var _ loginattempt.Service = new(FakeLoginAttemptService)

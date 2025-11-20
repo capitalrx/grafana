@@ -12,20 +12,20 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.Check":                        schema_pkg_apis_advisor_v0alpha1_Check(ref),
-		"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckErrorLink":               schema_pkg_apis_advisor_v0alpha1_CheckErrorLink(ref),
-		"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckList":                    schema_pkg_apis_advisor_v0alpha1_CheckList(ref),
-		"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckReport":                  schema_pkg_apis_advisor_v0alpha1_CheckReport(ref),
-		"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckReportFailure":           schema_pkg_apis_advisor_v0alpha1_CheckReportFailure(ref),
-		"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckSpec":                    schema_pkg_apis_advisor_v0alpha1_CheckSpec(ref),
-		"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckStatus":                  schema_pkg_apis_advisor_v0alpha1_CheckStatus(ref),
-		"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckType":                    schema_pkg_apis_advisor_v0alpha1_CheckType(ref),
-		"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeList":                schema_pkg_apis_advisor_v0alpha1_CheckTypeList(ref),
-		"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeSpec":                schema_pkg_apis_advisor_v0alpha1_CheckTypeSpec(ref),
-		"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeStatus":              schema_pkg_apis_advisor_v0alpha1_CheckTypeStatus(ref),
-		"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeStep":                schema_pkg_apis_advisor_v0alpha1_CheckTypeStep(ref),
-		"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypestatusOperatorState": schema_pkg_apis_advisor_v0alpha1_CheckTypestatusOperatorState(ref),
-		"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckstatusOperatorState":     schema_pkg_apis_advisor_v0alpha1_CheckstatusOperatorState(ref),
+		"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.Check":                        schema_pkg_apis_advisor_v0alpha1_Check(ref),
+		"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckErrorLink":               schema_pkg_apis_advisor_v0alpha1_CheckErrorLink(ref),
+		"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckList":                    schema_pkg_apis_advisor_v0alpha1_CheckList(ref),
+		"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckReport":                  schema_pkg_apis_advisor_v0alpha1_CheckReport(ref),
+		"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckReportFailure":           schema_pkg_apis_advisor_v0alpha1_CheckReportFailure(ref),
+		"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckSpec":                    schema_pkg_apis_advisor_v0alpha1_CheckSpec(ref),
+		"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckStatus":                  schema_pkg_apis_advisor_v0alpha1_CheckStatus(ref),
+		"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckType":                    schema_pkg_apis_advisor_v0alpha1_CheckType(ref),
+		"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeList":                schema_pkg_apis_advisor_v0alpha1_CheckTypeList(ref),
+		"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeSpec":                schema_pkg_apis_advisor_v0alpha1_CheckTypeSpec(ref),
+		"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeStatus":              schema_pkg_apis_advisor_v0alpha1_CheckTypeStatus(ref),
+		"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeStep":                schema_pkg_apis_advisor_v0alpha1_CheckTypeStep(ref),
+		"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypestatusOperatorState": schema_pkg_apis_advisor_v0alpha1_CheckTypestatusOperatorState(ref),
+		"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckstatusOperatorState":     schema_pkg_apis_advisor_v0alpha1_CheckstatusOperatorState(ref),
 	}
 }
 
@@ -59,13 +59,13 @@ func schema_pkg_apis_advisor_v0alpha1_Check(ref common.ReferenceCallback) common
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec is the spec of the Check",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckSpec"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckStatus"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckStatus"),
 						},
 					},
 				},
@@ -73,7 +73,7 @@ func schema_pkg_apis_advisor_v0alpha1_Check(ref common.ReferenceCallback) common
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckSpec", "github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckSpec", "github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -139,7 +139,7 @@ func schema_pkg_apis_advisor_v0alpha1_CheckList(ref common.ReferenceCallback) co
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.Check"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.Check"),
 									},
 								},
 							},
@@ -150,7 +150,7 @@ func schema_pkg_apis_advisor_v0alpha1_CheckList(ref common.ReferenceCallback) co
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.Check", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.Check", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -176,7 +176,7 @@ func schema_pkg_apis_advisor_v0alpha1_CheckReport(ref common.ReferenceCallback) 
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckReportFailure"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckReportFailure"),
 									},
 								},
 							},
@@ -187,7 +187,7 @@ func schema_pkg_apis_advisor_v0alpha1_CheckReport(ref common.ReferenceCallback) 
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckReportFailure"},
+			"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckReportFailure"},
 	}
 }
 
@@ -237,7 +237,7 @@ func schema_pkg_apis_advisor_v0alpha1_CheckReportFailure(ref common.ReferenceCal
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckErrorLink"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckErrorLink"),
 									},
 								},
 							},
@@ -255,7 +255,7 @@ func schema_pkg_apis_advisor_v0alpha1_CheckReportFailure(ref common.ReferenceCal
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckErrorLink"},
+			"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckErrorLink"},
 	}
 }
 
@@ -296,7 +296,7 @@ func schema_pkg_apis_advisor_v0alpha1_CheckStatus(ref common.ReferenceCallback) 
 					"report": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckReport"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckReport"),
 						},
 					},
 					"operatorStates": {
@@ -308,7 +308,7 @@ func schema_pkg_apis_advisor_v0alpha1_CheckStatus(ref common.ReferenceCallback) 
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckstatusOperatorState"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckstatusOperatorState"),
 									},
 								},
 							},
@@ -334,7 +334,7 @@ func schema_pkg_apis_advisor_v0alpha1_CheckStatus(ref common.ReferenceCallback) 
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckReport", "github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckstatusOperatorState"},
+			"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckReport", "github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckstatusOperatorState"},
 	}
 }
 
@@ -368,13 +368,13 @@ func schema_pkg_apis_advisor_v0alpha1_CheckType(ref common.ReferenceCallback) co
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec is the spec of the CheckType",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeSpec"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeStatus"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeStatus"),
 						},
 					},
 				},
@@ -382,7 +382,7 @@ func schema_pkg_apis_advisor_v0alpha1_CheckType(ref common.ReferenceCallback) co
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeSpec", "github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeSpec", "github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -419,7 +419,7 @@ func schema_pkg_apis_advisor_v0alpha1_CheckTypeList(ref common.ReferenceCallback
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckType"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckType"),
 									},
 								},
 							},
@@ -430,7 +430,7 @@ func schema_pkg_apis_advisor_v0alpha1_CheckTypeList(ref common.ReferenceCallback
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckType", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckType", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -454,7 +454,7 @@ func schema_pkg_apis_advisor_v0alpha1_CheckTypeSpec(ref common.ReferenceCallback
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeStep"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeStep"),
 									},
 								},
 							},
@@ -465,7 +465,7 @@ func schema_pkg_apis_advisor_v0alpha1_CheckTypeSpec(ref common.ReferenceCallback
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeStep"},
+			"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypeStep"},
 	}
 }
 
@@ -484,7 +484,7 @@ func schema_pkg_apis_advisor_v0alpha1_CheckTypeStatus(ref common.ReferenceCallba
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypestatusOperatorState"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypestatusOperatorState"),
 									},
 								},
 							},
@@ -509,7 +509,7 @@ func schema_pkg_apis_advisor_v0alpha1_CheckTypeStatus(ref common.ReferenceCallba
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypestatusOperatorState"},
+			"github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1.CheckTypestatusOperatorState"},
 	}
 }
 

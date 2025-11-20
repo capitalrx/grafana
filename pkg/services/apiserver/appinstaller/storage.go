@@ -8,11 +8,11 @@ import (
 	k8srequest "k8s.io/apiserver/pkg/endpoints/request"
 	"k8s.io/klog/v2"
 
-	grafanarest "github.com/grafana/grafana/pkg/apiserver/rest"
-	"github.com/grafana/grafana/pkg/services/apiserver/builder"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	"github.com/grafana/grafana/pkg/services/apiserver/options"
-	"github.com/grafana/grafana/pkg/storage/legacysql/dualwrite"
+	grafanarest "github.com/capitalrx/grafana/pkg/apiserver/rest"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/builder"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/options"
+	"github.com/capitalrx/grafana/pkg/storage/legacysql/dualwrite"
 )
 
 // NewDualWriter creates a dual writer for the given group resource using the provided configuration

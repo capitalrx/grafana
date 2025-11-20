@@ -3,7 +3,7 @@ package backend
 import (
 	"strings"
 
-	"github.com/grafana/grafana/pkg/build/daggerbuild/containers"
+	"github.com/capitalrx/grafana/pkg/build/daggerbuild/containers"
 )
 
 type (

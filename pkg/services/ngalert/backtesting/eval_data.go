@@ -7,9 +7,9 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 
-	"github.com/grafana/grafana/pkg/expr"
-	"github.com/grafana/grafana/pkg/expr/mathexp"
-	"github.com/grafana/grafana/pkg/services/ngalert/eval"
+	"github.com/capitalrx/grafana/pkg/expr"
+	"github.com/capitalrx/grafana/pkg/expr/mathexp"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/eval"
 )
 
 // DataEvaluator is evaluator that evaluates data

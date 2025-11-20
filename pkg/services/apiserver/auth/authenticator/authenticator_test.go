@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/services/user"
 	"github.com/stretchr/testify/require"
 	"k8s.io/apiserver/pkg/authentication/authenticator"
 )

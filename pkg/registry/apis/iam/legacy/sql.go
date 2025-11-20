@@ -9,7 +9,7 @@ import (
 	"time"
 
 	claims "github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/pkg/storage/legacysql"
+	"github.com/capitalrx/grafana/pkg/storage/legacysql"
 )
 
 // In every case, RBAC should be applied before calling, or before returning results to the requester

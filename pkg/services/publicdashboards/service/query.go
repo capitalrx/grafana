@@ -7,15 +7,15 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/gtime"
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/expr"
-	"github.com/grafana/grafana/pkg/services/annotations"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/publicdashboards/models"
-	"github.com/grafana/grafana/pkg/services/publicdashboards/validation"
-	"github.com/grafana/grafana/pkg/tsdb/grafanads"
+	"github.com/capitalrx/grafana/pkg/api/dtos"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/expr"
+	"github.com/capitalrx/grafana/pkg/services/annotations"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/publicdashboards/models"
+	"github.com/capitalrx/grafana/pkg/services/publicdashboards/validation"
+	"github.com/capitalrx/grafana/pkg/tsdb/grafanads"
 )
 
 // FindAnnotations returns annotations for a public dashboard

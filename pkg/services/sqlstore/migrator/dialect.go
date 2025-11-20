@@ -8,8 +8,8 @@ import (
 
 	"golang.org/x/exp/slices"
 
-	"github.com/grafana/grafana/pkg/services/sqlstore/session"
-	"github.com/grafana/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/session"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 )
 
 var (

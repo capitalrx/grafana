@@ -9,10 +9,10 @@ import (
 
 	"github.com/fatih/color"
 
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/logger"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/utils"
-	"github.com/grafana/grafana/pkg/server"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/logger"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/utils"
+	"github.com/capitalrx/grafana/pkg/server"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 const DefaultAdminUserId = 1

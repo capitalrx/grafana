@@ -1,6 +1,6 @@
 package encryption
 
-import "github.com/grafana/grafana/pkg/storage/secret/migrator"
+import "github.com/capitalrx/grafana/pkg/storage/secret/migrator"
 
 type EncryptedValue struct {
 	Namespace     string

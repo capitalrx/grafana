@@ -6,11 +6,11 @@ import (
 	"strings"
 
 	"github.com/grafana/grafana-app-sdk/logging"
-	advisor "github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1"
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checks"
-	"github.com/grafana/grafana/pkg/services/login"
-	"github.com/grafana/grafana/pkg/services/ssosettings/models"
-	"github.com/grafana/grafana/pkg/util"
+	advisor "github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checks"
+	"github.com/capitalrx/grafana/pkg/services/login"
+	"github.com/capitalrx/grafana/pkg/services/ssosettings/models"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 const ListFormatValidationStepID = "sso-list-format-validation"

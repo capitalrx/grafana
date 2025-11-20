@@ -10,14 +10,14 @@ import (
 	"github.com/stretchr/testify/assert"
 
 	claims "github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/pkg/components/apikeygen"
-	"github.com/grafana/grafana/pkg/components/satokengen"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/services/apikey"
-	"github.com/grafana/grafana/pkg/services/apikey/apikeytest"
-	"github.com/grafana/grafana/pkg/services/authn"
-	"github.com/grafana/grafana/pkg/services/login"
-	"github.com/grafana/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/components/apikeygen"
+	"github.com/capitalrx/grafana/pkg/components/satokengen"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/services/apikey"
+	"github.com/capitalrx/grafana/pkg/services/apikey/apikeytest"
+	"github.com/capitalrx/grafana/pkg/services/authn"
+	"github.com/capitalrx/grafana/pkg/services/login"
+	"github.com/capitalrx/grafana/pkg/services/org"
 )
 
 var (

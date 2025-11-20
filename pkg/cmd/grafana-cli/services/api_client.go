@@ -10,8 +10,8 @@ import (
 	"path"
 	"runtime"
 
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/logger"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/models"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/logger"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/models"
 )
 
 func GetPluginInfoFromRepo(pluginId, repoUrl string) (models.Plugin, error) {

@@ -12,12 +12,12 @@ import (
 	"k8s.io/kube-openapi/pkg/validation/spec"
 
 	authlib "github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/pkg/api/dtos"
-	iam "github.com/grafana/grafana/pkg/apis/iam/v0alpha1"
-	"github.com/grafana/grafana/pkg/registry/apis/iam/legacy"
-	"github.com/grafana/grafana/pkg/services/apiserver/builder"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util/errhttp"
+	"github.com/capitalrx/grafana/pkg/api/dtos"
+	iam "github.com/capitalrx/grafana/pkg/apis/iam/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/registry/apis/iam/legacy"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/builder"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/util/errhttp"
 )
 
 type LegacyDisplayREST struct {

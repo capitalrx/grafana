@@ -10,16 +10,16 @@ import (
 
 	claims "github.com/grafana/authlib/types"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	acmock "github.com/grafana/grafana/pkg/services/accesscontrol/mock"
-	permreg "github.com/grafana/grafana/pkg/services/accesscontrol/permreg/test"
-	"github.com/grafana/grafana/pkg/services/authn"
-	rbac "github.com/grafana/grafana/pkg/services/authz/rbac"
-	"github.com/grafana/grafana/pkg/services/login"
-	"github.com/grafana/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	acmock "github.com/capitalrx/grafana/pkg/services/accesscontrol/mock"
+	permreg "github.com/capitalrx/grafana/pkg/services/accesscontrol/permreg/test"
+	"github.com/capitalrx/grafana/pkg/services/authn"
+	rbac "github.com/capitalrx/grafana/pkg/services/authz/rbac"
+	"github.com/capitalrx/grafana/pkg/services/login"
+	"github.com/capitalrx/grafana/pkg/services/org"
 )
 
 func TestRBACSync_SyncPermission(t *testing.T) {

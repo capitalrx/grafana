@@ -3,9 +3,9 @@ package store
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/infra/filestorage"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/infra/filestorage"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 type createPathFilterByAction func(ctx context.Context, user *user.SignedInUser, storageName string) map[string]filestorage.PathFilter

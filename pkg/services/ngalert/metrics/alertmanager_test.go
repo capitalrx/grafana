@@ -3,7 +3,7 @@ package metrics
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/log"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/stretchr/testify/require"
 )

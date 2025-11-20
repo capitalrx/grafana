@@ -9,7 +9,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/klog/v2"
 
-	investigationsv0alpha1 "github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1"
+	investigationsv0alpha1 "github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1"
 )
 
 func New(cfg app.Config) (app.App, error) {

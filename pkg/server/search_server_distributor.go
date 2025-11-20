@@ -4,9 +4,9 @@ import (
 	"context"
 
 	"github.com/grafana/dskit/services"
-	"github.com/grafana/grafana/pkg/modules"
-	"github.com/grafana/grafana/pkg/services/grpcserver"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/modules"
+	"github.com/capitalrx/grafana/pkg/services/grpcserver"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
 	"go.opentelemetry.io/otel"
 )
 

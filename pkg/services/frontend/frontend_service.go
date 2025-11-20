@@ -12,18 +12,18 @@ import (
 	"go.opentelemetry.io/otel/trace"
 
 	"github.com/grafana/dskit/services"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/middleware"
-	"github.com/grafana/grafana/pkg/middleware/loggermw"
-	"github.com/grafana/grafana/pkg/middleware/requestmeta"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	fswebassets "github.com/grafana/grafana/pkg/services/frontend/webassets"
-	"github.com/grafana/grafana/pkg/services/licensing"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/middleware"
+	"github.com/capitalrx/grafana/pkg/middleware/loggermw"
+	"github.com/capitalrx/grafana/pkg/middleware/requestmeta"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	fswebassets "github.com/capitalrx/grafana/pkg/services/frontend/webassets"
+	"github.com/capitalrx/grafana/pkg/services/licensing"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
-var tracer = otel.Tracer("github.com/grafana/grafana/pkg/services/frontend")
+var tracer = otel.Tracer("github.com/capitalrx/grafana/pkg/services/frontend")
 
 type frontendService struct {
 	*services.BasicService

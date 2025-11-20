@@ -5,11 +5,11 @@ import (
 	"errors"
 	"time"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/config"
-	"github.com/grafana/grafana/pkg/plugins/log"
-	"github.com/grafana/grafana/pkg/plugins/manager/loader/angular/angularinspector"
-	"github.com/grafana/grafana/pkg/plugins/manager/signature"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/config"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/loader/angular/angularinspector"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/signature"
 )
 
 // DefaultValidateFuncs are the default ValidateFunc used for the Validate step of the Validation stage.

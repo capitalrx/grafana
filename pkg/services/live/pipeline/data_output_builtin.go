@@ -6,8 +6,8 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 
-	"github.com/grafana/grafana/pkg/services/live/livecontext"
-	"github.com/grafana/grafana/pkg/services/live/model"
+	"github.com/capitalrx/grafana/pkg/services/live/livecontext"
+	"github.com/capitalrx/grafana/pkg/services/live/model"
 )
 
 type BuiltinDataOutput struct {

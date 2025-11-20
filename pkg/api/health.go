@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/db"
 )
 
 func (hs *HTTPServer) databaseHealthy(ctx context.Context) bool {

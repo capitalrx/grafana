@@ -7,9 +7,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/datasources"
-	"github.com/grafana/grafana/pkg/tsdb/mssql"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/pkg/tsdb/mssql"
 )
 
 var logger = log.New("datasource")

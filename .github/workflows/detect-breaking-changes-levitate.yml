@@ -280,7 +280,7 @@ jobs:
 
             ${{ steps.levitate-markdown.outputs.levitate_markdown }}
 
-            [Read our guideline](https://github.com/grafana/grafana/blob/main/contribute/breaking-changes-guide/breaking-changes-guide.md)
+            [Read our guideline](https://github.com/capitalrx/grafana/blob/main/contribute/breaking-changes-guide/breaking-changes-guide.md)
 
             * Your pull request merge won't be blocked.
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}

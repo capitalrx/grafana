@@ -15,10 +15,10 @@ import (
 
 	alertingModels "github.com/grafana/alerting/models"
 
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	apimodels "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	"github.com/grafana/grafana/pkg/services/ngalert/eval"
-	ngModels "github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	apimodels "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/eval"
+	ngModels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 const (

@@ -14,14 +14,14 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/services/login"
-	"github.com/grafana/grafana/pkg/services/login/authinfoimpl"
-	"github.com/grafana/grafana/pkg/services/secrets/database"
-	secretsManager "github.com/grafana/grafana/pkg/services/secrets/manager"
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/tests/testinfra"
-	"github.com/grafana/grafana/pkg/tests/testsuite"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/services/login"
+	"github.com/capitalrx/grafana/pkg/services/login/authinfoimpl"
+	"github.com/capitalrx/grafana/pkg/services/secrets/database"
+	secretsManager "github.com/capitalrx/grafana/pkg/services/secrets/manager"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/tests/testinfra"
+	"github.com/capitalrx/grafana/pkg/tests/testsuite"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 func TestMain(m *testing.M) {

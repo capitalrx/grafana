@@ -3,8 +3,8 @@ package dashboardimport
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
 )
 
 // ImportDashboardInput definition of input parameters when importing a dashboard.

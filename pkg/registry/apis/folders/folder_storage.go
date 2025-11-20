@@ -11,16 +11,16 @@ import (
 
 	claims "github.com/grafana/authlib/types"
 
-	folders "github.com/grafana/grafana/apps/folder/pkg/apis/folder/v1beta1"
-	"github.com/grafana/grafana/pkg/api/apierrors"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	grafanarest "github.com/grafana/grafana/pkg/apiserver/rest"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	"github.com/grafana/grafana/pkg/services/dashboards/dashboardaccess"
-	"github.com/grafana/grafana/pkg/services/org"
+	folders "github.com/capitalrx/grafana/apps/folder/pkg/apis/folder/v1beta1"
+	"github.com/capitalrx/grafana/pkg/api/apierrors"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	grafanarest "github.com/capitalrx/grafana/pkg/apiserver/rest"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	"github.com/capitalrx/grafana/pkg/services/dashboards/dashboardaccess"
+	"github.com/capitalrx/grafana/pkg/services/org"
 )
 
 var (

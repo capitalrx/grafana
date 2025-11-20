@@ -17,7 +17,7 @@
 
 package bar
 
-import "github.com/grafana/grafana/pkg/build/wire"
+import "github.com/capitalrx/grafana/pkg/build/wire"
 
 // Set provides a friendly user greeting.
 var Set = wire.NewSet(wire.Value("Hello, World!"))

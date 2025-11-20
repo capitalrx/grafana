@@ -1,18 +1,18 @@
 package apiregistry
 
 import (
-	dashboardinternal "github.com/grafana/grafana/pkg/registry/apis/dashboard"
-	"github.com/grafana/grafana/pkg/registry/apis/dashboardsnapshot"
-	"github.com/grafana/grafana/pkg/registry/apis/datasource"
-	"github.com/grafana/grafana/pkg/registry/apis/featuretoggle"
-	"github.com/grafana/grafana/pkg/registry/apis/folders"
-	"github.com/grafana/grafana/pkg/registry/apis/iam"
-	"github.com/grafana/grafana/pkg/registry/apis/ofrep"
-	"github.com/grafana/grafana/pkg/registry/apis/preferences"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning"
-	"github.com/grafana/grafana/pkg/registry/apis/query"
-	"github.com/grafana/grafana/pkg/registry/apis/secret"
-	"github.com/grafana/grafana/pkg/registry/apis/userstorage"
+	dashboardinternal "github.com/capitalrx/grafana/pkg/registry/apis/dashboard"
+	"github.com/capitalrx/grafana/pkg/registry/apis/dashboardsnapshot"
+	"github.com/capitalrx/grafana/pkg/registry/apis/datasource"
+	"github.com/capitalrx/grafana/pkg/registry/apis/featuretoggle"
+	"github.com/capitalrx/grafana/pkg/registry/apis/folders"
+	"github.com/capitalrx/grafana/pkg/registry/apis/iam"
+	"github.com/capitalrx/grafana/pkg/registry/apis/ofrep"
+	"github.com/capitalrx/grafana/pkg/registry/apis/preferences"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning"
+	"github.com/capitalrx/grafana/pkg/registry/apis/query"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret"
+	"github.com/capitalrx/grafana/pkg/registry/apis/userstorage"
 )
 
 type Service struct{}

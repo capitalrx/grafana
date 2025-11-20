@@ -5,9 +5,9 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	ac "github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginaccesscontrol"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	ac "github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginaccesscontrol"
 )
 
 var (

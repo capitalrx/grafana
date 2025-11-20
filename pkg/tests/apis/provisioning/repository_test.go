@@ -17,12 +17,12 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"
 
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/extensions"
-	"github.com/grafana/grafana/pkg/infra/usagestats"
-	"github.com/grafana/grafana/pkg/tests/apis"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/extensions"
+	"github.com/capitalrx/grafana/pkg/infra/usagestats"
+	"github.com/capitalrx/grafana/pkg/tests/apis"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 func TestIntegrationProvisioning_CreatingAndGetting(t *testing.T) {

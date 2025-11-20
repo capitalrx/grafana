@@ -8,9 +8,9 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 	jsoniter "github.com/json-iterator/go"
 
-	"github.com/grafana/grafana/pkg/tsdb/influxdb/influxql/converter"
-	"github.com/grafana/grafana/pkg/tsdb/influxdb/influxql/util"
-	"github.com/grafana/grafana/pkg/tsdb/influxdb/models"
+	"github.com/capitalrx/grafana/pkg/tsdb/influxdb/influxql/converter"
+	"github.com/capitalrx/grafana/pkg/tsdb/influxdb/influxql/util"
+	"github.com/capitalrx/grafana/pkg/tsdb/influxdb/models"
 )
 
 func ResponseParse(buf io.ReadCloser, statusCode int, query *models.Query) *backend.DataResponse {

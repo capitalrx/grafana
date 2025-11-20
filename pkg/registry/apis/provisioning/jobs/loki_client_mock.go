@@ -5,7 +5,7 @@ package jobs
 import (
 	context "context"
 
-	loki "github.com/grafana/grafana/apps/provisioning/pkg/loki"
+	loki "github.com/capitalrx/grafana/apps/provisioning/pkg/loki"
 	mock "github.com/stretchr/testify/mock"
 )
 

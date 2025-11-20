@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/grafana/grafana/pkg/apimachinery/errutil"
+	"github.com/capitalrx/grafana/pkg/apimachinery/errutil"
 )
 
 var ErrBadRequest = errutil.BadRequest("quota.bad-request")

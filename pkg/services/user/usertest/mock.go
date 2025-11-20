@@ -5,7 +5,7 @@ package usertest
 import (
 	context "context"
 
-	user "github.com/grafana/grafana/pkg/services/user"
+	user "github.com/capitalrx/grafana/pkg/services/user"
 	mock "github.com/stretchr/testify/mock"
 )
 

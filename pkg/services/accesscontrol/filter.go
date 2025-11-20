@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 )
 
 var sqlIDAcceptList = map[string]struct{}{

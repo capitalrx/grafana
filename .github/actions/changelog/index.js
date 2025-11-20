@@ -248,7 +248,7 @@ const changelog = [...oss, ...entr]
   );
 
 // Convert PR numbers to Github links
-const pullRequestLink = (n) => `[#${n}](https://github.com/grafana/grafana/pull/${n})`;
+const pullRequestLink = (n) => `[#${n}](https://github.com/capitalrx/grafana/pull/${n})`;
 // Convert Github user IDs to Github links
 const userLink = (u) => `[@${u}](https://github.com/${u})`;
 

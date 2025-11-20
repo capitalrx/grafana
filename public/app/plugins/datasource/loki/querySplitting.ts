@@ -357,7 +357,7 @@ export function runSplitQuery(
 }
 
 // Replicate from backend for split queries for now, until we can move query splitting to the backend
-// https://github.com/grafana/grafana/blob/main/pkg/tsdb/loki/step.go#L23
+// https://github.com/capitalrx/grafana/blob/main/pkg/tsdb/loki/step.go#L23
 function calculateStep(intervalMs: number, range: TimeRange, resolution: number, step: string | undefined) {
   // If we can parse step,the we use it
   // Otherwise we will calculate step based on interval

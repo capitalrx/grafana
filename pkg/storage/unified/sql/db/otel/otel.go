@@ -10,7 +10,7 @@ import (
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/grafana/grafana/pkg/storage/unified/sql/db"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/db"
 )
 
 const (

@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/grafana/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/services/org"
 	"golang.org/x/oauth2"
 )
 

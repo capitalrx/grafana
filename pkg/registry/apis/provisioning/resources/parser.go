@@ -15,14 +15,14 @@ import (
 	"k8s.io/client-go/dynamic"
 
 	"github.com/grafana/grafana-app-sdk/logging"
-	dashboard "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1"
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
-	"github.com/grafana/grafana/apps/provisioning/pkg/repository"
-	"github.com/grafana/grafana/apps/provisioning/pkg/safepath"
-	"github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/util"
+	dashboard "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/repository"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/safepath"
+	"github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 // ParserFactory is a factory for creating parsers for a given repository

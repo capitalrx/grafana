@@ -7,11 +7,11 @@ import (
 	openfgastorage "github.com/openfga/openfga/pkg/storage"
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/services/authz/zanzana/server"
-	"github.com/grafana/grafana/pkg/services/grpcserver"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/services/authz/zanzana/server"
+	"github.com/capitalrx/grafana/pkg/services/grpcserver"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func NewServer(cfg setting.ZanzanaServerSettings, openfga server.OpenFGAServer, logger log.Logger, tracer tracing.Tracer, reg prometheus.Registerer) (*server.Server, error) {

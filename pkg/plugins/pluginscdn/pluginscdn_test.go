@@ -3,7 +3,7 @@ package pluginscdn
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/plugins/config"
+	"github.com/capitalrx/grafana/pkg/plugins/config"
 	"github.com/stretchr/testify/require"
 )
 

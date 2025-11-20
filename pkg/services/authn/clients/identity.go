@@ -3,7 +3,7 @@ package clients
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/authn"
+	"github.com/capitalrx/grafana/pkg/services/authn"
 )
 
 var _ authn.Client = (*IdentityClient)(nil)

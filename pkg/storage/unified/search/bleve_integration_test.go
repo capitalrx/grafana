@@ -6,10 +6,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
-	unitest "github.com/grafana/grafana/pkg/storage/unified/testing"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
+	unitest "github.com/capitalrx/grafana/pkg/storage/unified/testing"
 )
 
 func TestBleveSearchBackend(t *testing.T) {

@@ -52,9 +52,9 @@ The bot-assigned milestone should always reflect the branch into which the pull 
 
 ### What to include in changelog and release notes
 
-At Grafana we generate the [changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md) and [release notes](https://grafana.com/docs/grafana/latest/release-notes/) based on merged pull requests. Including changes in the changelog (release notes) is very important to provide a relatively complete picture of what changes a Grafana release actually includes.
+At Grafana we generate the [changelog](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md) and [release notes](https://grafana.com/docs/grafana/latest/release-notes/) based on merged pull requests. Including changes in the changelog (release notes) is very important to provide a relatively complete picture of what changes a Grafana release actually includes.
 
-There's a GitHub action available in the repository named [Update changelog](https://github.com/grafana/grafana/blob/main/.github/workflows/update-changelog.yml) that can be triggered manually to re-generate the changelog and release notes for any release.
+There's a GitHub action available in the repository named [Update changelog](https://github.com/capitalrx/grafana/blob/main/.github/workflows/update-changelog.yml) that can be triggered manually to re-generate the changelog and release notes for any release.
 
 Exactly what changes should be added to the changelog is hard to answer but here's some general guidance:
 

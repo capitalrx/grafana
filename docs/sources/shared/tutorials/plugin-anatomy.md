@@ -26,8 +26,8 @@ To see all the available configuration settings for the `plugin.json`, refer to 
 
 After discovering your plugin, Grafana loads the `module.ts` file, the entrypoint for your plugin. `module.ts` exposes the implementation of your plugin, which depends on the type of plugin you're building.
 
-Specifically, `module.ts` needs to expose an object that extends [GrafanaPlugin](https://github.com/grafana/grafana/blob/08bf2a54523526a7f59f7c6a8dafaace79ab87db/packages/grafana-data/src/types/plugin.ts#L124), and can be any of the following:
+Specifically, `module.ts` needs to expose an object that extends [GrafanaPlugin](https://github.com/capitalrx/grafana/blob/08bf2a54523526a7f59f7c6a8dafaace79ab87db/packages/grafana-data/src/types/plugin.ts#L124), and can be any of the following:
 
-- [PanelPlugin](https://github.com/grafana/grafana/blob/08bf2a54523526a7f59f7c6a8dafaace79ab87db/packages/grafana-data/src/types/panel.ts#L73)
-- [DataSourcePlugin](https://github.com/grafana/grafana/blob/08bf2a54523526a7f59f7c6a8dafaace79ab87db/packages/grafana-data/src/types/datasource.ts#L33)
-- [AppPlugin](https://github.com/grafana/grafana/blob/45b7de1910819ad0faa7a8aeac2481e675870ad9/packages/grafana-data/src/types/app.ts#L27)
+- [PanelPlugin](https://github.com/capitalrx/grafana/blob/08bf2a54523526a7f59f7c6a8dafaace79ab87db/packages/grafana-data/src/types/panel.ts#L73)
+- [DataSourcePlugin](https://github.com/capitalrx/grafana/blob/08bf2a54523526a7f59f7c6a8dafaace79ab87db/packages/grafana-data/src/types/datasource.ts#L33)
+- [AppPlugin](https://github.com/capitalrx/grafana/blob/45b7de1910819ad0faa7a8aeac2481e675870ad9/packages/grafana-data/src/types/app.ts#L27)

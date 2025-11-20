@@ -5,7 +5,7 @@ package migrate
 import (
 	context "context"
 
-	jobs "github.com/grafana/grafana/pkg/registry/apis/provisioning/jobs"
+	jobs "github.com/capitalrx/grafana/pkg/registry/apis/provisioning/jobs"
 	mock "github.com/stretchr/testify/mock"
 )
 

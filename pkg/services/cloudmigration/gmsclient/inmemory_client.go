@@ -10,7 +10,7 @@ import (
 	"github.com/google/uuid"
 	"golang.org/x/crypto/nacl/box"
 
-	"github.com/grafana/grafana/pkg/services/cloudmigration"
+	"github.com/capitalrx/grafana/pkg/services/cloudmigration"
 )
 
 // NewInMemoryClient returns an implementation of Client that returns canned responses

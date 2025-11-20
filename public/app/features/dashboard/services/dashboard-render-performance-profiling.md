@@ -315,8 +315,8 @@ Without profile isolation, these scenarios could result in profiles that never c
 ## Related Documentation
 
 - [PR #858 - Add SceneRenderProfiler to scenes](https://github.com/grafana/scenes/pull/858)
-- [PR #99629 - Dashboard render performance metrics](https://github.com/grafana/grafana/pull/99629)
-- [PR #108658 - Dashboard: Tweak interaction tracking](https://github.com/grafana/grafana/pull/108658)
+- [PR #99629 - Dashboard render performance metrics](https://github.com/capitalrx/grafana/pull/99629)
+- [PR #108658 - Dashboard: Tweak interaction tracking](https://github.com/capitalrx/grafana/pull/108658)
 - [PR #1195 - Enhance SceneRenderProfiler with additional interaction tracking](https://github.com/grafana/scenes/pull/1195)
 - [PR #1198 - Make SceneRenderProfiler optional and injectable](https://github.com/grafana/scenes/pull/1198)
 - [PR #1199 - SceneRenderProfiler: add start and end timestamps to profile events](https://github.com/grafana/scenes/pull/1199)

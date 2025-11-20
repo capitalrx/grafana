@@ -3,7 +3,7 @@ package log
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/log"
 )
 
 func New(name string) Logger {

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/grafana/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins"
 )
 
 // InMemory is a registry that only allows a single version of a plugin to be registered at a time.

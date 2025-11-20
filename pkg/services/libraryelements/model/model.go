@@ -5,7 +5,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/grafana/grafana/pkg/kinds/librarypanel"
+	"github.com/capitalrx/grafana/pkg/kinds/librarypanel"
 )
 
 type LibraryConnectionKind int

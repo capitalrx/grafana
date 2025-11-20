@@ -3,7 +3,7 @@ package folder
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/search/model"
+	"github.com/capitalrx/grafana/pkg/services/search/model"
 )
 
 type LegacyService interface {

@@ -11,15 +11,15 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/tsdb/influxdb/influxql/buffered"
-	"github.com/grafana/grafana/pkg/tsdb/influxdb/influxql/querydata"
-	"github.com/grafana/grafana/pkg/tsdb/influxdb/models"
+	"github.com/capitalrx/grafana/pkg/tsdb/influxdb/influxql/buffered"
+	"github.com/capitalrx/grafana/pkg/tsdb/influxdb/influxql/querydata"
+	"github.com/capitalrx/grafana/pkg/tsdb/influxdb/models"
 )
 
-// TEST_MODE=buffered RES_FORMAT=time_series go test -benchmem -run=^$ -memprofile buffered_mem.out -count=10 -bench ^BenchmarkParseJson github.com/grafana/grafana/pkg/tsdb/influxdb/influxql | tee buffered.txt
-// TEST_MODE=stream RES_FORMAT=time_series go test -benchmem -run=^$ -memprofile stream_mem.out -count=10 -bench ^BenchmarkParseJson github.com/grafana/grafana/pkg/tsdb/influxdb/influxql | tee stream.txt
-// TEST_MODE=buffered RES_FORMAT=table go test -benchmem -run=^$ -memprofile buffered_table_mem.out -cpuprofile buffered_table_cpu.out -count=10 -bench ^BenchmarkParseJson github.com/grafana/grafana/pkg/tsdb/influxdb/influxql | tee buffered_table.txt
-// TEST_MODE=stream RES_FORMAT=table go test -benchmem -run=^$ -memprofile stream_table_mem.out -cpuprofile stream_table_cpu.out -count=10 -bench ^BenchmarkParseJson github.com/grafana/grafana/pkg/tsdb/influxdb/influxql | tee stream_table.txt
+// TEST_MODE=buffered RES_FORMAT=time_series go test -benchmem -run=^$ -memprofile buffered_mem.out -count=10 -bench ^BenchmarkParseJson github.com/capitalrx/grafana/pkg/tsdb/influxdb/influxql | tee buffered.txt
+// TEST_MODE=stream RES_FORMAT=time_series go test -benchmem -run=^$ -memprofile stream_mem.out -count=10 -bench ^BenchmarkParseJson github.com/capitalrx/grafana/pkg/tsdb/influxdb/influxql | tee stream.txt
+// TEST_MODE=buffered RES_FORMAT=table go test -benchmem -run=^$ -memprofile buffered_table_mem.out -cpuprofile buffered_table_cpu.out -count=10 -bench ^BenchmarkParseJson github.com/capitalrx/grafana/pkg/tsdb/influxdb/influxql | tee buffered_table.txt
+// TEST_MODE=stream RES_FORMAT=table go test -benchmem -run=^$ -memprofile stream_table_mem.out -cpuprofile stream_table_cpu.out -count=10 -bench ^BenchmarkParseJson github.com/capitalrx/grafana/pkg/tsdb/influxdb/influxql | tee stream_table.txt
 // go tool pprof -http=localhost:9999 memprofile.out
 // benchstat buffered.txt stream.txt
 // benchstat buffered_table.txt stream_table.txt

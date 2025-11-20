@@ -10,7 +10,7 @@ import (
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/credentials/insecure"
 
-	"github.com/grafana/grafana/pkg/components/loki/logproto"
+	"github.com/capitalrx/grafana/pkg/components/loki/logproto"
 )
 
 // Client is a gRPC-based Loki client implementation.

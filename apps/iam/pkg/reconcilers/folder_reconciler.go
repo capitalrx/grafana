@@ -7,8 +7,8 @@ import (
 
 	"github.com/grafana/grafana-app-sdk/logging"
 	"github.com/grafana/grafana-app-sdk/operator"
-	foldersKind "github.com/grafana/grafana/apps/folder/pkg/apis/folder/v1beta1"
-	"github.com/grafana/grafana/pkg/services/authz"
+	foldersKind "github.com/capitalrx/grafana/apps/folder/pkg/apis/folder/v1beta1"
+	"github.com/capitalrx/grafana/pkg/services/authz"
 	"k8s.io/client-go/rest"
 )
 

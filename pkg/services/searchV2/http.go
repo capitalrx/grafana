@@ -10,10 +10,10 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/grafana/grafana/pkg/api/response"
-	"github.com/grafana/grafana/pkg/api/routing"
-	"github.com/grafana/grafana/pkg/middleware"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	"github.com/capitalrx/grafana/pkg/api/routing"
+	"github.com/capitalrx/grafana/pkg/middleware"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
 )
 
 type SearchHTTPService interface {

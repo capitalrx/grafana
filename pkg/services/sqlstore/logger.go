@@ -3,9 +3,9 @@ package sqlstore
 import (
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/util/xorm/core"
+	"github.com/capitalrx/grafana/pkg/util/xorm/core"
 
-	glog "github.com/grafana/grafana/pkg/infra/log"
+	glog "github.com/capitalrx/grafana/pkg/infra/log"
 )
 
 type XormLogger struct {

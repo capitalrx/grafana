@@ -1,4 +1,4 @@
-module: "github.com/grafana/grafana/apps/iam/kinds"
+module: "github.com/capitalrx/grafana/apps/iam/kinds"
 language: {
 	version: "v0.9.0"
 }

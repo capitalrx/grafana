@@ -9,14 +9,14 @@ const (
 	ClassicDashboard ClassicFileType = "dashboard"
 
 	// Datasource definitions
-	// eg: https://github.com/grafana/grafana/blob/v11.3.1/conf/provisioning/datasources/sample.yaml
+	// eg: https://github.com/capitalrx/grafana/blob/v11.3.1/conf/provisioning/datasources/sample.yaml
 	ClassicDatasources ClassicFileType = "datasources"
 
 	// Alert configuration
-	// https://github.com/grafana/grafana/blob/v11.3.1/conf/provisioning/alerting/sample.yaml
+	// https://github.com/capitalrx/grafana/blob/v11.3.1/conf/provisioning/alerting/sample.yaml
 	ClassicAlerting ClassicFileType = "alerting"
 
 	// Access control
-	// https://github.com/grafana/grafana/blob/v11.3.1/conf/provisioning/access-control/sample.yaml
+	// https://github.com/capitalrx/grafana/blob/v11.3.1/conf/provisioning/access-control/sample.yaml
 	ClassicAccessControl ClassicFileType = "access-control"
 )

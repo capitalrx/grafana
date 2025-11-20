@@ -3,7 +3,7 @@ package tagimpl
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/tag"
+	"github.com/capitalrx/grafana/pkg/services/tag"
 )
 
 type store interface {

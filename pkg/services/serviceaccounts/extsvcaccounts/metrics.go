@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/serviceaccounts"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/serviceaccounts"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

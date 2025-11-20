@@ -8,8 +8,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	ac "github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/folder/foldertest"
+	ac "github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/folder/foldertest"
 )
 
 func noOpLookup(ctx context.Context, orgID int64, id int64) (string, error) {

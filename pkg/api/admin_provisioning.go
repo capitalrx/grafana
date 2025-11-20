@@ -5,8 +5,8 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/grafana/grafana/pkg/api/response"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
 )
 
 // swagger:route POST /admin/provisioning/dashboards/reload admin_provisioning adminProvisioningReloadDashboards

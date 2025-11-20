@@ -8,13 +8,13 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	data "github.com/grafana/grafana-plugin-sdk-go/experimental/apis/data/v0alpha1"
-	grafanasemconv "github.com/grafana/grafana/pkg/semconv"
+	grafanasemconv "github.com/capitalrx/grafana/pkg/semconv"
 	semconv "go.opentelemetry.io/otel/semconv/v1.21.0"
 	"k8s.io/component-base/tracing"
 	"k8s.io/klog/v2"
 
-	aggregationv0alpha1 "github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
-	"github.com/grafana/grafana/pkg/aggregator/apiserver/util"
+	aggregationv0alpha1 "github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/aggregator/apiserver/util"
 )
 
 func (h *PluginHandler) QueryDataHandler() http.HandlerFunc {

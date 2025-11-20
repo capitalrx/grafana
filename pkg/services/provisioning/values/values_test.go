@@ -11,7 +11,7 @@ import (
 	"gopkg.in/ini.v1"
 	"gopkg.in/yaml.v3"
 
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func TestValues(t *testing.T) {

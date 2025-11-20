@@ -7,14 +7,14 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/apis/datasource/v0alpha1"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	gapiutil "github.com/grafana/grafana/pkg/services/apiserver/utils"
-	"github.com/grafana/grafana/pkg/services/datasources"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/plugincontext"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/apis/datasource/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	gapiutil "github.com/capitalrx/grafana/pkg/services/apiserver/utils"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/plugincontext"
 )
 
 // This provides access to settings saved in the database.

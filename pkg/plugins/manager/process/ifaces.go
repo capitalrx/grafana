@@ -3,7 +3,7 @@ package process
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins"
 )
 
 type Manager interface {

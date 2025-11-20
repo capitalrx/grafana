@@ -12,7 +12,7 @@ import (
 	_ "gocloud.dev/blob/memblob"
 	"gocloud.dev/gcerrors"
 
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/log"
 )
 
 const (

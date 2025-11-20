@@ -12,11 +12,11 @@ import (
 
 	"github.com/grafana/authlib/authn"
 	authlib "github.com/grafana/authlib/types"
-	secretv1beta1 "github.com/grafana/grafana/apps/secret/pkg/apis/secret/v1beta1"
-	common "github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/xkube"
+	secretv1beta1 "github.com/capitalrx/grafana/apps/secret/pkg/apis/secret/v1beta1"
+	common "github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/xkube"
 )
 
 type LocalInlineSecureValueService struct {

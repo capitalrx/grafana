@@ -1,4 +1,4 @@
-// Core Grafana history https://github.com/grafana/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/configuration/AlertingSettingsOverhaul.tsx
+// Core Grafana history https://github.com/capitalrx/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/configuration/AlertingSettingsOverhaul.tsx
 import { cx } from '@emotion/css';
 
 import { DataSourceJsonData, DataSourcePluginOptionsEditorProps } from '@grafana/data';

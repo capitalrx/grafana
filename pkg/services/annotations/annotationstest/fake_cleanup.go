@@ -3,7 +3,7 @@ package annotationstest
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type fakeCleaner struct {

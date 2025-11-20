@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
 	diff "github.com/yudai/gojsondiff"
 	deltaFormatter "github.com/yudai/gojsondiff/formatter"
 )

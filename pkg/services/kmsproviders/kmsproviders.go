@@ -1,6 +1,6 @@
 package kmsproviders
 
-import "github.com/grafana/grafana/pkg/services/secrets"
+import "github.com/capitalrx/grafana/pkg/services/secrets"
 
 const (
 	// Legacy is used for historical reasons (keeping backwards).

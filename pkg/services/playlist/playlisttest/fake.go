@@ -3,7 +3,7 @@ package playlisttest
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/playlist"
+	"github.com/capitalrx/grafana/pkg/services/playlist"
 )
 
 type FakePlaylistService struct {

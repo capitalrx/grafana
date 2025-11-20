@@ -1617,10 +1617,10 @@ github.com/grafana/grafana-openapi-client-go v0.0.0-20231213163343-bd475d63fb79 
 github.com/grafana/grafana-openapi-client-go v0.0.0-20231213163343-bd475d63fb79/go.mod h1:wc6Hbh3K2TgCUSfBC/BOzabItujtHMESZeFk5ZhdxhQ=
 github.com/grafana/grafana-plugin-sdk-go v0.278.0 h1:5/rIYparLi02pofdaag8wnjspMMVNCi8cZhC4cdC3Ho=
 github.com/grafana/grafana-plugin-sdk-go v0.278.0/go.mod h1:+8NXT/XUJ/89GV6FxGQ366NZ3nU+cAXDMd0OUESF9H4=
-github.com/grafana/grafana/pkg/promlib v0.0.8 h1:VUWsqttdf0wMI4j9OX9oNrykguQpZcruudDAFpJJVw0=
-github.com/grafana/grafana/pkg/promlib v0.0.8/go.mod h1:U1ezG/MGaEPoThqsr3lymMPN5yIPdVTJnDZ+wcXT+ao=
-github.com/grafana/grafana/pkg/semconv v0.0.0-20250804150913-990f1c69ecc2 h1:A65jWgLk4Re28gIuZcpC0aTh71JZ0ey89hKGE9h543s=
-github.com/grafana/grafana/pkg/semconv v0.0.0-20250804150913-990f1c69ecc2/go.mod h1:2HRzUK/xQEYc+8d5If/XSusMcaYq9IptnBSHACiQcOQ=
+github.com/capitalrx/grafana/pkg/promlib v0.0.8 h1:VUWsqttdf0wMI4j9OX9oNrykguQpZcruudDAFpJJVw0=
+github.com/capitalrx/grafana/pkg/promlib v0.0.8/go.mod h1:U1ezG/MGaEPoThqsr3lymMPN5yIPdVTJnDZ+wcXT+ao=
+github.com/capitalrx/grafana/pkg/semconv v0.0.0-20250804150913-990f1c69ecc2 h1:A65jWgLk4Re28gIuZcpC0aTh71JZ0ey89hKGE9h543s=
+github.com/capitalrx/grafana/pkg/semconv v0.0.0-20250804150913-990f1c69ecc2/go.mod h1:2HRzUK/xQEYc+8d5If/XSusMcaYq9IptnBSHACiQcOQ=
 github.com/grafana/jsonparser v0.0.0-20240425183733-ea80629e1a32 h1:NznuPwItog+rwdVg8hAuGKP29ndRSzJAwhxKldkP8oQ=
 github.com/grafana/jsonparser v0.0.0-20240425183733-ea80629e1a32/go.mod h1:796sq+UcONnSlzA3RtlBZ+b/hrerkZXiEmO8oMjyRwY=
 github.com/grafana/loki/pkg/push v0.0.0-20231124142027-e52380921608 h1:ZYk42718kSXOiIKdjZKljWLgBpzL5z1yutKABksQCMg=

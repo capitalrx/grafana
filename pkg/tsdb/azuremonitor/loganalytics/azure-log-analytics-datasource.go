@@ -22,10 +22,10 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/kinds/dataquery"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/macros"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/types"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/utils"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/macros"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/types"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/utils"
 )
 
 // Returns tables with the `HasData` field set to true

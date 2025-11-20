@@ -3,8 +3,8 @@ package expr
 import (
 	"embed"
 
-	"github.com/grafana/grafana/pkg/expr/classic"
-	"github.com/grafana/grafana/pkg/expr/mathexp"
+	"github.com/capitalrx/grafana/pkg/expr/classic"
+	"github.com/capitalrx/grafana/pkg/expr/mathexp"
 )
 
 // Supported expression types

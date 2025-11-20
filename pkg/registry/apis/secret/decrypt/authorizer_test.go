@@ -9,8 +9,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.opentelemetry.io/otel/trace/noop"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/xkube"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/xkube"
 )
 
 func TestDecryptAuthorizer(t *testing.T) {

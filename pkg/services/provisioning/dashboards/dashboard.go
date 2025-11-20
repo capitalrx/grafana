@@ -6,13 +6,13 @@ import (
 	"os"
 	"time"
 
-	dashboard "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/folder"
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/services/provisioning/utils"
-	"github.com/grafana/grafana/pkg/storage/legacysql/dualwrite"
+	dashboard "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/folder"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/services/provisioning/utils"
+	"github.com/capitalrx/grafana/pkg/storage/legacysql/dualwrite"
 )
 
 // DashboardProvisioner is responsible for syncing dashboard from disk to

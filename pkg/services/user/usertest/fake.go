@@ -3,7 +3,7 @@ package usertest
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 type ListUsersByIdOrUidCall struct {

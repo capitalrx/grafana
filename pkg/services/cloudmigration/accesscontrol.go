@@ -1,6 +1,6 @@
 package cloudmigration
 
-import "github.com/grafana/grafana/pkg/services/accesscontrol"
+import "github.com/capitalrx/grafana/pkg/services/accesscontrol"
 
 const (
 	ActionMigrate = "migrationassistant:migrate"

@@ -7,12 +7,12 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginsettings"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginstore"
-	"github.com/grafana/grafana/pkg/services/supportbundles"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginsettings"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginstore"
+	"github.com/capitalrx/grafana/pkg/services/supportbundles"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func basicCollector(cfg *setting.Cfg) supportbundles.Collector {

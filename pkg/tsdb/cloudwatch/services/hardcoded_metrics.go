@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/grafana/grafana-aws-sdk/pkg/cloudWatchConsts"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models/resources"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models/resources"
 )
 
 var GetHardCodedDimensionKeysByNamespace = func(namespace string) ([]resources.ResourceResponse[string], error) {

@@ -5,7 +5,7 @@ import (
 
 	"github.com/urfave/cli/v2"
 
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/utils"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/utils"
 )
 
 // NewCliContext creates a new CLI context with a certain set of flags.

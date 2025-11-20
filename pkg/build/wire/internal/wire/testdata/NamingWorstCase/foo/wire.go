@@ -20,7 +20,7 @@ package main
 import (
 	stdcontext "context"
 
-	"github.com/grafana/grafana/pkg/build/wire"
+	"github.com/capitalrx/grafana/pkg/build/wire"
 )
 
 func inject(context stdcontext.Context, err struct{}) (context, error) {

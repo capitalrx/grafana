@@ -3,12 +3,12 @@ package db
 import (
 	"bytes"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/services/dashboards/dashboardaccess"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
-	"github.com/grafana/grafana/pkg/services/sqlstore/permissions"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/services/dashboards/dashboardaccess"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/permissions"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func NewSqlBuilder(cfg *setting.Cfg, features featuremgmt.FeatureToggles, dialect migrator.Dialect, recursiveQueriesAreSupported bool) SQLBuilder {

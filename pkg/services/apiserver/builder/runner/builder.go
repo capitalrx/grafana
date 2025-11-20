@@ -14,10 +14,10 @@ import (
 	"github.com/grafana/grafana-app-sdk/app"
 	"github.com/grafana/grafana-app-sdk/resource"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	grafanaregistry "github.com/grafana/grafana/pkg/apiserver/registry/generic"
-	grafanarest "github.com/grafana/grafana/pkg/apiserver/rest"
-	"github.com/grafana/grafana/pkg/services/apiserver/builder"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	grafanaregistry "github.com/capitalrx/grafana/pkg/apiserver/registry/generic"
+	grafanarest "github.com/capitalrx/grafana/pkg/apiserver/rest"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/builder"
 )
 
 var _ AppBuilder = (*appBuilder)(nil)

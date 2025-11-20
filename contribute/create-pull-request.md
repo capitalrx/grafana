@@ -119,7 +119,7 @@ For changes to panels, the area is the name of the panel, suffixed with Panel. F
 - `GraphPanel: Fix legend sorting issues`
 - `Docs: Change url to URL in all documentation files`
 
-If you're unsure, see the existing [changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md) for inspiration or guidance.
+If you're unsure, see the existing [changelog](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md) for inspiration or guidance.
 
 ### Pull request titles
 

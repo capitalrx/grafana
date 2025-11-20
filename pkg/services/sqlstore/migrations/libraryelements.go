@@ -1,8 +1,8 @@
 package migrations
 
 import (
-	"github.com/grafana/grafana/pkg/services/libraryelements/model"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/services/libraryelements/model"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 )
 
 // addLibraryElementsMigrations defines database migrations for library elements.

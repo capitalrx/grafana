@@ -203,7 +203,7 @@ function getTableCols(dfs: DataFrame[], table: TableModel, target: InfluxQuery):
     table.columns.push({ text: selectedParams[i] });
   }
 
-  // ISSUE: https://github.com/grafana/grafana/issues/63842
+  // ISSUE: https://github.com/capitalrx/grafana/issues/63842
   // if rawQuery and
   // has other selected fields in the query and
   // dfs field names are in the rawQuery but

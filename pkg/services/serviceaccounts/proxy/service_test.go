@@ -7,10 +7,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	sa "github.com/grafana/grafana/pkg/services/serviceaccounts"
-	"github.com/grafana/grafana/pkg/services/serviceaccounts/extsvcaccounts"
-	"github.com/grafana/grafana/pkg/services/serviceaccounts/tests"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	sa "github.com/capitalrx/grafana/pkg/services/serviceaccounts"
+	"github.com/capitalrx/grafana/pkg/services/serviceaccounts/extsvcaccounts"
+	"github.com/capitalrx/grafana/pkg/services/serviceaccounts/tests"
 )
 
 var (

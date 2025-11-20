@@ -19,7 +19,7 @@ import (
 
 	"github.com/redis/go-redis/v9"
 
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/log"
 )
 
 type redisConfig struct {

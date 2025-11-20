@@ -12,17 +12,17 @@ import (
 
 	claims "github.com/grafana/authlib/types"
 
-	dashboard "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
-	folders "github.com/grafana/grafana/apps/folder/pkg/apis/folder/v1beta1"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/dashboards/dashboardaccess"
-	"github.com/grafana/grafana/pkg/services/search/sort"
-	"github.com/grafana/grafana/pkg/services/sqlstore/searchstore"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
-	unisearch "github.com/grafana/grafana/pkg/storage/unified/search"
+	dashboard "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
+	folders "github.com/capitalrx/grafana/apps/folder/pkg/apis/folder/v1beta1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/dashboards/dashboardaccess"
+	"github.com/capitalrx/grafana/pkg/services/search/sort"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/searchstore"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
+	unisearch "github.com/capitalrx/grafana/pkg/storage/unified/search"
 )
 
 type DashboardSearchClient struct {

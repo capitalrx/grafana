@@ -1,9 +1,9 @@
 package dtos
 
 import (
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/auth"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/auth"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
 )
 
 type PluginSetting struct {

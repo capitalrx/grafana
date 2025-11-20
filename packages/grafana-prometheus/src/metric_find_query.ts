@@ -1,4 +1,4 @@
-// Core Grafana history https://github.com/grafana/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/metric_find_query.ts
+// Core Grafana history https://github.com/capitalrx/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/metric_find_query.ts
 import { map as _map } from 'lodash';
 
 import { MetricFindValue, TimeRange } from '@grafana/data';

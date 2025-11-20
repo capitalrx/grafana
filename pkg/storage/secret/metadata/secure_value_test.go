@@ -12,11 +12,11 @@ import (
 	"k8s.io/utils/ptr"
 	"pgregory.net/rapid"
 
-	secretv1beta1 "github.com/grafana/grafana/apps/secret/pkg/apis/secret/v1beta1"
-	"github.com/grafana/grafana/apps/secret/pkg/decrypt"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/testutils"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/xkube"
+	secretv1beta1 "github.com/capitalrx/grafana/apps/secret/pkg/apis/secret/v1beta1"
+	"github.com/capitalrx/grafana/apps/secret/pkg/decrypt"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/testutils"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/xkube"
 )
 
 type modelSecureValue struct {

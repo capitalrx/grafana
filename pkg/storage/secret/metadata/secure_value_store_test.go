@@ -10,15 +10,15 @@ import (
 	"k8s.io/utils/ptr"
 	"pgregory.net/rapid"
 
-	secretv1beta1 "github.com/grafana/grafana/apps/secret/pkg/apis/secret/v1beta1"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/clock"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/testutils"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/xkube"
-	"github.com/grafana/grafana/pkg/services/sqlstore"
-	"github.com/grafana/grafana/pkg/storage/secret/database"
-	"github.com/grafana/grafana/pkg/storage/secret/metadata"
-	"github.com/grafana/grafana/pkg/storage/secret/migrator"
+	secretv1beta1 "github.com/capitalrx/grafana/apps/secret/pkg/apis/secret/v1beta1"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/clock"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/testutils"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/xkube"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore"
+	"github.com/capitalrx/grafana/pkg/storage/secret/database"
+	"github.com/capitalrx/grafana/pkg/storage/secret/metadata"
+	"github.com/capitalrx/grafana/pkg/storage/secret/migrator"
 )
 
 func createTestKeeper(t *testing.T, ctx context.Context, keeperStorage contracts.KeeperMetadataStorage, name, namespace string) string {

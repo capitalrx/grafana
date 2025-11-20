@@ -18,11 +18,11 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/experimental/status"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/grafana/grafana/pkg/promlib/client"
-	"github.com/grafana/grafana/pkg/promlib/intervalv2"
-	"github.com/grafana/grafana/pkg/promlib/models"
-	"github.com/grafana/grafana/pkg/promlib/querydata/exemplar"
-	"github.com/grafana/grafana/pkg/promlib/utils"
+	"github.com/capitalrx/grafana/pkg/promlib/client"
+	"github.com/capitalrx/grafana/pkg/promlib/intervalv2"
+	"github.com/capitalrx/grafana/pkg/promlib/models"
+	"github.com/capitalrx/grafana/pkg/promlib/querydata/exemplar"
+	"github.com/capitalrx/grafana/pkg/promlib/utils"
 )
 
 const legendFormatAuto = "__auto"

@@ -14,9 +14,9 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/grafana/grafana/pkg/apis/datasource/v0alpha1.DataSourceConnection":     schema_pkg_apis_datasource_v0alpha1_DataSourceConnection(ref),
-		"github.com/grafana/grafana/pkg/apis/datasource/v0alpha1.DataSourceConnectionList": schema_pkg_apis_datasource_v0alpha1_DataSourceConnectionList(ref),
-		"github.com/grafana/grafana/pkg/apis/datasource/v0alpha1.HealthCheckResult":        schema_pkg_apis_datasource_v0alpha1_HealthCheckResult(ref),
+		"github.com/capitalrx/grafana/pkg/apis/datasource/v0alpha1.DataSourceConnection":     schema_pkg_apis_datasource_v0alpha1_DataSourceConnection(ref),
+		"github.com/capitalrx/grafana/pkg/apis/datasource/v0alpha1.DataSourceConnectionList": schema_pkg_apis_datasource_v0alpha1_DataSourceConnectionList(ref),
+		"github.com/capitalrx/grafana/pkg/apis/datasource/v0alpha1.HealthCheckResult":        schema_pkg_apis_datasource_v0alpha1_HealthCheckResult(ref),
 	}
 }
 
@@ -103,7 +103,7 @@ func schema_pkg_apis_datasource_v0alpha1_DataSourceConnectionList(ref common.Ref
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/pkg/apis/datasource/v0alpha1.DataSourceConnection"),
+										Ref:     ref("github.com/capitalrx/grafana/pkg/apis/datasource/v0alpha1.DataSourceConnection"),
 									},
 								},
 							},
@@ -114,7 +114,7 @@ func schema_pkg_apis_datasource_v0alpha1_DataSourceConnectionList(ref common.Ref
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/apis/datasource/v0alpha1.DataSourceConnection", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/pkg/apis/datasource/v0alpha1.DataSourceConnection", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -162,13 +162,13 @@ func schema_pkg_apis_datasource_v0alpha1_HealthCheckResult(ref common.ReferenceC
 					"details": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec depends on the plugin",
-							Ref:         ref("github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1.Unstructured"),
+							Ref:         ref("github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1.Unstructured"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1.Unstructured"},
+			"github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1.Unstructured"},
 	}
 }

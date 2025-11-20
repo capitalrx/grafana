@@ -5,10 +5,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	acmig "github.com/grafana/grafana/pkg/services/sqlstore/migrations/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	acmig "github.com/capitalrx/grafana/pkg/services/sqlstore/migrations/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func TestPreventOnCallAccessSeed(t *testing.T) {

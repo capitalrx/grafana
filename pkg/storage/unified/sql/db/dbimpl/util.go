@@ -9,7 +9,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 var errInvalidUTF8Sequence = errors.New("invalid UTF-8 sequence")

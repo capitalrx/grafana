@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	inlinev1beta1 "github.com/grafana/grafana/apps/secret/inline/v1beta1"
+	inlinev1beta1 "github.com/capitalrx/grafana/apps/secret/inline/v1beta1"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 	"go.opentelemetry.io/otel/trace/noop"
@@ -17,11 +17,11 @@ import (
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/metadata"
 
-	common "github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/inline"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/testutils"
-	"github.com/grafana/grafana/pkg/services/authn/clients"
-	"github.com/grafana/grafana/pkg/setting"
+	common "github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/inline"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/testutils"
+	"github.com/capitalrx/grafana/pkg/services/authn/clients"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func TestProvideInlineSecureValueService(t *testing.T) {

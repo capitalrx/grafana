@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/storage/unified/sql/db"
-	"github.com/grafana/grafana/pkg/storage/unified/sql/db/mocks"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/db"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/db/mocks"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 var errTest = errors.New("you shall not pass")

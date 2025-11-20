@@ -4,7 +4,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 const (

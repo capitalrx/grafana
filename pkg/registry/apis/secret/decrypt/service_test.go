@@ -17,15 +17,15 @@ import (
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/metadata"
 
-	decryptv1beta1 "github.com/grafana/grafana/apps/secret/decrypt/v1beta1"
-	secretv1beta1 "github.com/grafana/grafana/apps/secret/pkg/apis/secret/v1beta1"
-	decryptcontracts "github.com/grafana/grafana/apps/secret/pkg/decrypt"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/decrypt"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/testutils"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/xkube"
-	"github.com/grafana/grafana/pkg/services/authn/clients"
-	"github.com/grafana/grafana/pkg/setting"
+	decryptv1beta1 "github.com/capitalrx/grafana/apps/secret/decrypt/v1beta1"
+	secretv1beta1 "github.com/capitalrx/grafana/apps/secret/pkg/apis/secret/v1beta1"
+	decryptcontracts "github.com/capitalrx/grafana/apps/secret/pkg/decrypt"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/decrypt"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/testutils"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/xkube"
+	"github.com/capitalrx/grafana/pkg/services/authn/clients"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func TestDecryptService(t *testing.T) {

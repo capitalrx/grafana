@@ -11,8 +11,8 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/kinds/dataquery"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/utils"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/utils"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

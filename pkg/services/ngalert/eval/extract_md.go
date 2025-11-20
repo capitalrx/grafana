@@ -7,7 +7,7 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 
-	"github.com/grafana/grafana/pkg/expr/classic"
+	"github.com/capitalrx/grafana/pkg/expr/classic"
 )
 
 func extractEvalString(frame *data.Frame) (s string) {

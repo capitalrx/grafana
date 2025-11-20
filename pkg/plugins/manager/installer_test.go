@@ -12,13 +12,13 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/config"
-	"github.com/grafana/grafana/pkg/plugins/log"
-	"github.com/grafana/grafana/pkg/plugins/manager/fakes"
-	"github.com/grafana/grafana/pkg/plugins/manager/sources"
-	"github.com/grafana/grafana/pkg/plugins/repo"
-	"github.com/grafana/grafana/pkg/plugins/storage"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/config"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/fakes"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/sources"
+	"github.com/capitalrx/grafana/pkg/plugins/repo"
+	"github.com/capitalrx/grafana/pkg/plugins/storage"
 )
 
 const testPluginID = "test-plugin"

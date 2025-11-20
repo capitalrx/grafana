@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"dagger.io/dagger"
-	"github.com/grafana/grafana/pkg/build/daggerbuild/golang"
-	"github.com/grafana/grafana/pkg/build/daggerbuild/pipeline"
+	"github.com/capitalrx/grafana/pkg/build/daggerbuild/golang"
+	"github.com/capitalrx/grafana/pkg/build/daggerbuild/pipeline"
 	"github.com/urfave/cli/v2"
 )
 

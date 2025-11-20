@@ -9,11 +9,11 @@ import (
 
 	"go.opentelemetry.io/otel/attribute"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/infra/usagestats"
-	"github.com/grafana/grafana/pkg/services/encryption"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/infra/usagestats"
+	"github.com/capitalrx/grafana/pkg/services/encryption"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 const (

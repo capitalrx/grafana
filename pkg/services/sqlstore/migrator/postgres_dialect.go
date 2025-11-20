@@ -9,7 +9,7 @@ import (
 
 	"github.com/lib/pq"
 
-	"github.com/grafana/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 )
 
 type PostgresDialect struct {

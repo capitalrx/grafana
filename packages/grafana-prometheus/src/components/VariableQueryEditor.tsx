@@ -1,4 +1,4 @@
-// Core Grafana history https://github.com/grafana/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/components/VariableQueryEditor.tsx
+// Core Grafana history https://github.com/capitalrx/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/components/VariableQueryEditor.tsx
 import debounce from 'debounce-promise';
 import { FormEvent, useCallback, useEffect, useState } from 'react';
 

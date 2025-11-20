@@ -6,8 +6,8 @@ import (
 	authzv1 "github.com/grafana/authlib/authz/proto/v1"
 	openfgav1 "github.com/openfga/api/proto/openfga/v1"
 
-	authzextv1 "github.com/grafana/grafana/pkg/services/authz/proto/v1"
-	"github.com/grafana/grafana/pkg/services/authz/zanzana/common"
+	authzextv1 "github.com/capitalrx/grafana/pkg/services/authz/proto/v1"
+	"github.com/capitalrx/grafana/pkg/services/authz/zanzana/common"
 )
 
 func (s *Server) BatchCheck(ctx context.Context, r *authzextv1.BatchCheckRequest) (*authzextv1.BatchCheckResponse, error) {

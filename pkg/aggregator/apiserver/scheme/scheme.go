@@ -6,7 +6,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 
-	"github.com/grafana/grafana/pkg/aggregator/apis/aggregation/install"
+	"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/install"
 )
 
 var (

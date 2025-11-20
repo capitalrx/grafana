@@ -5,16 +5,16 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/api/response"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/events"
-	"github.com/grafana/grafana/pkg/infra/metrics"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	tempuser "github.com/grafana/grafana/pkg/services/temp_user"
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/util"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/api/dtos"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/events"
+	"github.com/capitalrx/grafana/pkg/infra/metrics"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	tempuser "github.com/capitalrx/grafana/pkg/services/temp_user"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 // GET /api/user/signup/options

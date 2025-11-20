@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/grafana/grafana/pkg/build/daggerbuild/cmd"
+	"github.com/capitalrx/grafana/pkg/build/daggerbuild/cmd"
 )
 
 func main() {

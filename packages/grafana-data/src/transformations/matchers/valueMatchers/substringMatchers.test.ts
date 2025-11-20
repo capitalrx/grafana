@@ -44,7 +44,7 @@ describe('value substring to matcher', () => {
     expect(caseInsensitiveMatcher(valueIndex, field, frame, data)).toBeTruthy();
   });
 
-  // Added for https://github.com/grafana/grafana/pull/83548#pullrequestreview-1904931540 where the matcher was not handling null values
+  // Added for https://github.com/capitalrx/grafana/pull/83548#pullrequestreview-1904931540 where the matcher was not handling null values
   it('should be a mismatch if the option is null and should not cause errors', () => {
     const frame = data[0];
     const field = frame.fields[0];

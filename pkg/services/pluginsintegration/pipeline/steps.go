@@ -9,17 +9,17 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/codes"
 
-	"github.com/grafana/grafana/pkg/infra/metrics"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/auth"
-	"github.com/grafana/grafana/pkg/plugins/config"
-	"github.com/grafana/grafana/pkg/plugins/log"
-	"github.com/grafana/grafana/pkg/plugins/manager/pipeline/initialization"
-	"github.com/grafana/grafana/pkg/plugins/manager/pipeline/validation"
-	"github.com/grafana/grafana/pkg/plugins/manager/registry"
-	"github.com/grafana/grafana/pkg/plugins/manager/signature"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginaccesscontrol"
+	"github.com/capitalrx/grafana/pkg/infra/metrics"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/auth"
+	"github.com/capitalrx/grafana/pkg/plugins/config"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/pipeline/initialization"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/pipeline/validation"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/registry"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/signature"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginaccesscontrol"
 )
 
 // ExternalServiceRegistration implements an InitializeFunc for registering external services.

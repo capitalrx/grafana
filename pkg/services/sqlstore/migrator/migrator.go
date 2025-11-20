@@ -8,7 +8,7 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/golang-migrate/migrate/v4/database"
-	"github.com/grafana/grafana/pkg/util/sqlite"
+	"github.com/capitalrx/grafana/pkg/util/sqlite"
 	_ "github.com/lib/pq"
 	"github.com/prometheus/client_golang/prometheus"
 	"go.opentelemetry.io/otel"
@@ -17,12 +17,12 @@ import (
 	"go.opentelemetry.io/otel/trace"
 	"go.uber.org/atomic"
 
-	"github.com/grafana/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/metrics/metricutil"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/metrics/metricutil"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 var (
@@ -30,7 +30,7 @@ var (
 	ErrMigratorIsUnlocked = fmt.Errorf("migrator is unlocked")
 )
 
-var tracer = otel.Tracer("github.com/grafana/grafana/pkg/services/sqlstore/migrator")
+var tracer = otel.Tracer("github.com/capitalrx/grafana/pkg/services/sqlstore/migrator")
 
 type Migrator struct {
 	DBEngine     *xorm.Engine

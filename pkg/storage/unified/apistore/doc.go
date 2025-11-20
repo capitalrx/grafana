@@ -26,5 +26,5 @@
 //					            ↓                           ↓
 //	     StorageServer (unified storage)                SQL Storage
 //
-// [ResourceServer]: https://github.com/grafana/grafana/pkg/storage/unified/resource#ResourceServer
+// [ResourceServer]: https://github.com/capitalrx/grafana/pkg/storage/unified/resource#ResourceServer
 package apistore

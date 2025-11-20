@@ -56,7 +56,7 @@ swagger-codegen-api:
 	-o /local \
 	--additional-properties packageName=api \
 	-t /local/swagger-codegen/templates \
-	# --import-mappings eval.RelativeTimeRange="github.com/grafana/grafana/pkg/services/ngalert/eval" \
+	# --import-mappings eval.RelativeTimeRange="github.com/capitalrx/grafana/pkg/services/ngalert/eval" \
 	# --type-mappings RelativeTimeRange=eval.RelativeTimeRange
 
 copy-files:

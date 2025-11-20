@@ -7,11 +7,11 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/util"
-	"github.com/grafana/grafana/pkg/util/proxyutil"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/util/proxyutil"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 var grafanaComProxyTransport = &http.Transport{

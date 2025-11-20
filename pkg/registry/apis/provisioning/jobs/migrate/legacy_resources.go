@@ -6,17 +6,17 @@ import (
 
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
-	"github.com/grafana/grafana/apps/provisioning/pkg/repository"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/registry/apis/dashboard/legacy"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/jobs"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/jobs/export"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/resources"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/resources/signature"
-	"github.com/grafana/grafana/pkg/storage/unified/parquet"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/repository"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/registry/apis/dashboard/legacy"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/jobs"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/jobs/export"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/resources"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/resources/signature"
+	"github.com/capitalrx/grafana/pkg/storage/unified/parquet"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 )
 
 var _ resource.BulkResourceWriter = (*legacyResourceResourceMigrator)(nil)

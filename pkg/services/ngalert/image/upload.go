@@ -7,8 +7,8 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 
-	"github.com/grafana/grafana/pkg/components/imguploader"
-	ngmodels "github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/components/imguploader"
+	ngmodels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 type UploadingService struct {

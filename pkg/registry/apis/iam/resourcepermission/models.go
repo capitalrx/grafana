@@ -13,9 +13,9 @@ import (
 
 	"github.com/grafana/authlib/types"
 
-	v0alpha1 "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1"
-	idStore "github.com/grafana/grafana/pkg/registry/apis/iam/legacy"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
+	v0alpha1 "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1"
+	idStore "github.com/capitalrx/grafana/pkg/registry/apis/iam/legacy"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
 )
 
 var (

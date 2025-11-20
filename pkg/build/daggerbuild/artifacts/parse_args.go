@@ -7,7 +7,7 @@ import (
 	"log/slog"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/build/daggerbuild/pipeline"
+	"github.com/capitalrx/grafana/pkg/build/daggerbuild/pipeline"
 )
 
 var (

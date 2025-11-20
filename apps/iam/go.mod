@@ -4,19 +4,19 @@ go 1.25.3
 
 replace github.com/grafana/grafana => ../../
 
-replace github.com/grafana/grafana/apps/folder => ../folder
+replace github.com/capitalrx/grafana/apps/folder => ../folder
 
-replace github.com/grafana/grafana/apps/dashboard => ../dashboard
+replace github.com/capitalrx/grafana/apps/dashboard => ../dashboard
 
-replace github.com/grafana/grafana/apps/secret => ../secret
+replace github.com/capitalrx/grafana/apps/secret => ../secret
 
-replace github.com/grafana/grafana/apps/provisioning => ../provisioning
+replace github.com/capitalrx/grafana/apps/provisioning => ../provisioning
 
-replace github.com/grafana/grafana/pkg/apimachinery => ../../pkg/apimachinery
+replace github.com/capitalrx/grafana/pkg/apimachinery => ../../pkg/apimachinery
 
-replace github.com/grafana/grafana/pkg/apiserver => ../../pkg/apiserver
+replace github.com/capitalrx/grafana/pkg/apiserver => ../../pkg/apiserver
 
-replace github.com/grafana/grafana/pkg/aggregator => ../../pkg/aggregator
+replace github.com/capitalrx/grafana/pkg/aggregator => ../../pkg/aggregator
 
 replace github.com/prometheus/alertmanager => github.com/grafana/prometheus-alertmanager v0.25.1-0.20250620093340-be61a673dee6
 
@@ -26,8 +26,8 @@ require (
 	github.com/grafana/grafana-app-sdk v0.40.3
 	github.com/grafana/grafana-app-sdk/logging v0.40.3
 	github.com/grafana/grafana-app-sdk/plugin v0.40.3
-	github.com/grafana/grafana/apps/folder v0.0.0
-	github.com/grafana/grafana/pkg/apimachinery v0.0.0
+	github.com/capitalrx/grafana/apps/folder v0.0.0
+	github.com/capitalrx/grafana/pkg/apimachinery v0.0.0
 	k8s.io/apimachinery v0.33.3
 	k8s.io/client-go v0.33.3
 	k8s.io/kube-openapi v0.0.0-20250318190949-c8a335a9a2ff
@@ -208,13 +208,13 @@ require (
 	github.com/grafana/grafana-aws-sdk v1.1.0 // indirect
 	github.com/grafana/grafana-azure-sdk-go/v2 v2.2.0 // indirect
 	github.com/grafana/grafana-plugin-sdk-go v0.278.0 // indirect
-	github.com/grafana/grafana/apps/dashboard v0.0.0 // indirect
-	github.com/grafana/grafana/apps/provisioning v0.0.0 // indirect
-	github.com/grafana/grafana/apps/secret v0.0.0 // indirect
-	github.com/grafana/grafana/pkg/aggregator v0.0.0 // indirect
-	github.com/grafana/grafana/pkg/apiserver v0.0.0 // indirect
-	github.com/grafana/grafana/pkg/promlib v0.0.8 // indirect
-	github.com/grafana/grafana/pkg/semconv v0.0.0-20250804150913-990f1c69ecc2 // indirect
+	github.com/capitalrx/grafana/apps/dashboard v0.0.0 // indirect
+	github.com/capitalrx/grafana/apps/provisioning v0.0.0 // indirect
+	github.com/capitalrx/grafana/apps/secret v0.0.0 // indirect
+	github.com/capitalrx/grafana/pkg/aggregator v0.0.0 // indirect
+	github.com/capitalrx/grafana/pkg/apiserver v0.0.0 // indirect
+	github.com/capitalrx/grafana/pkg/promlib v0.0.8 // indirect
+	github.com/capitalrx/grafana/pkg/semconv v0.0.0-20250804150913-990f1c69ecc2 // indirect
 	github.com/grafana/otel-profiling-go v0.5.1 // indirect
 	github.com/grafana/pyroscope-go/godeltaprof v0.1.8 // indirect
 	github.com/grafana/regexp v0.0.0-20240518133315-a468a5bfb3bc // indirect

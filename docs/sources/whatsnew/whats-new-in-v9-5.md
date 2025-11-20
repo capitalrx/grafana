@@ -19,7 +19,7 @@ weight: -36
 
 Welcome to Grafana 9.5! We're excited to share some major updates to Grafana's navigation, tons of usability improvements to Alerting, and some promising experiments to help you query your Prometheus metrics. Also, read on to learn about our continued migration from API keys to service accounts, as well as deprecation of plugins that use Angular and a field in the InfluxDB data source.
 
-For more detail about all the changes in this release, refer to the [changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md). For the specific steps we recommend when you upgrade to v9.5, check out our [Upgrade Guide](../../upgrade-guide/upgrade-v9.5/).
+For more detail about all the changes in this release, refer to the [changelog](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md). For the specific steps we recommend when you upgrade to v9.5, check out our [Upgrade Guide](../../upgrade-guide/upgrade-v9.5/).
 
 <!-- Template below
 
@@ -43,7 +43,7 @@ As Grafana evolved from a visualization platform to a comprehensive observabilit
 - Updated layouts featuring breadcrumbs and a sidebar, allowing you to quickly jump between pages.
 - A new header that appears on all pages in Grafana, which includes a search function.
 
-Join the [discussion on GitHub](https://github.com/grafana/grafana/discussions/58910) and share your feedback.
+Join the [discussion on GitHub](https://github.com/capitalrx/grafana/discussions/58910) and share your feedback.
 
 {{< figure src="/media/docs/grafana/navigation-9-4.png" max-width="750px" caption="Grafana new navigation" >}}
 
@@ -98,7 +98,7 @@ This improves Prometheus query editor performance, with the biggest performance 
 
 With this update we are going one step further in deprecating API keys in favor of [service accounts](../../administration/service-accounts/). We've removed the button for creating new API keys through Grafana's user interface, and now only allow the creation of API keys using our HTTP API. We recommend that you migrate your existing API keys to service accounts, and opt for new service accounts instead of new API keys. This change is part of our long-term strategy for sunsetting API keys.
 
-Learn more about the deprecation strategy for API keys and how to manage them in our [Sunsetting API keys](https://github.com/grafana/grafana/issues/53567) GitHub issue.
+Learn more about the deprecation strategy for API keys and how to manage them in our [Sunsetting API keys](https://github.com/capitalrx/grafana/issues/53567) GitHub issue.
 
 ## Resolve Grafana issues faster with support bundles
 
@@ -198,7 +198,7 @@ This feature adds support for using JWT tokens to store rendering keys instead o
 
 ## Note for plugin developers
 
-One of the major changes coming in Grafana 10 will be our upgrade to React 18 and use of the new React client rendering API. There are many significant benefits we gain from this: access to new React features like [transitions](https://react.dev/reference/react/useTransition) and concurrent rendering, as well as other general performance and security improvements. These changes have now been delivered to the core `grafana` repo with [PR 64428](https://github.com/grafana/grafana/pull/64428).
+One of the major changes coming in Grafana 10 will be our upgrade to React 18 and use of the new React client rendering API. There are many significant benefits we gain from this: access to new React features like [transitions](https://react.dev/reference/react/useTransition) and concurrent rendering, as well as other general performance and security improvements. These changes have now been delivered to the core `grafana` repo with [PR 64428](https://github.com/capitalrx/grafana/pull/64428).
 
 As with any major upgrade, there's a potential for this to impact the way your plugin works. In particular, there could be unintended side effects caused by the changes around improving consistency with `useEffect` timings and automatic batching of state updates.
 

@@ -17,9 +17,9 @@ import (
 	"k8s.io/utils/ptr"
 
 	authlib "github.com/grafana/authlib/types"
-	dashv1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
+	dashv1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
 )
 
 var rtscheme = runtime.NewScheme()
@@ -175,7 +175,7 @@ func TestPrepareObjectForStorage(t *testing.T) {
 		// Change the folder -- the generation should increase and the updatedBy metadata
 		dashboard2 := &dashv1.Dashboard{ObjectMeta: v1.ObjectMeta{
 			Name: dashboard.Name,
-		}} // TODO... deep copy, See: https://github.com/grafana/grafana/pull/102258
+		}} // TODO... deep copy, See: https://github.com/capitalrx/grafana/pull/102258
 		meta2, err := utils.MetaAccessor(dashboard2)
 		require.NoError(t, err)
 		meta2.SetFolder("xyz") // will bump generation

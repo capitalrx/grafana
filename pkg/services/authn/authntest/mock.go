@@ -4,9 +4,9 @@ import (
 	"context"
 
 	claims "github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/models/usertoken"
-	"github.com/grafana/grafana/pkg/services/authn"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/models/usertoken"
+	"github.com/capitalrx/grafana/pkg/services/authn"
 )
 
 var (

@@ -7,11 +7,11 @@ import (
 	"github.com/fatih/color"
 	"github.com/urfave/cli/v2"
 
-	gcli "github.com/grafana/grafana/pkg/cmd/grafana-cli/commands"
-	"github.com/grafana/grafana/pkg/cmd/grafana-server/commands"
-	_ "github.com/grafana/grafana/pkg/operators"
-	"github.com/grafana/grafana/pkg/server"
-	"github.com/grafana/grafana/pkg/services/apiserver/standalone"
+	gcli "github.com/capitalrx/grafana/pkg/cmd/grafana-cli/commands"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-server/commands"
+	_ "github.com/capitalrx/grafana/pkg/operators"
+	"github.com/capitalrx/grafana/pkg/server"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/standalone"
 )
 
 // The following variables cannot be constants, since they can be overridden through the -X link flag

@@ -11,7 +11,7 @@ import (
 	"k8s.io/apiserver/pkg/admission"
 	"k8s.io/apiserver/pkg/authentication/user"
 
-	examplev1 "github.com/grafana/grafana/pkg/services/apiserver/builder/runner/testdata/app/pkg/apis/example/v1"
+	examplev1 "github.com/capitalrx/grafana/pkg/services/apiserver/builder/runner/testdata/app/pkg/apis/example/v1"
 )
 
 func TestBuilderAdmission_Validate(t *testing.T) {

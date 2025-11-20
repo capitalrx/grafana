@@ -6,10 +6,10 @@ import (
 
 	cloudwatchtypes "github.com/aws/aws-sdk-go-v2/service/cloudwatch/types"
 
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/kinds/dataquery"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/mocks"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/utils"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/mocks"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/utils"
 	"github.com/patrickmn/go-cache"
 	"github.com/stretchr/testify/assert"
 )

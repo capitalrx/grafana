@@ -12,7 +12,7 @@ import (
 	"k8s.io/apiserver/pkg/registry/rest"
 
 	claims "github.com/grafana/authlib/types"
-	pluginsv0alpha1 "github.com/grafana/grafana/apps/plugins/pkg/apis/plugins/v0alpha1"
+	pluginsv0alpha1 "github.com/capitalrx/grafana/apps/plugins/pkg/apis/plugins/v0alpha1"
 )
 
 var (

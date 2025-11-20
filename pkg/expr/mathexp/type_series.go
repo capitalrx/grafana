@@ -8,7 +8,7 @@ import (
 	"github.com/grafana/dataplane/sdata/timeseries"
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 
-	"github.com/grafana/grafana/pkg/expr/mathexp/parse"
+	"github.com/capitalrx/grafana/pkg/expr/mathexp/parse"
 )
 
 // seriesTypeTimeIdx is the data frame field index for the Series type's Time column.

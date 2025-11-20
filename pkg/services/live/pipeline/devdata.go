@@ -12,9 +12,9 @@ import (
 
 	"github.com/centrifugal/centrifuge"
 	"github.com/grafana/grafana-plugin-sdk-go/data"
-	"github.com/grafana/grafana/pkg/util/httpclient"
+	"github.com/capitalrx/grafana/pkg/util/httpclient"
 
-	"github.com/grafana/grafana/pkg/services/live/managedstream"
+	"github.com/capitalrx/grafana/pkg/services/live/managedstream"
 )
 
 type Data struct {

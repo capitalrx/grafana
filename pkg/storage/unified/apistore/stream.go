@@ -14,8 +14,8 @@ import (
 	"k8s.io/apiserver/pkg/storage"
 	"k8s.io/klog/v2"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 )
 
 type streamDecoder struct {

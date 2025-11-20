@@ -223,7 +223,7 @@ jobs:
           echo "Publish new plugin version on grafana.com:"
           echo "Plugin version: ${VERSION}"
 
-          OUTPUT_URL="https://github.com/grafana/grafana/tree/$OUTPUT_DIR" \
+          OUTPUT_URL="https://github.com/capitalrx/grafana/tree/$OUTPUT_DIR" \
           jq -n '{"url": env.OUTPUT_URL}' > body.json
           osarchs=(linux_amd64 linux_arm64 linux_arm windows_amd64 darwin_amd64 darwin_arm64)
           for osarch in "${osarchs[@]}"; do
@@ -255,7 +255,7 @@ jobs:
           echo "Publish new plugin version on grafana.com:"
           echo "Plugin version: ${VERSION}"
 
-          OUTPUT_URL="https://github.com/grafana/grafana/tree/$OUTPUT_DIR" \
+          OUTPUT_URL="https://github.com/capitalrx/grafana/tree/$OUTPUT_DIR" \
           DOWNLOAD_URL="https://storage.googleapis.com/$GCP_BUCKET/$PLUGIN_ID/release/${VERSION}/any/$PLUGIN_ID-${VERSION}.any.zip" \
           MD5_CHECKSUM="$(jq -r '.plugin.md5' ci/packages/info-any.json)" \
           jq -rn '{

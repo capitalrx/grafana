@@ -9,12 +9,12 @@ package api
 import (
 	"net/http"
 
-	"github.com/grafana/grafana/pkg/api/response"
-	"github.com/grafana/grafana/pkg/api/routing"
-	"github.com/grafana/grafana/pkg/middleware"
-	"github.com/grafana/grafana/pkg/middleware/requestmeta"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/ngalert/metrics"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	"github.com/capitalrx/grafana/pkg/api/routing"
+	"github.com/capitalrx/grafana/pkg/middleware"
+	"github.com/capitalrx/grafana/pkg/middleware/requestmeta"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/metrics"
 )
 
 type HistoryApi interface {

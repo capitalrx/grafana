@@ -5,7 +5,7 @@ package dualwrite
 import (
 	context "context"
 
-	rest "github.com/grafana/grafana/pkg/apiserver/rest"
+	rest "github.com/capitalrx/grafana/pkg/apiserver/rest"
 	mock "github.com/stretchr/testify/mock"
 
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

@@ -14,12 +14,12 @@ import (
 
 	appsdkapiserver "github.com/grafana/grafana-app-sdk/k8s/apiserver"
 	"github.com/grafana/grafana-app-sdk/logging"
-	grafanaregistry "github.com/grafana/grafana/pkg/apiserver/registry/generic"
-	grafanarest "github.com/grafana/grafana/pkg/apiserver/rest"
-	"github.com/grafana/grafana/pkg/services/apiserver/builder"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	grafanaapiserveroptions "github.com/grafana/grafana/pkg/services/apiserver/options"
-	"github.com/grafana/grafana/pkg/storage/legacysql/dualwrite"
+	grafanaregistry "github.com/capitalrx/grafana/pkg/apiserver/registry/generic"
+	grafanarest "github.com/capitalrx/grafana/pkg/apiserver/rest"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/builder"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	grafanaapiserveroptions "github.com/capitalrx/grafana/pkg/services/apiserver/options"
+	"github.com/capitalrx/grafana/pkg/storage/legacysql/dualwrite"
 )
 
 var _ appsdkapiserver.GenericAPIServer = (*serverWrapper)(nil)

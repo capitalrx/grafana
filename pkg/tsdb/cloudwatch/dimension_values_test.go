@@ -6,13 +6,13 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models/resources"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/services"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models/resources"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/services"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/mocks"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/mocks"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models"
 )
 
 func Test_DimensionValues_Route(t *testing.T) {

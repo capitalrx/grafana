@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 const timeLimitStartDateLength = 12

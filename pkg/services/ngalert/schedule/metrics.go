@@ -5,8 +5,8 @@ import (
 	"hash/fnv"
 	"sort"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/metrics"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/metrics"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 // hashUIDs returns a fnv64 hash of the UIDs for all alert rules.

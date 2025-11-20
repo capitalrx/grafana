@@ -9,8 +9,8 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/experimental/schemabuilder"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/expr/classic"
-	"github.com/grafana/grafana/pkg/expr/mathexp"
+	"github.com/capitalrx/grafana/pkg/expr/classic"
+	"github.com/capitalrx/grafana/pkg/expr/mathexp"
 )
 
 func TestQueryTypeDefinitions(t *testing.T) {
@@ -18,7 +18,7 @@ func TestQueryTypeDefinitions(t *testing.T) {
 		schemabuilder.BuilderOptions{
 			PluginID: []string{DatasourceType},
 			ScanCode: []schemabuilder.CodePaths{{
-				BasePackage: "github.com/grafana/grafana/pkg/expr",
+				BasePackage: "github.com/capitalrx/grafana/pkg/expr",
 				CodePath:    "./",
 			}},
 			Enums: []reflect.Type{

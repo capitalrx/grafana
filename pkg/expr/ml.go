@@ -12,11 +12,11 @@ import (
 	jsoniter "github.com/json-iterator/go"
 	"gonum.org/v1/gonum/graph/simple"
 
-	"github.com/grafana/grafana/pkg/api/response"
-	"github.com/grafana/grafana/pkg/expr/mathexp"
-	"github.com/grafana/grafana/pkg/expr/ml"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/httpresponsesender"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	"github.com/capitalrx/grafana/pkg/expr/mathexp"
+	"github.com/capitalrx/grafana/pkg/expr/ml"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/httpresponsesender"
 )
 
 var (

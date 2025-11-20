@@ -14,7 +14,7 @@ import (
 	"cuelang.org/go/cue/errors"
 	cuejson "cuelang.org/go/encoding/json"
 
-	"github.com/grafana/grafana/apps/dashboard/pkg/migration/schemaversion"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/migration/schemaversion"
 )
 
 func ValidateDashboardSpec(obj *Dashboard, forceValidation bool) (field.ErrorList, field.ErrorList) {

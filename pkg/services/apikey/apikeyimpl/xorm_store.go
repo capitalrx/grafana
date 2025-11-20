@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/services/apikey"
-	"github.com/grafana/grafana/pkg/services/quota"
-	"github.com/grafana/grafana/pkg/services/sqlstore"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/services/apikey"
+	"github.com/capitalrx/grafana/pkg/services/quota"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore"
 )
 
 type sqlStore struct {

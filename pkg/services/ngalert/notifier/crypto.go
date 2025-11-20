@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	"github.com/grafana/grafana/pkg/services/ngalert/notifier/channels_config"
-	"github.com/grafana/grafana/pkg/services/ngalert/store"
-	"github.com/grafana/grafana/pkg/services/secrets"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/notifier/channels_config"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/store"
+	"github.com/capitalrx/grafana/pkg/services/secrets"
 )
 
 const (

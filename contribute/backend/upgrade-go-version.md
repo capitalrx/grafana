@@ -6,7 +6,7 @@ We recommend the practices outlined in this documentation when you upgrade Go fo
 
 Refer to the following PR for an example of how to perform a Go upgrade:
 
-- [PR ##79329](https://github.com/grafana/grafana/pull/79329)
+- [PR ##79329](https://github.com/capitalrx/grafana/pull/79329)
 
 ## Main areas to update
 

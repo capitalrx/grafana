@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/infra/kvstore"
-	"github.com/grafana/grafana/pkg/services/datasources"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	secretskvs "github.com/grafana/grafana/pkg/services/secrets/kvstore"
+	"github.com/capitalrx/grafana/pkg/infra/kvstore"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	secretskvs "github.com/capitalrx/grafana/pkg/services/secrets/kvstore"
 )
 
 const (

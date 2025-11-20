@@ -174,7 +174,7 @@ export const browseDashboardsAPI = createApi({
         method: 'DELETE',
         params: {
           // TODO: Once backend returns alert rule counts, set this back to true
-          // when this is merged https://github.com/grafana/grafana/pull/67259
+          // when this is merged https://github.com/capitalrx/grafana/pull/67259
           forceDeleteRules: false,
         },
       }),
@@ -320,7 +320,7 @@ export const browseDashboardsAPI = createApi({
             method: 'DELETE',
             params: {
               // TODO: Once backend returns alert rule counts, set this back to true
-              // when this is merged https://github.com/grafana/grafana/pull/67259
+              // when this is merged https://github.com/capitalrx/grafana/pull/67259
               forceDeleteRules: false,
             },
           });

@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	pb "github.com/grafana/grafana/pkg/services/ngalert/store/proto/v1"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	pb "github.com/capitalrx/grafana/pkg/services/ngalert/store/proto/v1"
 )
 
 func TestAlertInstanceModelToProto(t *testing.T) {

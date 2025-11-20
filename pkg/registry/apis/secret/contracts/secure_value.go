@@ -6,8 +6,8 @@ import (
 
 	"k8s.io/client-go/dynamic"
 
-	secretv1beta1 "github.com/grafana/grafana/apps/secret/pkg/apis/secret/v1beta1"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/xkube"
+	secretv1beta1 "github.com/capitalrx/grafana/apps/secret/pkg/apis/secret/v1beta1"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/xkube"
 )
 
 // The maximum size of a secure value in bytes when written as raw input.

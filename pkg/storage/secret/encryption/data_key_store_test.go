@@ -8,12 +8,12 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.opentelemetry.io/otel/trace/noop"
 
-	"github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/encryption"
-	"github.com/grafana/grafana/pkg/services/sqlstore"
-	"github.com/grafana/grafana/pkg/storage/secret/database"
-	"github.com/grafana/grafana/pkg/storage/secret/migrator"
-	"github.com/grafana/grafana/pkg/tests/testsuite"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/encryption"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore"
+	"github.com/capitalrx/grafana/pkg/storage/secret/database"
+	"github.com/capitalrx/grafana/pkg/storage/secret/migrator"
+	"github.com/capitalrx/grafana/pkg/tests/testsuite"
 )
 
 func TestMain(m *testing.M) {

@@ -3,8 +3,8 @@ package searchstore_test
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/services/sqlstore/searchstore"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/searchstore"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 	"github.com/stretchr/testify/assert"
 )
 

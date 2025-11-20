@@ -5,7 +5,7 @@ package mocks
 import (
 	context "context"
 
-	db "github.com/grafana/grafana/pkg/storage/unified/sql/db"
+	db "github.com/capitalrx/grafana/pkg/storage/unified/sql/db"
 	mock "github.com/stretchr/testify/mock"
 
 	sql "database/sql"

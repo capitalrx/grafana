@@ -5,9 +5,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
-	"github.com/grafana/grafana/pkg/services/supportbundles"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/services/supportbundles"
 )
 
 func dbCollector(sql db.DB) supportbundles.Collector {

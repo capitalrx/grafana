@@ -18,7 +18,7 @@
 package main
 
 import (
-	"github.com/grafana/grafana/pkg/build/wire"
+	"github.com/capitalrx/grafana/pkg/build/wire"
 )
 
 func injectedMessage(t title, lines ...string) string {

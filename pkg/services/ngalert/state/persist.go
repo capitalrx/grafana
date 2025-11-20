@@ -3,8 +3,8 @@ package state
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	history_model "github.com/grafana/grafana/pkg/services/ngalert/state/historian/model"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	history_model "github.com/capitalrx/grafana/pkg/services/ngalert/state/historian/model"
 )
 
 // InstanceStore represents the ability to fetch and write alert instances.
@@ -47,7 +47,7 @@ type Historian interface {
 
 // ImageCapturer captures images.
 //
-//go:generate mockgen -destination=image_mock.go -package=state github.com/grafana/grafana/pkg/services/ngalert/state ImageCapturer
+//go:generate mockgen -destination=image_mock.go -package=state github.com/capitalrx/grafana/pkg/services/ngalert/state ImageCapturer
 type ImageCapturer interface {
 	NewImage(ctx context.Context, r *models.AlertRule) (*models.Image, error)
 }

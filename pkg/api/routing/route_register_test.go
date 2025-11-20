@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 type fakeRouter struct {

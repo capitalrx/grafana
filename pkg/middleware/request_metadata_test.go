@@ -5,8 +5,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/middleware/requestmeta"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/middleware/requestmeta"
+	"github.com/capitalrx/grafana/pkg/web"
 	"github.com/stretchr/testify/assert"
 )
 

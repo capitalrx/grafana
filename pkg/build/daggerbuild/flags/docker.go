@@ -1,6 +1,6 @@
 package flags
 
-import "github.com/grafana/grafana/pkg/build/daggerbuild/pipeline"
+import "github.com/capitalrx/grafana/pkg/build/daggerbuild/pipeline"
 
 var (
 	Ubuntu             pipeline.FlagOption = "docker-ubuntu"

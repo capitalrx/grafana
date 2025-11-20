@@ -11,13 +11,13 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apiserver/pkg/registry/rest"
 
-	model "github.com/grafana/grafana/apps/alerting/notifications/pkg/apis/alerting/v0alpha1"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	grafanarest "github.com/grafana/grafana/pkg/apiserver/rest"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	alertingac "github.com/grafana/grafana/pkg/services/ngalert/accesscontrol"
-	ngmodels "github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/ngalert/notifier/legacy_storage"
+	model "github.com/capitalrx/grafana/apps/alerting/notifications/pkg/apis/alerting/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	grafanarest "github.com/capitalrx/grafana/pkg/apiserver/rest"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	alertingac "github.com/capitalrx/grafana/pkg/services/ngalert/accesscontrol"
+	ngmodels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/notifier/legacy_storage"
 )
 
 var (

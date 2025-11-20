@@ -748,10 +748,10 @@ github.com/grafana/grafana-azure-sdk-go/v2 v2.2.0 h1:0TYrkzAc3u0HX+9GK86cGrLTUAc
 github.com/grafana/grafana-azure-sdk-go/v2 v2.2.0/go.mod h1:H9sVh9A4yg5egMGZeh0mifxT1Q/uqwKe1LBjBJU6pN8=
 github.com/grafana/grafana-plugin-sdk-go v0.278.0 h1:5/rIYparLi02pofdaag8wnjspMMVNCi8cZhC4cdC3Ho=
 github.com/grafana/grafana-plugin-sdk-go v0.278.0/go.mod h1:+8NXT/XUJ/89GV6FxGQ366NZ3nU+cAXDMd0OUESF9H4=
-github.com/grafana/grafana/pkg/promlib v0.0.8 h1:VUWsqttdf0wMI4j9OX9oNrykguQpZcruudDAFpJJVw0=
-github.com/grafana/grafana/pkg/promlib v0.0.8/go.mod h1:U1ezG/MGaEPoThqsr3lymMPN5yIPdVTJnDZ+wcXT+ao=
-github.com/grafana/grafana/pkg/semconv v0.0.0-20250804150913-990f1c69ecc2 h1:A65jWgLk4Re28gIuZcpC0aTh71JZ0ey89hKGE9h543s=
-github.com/grafana/grafana/pkg/semconv v0.0.0-20250804150913-990f1c69ecc2/go.mod h1:2HRzUK/xQEYc+8d5If/XSusMcaYq9IptnBSHACiQcOQ=
+github.com/capitalrx/grafana/pkg/promlib v0.0.8 h1:VUWsqttdf0wMI4j9OX9oNrykguQpZcruudDAFpJJVw0=
+github.com/capitalrx/grafana/pkg/promlib v0.0.8/go.mod h1:U1ezG/MGaEPoThqsr3lymMPN5yIPdVTJnDZ+wcXT+ao=
+github.com/capitalrx/grafana/pkg/semconv v0.0.0-20250804150913-990f1c69ecc2 h1:A65jWgLk4Re28gIuZcpC0aTh71JZ0ey89hKGE9h543s=
+github.com/capitalrx/grafana/pkg/semconv v0.0.0-20250804150913-990f1c69ecc2/go.mod h1:2HRzUK/xQEYc+8d5If/XSusMcaYq9IptnBSHACiQcOQ=
 github.com/grafana/otel-profiling-go v0.5.1 h1:stVPKAFZSa7eGiqbYuG25VcqYksR6iWvF3YH66t4qL8=
 github.com/grafana/otel-profiling-go v0.5.1/go.mod h1:ftN/t5A/4gQI19/8MoWurBEtC6gFw8Dns1sJZ9W4Tls=
 github.com/grafana/prometheus-alertmanager v0.25.1-0.20250620093340-be61a673dee6 h1:oJnbhG6ZNy10AjsgNeAtAKeGHogIGOMfAsBH6fYYa5M=

@@ -10,17 +10,17 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	dashboardstore "github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/folder"
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginsettings"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginstore"
-	prov_alerting "github.com/grafana/grafana/pkg/services/provisioning/alerting"
-	"github.com/grafana/grafana/pkg/services/provisioning/dashboards"
-	"github.com/grafana/grafana/pkg/services/provisioning/datasources"
-	"github.com/grafana/grafana/pkg/services/provisioning/utils"
-	"github.com/grafana/grafana/pkg/services/searchV2"
-	"github.com/grafana/grafana/pkg/storage/legacysql/dualwrite"
+	dashboardstore "github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/folder"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginsettings"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginstore"
+	prov_alerting "github.com/capitalrx/grafana/pkg/services/provisioning/alerting"
+	"github.com/capitalrx/grafana/pkg/services/provisioning/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/provisioning/datasources"
+	"github.com/capitalrx/grafana/pkg/services/provisioning/utils"
+	"github.com/capitalrx/grafana/pkg/services/searchV2"
+	"github.com/capitalrx/grafana/pkg/storage/legacysql/dualwrite"
 )
 
 func TestProvisioningServiceImpl(t *testing.T) {

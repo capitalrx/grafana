@@ -7,11 +7,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/infra/usagestats"
-	"github.com/grafana/grafana/pkg/services/encryption"
-	"github.com/grafana/grafana/pkg/services/encryption/provider"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/infra/usagestats"
+	"github.com/capitalrx/grafana/pkg/services/encryption"
+	"github.com/capitalrx/grafana/pkg/services/encryption/provider"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func Test_Service(t *testing.T) {

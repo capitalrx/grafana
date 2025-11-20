@@ -11,9 +11,9 @@ import (
 	dto "github.com/prometheus/client_model/go"
 	"k8s.io/component-base/metrics/legacyregistry"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/metrics/graphitebridge"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/metrics/graphitebridge"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 var metricsLogger log.Logger = log.New("metrics")

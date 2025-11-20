@@ -8,8 +8,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/grafana/grafana/pkg/services/secrets"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/services/secrets"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 // FileStorage can load channel rules from a file on disk.

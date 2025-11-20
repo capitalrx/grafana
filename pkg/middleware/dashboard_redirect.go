@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/setting"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 // In Grafana v7.0 we changed panel edit & view query parameters.

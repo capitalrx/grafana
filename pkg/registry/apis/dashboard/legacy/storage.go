@@ -11,11 +11,11 @@ import (
 
 	claims "github.com/grafana/authlib/types"
 
-	dashboard "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	dashboard "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 )

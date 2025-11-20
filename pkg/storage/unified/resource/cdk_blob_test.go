@@ -6,8 +6,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 
 	"github.com/stretchr/testify/require"
 	"gocloud.dev/blob/fileblob"

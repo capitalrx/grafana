@@ -5,7 +5,7 @@ import (
 	"slices"
 	"strings"
 
-	models "github.com/grafana/grafana/pkg/services/ngalert/models"
+	models "github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 // sequence represents a chain of rules that should be evaluated in order.

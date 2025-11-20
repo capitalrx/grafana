@@ -6,9 +6,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	authzextv1 "github.com/grafana/grafana/pkg/services/authz/proto/v1"
-	"github.com/grafana/grafana/pkg/services/authz/zanzana/common"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	authzextv1 "github.com/capitalrx/grafana/pkg/services/authz/proto/v1"
+	"github.com/capitalrx/grafana/pkg/services/authz/zanzana/common"
 )
 
 func testBatchCheck(t *testing.T, server *Server) {

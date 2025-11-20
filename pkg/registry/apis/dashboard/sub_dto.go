@@ -12,17 +12,17 @@ import (
 	claims "github.com/grafana/authlib/types"
 	"github.com/grafana/grafana-app-sdk/logging"
 
-	"github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/infra/slugify"
-	"github.com/grafana/grafana/pkg/registry/apis/dashboard/legacy"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/storage/unified/apistore"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/infra/slugify"
+	"github.com/capitalrx/grafana/pkg/registry/apis/dashboard/legacy"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/storage/unified/apistore"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 )
 
 type dtoBuilder = func(dashboard runtime.Object, access *dashboard.DashboardAccess) (runtime.Object, error)

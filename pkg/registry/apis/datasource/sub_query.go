@@ -8,14 +8,14 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	data "github.com/grafana/grafana-plugin-sdk-go/experimental/apis/data/v0alpha1"
-	query "github.com/grafana/grafana/pkg/apis/query/v0alpha1"
-	query_headers "github.com/grafana/grafana/pkg/registry/apis/query"
-	"github.com/grafana/grafana/pkg/services/datasources"
+	query "github.com/capitalrx/grafana/pkg/apis/query/v0alpha1"
+	query_headers "github.com/capitalrx/grafana/pkg/registry/apis/query"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apiserver/pkg/registry/rest"
 
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/web"
 
 	k8serrors "k8s.io/apimachinery/pkg/api/errors"
 )

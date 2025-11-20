@@ -10,12 +10,12 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/util/validation/field"
 
-	v0 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1"
-	v1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
-	v2alpha1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v2alpha1"
-	v2beta1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v2beta1"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
+	v0 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1"
+	v1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
+	v2alpha1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v2alpha1"
+	v2beta1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v2beta1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
 )
 
 // ValidateDashboardSpec validates the dashboard spec and throws a detailed error if there are validation errors.

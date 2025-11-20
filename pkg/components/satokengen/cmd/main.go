@@ -5,7 +5,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/grafana/grafana/pkg/components/satokengen"
+	"github.com/capitalrx/grafana/pkg/components/satokengen"
 )
 
 // placeholder key generator

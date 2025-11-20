@@ -6,7 +6,7 @@ import (
 	"github.com/blevesearch/bleve/v2/analysis/analyzer/standard"
 	"github.com/blevesearch/bleve/v2/mapping"
 
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
 )
 
 func GetBleveMappings(fields resource.SearchableDocumentFields) (mapping.IndexMapping, error) {

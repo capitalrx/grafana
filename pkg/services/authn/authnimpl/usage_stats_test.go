@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/services/authn/authntest"
+	"github.com/capitalrx/grafana/pkg/services/authn/authntest"
 )
 
 func TestService_getUsageStats(t *testing.T) {

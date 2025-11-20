@@ -73,7 +73,7 @@ export function getVersionLinks(hideEdition?: boolean): FooterLink[] {
     target: '_blank',
     id: 'version',
     text: buildInfo.versionString,
-    url: hasReleaseNotes ? `https://github.com/grafana/grafana/blob/main/CHANGELOG.md` : undefined,
+    url: hasReleaseNotes ? `https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md` : undefined,
   });
 
   if (buildInfo.hasUpdate) {

@@ -106,7 +106,7 @@ export const QueryWrapper = ({
     // We already elsewhere work under the assumption that the datasource settings are fetched from the datasourceUid property
 
     // This check is necessary for some few cases where the datasource might be an string instead of an object
-    // see: https://github.com/grafana/grafana/issues/96040 for more context
+    // see: https://github.com/capitalrx/grafana/issues/96040 for more context
     if (typeof queryWithDefaults.datasource === 'object' && Boolean(queryWithDefaults.datasource)) {
       queryWithDefaults.datasource.uid = query.datasourceUid;
     } else {

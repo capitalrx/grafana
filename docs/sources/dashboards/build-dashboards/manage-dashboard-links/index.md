@@ -70,7 +70,7 @@ To control the time range of a panel or dashboard, you can provide query paramet
 
 When you create a dashboard link, you can include the time range and current template variables to directly jump to the same context in another dashboard. This way, you don’t have to worry whether the person you send the link to is looking at the right data. For other types of links, refer to [Data link variables](ref:data-link-variables).
 
-Dashboard links can also be used as shortcuts to external systems, such as submitting [a GitHub issue with the current dashboard name](https://github.com/grafana/grafana/issues/new?title=Dashboard%3A%20HTTP%20Requests).
+Dashboard links can also be used as shortcuts to external systems, such as submitting [a GitHub issue with the current dashboard name](https://github.com/capitalrx/grafana/issues/new?title=Dashboard%3A%20HTTP%20Requests).
 
 To see an example of dashboard links in action, check out:
 
@@ -112,7 +112,7 @@ Add a link to a URL at the top of your current dashboard. You can link to any av
 1. In the **Type** drop-down, select **Link**.
 1. In the **URL** field, enter the URL to which you want to link.
 
-   Depending on the target, you might want to include field values. **Example:** https://github.com/grafana/grafana/issues/new?title=Dashboard%3A%20HTTP%20Requests
+   Depending on the target, you might want to include field values. **Example:** https://github.com/capitalrx/grafana/issues/new?title=Dashboard%3A%20HTTP%20Requests
 
 1. In the **Tooltip** field, enter the tooltip you want the link to display when the user hovers their mouse over it.
 1. In the **Icon** drop-down, choose the icon you want displayed with the link.

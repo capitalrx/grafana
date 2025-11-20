@@ -3,7 +3,7 @@ package provisioning
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/tests/testsuite"
+	"github.com/capitalrx/grafana/pkg/tests/testsuite"
 )
 
 func TestMain(m *testing.M) {

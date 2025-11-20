@@ -4,9 +4,9 @@ import (
 	"net/http"
 
 	sdkhttpclient "github.com/grafana/grafana-plugin-sdk-go/backend/httpclient"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/clientmiddleware"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/clientmiddleware"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 const GrafanaRequestIDHeaderMiddlewareName = "grafana-request-id-header-middleware"

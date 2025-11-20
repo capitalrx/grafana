@@ -10,13 +10,13 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/client-go/dynamic"
 
-	dashboardV1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
-	dashboardV2alpha1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v2alpha1"
-	dashboardV2beta1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v2beta1"
-	folders "github.com/grafana/grafana/apps/folder/pkg/apis/folder/v1beta1"
-	iam "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1"
-	"github.com/grafana/grafana/pkg/services/apiserver"
-	"github.com/grafana/grafana/pkg/services/apiserver/client"
+	dashboardV1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
+	dashboardV2alpha1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v2alpha1"
+	dashboardV2beta1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v2beta1"
+	folders "github.com/capitalrx/grafana/apps/folder/pkg/apis/folder/v1beta1"
+	iam "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/services/apiserver"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/client"
 )
 
 var (

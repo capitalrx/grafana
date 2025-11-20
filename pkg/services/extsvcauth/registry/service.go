@@ -7,13 +7,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/serverlock"
-	"github.com/grafana/grafana/pkg/infra/slugify"
-	"github.com/grafana/grafana/pkg/services/extsvcauth"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/serviceaccounts/extsvcaccounts"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/serverlock"
+	"github.com/capitalrx/grafana/pkg/infra/slugify"
+	"github.com/capitalrx/grafana/pkg/services/extsvcauth"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/serviceaccounts/extsvcaccounts"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 var _ extsvcauth.ExternalServiceRegistry = &Registry{}

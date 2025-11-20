@@ -5,14 +5,14 @@ package {{packageName}}
 import (
 	"github.com/go-macaron/binding"
 
-	"github.com/grafana/grafana/pkg/api/routing"
-	"github.com/grafana/grafana/pkg/api/response"
-	"github.com/grafana/grafana/pkg/middleware/requestmeta"
-	"github.com/grafana/grafana/pkg/models"
-	apimodels "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	"github.com/grafana/grafana/pkg/services/ngalert/metrics"
-	"github.com/grafana/grafana/pkg/middleware"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/api/routing"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	"github.com/capitalrx/grafana/pkg/middleware/requestmeta"
+	"github.com/capitalrx/grafana/pkg/models"
+	apimodels "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/metrics"
+	"github.com/capitalrx/grafana/pkg/middleware"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
 )
 
 type {{classname}} interface { {{#operation}}

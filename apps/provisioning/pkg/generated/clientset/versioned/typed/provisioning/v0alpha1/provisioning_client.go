@@ -7,8 +7,8 @@ package v0alpha1
 import (
 	http "net/http"
 
-	provisioningv0alpha1 "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
-	scheme "github.com/grafana/grafana/apps/provisioning/pkg/generated/clientset/versioned/scheme"
+	provisioningv0alpha1 "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	scheme "github.com/capitalrx/grafana/apps/provisioning/pkg/generated/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 

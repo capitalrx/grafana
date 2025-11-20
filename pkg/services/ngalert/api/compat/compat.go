@@ -9,9 +9,9 @@ import (
 	amConfig "github.com/prometheus/alertmanager/config"
 	"github.com/prometheus/common/model"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 // AlertRuleFromProvisionedAlertRule converts definitions.ProvisionedAlertRule to models.AlertRule

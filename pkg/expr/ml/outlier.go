@@ -7,7 +7,7 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 
-	"github.com/grafana/grafana/pkg/api/response"
+	"github.com/capitalrx/grafana/pkg/api/response"
 )
 
 // OutlierCommand implements Command that sends a request to outlier proxy API and converts response to backend.QueryDataResponse

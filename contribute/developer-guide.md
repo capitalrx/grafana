@@ -397,7 +397,7 @@ Set NODE_OPTIONS="--max-old-space-size=8192"
 
 ### Getting `AggregateError` when building frontend tests
 
-If you encounter an `AggregateError` when building new tests, this is probably due to a call to our client [backend service](https://github.com/grafana/grafana/blob/main/public/app/core/services/backend_srv.ts) not being mocked. Our backend service anticipates multiple responses being returned and was built to return errors as an array. A test encountering errors from the service will group those errors as an `AggregateError` without breaking down the individual errors within. `backend_srv.processRequestError` is called once per error and is a great place to return information on what the individual errors might contain.
+If you encounter an `AggregateError` when building new tests, this is probably due to a call to our client [backend service](https://github.com/capitalrx/grafana/blob/main/public/app/core/services/backend_srv.ts) not being mocked. Our backend service anticipates multiple responses being returned and was built to return errors as an array. A test encountering errors from the service will group those errors as an `AggregateError` without breaking down the individual errors within. `backend_srv.processRequestError` is called once per error and is a great place to return information on what the individual errors might contain.
 
 ### Getting `error reading debug_info: decoding dwarf section line_str at offset` trying to run VSCode debugger
 

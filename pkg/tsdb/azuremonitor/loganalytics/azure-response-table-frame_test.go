@@ -10,9 +10,9 @@ import (
 	"testing"
 
 	"github.com/grafana/grafana-plugin-sdk-go/data"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/kinds/dataquery"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/testdata"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/types"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/testdata"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

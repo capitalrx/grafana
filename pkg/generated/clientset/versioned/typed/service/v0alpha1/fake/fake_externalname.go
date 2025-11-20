@@ -5,9 +5,9 @@
 package fake
 
 import (
-	v0alpha1 "github.com/grafana/grafana/pkg/apis/service/v0alpha1"
-	servicev0alpha1 "github.com/grafana/grafana/pkg/generated/applyconfiguration/service/v0alpha1"
-	typedservicev0alpha1 "github.com/grafana/grafana/pkg/generated/clientset/versioned/typed/service/v0alpha1"
+	v0alpha1 "github.com/capitalrx/grafana/pkg/apis/service/v0alpha1"
+	servicev0alpha1 "github.com/capitalrx/grafana/pkg/generated/applyconfiguration/service/v0alpha1"
+	typedservicev0alpha1 "github.com/capitalrx/grafana/pkg/generated/clientset/versioned/typed/service/v0alpha1"
 	gentype "k8s.io/client-go/gentype"
 )
 

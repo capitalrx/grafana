@@ -5,9 +5,9 @@ import (
 	"errors"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	pref "github.com/grafana/grafana/pkg/services/preference"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	pref "github.com/capitalrx/grafana/pkg/services/preference"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type Service struct {

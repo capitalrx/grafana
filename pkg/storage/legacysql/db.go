@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/services/sqlstore"
-	"github.com/grafana/grafana/pkg/storage/unified/sql/sqltemplate"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/sqltemplate"
 )
 
 // The database may depend on the request context

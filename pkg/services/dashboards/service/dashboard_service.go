@@ -24,42 +24,42 @@ import (
 	"github.com/grafana/grafana-app-sdk/logging"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/gtime"
 
-	"github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard"
-	dashboardv0 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1"
-	folderv1 "github.com/grafana/grafana/apps/folder/pkg/apis/folder/v1beta1"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/infra/kvstore"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/metrics"
-	"github.com/grafana/grafana/pkg/infra/serverlock"
-	"github.com/grafana/grafana/pkg/infra/slugify"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/registry"
-	"github.com/grafana/grafana/pkg/registry/apis/dashboard/legacysearcher"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/dashboards/dashboardaccess"
-	dashboardclient "github.com/grafana/grafana/pkg/services/dashboards/service/client"
-	dashboardsearch "github.com/grafana/grafana/pkg/services/dashboards/service/search"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/folder"
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/services/publicdashboards"
-	"github.com/grafana/grafana/pkg/services/quota"
-	"github.com/grafana/grafana/pkg/services/search/model"
-	"github.com/grafana/grafana/pkg/services/sqlstore/searchstore"
-	"github.com/grafana/grafana/pkg/services/store/entity"
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/storage/legacysql/dualwrite"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
-	"github.com/grafana/grafana/pkg/storage/unified/search"
-	"github.com/grafana/grafana/pkg/util"
-	"github.com/grafana/grafana/pkg/util/retryer"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard"
+	dashboardv0 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1"
+	folderv1 "github.com/capitalrx/grafana/apps/folder/pkg/apis/folder/v1beta1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/infra/kvstore"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/metrics"
+	"github.com/capitalrx/grafana/pkg/infra/serverlock"
+	"github.com/capitalrx/grafana/pkg/infra/slugify"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/registry"
+	"github.com/capitalrx/grafana/pkg/registry/apis/dashboard/legacysearcher"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/dashboards/dashboardaccess"
+	dashboardclient "github.com/capitalrx/grafana/pkg/services/dashboards/service/client"
+	dashboardsearch "github.com/capitalrx/grafana/pkg/services/dashboards/service/search"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/folder"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/services/publicdashboards"
+	"github.com/capitalrx/grafana/pkg/services/quota"
+	"github.com/capitalrx/grafana/pkg/services/search/model"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/searchstore"
+	"github.com/capitalrx/grafana/pkg/services/store/entity"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/storage/legacysql/dualwrite"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/storage/unified/search"
+	"github.com/capitalrx/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/util/retryer"
 )
 
 var (
@@ -69,7 +69,7 @@ var (
 	_ dashboards.PluginService                = (*DashboardServiceImpl)(nil)
 
 	daysInTrash = 24 * 30 * time.Hour
-	tracer      = otel.Tracer("github.com/grafana/grafana/pkg/services/dashboards/service")
+	tracer      = otel.Tracer("github.com/capitalrx/grafana/pkg/services/dashboards/service")
 )
 
 const (
@@ -1851,7 +1851,7 @@ func (dr *DashboardServiceImpl) searchDashboardsThroughK8sRaw(ctx context.Contex
 	if len(query.FolderUIDs) > 0 {
 		// Grafana frontend issues a call to search for dashboards in "general" folder. General folder doesn't exists and
 		// should return all dashboards without a parent folder.
-		// We do something similar in the old sql search query https://github.com/grafana/grafana/blob/a58564a35efe8c05a21d8190b283af5bc0979d2a/pkg/services/sqlstore/searchstore/filters.go#L103
+		// We do something similar in the old sql search query https://github.com/capitalrx/grafana/blob/a58564a35efe8c05a21d8190b283af5bc0979d2a/pkg/services/sqlstore/searchstore/filters.go#L103
 		for i := range query.FolderUIDs {
 			if query.FolderUIDs[i] == folder.GeneralFolderUID {
 				query.FolderUIDs[i] = ""

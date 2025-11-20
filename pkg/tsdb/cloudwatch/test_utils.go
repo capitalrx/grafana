@@ -17,7 +17,7 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/experimental/featuretoggles"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models"
 	"github.com/stretchr/testify/mock"
 )
 

@@ -3,8 +3,8 @@ package imguploader
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/components/imguploader/gcs"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/components/imguploader/gcs"
+	"github.com/capitalrx/grafana/pkg/setting"
 	"github.com/stretchr/testify/require"
 )
 

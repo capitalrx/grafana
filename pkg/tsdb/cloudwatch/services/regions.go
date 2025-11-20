@@ -8,9 +8,9 @@ import (
 	ec2types "github.com/aws/aws-sdk-go-v2/service/ec2/types"
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/constants"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models/resources"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/constants"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models/resources"
 )
 
 type RegionsService struct {

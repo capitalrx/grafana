@@ -5,9 +5,9 @@ import (
 	"net/url"
 
 	"github.com/gorilla/mux"
-	"github.com/grafana/grafana/pkg/api/response"
-	"github.com/grafana/grafana/pkg/infra/log"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
 )
 
 type RequestHandlerFunc func(*contextmodel.ReqContext) response.Response

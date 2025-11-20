@@ -15,10 +15,10 @@ import (
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/credentials/insecure"
 
-	inlinev1beta1 "github.com/grafana/grafana/apps/secret/inline/v1beta1"
-	secretv1beta1 "github.com/grafana/grafana/apps/secret/pkg/apis/secret/v1beta1"
-	"github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
+	inlinev1beta1 "github.com/capitalrx/grafana/apps/secret/inline/v1beta1"
+	secretv1beta1 "github.com/capitalrx/grafana/apps/secret/pkg/apis/secret/v1beta1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
 )
 
 type GRPCInlineClient struct {

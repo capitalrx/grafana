@@ -4,7 +4,7 @@ import (
 	"context"
 	"os"
 
-	"github.com/grafana/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins"
 )
 
 // permittedHostEnvVarNames is the list of environment variables that can be passed from Grafana's process to the

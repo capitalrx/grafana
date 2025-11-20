@@ -21,26 +21,26 @@ import (
 	"k8s.io/kube-openapi/pkg/validation/spec"
 
 	"github.com/grafana/authlib/types"
-	iamv0 "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	legacyiamv0 "github.com/grafana/grafana/pkg/apis/iam/v0alpha1"
-	grafanaregistry "github.com/grafana/grafana/pkg/apiserver/registry/generic"
-	grafanarest "github.com/grafana/grafana/pkg/apiserver/rest"
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/registry/apis/iam/legacy"
-	"github.com/grafana/grafana/pkg/registry/apis/iam/resourcepermission"
-	"github.com/grafana/grafana/pkg/registry/apis/iam/serviceaccount"
-	"github.com/grafana/grafana/pkg/registry/apis/iam/sso"
-	"github.com/grafana/grafana/pkg/registry/apis/iam/team"
-	"github.com/grafana/grafana/pkg/registry/apis/iam/user"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/apiserver/builder"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/ssosettings"
-	"github.com/grafana/grafana/pkg/storage/legacysql"
-	"github.com/grafana/grafana/pkg/storage/unified/apistore"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
+	iamv0 "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	legacyiamv0 "github.com/capitalrx/grafana/pkg/apis/iam/v0alpha1"
+	grafanaregistry "github.com/capitalrx/grafana/pkg/apiserver/registry/generic"
+	grafanarest "github.com/capitalrx/grafana/pkg/apiserver/rest"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/registry/apis/iam/legacy"
+	"github.com/capitalrx/grafana/pkg/registry/apis/iam/resourcepermission"
+	"github.com/capitalrx/grafana/pkg/registry/apis/iam/serviceaccount"
+	"github.com/capitalrx/grafana/pkg/registry/apis/iam/sso"
+	"github.com/capitalrx/grafana/pkg/registry/apis/iam/team"
+	"github.com/capitalrx/grafana/pkg/registry/apis/iam/user"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/builder"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/ssosettings"
+	"github.com/capitalrx/grafana/pkg/storage/legacysql"
+	"github.com/capitalrx/grafana/pkg/storage/unified/apistore"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
 )
 
 func RegisterAPIService(
@@ -225,7 +225,7 @@ func (b *IdentityAccessManagementAPIBuilder) PostProcessOpenAPI(oas *spec3.OpenA
 	oas.Info.Description = "Identity and Access Management"
 
 	defs := b.GetOpenAPIDefinitions()(func(path string) spec.Ref { return spec.Ref{} })
-	defsBase := "github.com/grafana/grafana/pkg/apis/iam/v0alpha1."
+	defsBase := "github.com/capitalrx/grafana/pkg/apis/iam/v0alpha1."
 
 	// Add missing schemas
 	for k, v := range defs {
@@ -284,7 +284,7 @@ func (b *IdentityAccessManagementAPIBuilder) GetAuthorizer() authorizer.Authoriz
 
 // Validate implements builder.APIGroupValidation.
 // TODO: Move this to the ValidateFunc of the user resource after moving the APIs to use the app-platofrm-sdk.
-// TODO: https://github.com/grafana/grafana/blob/main/apps/playlist/pkg/app/app.go#L62
+// TODO: https://github.com/capitalrx/grafana/blob/main/apps/playlist/pkg/app/app.go#L62
 func (b *IdentityAccessManagementAPIBuilder) Validate(ctx context.Context, a admission.Attributes, o admission.ObjectInterfaces) (err error) {
 	switch a.GetOperation() {
 	case admission.Create:
@@ -333,7 +333,7 @@ func (b *IdentityAccessManagementAPIBuilder) validateCreateUser(ctx context.Cont
 
 // Mutate implements builder.APIGroupMutation.
 // TODO: Move this to the MutateFunc of the user resource after moving the APIs to use the app-platofrm-sdk.
-// TODO: https://github.com/grafana/grafana/blob/main/apps/playlist/pkg/app/app.go#L62
+// TODO: https://github.com/capitalrx/grafana/blob/main/apps/playlist/pkg/app/app.go#L62
 func (b *IdentityAccessManagementAPIBuilder) Mutate(ctx context.Context, a admission.Attributes, o admission.ObjectInterfaces) (err error) {
 	switch a.GetOperation() {
 	case admission.Create:

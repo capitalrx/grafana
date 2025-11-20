@@ -8,9 +8,9 @@ import (
 
 	"github.com/go-jose/go-jose/v3/jwt"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/remotecache"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/remotecache"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 const ServiceName = "AuthService"

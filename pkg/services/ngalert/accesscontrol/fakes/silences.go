@@ -3,8 +3,8 @@ package fakes
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 type FakeSilenceService struct {

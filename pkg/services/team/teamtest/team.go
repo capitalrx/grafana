@@ -3,7 +3,7 @@ package teamtest
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/team"
+	"github.com/capitalrx/grafana/pkg/services/team"
 )
 
 type FakeService struct {

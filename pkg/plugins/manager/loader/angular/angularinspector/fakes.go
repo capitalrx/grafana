@@ -3,7 +3,7 @@ package angularinspector
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins"
 )
 
 // FakeInspector is an inspector whose Inspect function can be set to any function.

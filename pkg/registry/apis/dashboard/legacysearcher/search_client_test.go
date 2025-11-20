@@ -10,16 +10,16 @@ import (
 	"github.com/stretchr/testify/require"
 	"k8s.io/apimachinery/pkg/selection"
 
-	dashboard "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/search/model"
-	"github.com/grafana/grafana/pkg/services/search/sort"
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
-	unisearch "github.com/grafana/grafana/pkg/storage/unified/search"
+	dashboard "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/search/model"
+	"github.com/capitalrx/grafana/pkg/services/search/sort"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
+	unisearch "github.com/capitalrx/grafana/pkg/storage/unified/search"
 )
 
 func TestDashboardSearchClient_Search(t *testing.T) {

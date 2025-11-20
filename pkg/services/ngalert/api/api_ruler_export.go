@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/grafana/grafana/pkg/api/response"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
 
-	authz "github.com/grafana/grafana/pkg/services/ngalert/accesscontrol"
-	. "github.com/grafana/grafana/pkg/services/ngalert/api/compat"
-	apimodels "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	apivalidation "github.com/grafana/grafana/pkg/services/ngalert/api/validation"
-	ngmodels "github.com/grafana/grafana/pkg/services/ngalert/models"
+	authz "github.com/capitalrx/grafana/pkg/services/ngalert/accesscontrol"
+	. "github.com/capitalrx/grafana/pkg/services/ngalert/api/compat"
+	apimodels "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	apivalidation "github.com/capitalrx/grafana/pkg/services/ngalert/api/validation"
+	ngmodels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 // ExportFromPayload converts the rule groups from the argument `ruleGroupConfig` to export format. All rules are expected to be fully specified. The access to data sources mentioned in the rules is not enforced.

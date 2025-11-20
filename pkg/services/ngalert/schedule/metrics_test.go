@@ -3,7 +3,7 @@ package schedule
 import (
 	"testing"
 
-	models "github.com/grafana/grafana/pkg/services/ngalert/models"
+	models "github.com/capitalrx/grafana/pkg/services/ngalert/models"
 	"github.com/stretchr/testify/assert"
 )
 

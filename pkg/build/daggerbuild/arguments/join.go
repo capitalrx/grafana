@@ -1,6 +1,6 @@
 package arguments
 
-import "github.com/grafana/grafana/pkg/build/daggerbuild/pipeline"
+import "github.com/capitalrx/grafana/pkg/build/daggerbuild/pipeline"
 
 func Join(f ...[]pipeline.Argument) []pipeline.Argument {
 	r := []pipeline.Argument{}

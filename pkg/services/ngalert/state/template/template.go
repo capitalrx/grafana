@@ -15,7 +15,7 @@ import (
 	"github.com/prometheus/prometheus/promql"
 	"github.com/prometheus/prometheus/template"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/eval"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/eval"
 )
 
 type Labels map[string]string

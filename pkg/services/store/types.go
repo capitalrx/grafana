@@ -6,8 +6,8 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 
-	"github.com/grafana/grafana/pkg/infra/filestorage"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/infra/filestorage"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 type WriteValueWorkflow = string

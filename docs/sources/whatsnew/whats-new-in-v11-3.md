@@ -24,7 +24,7 @@ Welcome to Grafana 11.3! Scenes-powered dashboards are now generally available a
 
 {{< youtube id="a0rdRbYPCls" >}}
 
-For even more detail about all the changes in this release, refer to the [changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md). For the specific steps we recommend when you upgrade to v11.3, check out our [Upgrade Guide](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/upgrade-guide/upgrade-v11.3/).
+For even more detail about all the changes in this release, refer to the [changelog](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md). For the specific steps we recommend when you upgrade to v11.3, check out our [Upgrade Guide](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/upgrade-guide/upgrade-v11.3/).
 
 ## Scenes-powered Dashboards are generally available
 
@@ -40,7 +40,7 @@ It can be difficult to efficiently navigate through the visually cluttered optio
 
 **Template variables and the time range picker remain visible as your scroll**
 
-The time picker is now the dashboard canvas rather than the toolbar, and now, together with template variables, it will stick to the top as you scroll through your dashboard. This is a highly [requested feature](https://github.com/grafana/grafana/issues/11166) that we're very happy to be able to roll out!
+The time picker is now the dashboard canvas rather than the toolbar, and now, together with template variables, it will stick to the top as you scroll through your dashboard. This is a highly [requested feature](https://github.com/capitalrx/grafana/issues/11166) that we're very happy to be able to roll out!
 
 **Timezone parameter in Grafana URL**
 
@@ -169,7 +169,7 @@ With **Explore Logs** you can visualize and explore your logs to troubleshoot wi
 
 While **Explore Logs** is [GA in cloud](https://grafana.com/blog/2024/09/24/queryless-metrics-logs-traces-profiles/#explore-logs) and installed there by default already, with Grafana v11.3.0 it will be automatically installed on your Open Source or Enterprise instance as well. This will let you use Explore Logs alongside **Explore Metrics** without needing to install it manually.
 
-This is configured by the [`preinstall` configuration parameter](https://github.com/grafana/grafana/blob/9ece88d5852dceb90f83271e66902eece24f908f/conf/defaults.ini#L1748) in your Grafana configuration. For more information about Explore logs, refer to [the documentation](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/explore/simplified-exploration/logs/).
+This is configured by the [`preinstall` configuration parameter](https://github.com/capitalrx/grafana/blob/9ece88d5852dceb90f83271e66902eece24f908f/conf/defaults.ini#L1748) in your Grafana configuration. For more information about Explore logs, refer to [the documentation](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/explore/simplified-exploration/logs/).
 
 ## Correlations
 

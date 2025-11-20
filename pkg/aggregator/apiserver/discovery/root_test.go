@@ -13,7 +13,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apiserver/pkg/endpoints/discovery/aggregated"
 
-	aggregationv0alpha1api "github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
+	aggregationv0alpha1api "github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
 )
 
 func TestRootDiscoveryHandler_Handle(t *testing.T) {

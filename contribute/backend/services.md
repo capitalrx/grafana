@@ -75,8 +75,8 @@ package server
 
 import (
 	"github.com/google/wire"
-	"github.com/grafana/grafana/pkg/example"
-    "github.com/grafana/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/example"
+    "github.com/capitalrx/grafana/pkg/infra/db"
 )
 
 var wireBasicSet = wire.NewSet(

@@ -1,6 +1,6 @@
 package authinfoimpl
 
-import "github.com/grafana/grafana/pkg/services/user"
+import "github.com/capitalrx/grafana/pkg/services/user"
 
 type OSSUserProtectionImpl struct {
 }

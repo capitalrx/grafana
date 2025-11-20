@@ -3,7 +3,7 @@ package dashverimpl
 import (
 	"context"
 
-	dashver "github.com/grafana/grafana/pkg/services/dashboardversion"
+	dashver "github.com/capitalrx/grafana/pkg/services/dashboardversion"
 )
 
 type store interface {

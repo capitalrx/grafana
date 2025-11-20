@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/org"
 )
 
 type DashboardStore interface {

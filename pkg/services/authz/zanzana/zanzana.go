@@ -8,7 +8,7 @@ import (
 
 	authlib "github.com/grafana/authlib/types"
 
-	"github.com/grafana/grafana/pkg/services/authz/zanzana/common"
+	"github.com/capitalrx/grafana/pkg/services/authz/zanzana/common"
 )
 
 const (

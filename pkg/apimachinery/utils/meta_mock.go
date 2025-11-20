@@ -12,7 +12,7 @@ import (
 
 	types "k8s.io/apimachinery/pkg/types"
 
-	v0alpha1 "github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1"
+	v0alpha1 "github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1"
 
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )

@@ -8,8 +8,8 @@ import (
 	oam "github.com/aws/aws-sdk-go-v2/service/oam"
 	oamtypes "github.com/aws/aws-sdk-go-v2/service/oam/types"
 	"github.com/aws/smithy-go"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models/resources"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models/resources"
 )
 
 var ErrAccessDeniedException = errors.New("access denied. please check your IAM policy")

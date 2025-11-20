@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/plugins/manager/loader/angular/angulardetector"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/loader/angular/angulardetector"
 	"github.com/stretchr/testify/require"
 )
 

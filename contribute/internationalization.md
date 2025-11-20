@@ -98,7 +98,7 @@ While the `t` function can technically be used outside of React functions (for e
    3. Under **Target languages**, add the language.
    4. If Crowdin's locale code is different from our IETF language tag (such as Chinese Simplified), add a custom mapping in **Project Settings** -> **Language mapping**.
 2. Sync the new (empty) language to the repo.
-   1. In Grafana's Github Actions, go to [Crowdin Download Action](https://github.com/grafana/grafana/actions/workflows/i18n-crowdin-download.yml).
+   1. In Grafana's Github Actions, go to [Crowdin Download Action](https://github.com/capitalrx/grafana/actions/workflows/i18n-crowdin-download.yml).
    2. From main, select **Run workflow**.
    3. The workflow creates a PR with the new language files, which can be reviewed and merged.
 3. Update `public/app/core/internationalization/constants.ts`.

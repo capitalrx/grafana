@@ -6,8 +6,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/services/ldap"
-	"github.com/grafana/grafana/pkg/services/ssosettings/models"
+	"github.com/capitalrx/grafana/pkg/services/ldap"
+	"github.com/capitalrx/grafana/pkg/services/ssosettings/models"
 	"github.com/stretchr/testify/require"
 )
 

@@ -63,10 +63,10 @@ Don't use the `init()` function for any purpose other than registering services 
 
 **State:** Ongoing, passive.
 
-We plan to move all settings from package-level vars in the settings package to the [`setting.Cfg`](https://github.com/grafana/grafana/blob/df917663e6f358a076ed3daa9b199412e95c11f4/pkg/setting/setting.go#L210) struct. To access the settings, services and components can inject `setting.Cfg`:
+We plan to move all settings from package-level vars in the settings package to the [`setting.Cfg`](https://github.com/capitalrx/grafana/blob/df917663e6f358a076ed3daa9b199412e95c11f4/pkg/setting/setting.go#L210) struct. To access the settings, services and components can inject `setting.Cfg`:
 
-- [`Cfg` struct](https://github.com/grafana/grafana/blob/df917663e6f358a076ed3daa9b199412e95c11f4/pkg/setting/setting.go#L210)
-- [Injection](https://github.com/grafana/grafana/blob/c9773e55b234b7637ea97b671161cd856a1d3d69/pkg/services/cleanup/cleanup.go#L34)
+- [`Cfg` struct](https://github.com/capitalrx/grafana/blob/df917663e6f358a076ed3daa9b199412e95c11f4/pkg/setting/setting.go#L210)
+- [Injection](https://github.com/capitalrx/grafana/blob/c9773e55b234b7637ea97b671161cd856a1d3d69/pkg/services/cleanup/cleanup.go#L34)
 
 ## 103 - Reduce use of GoConvey
 
@@ -113,9 +113,9 @@ We want to enhance the use of the API to enable provisioning for all Grafana ins
 All new features that require state should be able to configure Grafana using configuration files.
 For example:
 
-- [Data sources](https://github.com/grafana/grafana/tree/main/pkg/services/provisioning/datasources)
-- [Alert notifiers](https://github.com/grafana/grafana/tree/main/pkg/services/provisioning/notifiers)
-- [Dashboards](https://github.com/grafana/grafana/tree/main/pkg/services/provisioning/dashboards)
+- [Data sources](https://github.com/capitalrx/grafana/tree/main/pkg/services/provisioning/datasources)
+- [Alert notifiers](https://github.com/capitalrx/grafana/tree/main/pkg/services/provisioning/notifiers)
+- [Dashboards](https://github.com/capitalrx/grafana/tree/main/pkg/services/provisioning/dashboards)
 
 Today it's only possible to provision data sources and dashboards, but we want to support it throughout Grafana in the future.
 

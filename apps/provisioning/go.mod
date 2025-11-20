@@ -7,8 +7,8 @@ require (
 	github.com/google/uuid v1.6.0
 	github.com/grafana/authlib v0.0.0-20250710201142-9542f2f28d43
 	github.com/grafana/grafana-app-sdk/logging v0.40.3
-	github.com/grafana/grafana/apps/secret v0.0.0-20250902093454-b56b7add012f
-	github.com/grafana/grafana/pkg/apimachinery v0.0.0-20250804150913-990f1c69ecc2
+	github.com/capitalrx/grafana/apps/secret v0.0.0-20250902093454-b56b7add012f
+	github.com/capitalrx/grafana/pkg/apimachinery v0.0.0-20250804150913-990f1c69ecc2
 	github.com/grafana/nanogit v0.0.0-20250723104447-68f58f5ecec0
 	github.com/migueleliasweb/go-github-mock v1.1.0
 	github.com/stretchr/testify v1.10.0

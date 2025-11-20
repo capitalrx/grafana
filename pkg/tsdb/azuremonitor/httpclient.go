@@ -13,7 +13,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/httpclient"
 
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/types"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/types"
 )
 
 type Provider interface {

@@ -5,10 +5,10 @@
 package fake
 
 import (
-	applyconfiguration "github.com/grafana/grafana/apps/provisioning/pkg/generated/applyconfiguration"
-	clientset "github.com/grafana/grafana/apps/provisioning/pkg/generated/clientset/versioned"
-	provisioningv0alpha1 "github.com/grafana/grafana/apps/provisioning/pkg/generated/clientset/versioned/typed/provisioning/v0alpha1"
-	fakeprovisioningv0alpha1 "github.com/grafana/grafana/apps/provisioning/pkg/generated/clientset/versioned/typed/provisioning/v0alpha1/fake"
+	applyconfiguration "github.com/capitalrx/grafana/apps/provisioning/pkg/generated/applyconfiguration"
+	clientset "github.com/capitalrx/grafana/apps/provisioning/pkg/generated/clientset/versioned"
+	provisioningv0alpha1 "github.com/capitalrx/grafana/apps/provisioning/pkg/generated/clientset/versioned/typed/provisioning/v0alpha1"
+	fakeprovisioningv0alpha1 "github.com/capitalrx/grafana/apps/provisioning/pkg/generated/clientset/versioned/typed/provisioning/v0alpha1/fake"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"

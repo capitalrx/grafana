@@ -11,7 +11,7 @@ import (
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/dynamic"
 
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
 
 	"github.com/grafana/authlib/types"
 	"github.com/grafana/grafana-app-sdk/logging"
@@ -19,9 +19,9 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/data/utils/jsoniter"
 	"github.com/grafana/grafana-plugin-sdk-go/live"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/services/apiserver"
-	"github.com/grafana/grafana/pkg/services/live/model"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/services/apiserver"
+	"github.com/capitalrx/grafana/pkg/services/live/model"
 )
 
 // WatchRunner will start a watch task and broadcast results

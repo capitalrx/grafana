@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/apis/featuretoggle/v0alpha1"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/apis/featuretoggle/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
 	"k8s.io/apimachinery/pkg/apis/meta/internalversion"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"

@@ -26,7 +26,7 @@ import (
 	"k8s.io/apiserver/pkg/storage"
 	"k8s.io/apiserver/pkg/storage/value"
 
-	grafanaregistry "github.com/grafana/grafana/pkg/apiserver/registry/generic"
+	grafanaregistry "github.com/capitalrx/grafana/pkg/apiserver/registry/generic"
 )
 
 var NewContext = func() context.Context {

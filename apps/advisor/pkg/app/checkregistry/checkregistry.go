@@ -1,22 +1,22 @@
 package checkregistry
 
 import (
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checks"
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checks/authchecks"
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checks/configchecks"
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checks/datasourcecheck"
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checks/instancechecks"
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checks/plugincheck"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/repo"
-	"github.com/grafana/grafana/pkg/services/datasources"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/managedplugins"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginchecker"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/plugincontext"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginstore"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/provisionedplugins"
-	"github.com/grafana/grafana/pkg/services/ssosettings"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checks"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checks/authchecks"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checks/configchecks"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checks/datasourcecheck"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checks/instancechecks"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checks/plugincheck"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/repo"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/managedplugins"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginchecker"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/plugincontext"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginstore"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/provisionedplugins"
+	"github.com/capitalrx/grafana/pkg/services/ssosettings"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type CheckService interface {

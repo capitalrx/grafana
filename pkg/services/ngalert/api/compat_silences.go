@@ -3,8 +3,8 @@ package api
 import (
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 // Silence-specific compat functions to convert between API and model types.

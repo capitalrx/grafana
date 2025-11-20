@@ -44,7 +44,7 @@ func Version() string {
 // and panics if an argument could not be fulfilled via dependency injection.
 type Handler any
 
-//go:linkname hack_wrap github.com/grafana/grafana/pkg/api/response.wrap_handler
+//go:linkname hack_wrap github.com/capitalrx/grafana/pkg/api/response.wrap_handler
 func hack_wrap(Handler) http.HandlerFunc
 
 // wrapHandler turns any supported handler type into a http.Handler by wrapping it accordingly

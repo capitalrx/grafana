@@ -20,11 +20,11 @@ import (
 	"go.opentelemetry.io/otel/trace"
 	gomail "gopkg.in/mail.v2"
 
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
-var tracer = otel.Tracer("github.com/grafana/grafana/pkg/services/notifications")
+var tracer = otel.Tracer("github.com/capitalrx/grafana/pkg/services/notifications")
 
 type SmtpClient struct {
 	cfg setting.SmtpSettings

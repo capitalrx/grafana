@@ -95,7 +95,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const iconComponent = icon && <IconRenderer icon={icon} size={size} className={styles.icon} />;
 
     // In order to standardise Button please always consider using IconButton when you need a button with an icon only
-    // When using tooltip, ref is forwarded to Tooltip component instead for https://github.com/grafana/grafana/issues/65632
+    // When using tooltip, ref is forwarded to Tooltip component instead for https://github.com/capitalrx/grafana/issues/65632
     const button = (
       <button
         className={buttonStyles}
@@ -171,7 +171,7 @@ export const LinkButton = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
       className
     );
 
-    // When using tooltip, ref is forwarded to Tooltip component instead for https://github.com/grafana/grafana/issues/65632
+    // When using tooltip, ref is forwarded to Tooltip component instead for https://github.com/capitalrx/grafana/issues/65632
     const button = (
       <a
         className={linkButtonStyles}

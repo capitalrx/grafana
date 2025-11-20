@@ -6,7 +6,7 @@ import (
 	"log/slog"
 
 	"dagger.io/dagger"
-	"github.com/grafana/grafana/pkg/build/daggerbuild/containers"
+	"github.com/capitalrx/grafana/pkg/build/daggerbuild/containers"
 )
 
 // NPMPackages versions and packs the npm packages into tarballs into `npm-packages` directory.

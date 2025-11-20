@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	common "github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	secret "github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
+	common "github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	secret "github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
 )
 
 // prepareSecureValues will create any new secure values and register changes inside the provided objectForStorage

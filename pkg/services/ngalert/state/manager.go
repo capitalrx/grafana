@@ -12,12 +12,12 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/services/ngalert/eval"
-	"github.com/grafana/grafana/pkg/services/ngalert/metrics"
-	ngModels "github.com/grafana/grafana/pkg/services/ngalert/models"
-	history_model "github.com/grafana/grafana/pkg/services/ngalert/state/historian/model"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/eval"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/metrics"
+	ngModels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	history_model "github.com/capitalrx/grafana/pkg/services/ngalert/state/historian/model"
 )
 
 var (
@@ -396,7 +396,7 @@ func (st *Manager) updateLastSentAt(states StateTransitions, evaluatedAt time.Ti
 
 func (st *Manager) setNextStateForRule(ctx context.Context, alertRule *ngModels.AlertRule, results eval.Results, extraLabels data.Labels, logger log.Logger, takeImageFn takeImageFn, now time.Time) []StateTransition {
 	if results.IsNoData() && (alertRule.NoDataState == ngModels.Alerting || alertRule.NoDataState == ngModels.OK || alertRule.NoDataState == ngModels.KeepLast) { // If it is no data, check the mapping and switch all results to the new state
-		// aggregate UID of datasources that returned NoData into one and provide as auxiliary info via annotationa. See: https://github.com/grafana/grafana/issues/88184
+		// aggregate UID of datasources that returned NoData into one and provide as auxiliary info via annotationa. See: https://github.com/capitalrx/grafana/issues/88184
 		var refIds strings.Builder
 		var datasourceUIDs strings.Builder
 		// for deduplication of datasourceUIDs

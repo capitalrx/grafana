@@ -27,7 +27,7 @@ Each version of Playwright needs specific versions of browser binaries to operat
 yarn playwright install chromium
 ```
 
-The following script starts a Grafana [development server](https://github.com/grafana/grafana/blob/main/scripts/grafana-server/start-server) (same server that is being used when running e2e tests in CI) on port 3001 and runs all the Playwright tests. The development server is provisioned with the [devenv](https://github.com/grafana/grafana/blob/main/contribute/developer-guide.md#add-data-sources) dashboards, data sources and apps.
+The following script starts a Grafana [development server](https://github.com/capitalrx/grafana/blob/main/scripts/grafana-server/start-server) (same server that is being used when running e2e tests in CI) on port 3001 and runs all the Playwright tests. The development server is provisioned with the [devenv](https://github.com/capitalrx/grafana/blob/main/contribute/developer-guide.md#add-data-sources) dashboards, data sources and apps.
 
 ```
 yarn e2e:playwright
@@ -61,7 +61,7 @@ You can also run all the tests matching a specific tag with _@tagName_.
 yarn e2e:playwright --grep @<tagname>
 ```
 
-3 - **To run a project**. It will run the entire project. You can find them in [grafana/playwright.config.ts](https://github.com/grafana/grafana/blob/main/playwright.config.ts#L90).
+3 - **To run a project**. It will run the entire project. You can find them in [grafana/playwright.config.ts](https://github.com/capitalrx/grafana/blob/main/playwright.config.ts#L90).
 
 ```
 yarn e2e:playwright --project <projectname>
@@ -253,12 +253,12 @@ When end-to-end testing Grafana plugins, a best practice is to use the [`@grafan
 
 ## Add end-to-end tests for a core plugin
 
-You can add Playwright end-to-end tests for plugins to the [`e2e-playwright/plugin-e2e`](https://github.com/grafana/grafana/tree/main/e2e-playwright/plugin-e2e) directory.
+You can add Playwright end-to-end tests for plugins to the [`e2e-playwright/plugin-e2e`](https://github.com/capitalrx/grafana/tree/main/e2e-playwright/plugin-e2e) directory.
 
-1. Add a new directory that has the name as your plugin [`here`](https://github.com/grafana/grafana/tree/main/e2e-playwright/plugin-e2e). This is the directory where your plugin tests will be kept.
+1. Add a new directory that has the name as your plugin [`here`](https://github.com/capitalrx/grafana/tree/main/e2e-playwright/plugin-e2e). This is the directory where your plugin tests will be kept.
 
 1. Playwright uses [projects](https://playwright.dev/docs/test-projects) to logically group tests together. All tests in a project share the same configuration.
-   In the [Playwright config file](https://github.com/grafana/grafana/blob/main/playwright.config.ts), add a new project item. Make sure the `name` and the `testDir` subdirectory match the name of the directory that contains your plugin tests.
+   In the [Playwright config file](https://github.com/capitalrx/grafana/blob/main/playwright.config.ts), add a new project item. Make sure the `name` and the `testDir` subdirectory match the name of the directory that contains your plugin tests.
    Add `'authenticate'` to the list of dependencies and specify `'playwright/.auth/admin.json'` as the storage state to ensure that all tests in your project will start already authenticated as an admin user. If you want to use a different role for and perhaps test RBAC for some of your tests, refer to our [documentation](https://grafana.com/developers/plugin-tools/e2e-test-a-plugin/use-authentication).
 
    ```ts
@@ -273,13 +273,13 @@ You can add Playwright end-to-end tests for plugins to the [`e2e-playwright/plug
     },
    ```
 
-1. Update the [CODEOWNERS](https://github.com/grafana/grafana/blob/main/.github/CODEOWNERS/#L315) file so that your team is owner of the tests in the directory you added in step 1.
+1. Update the [CODEOWNERS](https://github.com/capitalrx/grafana/blob/main/.github/CODEOWNERS/#L315) file so that your team is owner of the tests in the directory you added in step 1.
 
 ## Commands
 
 - `yarn e2e:playwright` runs all Playwright tests. Optionally, you can provide the `--project mysql` argument to run tests in a specific project.
 
-  The `yarn e2e:playwright` command starts a Grafana [development server](https://github.com/grafana/grafana/blob/main/scripts/grafana-server/start-server) on port 3001 and runs the Playwright tests.
+  The `yarn e2e:playwright` command starts a Grafana [development server](https://github.com/capitalrx/grafana/blob/main/scripts/grafana-server/start-server) on port 3001 and runs the Playwright tests.
 
   You can run against an arbitrary instance by setting the `GRAFANA_URL` environment variable:
 
@@ -287,7 +287,7 @@ You can add Playwright end-to-end tests for plugins to the [`e2e-playwright/plug
 
   Note this will not start a development server, so you must ensure that Grafana is running and accessible at the specified URL.
 
-- You can provision the development server with the [devenv](https://github.com/grafana/grafana/blob/main/contribute/developer-guide.md#add-data-sources) dashboards, data sources, and apps.
+- You can provision the development server with the [devenv](https://github.com/capitalrx/grafana/blob/main/contribute/developer-guide.md#add-data-sources) dashboards, data sources, and apps.
 
 > ### Playwright tests in Grafana Enterprise
 >

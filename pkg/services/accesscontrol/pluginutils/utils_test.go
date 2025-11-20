@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	ac "github.com/grafana/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	ac "github.com/capitalrx/grafana/pkg/services/accesscontrol"
 )
 
 func TestToRegistrations(t *testing.T) {

@@ -5,8 +5,8 @@ import (
 
 	"github.com/grafana/dskit/services"
 
-	"github.com/grafana/grafana/pkg/api"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/api"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type coreService struct {

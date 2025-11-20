@@ -7,7 +7,7 @@ import (
 )
 
 // JSON configuration schema for Grafana plugins
-// Converted from: https://github.com/grafana/grafana/blob/main/docs/sources/developers/plugins/plugin.schema.json
+// Converted from: https://github.com/capitalrx/grafana/blob/main/docs/sources/developers/plugins/plugin.schema.json
 // +k8s:openapi-gen=true
 type PluginMetaJSONData struct {
 	// Unique name of the plugin

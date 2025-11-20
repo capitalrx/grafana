@@ -67,7 +67,7 @@ You can use a geomap visualization if you need to:
 - Visualize the relationship of your locations' HVAC consumption or solar production with the sun's location
 
 {{< admonition type="note" >}}
-We'd love your feedback on the geomap visualization. Please check out the [open Github issues](https://github.com/grafana/grafana/issues?page=1&q=is%3Aopen+is%3Aissue+label%3Aarea%2Fpanel%2Fgeomap) and [submit a new feature request](https://github.com/grafana/grafana/issues/new?assignees=&labels=type%2Ffeature-request,area%2Fpanel%2Fgeomap&title=Geomap:&projects=grafana-dataviz&template=1-feature_requests.md) as needed.
+We'd love your feedback on the geomap visualization. Please check out the [open Github issues](https://github.com/capitalrx/grafana/issues?page=1&q=is%3Aopen+is%3Aissue+label%3Aarea%2Fpanel%2Fgeomap) and [submit a new feature request](https://github.com/capitalrx/grafana/issues/new?assignees=&labels=type%2Ffeature-request,area%2Fpanel%2Fgeomap&title=Geomap:&projects=grafana-dataviz&template=1-feature_requests.md) as needed.
 {{< /admonition >}}
 
 ## Configure a geomap visualization

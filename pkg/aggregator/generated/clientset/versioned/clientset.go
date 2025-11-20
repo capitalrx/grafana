@@ -8,7 +8,7 @@ import (
 	fmt "fmt"
 	http "net/http"
 
-	aggregationv0alpha1 "github.com/grafana/grafana/pkg/aggregator/generated/clientset/versioned/typed/aggregation/v0alpha1"
+	aggregationv0alpha1 "github.com/capitalrx/grafana/pkg/aggregator/generated/clientset/versioned/typed/aggregation/v0alpha1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

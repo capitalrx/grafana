@@ -3,7 +3,7 @@ package plugindashboards
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
 )
 
 // PluginDashboard plugin dashboard model..

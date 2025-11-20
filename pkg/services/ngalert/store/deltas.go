@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/util/cmputil"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/util/cmputil"
 )
 
 // AlertRuleFieldsToIgnoreInDiff contains fields that are ignored when calculating the RuleDelta.Diff.

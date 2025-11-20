@@ -1,4 +1,4 @@
-// Core Grafana history https://github.com/grafana/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/migrations/variableMigration.ts
+// Core Grafana history https://github.com/capitalrx/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/migrations/variableMigration.ts
 import { buildVisualQueryFromString } from '../querybuilder/parsing';
 import { promQueryModeller } from '../querybuilder/shared/modeller_instance';
 import { PromVariableQuery, PromVariableQueryType as QueryType } from '../types';

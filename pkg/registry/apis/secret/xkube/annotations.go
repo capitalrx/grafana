@@ -1,6 +1,6 @@
 package xkube
 
-import "github.com/grafana/grafana/pkg/apimachinery/utils"
+import "github.com/capitalrx/grafana/pkg/apimachinery/utils"
 
 var (
 	// Exclude these annotations

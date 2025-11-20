@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/google/uuid"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 	"github.com/redis/go-redis/v9"
 	"github.com/stretchr/testify/require"
 )

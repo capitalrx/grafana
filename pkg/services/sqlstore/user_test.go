@@ -4,13 +4,13 @@ import (
 	"context"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 	"github.com/stretchr/testify/require"
 )
 
 // testing a regression which shows up when the main org is created, but not the
 // admin user: getOrCreateOrg was unable to find the existing org.
-// https://github.com/grafana/grafana/issues/71781
+// https://github.com/capitalrx/grafana/issues/71781
 func TestIntegrationGetOrCreateOrg(t *testing.T) {
 	testutil.SkipIntegrationTestInShortMode(t)
 

@@ -3,7 +3,7 @@ package pipeline
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/live/convert"
+	"github.com/capitalrx/grafana/pkg/services/live/convert"
 )
 
 // AutoInfluxConverter decodes Influx line protocol input and transforms it

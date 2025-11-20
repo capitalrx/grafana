@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/grafana/grafana/apps/provisioning/pkg/repository"
-	"github.com/grafana/grafana/apps/provisioning/pkg/safepath"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/repository"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/safepath"
 	"github.com/grafana/nanogit"
 )
 

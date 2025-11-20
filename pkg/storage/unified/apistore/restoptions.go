@@ -19,8 +19,8 @@ import (
 	flowcontrolrequest "k8s.io/apiserver/pkg/util/flowcontrol/request"
 	"k8s.io/client-go/tools/cache"
 
-	secret "github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
+	secret "github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
 )
 
 var _ generic.RESTOptionsGetter = (*RESTOptionsGetter)(nil)

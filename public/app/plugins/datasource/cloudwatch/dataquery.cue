@@ -15,7 +15,7 @@
 package grafanaplugin
 
 import (
-	common "github.com/grafana/grafana/packages/grafana-schema/src/common"
+	common "github.com/capitalrx/grafana/packages/grafana-schema/src/common"
 )
 
 composableKinds: DataQuery: {

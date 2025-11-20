@@ -1,6 +1,6 @@
 package licensing
 
-import "github.com/grafana/grafana/pkg/services/accesscontrol"
+import "github.com/capitalrx/grafana/pkg/services/accesscontrol"
 
 const (
 	ActionRead        = "licensing:read"

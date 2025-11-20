@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/db"
 )
 
 func (s *UserAuthTokenService) Run(ctx context.Context) error {

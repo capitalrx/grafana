@@ -8,9 +8,9 @@ import (
 
 	"github.com/grafana/dskit/concurrency"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/annotations"
-	"github.com/grafana/grafana/pkg/services/annotations/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/annotations"
+	"github.com/capitalrx/grafana/pkg/services/annotations/accesscontrol"
 )
 
 // CompositeStore is a read store that combines two or more read stores, and queries all stores in parallel.

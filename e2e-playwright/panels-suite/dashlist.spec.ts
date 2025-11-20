@@ -8,7 +8,7 @@ test.describe(
     tag: '@panels',
   },
   () => {
-    // this is to prevent the fix for https://github.com/grafana/grafana/issues/76800 from regressing
+    // this is to prevent the fix for https://github.com/capitalrx/grafana/issues/76800 from regressing
     test('should pass current variable values correctly when `Include current template variable values` is set', async ({
       gotoDashboardPage,
       selectors,

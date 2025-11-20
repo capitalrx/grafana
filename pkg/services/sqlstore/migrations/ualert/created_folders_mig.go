@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/grafana/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 )
 
 // stateKey is a vendored migrationStore.stateKey.

@@ -1,7 +1,7 @@
 syntax = "proto3";
 package resource;
 
-option go_package = "github.com/grafana/grafana/pkg/storage/unified/resourcepb";
+option go_package = "github.com/capitalrx/grafana/pkg/storage/unified/resourcepb";
 
 message ResourceKey {
   // Namespace (tenant)

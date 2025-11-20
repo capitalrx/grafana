@@ -14,9 +14,9 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/apps/dashboard/pkg/migration"
-	"github.com/grafana/grafana/apps/dashboard/pkg/migration/schemaversion"
-	migrationtestutil "github.com/grafana/grafana/apps/dashboard/pkg/migration/testutil"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/migration"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/migration/schemaversion"
+	migrationtestutil "github.com/capitalrx/grafana/apps/dashboard/pkg/migration/testutil"
 )
 
 const INPUT_DIR = "testdata/input"

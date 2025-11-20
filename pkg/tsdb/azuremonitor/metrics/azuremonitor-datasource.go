@@ -20,11 +20,11 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/kinds/dataquery"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/loganalytics"
-	azTime "github.com/grafana/grafana/pkg/tsdb/azuremonitor/time"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/types"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/utils"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/loganalytics"
+	azTime "github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/time"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/types"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/utils"
 )
 
 // AzureMonitorDatasource calls the Azure Monitor API - one of the four API's supported
@@ -676,7 +676,7 @@ func formatAzureMonitorLegendKey(query *types.AzureMonitorQuery, resourceId stri
 //
 // to
 //
-//	https://github.com/grafana/grafana/blob/main/packages/grafana-data/src/valueFormats/categories.ts#L24
+//	https://github.com/capitalrx/grafana/blob/main/packages/grafana-data/src/valueFormats/categories.ts#L24
 func toGrafanaUnit(unit string) string {
 	switch unit {
 	case "BitsPerSecond":

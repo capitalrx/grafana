@@ -22,25 +22,25 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/exp/slices"
 
-	"github.com/grafana/grafana/pkg/expr"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/services/annotations"
-	"github.com/grafana/grafana/pkg/services/annotations/annotationstest"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	acfakes "github.com/grafana/grafana/pkg/services/ngalert/accesscontrol/fakes"
-	"github.com/grafana/grafana/pkg/services/ngalert/eval"
-	"github.com/grafana/grafana/pkg/services/ngalert/metrics"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/ngalert/state"
-	"github.com/grafana/grafana/pkg/services/ngalert/state/historian"
-	"github.com/grafana/grafana/pkg/services/ngalert/tests"
-	alertTestUtil "github.com/grafana/grafana/pkg/services/ngalert/testutil"
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/tests/testsuite"
-	"github.com/grafana/grafana/pkg/util"
-	tutil "github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/expr"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/services/annotations"
+	"github.com/capitalrx/grafana/pkg/services/annotations/annotationstest"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	acfakes "github.com/capitalrx/grafana/pkg/services/ngalert/accesscontrol/fakes"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/eval"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/metrics"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/state"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/state/historian"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/tests"
+	alertTestUtil "github.com/capitalrx/grafana/pkg/services/ngalert/testutil"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/tests/testsuite"
+	"github.com/capitalrx/grafana/pkg/util"
+	tutil "github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 func TestMain(m *testing.M) {
@@ -799,7 +799,7 @@ func TestProcessEvalResults(t *testing.T) {
 			},
 		},
 		{
-			desc:      "normal -> nodata no labels when result is NoData and NoDataState is nodata", // TODO should be broken in https://github.com/grafana/grafana/pull/68142
+			desc:      "normal -> nodata no labels when result is NoData and NoDataState is nodata", // TODO should be broken in https://github.com/capitalrx/grafana/pull/68142
 			alertRule: baseRule,
 			evalResults: map[time.Time]eval.Results{
 				t1: {

@@ -7,7 +7,7 @@ import (
 	"k8s.io/apiserver/pkg/authentication/request/union"
 	"k8s.io/klog/v2"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
 )
 
 func NewAuthenticator(authRequestHandlers ...authenticator.Request) authenticator.Request {

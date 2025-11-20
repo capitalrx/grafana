@@ -6,7 +6,7 @@ BENCH_FILE="tmp/bench_${COMMIT_HASH}.txt"
 BENCH_GRAPH="tmp/bench_${COMMIT_HASH}.html"
 
 # Run benchmark
-go test -benchmem -run=^$ -bench . github.com/grafana/grafana/pkg/services/accesscontrol/database | tee "${BENCH_FILE}"
+go test -benchmem -run=^$ -bench . github.com/capitalrx/grafana/pkg/services/accesscontrol/database | tee "${BENCH_FILE}"
 
 CHART_DATA_USERS=$(grep -oP "^BenchmarkRolesUsers([^[:blank:]]+)[[:blank:]]+[0-9]+[[:blank:]]+[0-9]+" "${BENCH_FILE}" |
   sed -E 's/Benchmark([^[:blank:]]+)[[:blank:]]+[0-9]+[[:blank:]]+([0-9]+)/\1 \2/' |

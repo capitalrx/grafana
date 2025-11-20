@@ -37,7 +37,7 @@ export const createShortLink = memoizeOne(async function (path: string) {
 
 /**
  * Creates a ClipboardItem for the shortened link. This is used due to clipboard issues in Safari after making async calls.
- * See https://github.com/grafana/grafana/issues/106889
+ * See https://github.com/capitalrx/grafana/issues/106889
  * @param path - The long path to share.
  * @returns A ClipboardItem for the shortened link.
  */

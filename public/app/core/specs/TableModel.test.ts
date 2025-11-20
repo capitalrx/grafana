@@ -71,7 +71,7 @@ describe('when sorting table with cols being undefined', () => {
       [103, 10],
     ];
     // This is needed because after 8.3 cols can be undefined
-    // https://github.com/grafana/grafana/issues/44127
+    // https://github.com/capitalrx/grafana/issues/44127
     //@ts-ignore
     table.sort(panel.sort);
   });

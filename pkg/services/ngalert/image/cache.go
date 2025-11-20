@@ -8,7 +8,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 const (
@@ -18,7 +18,7 @@ const (
 
 // CacheService caches images.
 //
-//go:generate mockgen -destination=cache_mock.go -package=image github.com/grafana/grafana/pkg/services/ngalert/image CacheService
+//go:generate mockgen -destination=cache_mock.go -package=image github.com/capitalrx/grafana/pkg/services/ngalert/image CacheService
 type CacheService interface {
 	// Get returns the screenshot for the options or false if a screenshot with these
 	// options does not exist.

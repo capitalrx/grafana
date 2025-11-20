@@ -128,7 +128,7 @@ describe('TextPanel', () => {
     expect(waited.innerHTML).toEqual('<p><em>hello</em></p>\n');
   });
 
-  // Tests https://github.com/grafana/grafana/issues/49759 explicitly
+  // Tests https://github.com/capitalrx/grafana/issues/49759 explicitly
   it('interpolates variables correctly so they can be used in markdown urls', async () => {
     const contentTest = '[Example: ${__url_time_range}](https://example.com/?${__url_time_range})';
     replaceVariablesMock.mockImplementationOnce((str) => {

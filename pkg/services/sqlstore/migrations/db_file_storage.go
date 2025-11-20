@@ -1,6 +1,6 @@
 package migrations
 
-import "github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+import "github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 
 func addDbFileStorageMigration(mg *migrator.Migrator) {
 	filesTable := migrator.Table{

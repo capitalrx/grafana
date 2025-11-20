@@ -5,7 +5,7 @@ package legacy
 import (
 	context "context"
 
-	resourcepb "github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	resourcepb "github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 	mock "github.com/stretchr/testify/mock"
 )
 

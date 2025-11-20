@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
-	"github.com/grafana/grafana/apps/secret/pkg/decrypt"
-	common "github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	"github.com/capitalrx/grafana/apps/secret/pkg/decrypt"
+	common "github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1"
 )
 
 type Decrypter = func(r *provisioning.Repository) SecureValues

@@ -25,7 +25,7 @@ var logger = backend.NewLoggerWith("logger", "tsdb.tempo")
 // default httpClient to the gRPC client. This means that we cannot use the same middleware that we use for
 // standard HTTP requests.
 // Using other library like connect-go isn't possible right now because Tempo uses non-standard proto compiler which
-// makes generating different client difficult. See https://github.com/grafana/grafana/pull/81683
+// makes generating different client difficult. See https://github.com/capitalrx/grafana/pull/81683
 func newGrpcClient(ctx context.Context, settings backend.DataSourceInstanceSettings, opts httpclient.Options) (tempopb.StreamingQuerierClient, error) {
 	parsedUrl, err := url.Parse(settings.URL)
 	if err != nil {

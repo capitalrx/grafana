@@ -3,9 +3,9 @@ package ualert
 import (
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 )
 
 // DefaultFieldMaxLength is the standard size for most user-settable string fields in Alerting. Use this for typical string fields, unless you have a special reason not to.

@@ -5,7 +5,7 @@ import (
 
 	sdkhttpclient "github.com/grafana/grafana-plugin-sdk-go/backend/httpclient"
 	httplogger "github.com/grafana/grafana-plugin-sdk-go/experimental/http_logger"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 const HTTPLoggerMiddlewareName = "http-logger"

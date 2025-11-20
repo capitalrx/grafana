@@ -9,7 +9,7 @@ import (
 	"k8s.io/klog/v2"
 
 	claims "github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
 )
 
 // WithRequester makes sure there is an identity.Requester in context

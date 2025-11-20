@@ -3,8 +3,8 @@ package alerting
 import (
 	"encoding/json"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	"github.com/grafana/grafana/pkg/services/provisioning/values"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/services/provisioning/values"
 )
 
 type NotificiationPolicyV1 struct {

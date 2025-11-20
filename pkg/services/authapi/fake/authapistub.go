@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/services/authapi"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/services/authapi"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 var _ authapi.Service = (*AuthapiStub)(nil)

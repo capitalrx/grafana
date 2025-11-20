@@ -42,7 +42,7 @@ export default class TableModel implements TableData {
   }
 
   sort(options: { col: number; desc: boolean }) {
-    // Since 8.3.0 col property can be also undefined, https://github.com/grafana/grafana/issues/44127
+    // Since 8.3.0 col property can be also undefined, https://github.com/capitalrx/grafana/issues/44127
     if (options.col === null || options.col === undefined || this.columns.length <= options.col) {
       return;
     }

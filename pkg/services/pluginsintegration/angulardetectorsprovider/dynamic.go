@@ -12,11 +12,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/grafana/grafana/pkg/plugins/log"
-	"github.com/grafana/grafana/pkg/plugins/manager/loader/angular/angulardetector"
-	"github.com/grafana/grafana/pkg/registry"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/angularpatternsstore"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/loader/angular/angulardetector"
+	"github.com/capitalrx/grafana/pkg/registry"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/angularpatternsstore"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 var errNotModified = errors.New("not modified")

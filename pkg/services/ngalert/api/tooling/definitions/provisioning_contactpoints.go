@@ -1,7 +1,7 @@
 package definitions
 
 import (
-	"github.com/grafana/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
 )
 
 // swagger:route GET /v1/provisioning/contact-points provisioning stable RouteGetContactpoints

@@ -13,8 +13,8 @@ import (
 	"k8s.io/apiserver/pkg/registry/rest"
 	"sigs.k8s.io/structured-merge-diff/v4/fieldpath"
 
-	"github.com/grafana/grafana/pkg/aggregator/apis/aggregation"
-	"github.com/grafana/grafana/pkg/aggregator/registry/dataplaneservice"
+	"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation"
+	"github.com/capitalrx/grafana/pkg/aggregator/registry/dataplaneservice"
 )
 
 // REST implements a RESTStorage for Data Plane services.

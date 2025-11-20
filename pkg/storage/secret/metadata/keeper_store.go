@@ -12,12 +12,12 @@ import (
 	"go.opentelemetry.io/otel/trace"
 
 	"github.com/grafana/grafana-app-sdk/logging"
-	secretv1beta1 "github.com/grafana/grafana/apps/secret/pkg/apis/secret/v1beta1"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/xkube"
-	"github.com/grafana/grafana/pkg/storage/secret/metadata/metrics"
-	"github.com/grafana/grafana/pkg/storage/unified/sql"
-	"github.com/grafana/grafana/pkg/storage/unified/sql/sqltemplate"
+	secretv1beta1 "github.com/capitalrx/grafana/apps/secret/pkg/apis/secret/v1beta1"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/xkube"
+	"github.com/capitalrx/grafana/pkg/storage/secret/metadata/metrics"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/sqltemplate"
 )
 
 // keeperMetadataStorage is the actual implementation of the keeper metadata storage.

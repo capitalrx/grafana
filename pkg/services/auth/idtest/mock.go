@@ -7,7 +7,7 @@ import (
 
 	authn "github.com/grafana/authlib/authn"
 
-	identity "github.com/grafana/grafana/pkg/apimachinery/identity"
+	identity "github.com/capitalrx/grafana/pkg/apimachinery/identity"
 
 	mock "github.com/stretchr/testify/mock"
 )

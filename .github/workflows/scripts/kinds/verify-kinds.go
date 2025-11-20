@@ -14,7 +14,7 @@ import (
 	"cuelang.org/go/cue"
 	cueformat "cuelang.org/go/cue/format"
 	"github.com/grafana/codejen"
-	"github.com/grafana/grafana/pkg/registry/schemas"
+	"github.com/capitalrx/grafana/pkg/registry/schemas"
 )
 
 var nonAlphaNumRegex = regexp.MustCompile("[^a-zA-Z0-9 ]+")

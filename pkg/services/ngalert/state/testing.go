@@ -7,9 +7,9 @@ import (
 	"slices"
 	"sync"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	history_model "github.com/grafana/grafana/pkg/services/ngalert/state/historian/model"
-	"github.com/grafana/grafana/pkg/services/screenshot"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	history_model "github.com/capitalrx/grafana/pkg/services/ngalert/state/historian/model"
+	"github.com/capitalrx/grafana/pkg/services/screenshot"
 )
 
 var _ InstanceStore = &FakeInstanceStore{}

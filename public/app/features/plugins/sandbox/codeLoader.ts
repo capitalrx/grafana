@@ -114,7 +114,7 @@ function patchPluginAPIs(pluginCode: string): string {
 }
 
 export function patchSandboxEnvironmentPrototype(sandboxEnvironment: SandboxEnvironment) {
-  // same as https://github.com/grafana/grafana/blob/main/packages/grafana-data/src/types/vector.ts#L16
+  // same as https://github.com/capitalrx/grafana/blob/main/packages/grafana-data/src/types/vector.ts#L16
   // Array is a "reflective" type in Near-membrane and doesn't get an identify continuity
   sandboxEnvironment.evaluate(
     `${patchArrayVectorProrotypeMethods.toString()};${patchArrayVectorProrotypeMethods.name}()`

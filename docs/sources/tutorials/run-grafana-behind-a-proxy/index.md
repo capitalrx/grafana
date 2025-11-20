@@ -81,7 +81,7 @@ For Grafana Live which uses WebSocket connections you may have to raise the ngin
 
 Also, be aware that the preceding configuration only works when the `proxy_pass` value for `location /` is a literal string.
 If you want to use a variable here, you must instead use [a rewrite rule](https://www.nginx.com/blog/creating-nginx-rewrite-rules/).
-For more information, refer to [the GitHub issue #18299](https://github.com/grafana/grafana/issues/18299).
+For more information, refer to [the GitHub issue #18299](https://github.com/capitalrx/grafana/issues/18299).
 
 To configure nginx to serve Grafana under a _sub path_, update the `location` block:
 

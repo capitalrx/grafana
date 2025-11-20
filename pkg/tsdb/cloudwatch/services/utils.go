@@ -3,7 +3,7 @@ package services
 import (
 	"strings"
 
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models/resources"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models/resources"
 )
 
 func valuesToListMetricResponse[T any](values []T) []resources.ResourceResponse[T] {

@@ -10,7 +10,7 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/tests/fakes"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/tests/fakes"
 )
 
 func TestFileStore_Silences(t *testing.T) {

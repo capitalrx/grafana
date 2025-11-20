@@ -5,7 +5,7 @@ import (
 
 	"github.com/grafana/grafana-app-sdk/logging"
 
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 )
 
 // MigrateVersionMatch handles backwards compatibility for ResourceVersionMatch

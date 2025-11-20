@@ -7,7 +7,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/grafana/grafana/pkg/expr"
+	"github.com/capitalrx/grafana/pkg/expr"
 )
 
 var grafanaDatasources = []string{expr.DatasourceType, "datasource"}

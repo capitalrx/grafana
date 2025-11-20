@@ -9,9 +9,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/contexthandler"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/contexthandler"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 // ContentSecurityPolicy sets the configured Content-Security-Policy and/or Content-Security-Policy-Report-Only header(s) in the response.

@@ -5,8 +5,8 @@ import (
 
 	authnlib "github.com/grafana/authlib/authn"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/services/authn"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/services/authn"
 )
 
 func NewAccessClaimsSync() AccessClaimsSync {

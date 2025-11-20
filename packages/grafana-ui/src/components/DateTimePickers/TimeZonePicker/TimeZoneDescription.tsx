@@ -29,7 +29,7 @@ const useDescription = (info?: TimeZoneInfo): string => {
     }
 
     if (info.name === 'Europe/Simferopol') {
-      // See https://github.com/grafana/grafana/issues/72031
+      // See https://github.com/capitalrx/grafana/issues/72031
       return 'Ukraine, EEST';
     }
 

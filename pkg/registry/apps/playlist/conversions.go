@@ -9,12 +9,12 @@ import (
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/types"
 
-	playlist "github.com/grafana/grafana/apps/playlist/pkg/apis/playlist/v0alpha1"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	gapiutil "github.com/grafana/grafana/pkg/services/apiserver/utils"
-	playlistsvc "github.com/grafana/grafana/pkg/services/playlist"
-	"github.com/grafana/grafana/pkg/util"
+	playlist "github.com/capitalrx/grafana/apps/playlist/pkg/apis/playlist/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	gapiutil "github.com/capitalrx/grafana/pkg/services/apiserver/utils"
+	playlistsvc "github.com/capitalrx/grafana/pkg/services/playlist"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 func LegacyUpdateCommandToUnstructured(cmd playlistsvc.UpdatePlaylistCommand) unstructured.Unstructured {

@@ -16,22 +16,22 @@ import (
 	_ "github.com/lib/pq"
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/grafana/grafana/pkg/util/xorm"
-	"github.com/grafana/grafana/pkg/util/xorm/core"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/util/xorm/core"
 
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/infra/fs"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/registry"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrations"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
-	"github.com/grafana/grafana/pkg/services/sqlstore/session"
-	"github.com/grafana/grafana/pkg/services/sqlstore/sqlutil"
-	"github.com/grafana/grafana/pkg/services/stats"
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/bus"
+	"github.com/capitalrx/grafana/pkg/infra/fs"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/registry"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrations"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/session"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/sqlutil"
+	"github.com/capitalrx/grafana/pkg/services/stats"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 // ContextSessionKey is used as key to save values in `context.Context`
@@ -508,7 +508,7 @@ func initTestDB(t sqlutil.ITestDB, testCfg *setting.Cfg,
 
 ERROR: Test DB not set up, are you missing TestMain?
 
-https://github.com/grafana/grafana/blob/main/contribute/backend/style-guide.md
+https://github.com/capitalrx/grafana/blob/main/contribute/backend/style-guide.md
 
 Example:
 
@@ -517,7 +517,7 @@ package mypkg
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/tests/testsuite"
+	"github.com/capitalrx/grafana/pkg/tests/testsuite"
 )
 
 func TestMain(m *testing.M) {

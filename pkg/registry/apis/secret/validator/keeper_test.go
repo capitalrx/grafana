@@ -9,7 +9,7 @@ import (
 	"k8s.io/apiserver/pkg/admission"
 	"k8s.io/utils/ptr"
 
-	secretv1beta1 "github.com/grafana/grafana/apps/secret/pkg/apis/secret/v1beta1"
+	secretv1beta1 "github.com/capitalrx/grafana/apps/secret/pkg/apis/secret/v1beta1"
 )
 
 func TestValidateKeeper(t *testing.T) {

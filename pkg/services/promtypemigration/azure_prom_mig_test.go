@@ -5,8 +5,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
 	"github.com/stretchr/testify/assert"
 )
 

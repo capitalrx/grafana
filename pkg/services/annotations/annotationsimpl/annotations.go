@@ -5,18 +5,18 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/grafana/grafana/pkg/services/annotations/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/annotations/annotationsimpl/loki"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	alertingStore "github.com/grafana/grafana/pkg/services/ngalert/store"
+	"github.com/capitalrx/grafana/pkg/services/annotations/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/annotations/annotationsimpl/loki"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	alertingStore "github.com/capitalrx/grafana/pkg/services/ngalert/store"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/services/annotations"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/tag"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/services/annotations"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/tag"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type RepositoryImpl struct {

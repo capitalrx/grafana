@@ -5,10 +5,10 @@ package dashboards
 import (
 	context "context"
 
-	identity "github.com/grafana/grafana/pkg/apimachinery/identity"
+	identity "github.com/capitalrx/grafana/pkg/apimachinery/identity"
 	mock "github.com/stretchr/testify/mock"
 
-	model "github.com/grafana/grafana/pkg/services/search/model"
+	model "github.com/capitalrx/grafana/pkg/services/search/model"
 
 	unstructured "k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 )

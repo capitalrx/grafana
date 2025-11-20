@@ -1,4 +1,4 @@
-// Core Grafana history https://github.com/grafana/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/tracking.ts
+// Core Grafana history https://github.com/capitalrx/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/tracking.ts
 import { CoreApp, DataQueryRequest, DataQueryResponse } from '@grafana/data';
 import { config, reportInteraction } from '@grafana/runtime';
 

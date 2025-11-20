@@ -1,8 +1,8 @@
 package server
 
 import (
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 // ModuleRunner is a simplified version of Runner that is used in the grafana

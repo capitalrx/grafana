@@ -89,8 +89,8 @@ Legacy alerting has reached its end-of-life. In Grafana v11 you can no longer en
 
 For more details on the code removal, review the following PRs:
 
-- [https://github.com/grafana/grafana/pull/83651](https://github.com/grafana/grafana/pull/83651)
-- [https://github.com/grafana/grafana/issues/81268](https://github.com/grafana/grafana/issues/81268)
+- [https://github.com/capitalrx/grafana/pull/83651](https://github.com/capitalrx/grafana/pull/83651)
+- [https://github.com/capitalrx/grafana/issues/81268](https://github.com/capitalrx/grafana/issues/81268)
 
 ### Deprecated endpoints and fields in Reporting removed
 
@@ -137,13 +137,13 @@ Please note that if you use file provisioning, you can upgrade and update the ro
 
 [Subfolders announcement](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/whatsnew/whats-new-in-v11-0/#subfolders)
 
-[Provisioning: Provision dashboards into subfolders PR](https://github.com/grafana/grafana/pull/79793)
+[Provisioning: Provision dashboards into subfolders PR](https://github.com/capitalrx/grafana/pull/79793)
 
 ### The Input data source is removed
 
 The direct input data source plugin has been removed in Grafana v11. It has been in alpha for four years and is superseded by [TestData](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/datasources/testdata/), which ships with Grafana. This is a small deprecation.
 
-Review [this PR](https://github.com/grafana/grafana/pull/83163) for details.
+Review [this PR](https://github.com/capitalrx/grafana/pull/83163) for details.
 
 ### Data sources: Query filtering changes
 
@@ -161,7 +161,7 @@ For data sources that extend `DataSourceWithBackend`, the filterQuery method is 
 
 #### Learn more
 
-[GitHub PR](https://github.com/grafana/grafana/pull/84656)
+[GitHub PR](https://github.com/capitalrx/grafana/pull/84656)
 
 ### Chore: Query oauth info from a new instance
 
@@ -171,7 +171,7 @@ If you set Google OAuth configuration using `api_url,` you might be using the le
 
 You can turn off this feature through the configuration toggle `validate_hd `. Anyone using the legacy Google OAuth configuration should turn off this validation if the ID Token response doesn't have the HD parameter.
 
-[GitHub PR](https://github.com/grafana/grafana/pull/83229)
+[GitHub PR](https://github.com/capitalrx/grafana/pull/83229)
 
 ### Changes to how the panel view URL is generated for repeated panels
 
@@ -215,18 +215,18 @@ We recommend all plugin authors to migrate their end-to-end tests to use the new
 
 ### Chore: Taint ArrayVector with `never` to further discourage
 
-[GitHub PR](https://github.com/grafana/grafana/pull/83681)
+[GitHub PR](https://github.com/capitalrx/grafana/pull/83681)
 
 The Vector interface that was deprecated in Grafana v10 is further deprecated. Using it now generates build-time Typescript errors, but it remains working at runtime. If you're still using ArrayVector in your code, you should remove it immediately and replace it with plain arrays. Plugins that are compiled against older versions and depend on calling get/set will continue to work because the Array prototype still has a modified prototype. This will be removed in the future.
 
 ### Chore: Remove React 17 peer deps
 
-[GitHub PR](https://github.com/grafana/grafana/pull/83524)
+[GitHub PR](https://github.com/capitalrx/grafana/pull/83524)
 
 We've removed React 17 as a peer dependency from our packages. Anyone using the new versions of these packages should ensure they've upgraded to React 18 following [the upgrade steps](https://react.dev/blog/2022/03/08/react-18-upgrade-guide).
 
 ### Chore: Remove SystemJS from Grafana/Runtime
 
-[GitHub PR](https://github.com/grafana/grafana/pull/84561)
+[GitHub PR](https://github.com/capitalrx/grafana/pull/84561)
 
 SystemJS is no longer exported from `@grafana/runtime`. Plugin developers should instead rely on importing modules/packages using standard TS import syntax and npm/yarn for package installation.

@@ -14,13 +14,13 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/grafana/grafana/pkg/apis/featuretoggle/v0alpha1.Feature":             schema_pkg_apis_featuretoggle_v0alpha1_Feature(ref),
-		"github.com/grafana/grafana/pkg/apis/featuretoggle/v0alpha1.FeatureList":         schema_pkg_apis_featuretoggle_v0alpha1_FeatureList(ref),
-		"github.com/grafana/grafana/pkg/apis/featuretoggle/v0alpha1.FeatureSpec":         schema_pkg_apis_featuretoggle_v0alpha1_FeatureSpec(ref),
-		"github.com/grafana/grafana/pkg/apis/featuretoggle/v0alpha1.FeatureToggles":      schema_pkg_apis_featuretoggle_v0alpha1_FeatureToggles(ref),
-		"github.com/grafana/grafana/pkg/apis/featuretoggle/v0alpha1.FeatureTogglesList":  schema_pkg_apis_featuretoggle_v0alpha1_FeatureTogglesList(ref),
-		"github.com/grafana/grafana/pkg/apis/featuretoggle/v0alpha1.ResolvedToggleState": schema_pkg_apis_featuretoggle_v0alpha1_ResolvedToggleState(ref),
-		"github.com/grafana/grafana/pkg/apis/featuretoggle/v0alpha1.ToggleStatus":        schema_pkg_apis_featuretoggle_v0alpha1_ToggleStatus(ref),
+		"github.com/capitalrx/grafana/pkg/apis/featuretoggle/v0alpha1.Feature":             schema_pkg_apis_featuretoggle_v0alpha1_Feature(ref),
+		"github.com/capitalrx/grafana/pkg/apis/featuretoggle/v0alpha1.FeatureList":         schema_pkg_apis_featuretoggle_v0alpha1_FeatureList(ref),
+		"github.com/capitalrx/grafana/pkg/apis/featuretoggle/v0alpha1.FeatureSpec":         schema_pkg_apis_featuretoggle_v0alpha1_FeatureSpec(ref),
+		"github.com/capitalrx/grafana/pkg/apis/featuretoggle/v0alpha1.FeatureToggles":      schema_pkg_apis_featuretoggle_v0alpha1_FeatureToggles(ref),
+		"github.com/capitalrx/grafana/pkg/apis/featuretoggle/v0alpha1.FeatureTogglesList":  schema_pkg_apis_featuretoggle_v0alpha1_FeatureTogglesList(ref),
+		"github.com/capitalrx/grafana/pkg/apis/featuretoggle/v0alpha1.ResolvedToggleState": schema_pkg_apis_featuretoggle_v0alpha1_ResolvedToggleState(ref),
+		"github.com/capitalrx/grafana/pkg/apis/featuretoggle/v0alpha1.ToggleStatus":        schema_pkg_apis_featuretoggle_v0alpha1_ToggleStatus(ref),
 	}
 }
 
@@ -54,14 +54,14 @@ func schema_pkg_apis_featuretoggle_v0alpha1_Feature(ref common.ReferenceCallback
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/pkg/apis/featuretoggle/v0alpha1.FeatureSpec"),
+							Ref:     ref("github.com/capitalrx/grafana/pkg/apis/featuretoggle/v0alpha1.FeatureSpec"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/apis/featuretoggle/v0alpha1.FeatureSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/pkg/apis/featuretoggle/v0alpha1.FeatureSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -98,7 +98,7 @@ func schema_pkg_apis_featuretoggle_v0alpha1_FeatureList(ref common.ReferenceCall
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/pkg/apis/featuretoggle/v0alpha1.Feature"),
+										Ref:     ref("github.com/capitalrx/grafana/pkg/apis/featuretoggle/v0alpha1.Feature"),
 									},
 								},
 							},
@@ -109,7 +109,7 @@ func schema_pkg_apis_featuretoggle_v0alpha1_FeatureList(ref common.ReferenceCall
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/apis/featuretoggle/v0alpha1.Feature", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/pkg/apis/featuretoggle/v0alpha1.Feature", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -290,7 +290,7 @@ func schema_pkg_apis_featuretoggle_v0alpha1_FeatureTogglesList(ref common.Refere
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/pkg/apis/featuretoggle/v0alpha1.FeatureToggles"),
+										Ref:     ref("github.com/capitalrx/grafana/pkg/apis/featuretoggle/v0alpha1.FeatureToggles"),
 									},
 								},
 							},
@@ -301,7 +301,7 @@ func schema_pkg_apis_featuretoggle_v0alpha1_FeatureTogglesList(ref common.Refere
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/apis/featuretoggle/v0alpha1.FeatureToggles", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/pkg/apis/featuretoggle/v0alpha1.FeatureToggles", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -363,7 +363,7 @@ func schema_pkg_apis_featuretoggle_v0alpha1_ResolvedToggleState(ref common.Refer
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/pkg/apis/featuretoggle/v0alpha1.ToggleStatus"),
+										Ref:     ref("github.com/capitalrx/grafana/pkg/apis/featuretoggle/v0alpha1.ToggleStatus"),
 									},
 								},
 							},
@@ -373,7 +373,7 @@ func schema_pkg_apis_featuretoggle_v0alpha1_ResolvedToggleState(ref common.Refer
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/apis/featuretoggle/v0alpha1.ToggleStatus"},
+			"github.com/capitalrx/grafana/pkg/apis/featuretoggle/v0alpha1.ToggleStatus"},
 	}
 }
 
@@ -425,7 +425,7 @@ func schema_pkg_apis_featuretoggle_v0alpha1_ToggleStatus(ref common.ReferenceCal
 					"source": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Where was the value configured eg: startup | tenant|org | user | browser missing means default",
-							Ref:         ref("github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1.ObjectReference"),
+							Ref:         ref("github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1.ObjectReference"),
 						},
 					},
 					"warning": {
@@ -440,6 +440,6 @@ func schema_pkg_apis_featuretoggle_v0alpha1_ToggleStatus(ref common.ReferenceCal
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1.ObjectReference"},
+			"github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1.ObjectReference"},
 	}
 }

@@ -6,12 +6,12 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/api/response"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	. "github.com/grafana/grafana/pkg/services/publicdashboards/models"
-	"github.com/grafana/grafana/pkg/services/publicdashboards/validation"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/api/dtos"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	. "github.com/capitalrx/grafana/pkg/services/publicdashboards/models"
+	"github.com/capitalrx/grafana/pkg/services/publicdashboards/validation"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 // swagger:route GET /public/dashboards/{accessToken} dashboards dashboard_public viewPublicDashboard

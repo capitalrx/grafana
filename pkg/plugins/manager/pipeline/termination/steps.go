@@ -3,10 +3,10 @@ package termination
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/log"
-	"github.com/grafana/grafana/pkg/plugins/manager/process"
-	"github.com/grafana/grafana/pkg/plugins/manager/registry"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/process"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/registry"
 )
 
 // BackendProcessTerminator implements a TerminateFunc for stopping a backend plugin process.

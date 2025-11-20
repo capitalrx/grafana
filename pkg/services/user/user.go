@@ -4,7 +4,7 @@ import (
 	"context"
 	"strconv"
 
-	"github.com/grafana/grafana/pkg/registry"
+	"github.com/capitalrx/grafana/pkg/registry"
 )
 
 //go:generate mockery --name Service --structname MockService --outpkg usertest --filename mock.go --output ./usertest/

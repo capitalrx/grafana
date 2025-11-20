@@ -4,9 +4,9 @@ import (
 	"context"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/build/daggerbuild/containers"
-	"github.com/grafana/grafana/pkg/build/daggerbuild/pipeline"
-	"github.com/grafana/grafana/pkg/build/daggerbuild/stringutil"
+	"github.com/capitalrx/grafana/pkg/build/daggerbuild/containers"
+	"github.com/capitalrx/grafana/pkg/build/daggerbuild/pipeline"
+	"github.com/capitalrx/grafana/pkg/build/daggerbuild/stringutil"
 	"github.com/urfave/cli/v2"
 )
 

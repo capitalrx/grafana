@@ -1,6 +1,6 @@
 package ualert
 
-import "github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+import "github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 
 // AddAlertRuleStateTable adds column to store alert rule state data.
 func AddAlertRuleStateTable(mg *migrator.Migrator) {

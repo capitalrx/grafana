@@ -3,7 +3,7 @@ package loganalytics
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/kinds/dataquery"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -14,11 +14,11 @@ import (
 	requestK8s "k8s.io/apiserver/pkg/endpoints/request"
 	"k8s.io/apiserver/pkg/registry/rest"
 
-	preferences "github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	utilsOrig "github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/registry/apis/preferences/utils"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
+	preferences "github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	utilsOrig "github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/registry/apis/preferences/utils"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
 )
 
 var (

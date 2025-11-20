@@ -11,7 +11,7 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"google.golang.org/protobuf/types/known/structpb"
 
-	"github.com/grafana/grafana/pkg/services/authz/zanzana/common"
+	"github.com/capitalrx/grafana/pkg/services/authz/zanzana/common"
 )
 
 func (s *Server) Check(ctx context.Context, r *authzv1.CheckRequest) (*authzv1.CheckResponse, error) {

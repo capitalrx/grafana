@@ -14,15 +14,15 @@ import (
 
 	"gopkg.in/ini.v1"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/remotecache"
-	"github.com/grafana/grafana/pkg/infra/usagestats"
-	"github.com/grafana/grafana/pkg/login/social"
-	"github.com/grafana/grafana/pkg/login/social/connectors"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/ssosettings"
-	"github.com/grafana/grafana/pkg/services/supportbundles"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/remotecache"
+	"github.com/capitalrx/grafana/pkg/infra/usagestats"
+	"github.com/capitalrx/grafana/pkg/login/social"
+	"github.com/capitalrx/grafana/pkg/login/social/connectors"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/ssosettings"
+	"github.com/capitalrx/grafana/pkg/services/supportbundles"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type SocialService struct {

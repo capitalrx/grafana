@@ -20,7 +20,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/build/wire"
+	"github.com/capitalrx/grafana/pkg/build/wire"
 )
 
 func injectStringer(s MyString) fmt.Stringer {

@@ -8,7 +8,7 @@ import (
 	"github.com/prometheus/alertmanager/pkg/labels"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
 )
 
 func TestMultiOrgAlertmanager_SaveAndApplyExtraConfiguration(t *testing.T) {

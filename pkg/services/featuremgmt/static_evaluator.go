@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/setting"
 	"github.com/open-feature/go-sdk/openfeature"
 	goffmodel "github.com/thomaspoignant/go-feature-flag/cmd/relayproxy/model"
 )

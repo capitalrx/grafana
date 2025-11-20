@@ -5,8 +5,8 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/services/star"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/services/star"
 )
 
 type sqlStore struct {

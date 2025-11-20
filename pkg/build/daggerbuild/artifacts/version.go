@@ -5,8 +5,8 @@ import (
 	"log/slog"
 
 	"dagger.io/dagger"
-	"github.com/grafana/grafana/pkg/build/daggerbuild/arguments"
-	"github.com/grafana/grafana/pkg/build/daggerbuild/pipeline"
+	"github.com/capitalrx/grafana/pkg/build/daggerbuild/arguments"
+	"github.com/capitalrx/grafana/pkg/build/daggerbuild/pipeline"
 )
 
 var (

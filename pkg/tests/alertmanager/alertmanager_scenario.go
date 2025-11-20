@@ -11,7 +11,7 @@ import (
 
 	"github.com/grafana/e2e"
 	gapi "github.com/grafana/grafana-api-golang-client"
-	"github.com/grafana/grafana/pkg/services/ngalert/remote/client"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/remote/client"
 	"github.com/stretchr/testify/require"
 )
 

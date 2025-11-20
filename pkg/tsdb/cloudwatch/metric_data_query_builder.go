@@ -9,8 +9,8 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	cloudwatchtypes "github.com/aws/aws-sdk-go-v2/service/cloudwatch/types"
 
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/features"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/features"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models"
 )
 
 const keySeparator = "|&|"

@@ -11,9 +11,9 @@ import (
 	"sync"
 
 	sourcemap "github.com/go-sourcemap/sourcemap"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 var logger = log.New("frontendlogging")

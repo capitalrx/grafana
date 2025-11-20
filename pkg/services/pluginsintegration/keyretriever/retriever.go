@@ -3,9 +3,9 @@ package keyretriever
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/manager/signature/statickey"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/keyretriever/dynamic"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/signature/statickey"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/keyretriever/dynamic"
 )
 
 var _ plugins.KeyRetriever = (*Service)(nil)

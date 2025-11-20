@@ -301,9 +301,9 @@ If you've written a data source or panel plugin, make sure it doesn't use the fu
 
 #### Learn more
 
-- [https://github.com/grafana/grafana/issues/65779](https://github.com/grafana/grafana/issues/65779)
+- [https://github.com/capitalrx/grafana/issues/65779](https://github.com/capitalrx/grafana/issues/65779)
 
-- [https://github.com/grafana/grafana/issues/65778](https://github.com/grafana/grafana/issues/65778)
+- [https://github.com/capitalrx/grafana/issues/65778](https://github.com/capitalrx/grafana/issues/65778)
 
 ### DataFrame: Use Array<T> or Vector<T> for field values
 
@@ -323,7 +323,7 @@ Any code using Vectors will continue to work without issue. If you've implement
 
 #### Learn more
 
-- [https://github.com/grafana/grafana/issues/66480](https://github.com/grafana/grafana/issues/66480)
+- [https://github.com/capitalrx/grafana/issues/66480](https://github.com/capitalrx/grafana/issues/66480)
 
 ### grafana/toolkit CLI commands have been removed and migrated to the create-plugin package
 

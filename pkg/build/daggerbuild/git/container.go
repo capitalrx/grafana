@@ -10,7 +10,7 @@ import (
 	"strings"
 
 	"dagger.io/dagger"
-	"github.com/grafana/grafana/pkg/build/daggerbuild/containers"
+	"github.com/capitalrx/grafana/pkg/build/daggerbuild/containers"
 )
 
 const GitImage = "alpine/git"

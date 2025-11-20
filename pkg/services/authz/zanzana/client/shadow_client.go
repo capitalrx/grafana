@@ -6,7 +6,7 @@ import (
 	authlib "github.com/grafana/authlib/types"
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/log"
 )
 
 type ShadowClient struct {

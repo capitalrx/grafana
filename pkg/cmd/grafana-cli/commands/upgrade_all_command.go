@@ -5,11 +5,11 @@ import (
 
 	"github.com/hashicorp/go-version"
 
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/logger"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/models"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/services"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/utils"
-	"github.com/grafana/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/logger"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/models"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/services"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/utils"
+	"github.com/capitalrx/grafana/pkg/plugins"
 )
 
 func shouldUpgrade(installed plugins.FoundPlugin, remote models.Plugin) bool {

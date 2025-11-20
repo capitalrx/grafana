@@ -5,7 +5,7 @@ package fakes
 import (
 	context "context"
 
-	secrets "github.com/grafana/grafana/pkg/services/secrets"
+	secrets "github.com/capitalrx/grafana/pkg/services/secrets"
 	mock "github.com/stretchr/testify/mock"
 )
 

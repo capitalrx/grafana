@@ -1,8 +1,8 @@
 package flags
 
 import (
-	"github.com/grafana/grafana/pkg/build/daggerbuild/backend"
-	"github.com/grafana/grafana/pkg/build/daggerbuild/pipeline"
+	"github.com/capitalrx/grafana/pkg/build/daggerbuild/backend"
+	"github.com/capitalrx/grafana/pkg/build/daggerbuild/pipeline"
 )
 
 const (

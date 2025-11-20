@@ -4,21 +4,21 @@ import (
 	"context"
 	"sort"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/infra/metrics"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/dashboards/dashboardaccess"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/folder"
-	"github.com/grafana/grafana/pkg/services/search/model"
-	grafanasort "github.com/grafana/grafana/pkg/services/search/sort"
-	"github.com/grafana/grafana/pkg/services/star"
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/metrics"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/dashboards/dashboardaccess"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/folder"
+	"github.com/capitalrx/grafana/pkg/services/search/model"
+	grafanasort "github.com/capitalrx/grafana/pkg/services/search/sort"
+	"github.com/capitalrx/grafana/pkg/services/star"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/setting"
 	"go.opentelemetry.io/otel"
 )
 
-var tracer = otel.Tracer("github.com/grafana/grafana/pkg/services/search")
+var tracer = otel.Tracer("github.com/capitalrx/grafana/pkg/services/search")
 
 func ProvideService(cfg *setting.Cfg, sqlstore db.DB, starService star.Service, dashboardService dashboards.DashboardService, folderService folder.Service, features featuremgmt.FeatureToggles, sortService grafanasort.Service) *SearchService {
 	s := &SearchService{

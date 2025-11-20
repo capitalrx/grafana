@@ -1,8 +1,8 @@
 package navtree
 
 import (
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	pref "github.com/grafana/grafana/pkg/services/preference"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	pref "github.com/capitalrx/grafana/pkg/services/preference"
 )
 
 type Service interface {

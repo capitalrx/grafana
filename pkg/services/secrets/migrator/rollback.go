@@ -6,11 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/services/encryption"
-	"github.com/grafana/grafana/pkg/services/ngalert/notifier"
-	"github.com/grafana/grafana/pkg/services/secrets/manager"
-	"github.com/grafana/grafana/pkg/services/ssosettings/models"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/services/encryption"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/notifier"
+	"github.com/capitalrx/grafana/pkg/services/secrets/manager"
+	"github.com/capitalrx/grafana/pkg/services/ssosettings/models"
 )
 
 func (s simpleSecret) Rollback(

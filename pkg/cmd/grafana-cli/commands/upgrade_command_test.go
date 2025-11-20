@@ -11,7 +11,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/urfave/cli/v2"
 
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/models"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/models"
 )
 
 func TestUpgradeCommand(t *testing.T) {

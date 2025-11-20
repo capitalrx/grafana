@@ -12,67 +12,67 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRole":                              schema_pkg_apis_iam_v0alpha1_CoreRole(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleList":                          schema_pkg_apis_iam_v0alpha1_CoreRoleList(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleSpec":                          schema_pkg_apis_iam_v0alpha1_CoreRoleSpec(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleStatus":                        schema_pkg_apis_iam_v0alpha1_CoreRoleStatus(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRolespecPermission":                schema_pkg_apis_iam_v0alpha1_CoreRolespecPermission(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRolestatusOperatorState":           schema_pkg_apis_iam_v0alpha1_CoreRolestatusOperatorState(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRole":                            schema_pkg_apis_iam_v0alpha1_GlobalRole(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBinding":                     schema_pkg_apis_iam_v0alpha1_GlobalRoleBinding(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingList":                 schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingList(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingSpec":                 schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingSpec(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingStatus":               schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingStatus(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingspecRoleRef":          schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingspecRoleRef(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingspecSubject":          schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingspecSubject(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingstatusOperatorState":  schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingstatusOperatorState(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleList":                        schema_pkg_apis_iam_v0alpha1_GlobalRoleList(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleSpec":                        schema_pkg_apis_iam_v0alpha1_GlobalRoleSpec(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleStatus":                      schema_pkg_apis_iam_v0alpha1_GlobalRoleStatus(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRolespecPermission":              schema_pkg_apis_iam_v0alpha1_GlobalRolespecPermission(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRolestatusOperatorState":         schema_pkg_apis_iam_v0alpha1_GlobalRolestatusOperatorState(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermission":                    schema_pkg_apis_iam_v0alpha1_ResourcePermission(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionList":                schema_pkg_apis_iam_v0alpha1_ResourcePermissionList(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionSpec":                schema_pkg_apis_iam_v0alpha1_ResourcePermissionSpec(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionStatus":              schema_pkg_apis_iam_v0alpha1_ResourcePermissionStatus(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionspecPermission":      schema_pkg_apis_iam_v0alpha1_ResourcePermissionspecPermission(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionspecResource":        schema_pkg_apis_iam_v0alpha1_ResourcePermissionspecResource(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionstatusOperatorState": schema_pkg_apis_iam_v0alpha1_ResourcePermissionstatusOperatorState(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.Role":                                  schema_pkg_apis_iam_v0alpha1_Role(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBinding":                           schema_pkg_apis_iam_v0alpha1_RoleBinding(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingList":                       schema_pkg_apis_iam_v0alpha1_RoleBindingList(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingSpec":                       schema_pkg_apis_iam_v0alpha1_RoleBindingSpec(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingStatus":                     schema_pkg_apis_iam_v0alpha1_RoleBindingStatus(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingspecRoleRef":                schema_pkg_apis_iam_v0alpha1_RoleBindingspecRoleRef(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingspecSubject":                schema_pkg_apis_iam_v0alpha1_RoleBindingspecSubject(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingstatusOperatorState":        schema_pkg_apis_iam_v0alpha1_RoleBindingstatusOperatorState(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleList":                              schema_pkg_apis_iam_v0alpha1_RoleList(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleSpec":                              schema_pkg_apis_iam_v0alpha1_RoleSpec(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleStatus":                            schema_pkg_apis_iam_v0alpha1_RoleStatus(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RolespecPermission":                    schema_pkg_apis_iam_v0alpha1_RolespecPermission(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RolestatusOperatorState":               schema_pkg_apis_iam_v0alpha1_RolestatusOperatorState(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccount":                        schema_pkg_apis_iam_v0alpha1_ServiceAccount(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountList":                    schema_pkg_apis_iam_v0alpha1_ServiceAccountList(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountSpec":                    schema_pkg_apis_iam_v0alpha1_ServiceAccountSpec(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountStatus":                  schema_pkg_apis_iam_v0alpha1_ServiceAccountStatus(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountstatusOperatorState":     schema_pkg_apis_iam_v0alpha1_ServiceAccountstatusOperatorState(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.Team":                                  schema_pkg_apis_iam_v0alpha1_Team(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBinding":                           schema_pkg_apis_iam_v0alpha1_TeamBinding(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingList":                       schema_pkg_apis_iam_v0alpha1_TeamBindingList(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingSpec":                       schema_pkg_apis_iam_v0alpha1_TeamBindingSpec(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingStatus":                     schema_pkg_apis_iam_v0alpha1_TeamBindingStatus(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingTeamRef":                    schema_pkg_apis_iam_v0alpha1_TeamBindingTeamRef(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingspecSubject":                schema_pkg_apis_iam_v0alpha1_TeamBindingspecSubject(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingstatusOperatorState":        schema_pkg_apis_iam_v0alpha1_TeamBindingstatusOperatorState(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamList":                              schema_pkg_apis_iam_v0alpha1_TeamList(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamSpec":                              schema_pkg_apis_iam_v0alpha1_TeamSpec(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamStatus":                            schema_pkg_apis_iam_v0alpha1_TeamStatus(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamstatusOperatorState":               schema_pkg_apis_iam_v0alpha1_TeamstatusOperatorState(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.User":                                  schema_pkg_apis_iam_v0alpha1_User(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserList":                              schema_pkg_apis_iam_v0alpha1_UserList(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserSpec":                              schema_pkg_apis_iam_v0alpha1_UserSpec(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserStatus":                            schema_pkg_apis_iam_v0alpha1_UserStatus(ref),
-		"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserstatusOperatorState":               schema_pkg_apis_iam_v0alpha1_UserstatusOperatorState(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRole":                              schema_pkg_apis_iam_v0alpha1_CoreRole(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleList":                          schema_pkg_apis_iam_v0alpha1_CoreRoleList(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleSpec":                          schema_pkg_apis_iam_v0alpha1_CoreRoleSpec(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleStatus":                        schema_pkg_apis_iam_v0alpha1_CoreRoleStatus(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRolespecPermission":                schema_pkg_apis_iam_v0alpha1_CoreRolespecPermission(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRolestatusOperatorState":           schema_pkg_apis_iam_v0alpha1_CoreRolestatusOperatorState(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRole":                            schema_pkg_apis_iam_v0alpha1_GlobalRole(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBinding":                     schema_pkg_apis_iam_v0alpha1_GlobalRoleBinding(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingList":                 schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingList(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingSpec":                 schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingSpec(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingStatus":               schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingStatus(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingspecRoleRef":          schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingspecRoleRef(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingspecSubject":          schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingspecSubject(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingstatusOperatorState":  schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingstatusOperatorState(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleList":                        schema_pkg_apis_iam_v0alpha1_GlobalRoleList(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleSpec":                        schema_pkg_apis_iam_v0alpha1_GlobalRoleSpec(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleStatus":                      schema_pkg_apis_iam_v0alpha1_GlobalRoleStatus(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRolespecPermission":              schema_pkg_apis_iam_v0alpha1_GlobalRolespecPermission(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRolestatusOperatorState":         schema_pkg_apis_iam_v0alpha1_GlobalRolestatusOperatorState(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermission":                    schema_pkg_apis_iam_v0alpha1_ResourcePermission(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionList":                schema_pkg_apis_iam_v0alpha1_ResourcePermissionList(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionSpec":                schema_pkg_apis_iam_v0alpha1_ResourcePermissionSpec(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionStatus":              schema_pkg_apis_iam_v0alpha1_ResourcePermissionStatus(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionspecPermission":      schema_pkg_apis_iam_v0alpha1_ResourcePermissionspecPermission(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionspecResource":        schema_pkg_apis_iam_v0alpha1_ResourcePermissionspecResource(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionstatusOperatorState": schema_pkg_apis_iam_v0alpha1_ResourcePermissionstatusOperatorState(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.Role":                                  schema_pkg_apis_iam_v0alpha1_Role(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBinding":                           schema_pkg_apis_iam_v0alpha1_RoleBinding(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingList":                       schema_pkg_apis_iam_v0alpha1_RoleBindingList(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingSpec":                       schema_pkg_apis_iam_v0alpha1_RoleBindingSpec(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingStatus":                     schema_pkg_apis_iam_v0alpha1_RoleBindingStatus(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingspecRoleRef":                schema_pkg_apis_iam_v0alpha1_RoleBindingspecRoleRef(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingspecSubject":                schema_pkg_apis_iam_v0alpha1_RoleBindingspecSubject(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingstatusOperatorState":        schema_pkg_apis_iam_v0alpha1_RoleBindingstatusOperatorState(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleList":                              schema_pkg_apis_iam_v0alpha1_RoleList(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleSpec":                              schema_pkg_apis_iam_v0alpha1_RoleSpec(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleStatus":                            schema_pkg_apis_iam_v0alpha1_RoleStatus(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RolespecPermission":                    schema_pkg_apis_iam_v0alpha1_RolespecPermission(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RolestatusOperatorState":               schema_pkg_apis_iam_v0alpha1_RolestatusOperatorState(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccount":                        schema_pkg_apis_iam_v0alpha1_ServiceAccount(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountList":                    schema_pkg_apis_iam_v0alpha1_ServiceAccountList(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountSpec":                    schema_pkg_apis_iam_v0alpha1_ServiceAccountSpec(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountStatus":                  schema_pkg_apis_iam_v0alpha1_ServiceAccountStatus(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountstatusOperatorState":     schema_pkg_apis_iam_v0alpha1_ServiceAccountstatusOperatorState(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.Team":                                  schema_pkg_apis_iam_v0alpha1_Team(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBinding":                           schema_pkg_apis_iam_v0alpha1_TeamBinding(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingList":                       schema_pkg_apis_iam_v0alpha1_TeamBindingList(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingSpec":                       schema_pkg_apis_iam_v0alpha1_TeamBindingSpec(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingStatus":                     schema_pkg_apis_iam_v0alpha1_TeamBindingStatus(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingTeamRef":                    schema_pkg_apis_iam_v0alpha1_TeamBindingTeamRef(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingspecSubject":                schema_pkg_apis_iam_v0alpha1_TeamBindingspecSubject(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingstatusOperatorState":        schema_pkg_apis_iam_v0alpha1_TeamBindingstatusOperatorState(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamList":                              schema_pkg_apis_iam_v0alpha1_TeamList(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamSpec":                              schema_pkg_apis_iam_v0alpha1_TeamSpec(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamStatus":                            schema_pkg_apis_iam_v0alpha1_TeamStatus(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamstatusOperatorState":               schema_pkg_apis_iam_v0alpha1_TeamstatusOperatorState(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.User":                                  schema_pkg_apis_iam_v0alpha1_User(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserList":                              schema_pkg_apis_iam_v0alpha1_UserList(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserSpec":                              schema_pkg_apis_iam_v0alpha1_UserSpec(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserStatus":                            schema_pkg_apis_iam_v0alpha1_UserStatus(ref),
+		"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserstatusOperatorState":               schema_pkg_apis_iam_v0alpha1_UserstatusOperatorState(ref),
 	}
 }
 
@@ -106,13 +106,13 @@ func schema_pkg_apis_iam_v0alpha1_CoreRole(ref common.ReferenceCallback) common.
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec is the spec of the CoreRole",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleSpec"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleStatus"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleStatus"),
 						},
 					},
 				},
@@ -120,7 +120,7 @@ func schema_pkg_apis_iam_v0alpha1_CoreRole(ref common.ReferenceCallback) common.
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleSpec", "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleSpec", "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -157,7 +157,7 @@ func schema_pkg_apis_iam_v0alpha1_CoreRoleList(ref common.ReferenceCallback) com
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRole"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRole"),
 									},
 								},
 							},
@@ -168,7 +168,7 @@ func schema_pkg_apis_iam_v0alpha1_CoreRoleList(ref common.ReferenceCallback) com
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRole", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRole", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -215,7 +215,7 @@ func schema_pkg_apis_iam_v0alpha1_CoreRoleSpec(ref common.ReferenceCallback) com
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRolespecPermission"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRolespecPermission"),
 									},
 								},
 							},
@@ -226,7 +226,7 @@ func schema_pkg_apis_iam_v0alpha1_CoreRoleSpec(ref common.ReferenceCallback) com
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRolespecPermission"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRolespecPermission"},
 	}
 }
 
@@ -245,7 +245,7 @@ func schema_pkg_apis_iam_v0alpha1_CoreRoleStatus(ref common.ReferenceCallback) c
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRolestatusOperatorState"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRolestatusOperatorState"),
 									},
 								},
 							},
@@ -270,7 +270,7 @@ func schema_pkg_apis_iam_v0alpha1_CoreRoleStatus(ref common.ReferenceCallback) c
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRolestatusOperatorState"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRolestatusOperatorState"},
 	}
 }
 
@@ -384,13 +384,13 @@ func schema_pkg_apis_iam_v0alpha1_GlobalRole(ref common.ReferenceCallback) commo
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec is the spec of the GlobalRole",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleSpec"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleStatus"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleStatus"),
 						},
 					},
 				},
@@ -398,7 +398,7 @@ func schema_pkg_apis_iam_v0alpha1_GlobalRole(ref common.ReferenceCallback) commo
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleSpec", "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleSpec", "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -432,13 +432,13 @@ func schema_pkg_apis_iam_v0alpha1_GlobalRoleBinding(ref common.ReferenceCallback
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec is the spec of the GlobalRoleBinding",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingSpec"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingStatus"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingStatus"),
 						},
 					},
 				},
@@ -446,7 +446,7 @@ func schema_pkg_apis_iam_v0alpha1_GlobalRoleBinding(ref common.ReferenceCallback
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingSpec", "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingSpec", "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -483,7 +483,7 @@ func schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingList(ref common.ReferenceCall
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBinding"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBinding"),
 									},
 								},
 							},
@@ -494,7 +494,7 @@ func schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingList(ref common.ReferenceCall
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -511,7 +511,7 @@ func schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingSpec(ref common.ReferenceCall
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingspecSubject"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingspecSubject"),
 									},
 								},
 							},
@@ -520,7 +520,7 @@ func schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingSpec(ref common.ReferenceCall
 					"roleRef": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingspecRoleRef"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingspecRoleRef"),
 						},
 					},
 				},
@@ -528,7 +528,7 @@ func schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingSpec(ref common.ReferenceCall
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingspecRoleRef", "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingspecSubject"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingspecRoleRef", "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingspecSubject"},
 	}
 }
 
@@ -547,7 +547,7 @@ func schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingStatus(ref common.ReferenceCa
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingstatusOperatorState"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingstatusOperatorState"),
 									},
 								},
 							},
@@ -572,7 +572,7 @@ func schema_pkg_apis_iam_v0alpha1_GlobalRoleBindingStatus(ref common.ReferenceCa
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingstatusOperatorState"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingstatusOperatorState"},
 	}
 }
 
@@ -718,7 +718,7 @@ func schema_pkg_apis_iam_v0alpha1_GlobalRoleList(ref common.ReferenceCallback) c
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRole"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRole"),
 									},
 								},
 							},
@@ -729,7 +729,7 @@ func schema_pkg_apis_iam_v0alpha1_GlobalRoleList(ref common.ReferenceCallback) c
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRole", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRole", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -776,7 +776,7 @@ func schema_pkg_apis_iam_v0alpha1_GlobalRoleSpec(ref common.ReferenceCallback) c
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRolespecPermission"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRolespecPermission"),
 									},
 								},
 							},
@@ -787,7 +787,7 @@ func schema_pkg_apis_iam_v0alpha1_GlobalRoleSpec(ref common.ReferenceCallback) c
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRolespecPermission"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRolespecPermission"},
 	}
 }
 
@@ -806,7 +806,7 @@ func schema_pkg_apis_iam_v0alpha1_GlobalRoleStatus(ref common.ReferenceCallback)
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRolestatusOperatorState"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRolestatusOperatorState"),
 									},
 								},
 							},
@@ -831,7 +831,7 @@ func schema_pkg_apis_iam_v0alpha1_GlobalRoleStatus(ref common.ReferenceCallback)
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRolestatusOperatorState"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRolestatusOperatorState"},
 	}
 }
 
@@ -945,13 +945,13 @@ func schema_pkg_apis_iam_v0alpha1_ResourcePermission(ref common.ReferenceCallbac
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec is the spec of the ResourcePermission",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionSpec"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionStatus"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionStatus"),
 						},
 					},
 				},
@@ -959,7 +959,7 @@ func schema_pkg_apis_iam_v0alpha1_ResourcePermission(ref common.ReferenceCallbac
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionSpec", "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionSpec", "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -996,7 +996,7 @@ func schema_pkg_apis_iam_v0alpha1_ResourcePermissionList(ref common.ReferenceCal
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermission"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermission"),
 									},
 								},
 							},
@@ -1007,7 +1007,7 @@ func schema_pkg_apis_iam_v0alpha1_ResourcePermissionList(ref common.ReferenceCal
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermission", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermission", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -1020,7 +1020,7 @@ func schema_pkg_apis_iam_v0alpha1_ResourcePermissionSpec(ref common.ReferenceCal
 					"resource": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionspecResource"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionspecResource"),
 						},
 					},
 					"permissions": {
@@ -1030,7 +1030,7 @@ func schema_pkg_apis_iam_v0alpha1_ResourcePermissionSpec(ref common.ReferenceCal
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionspecPermission"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionspecPermission"),
 									},
 								},
 							},
@@ -1041,7 +1041,7 @@ func schema_pkg_apis_iam_v0alpha1_ResourcePermissionSpec(ref common.ReferenceCal
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionspecPermission", "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionspecResource"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionspecPermission", "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionspecResource"},
 	}
 }
 
@@ -1060,7 +1060,7 @@ func schema_pkg_apis_iam_v0alpha1_ResourcePermissionStatus(ref common.ReferenceC
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionstatusOperatorState"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionstatusOperatorState"),
 									},
 								},
 							},
@@ -1085,7 +1085,7 @@ func schema_pkg_apis_iam_v0alpha1_ResourcePermissionStatus(ref common.ReferenceC
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionstatusOperatorState"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionstatusOperatorState"},
 	}
 }
 
@@ -1244,13 +1244,13 @@ func schema_pkg_apis_iam_v0alpha1_Role(ref common.ReferenceCallback) common.Open
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec is the spec of the Role",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleSpec"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleStatus"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleStatus"),
 						},
 					},
 				},
@@ -1258,7 +1258,7 @@ func schema_pkg_apis_iam_v0alpha1_Role(ref common.ReferenceCallback) common.Open
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleSpec", "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleSpec", "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -1292,13 +1292,13 @@ func schema_pkg_apis_iam_v0alpha1_RoleBinding(ref common.ReferenceCallback) comm
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec is the spec of the RoleBinding",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingSpec"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingStatus"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingStatus"),
 						},
 					},
 				},
@@ -1306,7 +1306,7 @@ func schema_pkg_apis_iam_v0alpha1_RoleBinding(ref common.ReferenceCallback) comm
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingSpec", "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingSpec", "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -1343,7 +1343,7 @@ func schema_pkg_apis_iam_v0alpha1_RoleBindingList(ref common.ReferenceCallback) 
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBinding"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBinding"),
 									},
 								},
 							},
@@ -1354,7 +1354,7 @@ func schema_pkg_apis_iam_v0alpha1_RoleBindingList(ref common.ReferenceCallback) 
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -1371,7 +1371,7 @@ func schema_pkg_apis_iam_v0alpha1_RoleBindingSpec(ref common.ReferenceCallback) 
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingspecSubject"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingspecSubject"),
 									},
 								},
 							},
@@ -1380,7 +1380,7 @@ func schema_pkg_apis_iam_v0alpha1_RoleBindingSpec(ref common.ReferenceCallback) 
 					"roleRef": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingspecRoleRef"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingspecRoleRef"),
 						},
 					},
 				},
@@ -1388,7 +1388,7 @@ func schema_pkg_apis_iam_v0alpha1_RoleBindingSpec(ref common.ReferenceCallback) 
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingspecRoleRef", "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingspecSubject"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingspecRoleRef", "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingspecSubject"},
 	}
 }
 
@@ -1407,7 +1407,7 @@ func schema_pkg_apis_iam_v0alpha1_RoleBindingStatus(ref common.ReferenceCallback
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingstatusOperatorState"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingstatusOperatorState"),
 									},
 								},
 							},
@@ -1432,7 +1432,7 @@ func schema_pkg_apis_iam_v0alpha1_RoleBindingStatus(ref common.ReferenceCallback
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingstatusOperatorState"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingstatusOperatorState"},
 	}
 }
 
@@ -1578,7 +1578,7 @@ func schema_pkg_apis_iam_v0alpha1_RoleList(ref common.ReferenceCallback) common.
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.Role"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.Role"),
 									},
 								},
 							},
@@ -1589,7 +1589,7 @@ func schema_pkg_apis_iam_v0alpha1_RoleList(ref common.ReferenceCallback) common.
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.Role", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.Role", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -1636,7 +1636,7 @@ func schema_pkg_apis_iam_v0alpha1_RoleSpec(ref common.ReferenceCallback) common.
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RolespecPermission"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RolespecPermission"),
 									},
 								},
 							},
@@ -1647,7 +1647,7 @@ func schema_pkg_apis_iam_v0alpha1_RoleSpec(ref common.ReferenceCallback) common.
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RolespecPermission"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RolespecPermission"},
 	}
 }
 
@@ -1666,7 +1666,7 @@ func schema_pkg_apis_iam_v0alpha1_RoleStatus(ref common.ReferenceCallback) commo
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RolestatusOperatorState"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RolestatusOperatorState"),
 									},
 								},
 							},
@@ -1691,7 +1691,7 @@ func schema_pkg_apis_iam_v0alpha1_RoleStatus(ref common.ReferenceCallback) commo
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RolestatusOperatorState"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RolestatusOperatorState"},
 	}
 }
 
@@ -1805,13 +1805,13 @@ func schema_pkg_apis_iam_v0alpha1_ServiceAccount(ref common.ReferenceCallback) c
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec is the spec of the ServiceAccount",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountSpec"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountStatus"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountStatus"),
 						},
 					},
 				},
@@ -1819,7 +1819,7 @@ func schema_pkg_apis_iam_v0alpha1_ServiceAccount(ref common.ReferenceCallback) c
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountSpec", "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountSpec", "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -1856,7 +1856,7 @@ func schema_pkg_apis_iam_v0alpha1_ServiceAccountList(ref common.ReferenceCallbac
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccount"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccount"),
 									},
 								},
 							},
@@ -1867,7 +1867,7 @@ func schema_pkg_apis_iam_v0alpha1_ServiceAccountList(ref common.ReferenceCallbac
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccount", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccount", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -1927,7 +1927,7 @@ func schema_pkg_apis_iam_v0alpha1_ServiceAccountStatus(ref common.ReferenceCallb
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountstatusOperatorState"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountstatusOperatorState"),
 									},
 								},
 							},
@@ -1952,7 +1952,7 @@ func schema_pkg_apis_iam_v0alpha1_ServiceAccountStatus(ref common.ReferenceCallb
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountstatusOperatorState"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountstatusOperatorState"},
 	}
 }
 
@@ -2037,13 +2037,13 @@ func schema_pkg_apis_iam_v0alpha1_Team(ref common.ReferenceCallback) common.Open
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec is the spec of the Team",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamSpec"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamStatus"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamStatus"),
 						},
 					},
 				},
@@ -2051,7 +2051,7 @@ func schema_pkg_apis_iam_v0alpha1_Team(ref common.ReferenceCallback) common.Open
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamSpec", "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamSpec", "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -2085,13 +2085,13 @@ func schema_pkg_apis_iam_v0alpha1_TeamBinding(ref common.ReferenceCallback) comm
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec is the spec of the TeamBinding",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingSpec"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingStatus"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingStatus"),
 						},
 					},
 				},
@@ -2099,7 +2099,7 @@ func schema_pkg_apis_iam_v0alpha1_TeamBinding(ref common.ReferenceCallback) comm
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingSpec", "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingSpec", "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -2136,7 +2136,7 @@ func schema_pkg_apis_iam_v0alpha1_TeamBindingList(ref common.ReferenceCallback) 
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBinding"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBinding"),
 									},
 								},
 							},
@@ -2147,7 +2147,7 @@ func schema_pkg_apis_iam_v0alpha1_TeamBindingList(ref common.ReferenceCallback) 
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -2164,7 +2164,7 @@ func schema_pkg_apis_iam_v0alpha1_TeamBindingSpec(ref common.ReferenceCallback) 
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingspecSubject"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingspecSubject"),
 									},
 								},
 							},
@@ -2173,7 +2173,7 @@ func schema_pkg_apis_iam_v0alpha1_TeamBindingSpec(ref common.ReferenceCallback) 
 					"teamRef": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingTeamRef"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingTeamRef"),
 						},
 					},
 				},
@@ -2181,7 +2181,7 @@ func schema_pkg_apis_iam_v0alpha1_TeamBindingSpec(ref common.ReferenceCallback) 
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingTeamRef", "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingspecSubject"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingTeamRef", "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingspecSubject"},
 	}
 }
 
@@ -2200,7 +2200,7 @@ func schema_pkg_apis_iam_v0alpha1_TeamBindingStatus(ref common.ReferenceCallback
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingstatusOperatorState"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingstatusOperatorState"),
 									},
 								},
 							},
@@ -2225,7 +2225,7 @@ func schema_pkg_apis_iam_v0alpha1_TeamBindingStatus(ref common.ReferenceCallback
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingstatusOperatorState"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingstatusOperatorState"},
 	}
 }
 
@@ -2363,7 +2363,7 @@ func schema_pkg_apis_iam_v0alpha1_TeamList(ref common.ReferenceCallback) common.
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.Team"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.Team"),
 									},
 								},
 							},
@@ -2374,7 +2374,7 @@ func schema_pkg_apis_iam_v0alpha1_TeamList(ref common.ReferenceCallback) common.
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.Team", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.Team", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -2420,7 +2420,7 @@ func schema_pkg_apis_iam_v0alpha1_TeamStatus(ref common.ReferenceCallback) commo
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamstatusOperatorState"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamstatusOperatorState"),
 									},
 								},
 							},
@@ -2445,7 +2445,7 @@ func schema_pkg_apis_iam_v0alpha1_TeamStatus(ref common.ReferenceCallback) commo
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamstatusOperatorState"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamstatusOperatorState"},
 	}
 }
 
@@ -2530,13 +2530,13 @@ func schema_pkg_apis_iam_v0alpha1_User(ref common.ReferenceCallback) common.Open
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec is the spec of the User",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserSpec"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserStatus"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserStatus"),
 						},
 					},
 				},
@@ -2544,7 +2544,7 @@ func schema_pkg_apis_iam_v0alpha1_User(ref common.ReferenceCallback) common.Open
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserSpec", "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserSpec", "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -2581,7 +2581,7 @@ func schema_pkg_apis_iam_v0alpha1_UserList(ref common.ReferenceCallback) common.
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.User"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.User"),
 									},
 								},
 							},
@@ -2592,7 +2592,7 @@ func schema_pkg_apis_iam_v0alpha1_UserList(ref common.ReferenceCallback) common.
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.User", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.User", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -2674,7 +2674,7 @@ func schema_pkg_apis_iam_v0alpha1_UserStatus(ref common.ReferenceCallback) commo
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserstatusOperatorState"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserstatusOperatorState"),
 									},
 								},
 							},
@@ -2699,7 +2699,7 @@ func schema_pkg_apis_iam_v0alpha1_UserStatus(ref common.ReferenceCallback) commo
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserstatusOperatorState"},
+			"github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserstatusOperatorState"},
 	}
 }
 

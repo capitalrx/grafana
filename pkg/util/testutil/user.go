@@ -3,7 +3,7 @@ package testutil
 import (
 	"encoding/json"
 
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 type SignedInUser struct{}

@@ -3,7 +3,7 @@ package metrics
 import (
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/log"
 
 	"github.com/prometheus/alertmanager/api/metrics"
 	"github.com/prometheus/client_golang/prometheus"

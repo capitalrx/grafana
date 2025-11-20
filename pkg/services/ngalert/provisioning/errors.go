@@ -3,8 +3,8 @@ package provisioning
 import (
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/apimachinery/errutil"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/apimachinery/errutil"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 var ErrValidation = fmt.Errorf("invalid object specification")

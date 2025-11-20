@@ -10,17 +10,17 @@ import (
 
 	claims "github.com/grafana/authlib/types"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/serverlock"
-	"github.com/grafana/grafana/pkg/services/authz/zanzana"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/folder"
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/serverlock"
+	"github.com/capitalrx/grafana/pkg/services/authz/zanzana"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/folder"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
-var tracer = otel.Tracer("github.com/grafana/grafana/pkg/accesscontrol/migrator")
+var tracer = otel.Tracer("github.com/capitalrx/grafana/pkg/accesscontrol/migrator")
 var reconcilerLogger = log.New("zanzana.reconciler")
 
 // ZanzanaReconciler is a component to reconcile RBAC permissions to zanzana.

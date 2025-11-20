@@ -83,7 +83,7 @@ Windows Active Directory (Kerberos) authentication is not supported in Grafana C
 ]
 ```
 
-For installations from the [grafana/grafana](https://github.com/grafana/grafana/tree/main) repository, `gdev-mssql` data source is available. Once you add this data source, you can use the `Datasource tests - MSSQL` dashboard with three panels showing metrics generated from a test database.
+For installations from the [grafana/grafana](https://github.com/capitalrx/grafana/tree/main) repository, `gdev-mssql` data source is available. Once you add this data source, you can use the `Datasource tests - MSSQL` dashboard with three panels showing metrics generated from a test database.
 
 ![MS SQL Server dashboard](/static/img/docs/getting-started/gdev-sql-dashboard.png)
 

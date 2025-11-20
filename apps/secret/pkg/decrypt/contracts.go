@@ -3,7 +3,7 @@ package decrypt
 import (
 	"context"
 
-	secretv1beta1 "github.com/grafana/grafana/apps/secret/pkg/apis/secret/v1beta1"
+	secretv1beta1 "github.com/capitalrx/grafana/apps/secret/pkg/apis/secret/v1beta1"
 )
 
 // DecryptService is the interface for the decrypt service.

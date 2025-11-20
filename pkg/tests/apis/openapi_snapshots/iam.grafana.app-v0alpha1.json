@@ -4083,7 +4083,7 @@
           }
         ]
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRole": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRole": {
         "type": "object",
         "required": [
           "metadata",
@@ -4111,7 +4111,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleList": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleList": {
         "type": "object",
         "required": [
           "metadata",
@@ -4137,7 +4137,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleSpec": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleSpec": {
         "type": "object",
         "required": [
           "title",
@@ -4174,7 +4174,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleStatus": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRoleStatus": {
         "type": "object",
         "properties": {
           "additionalFields": {
@@ -4193,7 +4193,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRolespecPermission": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRolespecPermission": {
         "type": "object",
         "required": [
           "action",
@@ -4212,7 +4212,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRolestatusOperatorState": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.CoreRolestatusOperatorState": {
         "type": "object",
         "required": [
           "lastEvaluation",
@@ -4242,7 +4242,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRole": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRole": {
         "type": "object",
         "required": [
           "metadata",
@@ -4270,7 +4270,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBinding": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBinding": {
         "type": "object",
         "required": [
           "metadata",
@@ -4298,7 +4298,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingList": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingList": {
         "type": "object",
         "required": [
           "metadata",
@@ -4324,7 +4324,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingSpec": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingSpec": {
         "type": "object",
         "required": [
           "subjects",
@@ -4342,7 +4342,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingStatus": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingStatus": {
         "type": "object",
         "properties": {
           "additionalFields": {
@@ -4361,7 +4361,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingspecRoleRef": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingspecRoleRef": {
         "type": "object",
         "required": [
           "kind",
@@ -4380,7 +4380,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingspecSubject": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingspecSubject": {
         "type": "object",
         "required": [
           "kind",
@@ -4399,7 +4399,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingstatusOperatorState": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleBindingstatusOperatorState": {
         "type": "object",
         "required": [
           "lastEvaluation",
@@ -4429,7 +4429,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleList": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleList": {
         "type": "object",
         "required": [
           "metadata",
@@ -4455,7 +4455,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleSpec": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleSpec": {
         "type": "object",
         "required": [
           "title",
@@ -4492,7 +4492,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleStatus": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRoleStatus": {
         "type": "object",
         "properties": {
           "additionalFields": {
@@ -4511,7 +4511,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRolespecPermission": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRolespecPermission": {
         "type": "object",
         "required": [
           "action",
@@ -4530,7 +4530,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRolestatusOperatorState": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.GlobalRolestatusOperatorState": {
         "type": "object",
         "required": [
           "lastEvaluation",
@@ -4560,7 +4560,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermission": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermission": {
         "type": "object",
         "required": [
           "metadata",
@@ -4588,7 +4588,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionList": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionList": {
         "type": "object",
         "required": [
           "metadata",
@@ -4614,7 +4614,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionSpec": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionSpec": {
         "type": "object",
         "required": [
           "resource",
@@ -4632,7 +4632,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionStatus": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionStatus": {
         "type": "object",
         "properties": {
           "additionalFields": {
@@ -4651,7 +4651,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionspecPermission": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionspecPermission": {
         "type": "object",
         "required": [
           "kind",
@@ -4676,7 +4676,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionspecResource": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionspecResource": {
         "type": "object",
         "required": [
           "apiGroup",
@@ -4701,7 +4701,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionstatusOperatorState": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ResourcePermissionstatusOperatorState": {
         "type": "object",
         "required": [
           "lastEvaluation",
@@ -4731,7 +4731,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.Role": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.Role": {
         "type": "object",
         "required": [
           "metadata",
@@ -4759,7 +4759,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBinding": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBinding": {
         "type": "object",
         "required": [
           "metadata",
@@ -4787,7 +4787,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingList": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingList": {
         "type": "object",
         "required": [
           "metadata",
@@ -4813,7 +4813,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingSpec": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingSpec": {
         "type": "object",
         "required": [
           "subjects",
@@ -4831,7 +4831,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingStatus": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingStatus": {
         "type": "object",
         "properties": {
           "additionalFields": {
@@ -4850,7 +4850,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingspecRoleRef": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingspecRoleRef": {
         "type": "object",
         "required": [
           "kind",
@@ -4869,7 +4869,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingspecSubject": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingspecSubject": {
         "type": "object",
         "required": [
           "kind",
@@ -4888,7 +4888,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingstatusOperatorState": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleBindingstatusOperatorState": {
         "type": "object",
         "required": [
           "lastEvaluation",
@@ -4918,7 +4918,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleList": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleList": {
         "type": "object",
         "required": [
           "metadata",
@@ -4944,7 +4944,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleSpec": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleSpec": {
         "type": "object",
         "required": [
           "title",
@@ -4981,7 +4981,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleStatus": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RoleStatus": {
         "type": "object",
         "properties": {
           "additionalFields": {
@@ -5000,7 +5000,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RolespecPermission": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RolespecPermission": {
         "type": "object",
         "required": [
           "action",
@@ -5019,7 +5019,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.RolestatusOperatorState": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.RolestatusOperatorState": {
         "type": "object",
         "required": [
           "lastEvaluation",
@@ -5049,7 +5049,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccount": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccount": {
         "type": "object",
         "required": [
           "metadata",
@@ -5077,7 +5077,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountList": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountList": {
         "type": "object",
         "required": [
           "metadata",
@@ -5103,7 +5103,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountSpec": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountSpec": {
         "type": "object",
         "required": [
           "disabled",
@@ -5130,7 +5130,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountStatus": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountStatus": {
         "type": "object",
         "properties": {
           "additionalFields": {
@@ -5149,7 +5149,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountstatusOperatorState": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.ServiceAccountstatusOperatorState": {
         "type": "object",
         "required": [
           "lastEvaluation",
@@ -5179,7 +5179,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.Team": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.Team": {
         "type": "object",
         "required": [
           "metadata",
@@ -5207,7 +5207,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBinding": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBinding": {
         "type": "object",
         "required": [
           "metadata",
@@ -5235,7 +5235,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingList": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingList": {
         "type": "object",
         "required": [
           "metadata",
@@ -5261,7 +5261,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingSpec": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingSpec": {
         "type": "object",
         "required": [
           "subjects",
@@ -5279,7 +5279,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingStatus": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingStatus": {
         "type": "object",
         "properties": {
           "additionalFields": {
@@ -5298,7 +5298,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingTeamRef": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingTeamRef": {
         "type": "object",
         "required": [
           "name"
@@ -5311,7 +5311,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingspecSubject": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingspecSubject": {
         "type": "object",
         "required": [
           "name",
@@ -5330,7 +5330,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingstatusOperatorState": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamBindingstatusOperatorState": {
         "type": "object",
         "required": [
           "lastEvaluation",
@@ -5360,7 +5360,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamList": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamList": {
         "type": "object",
         "required": [
           "metadata",
@@ -5386,7 +5386,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamSpec": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamSpec": {
         "type": "object",
         "required": [
           "title",
@@ -5403,7 +5403,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamStatus": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamStatus": {
         "type": "object",
         "properties": {
           "additionalFields": {
@@ -5422,7 +5422,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamstatusOperatorState": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.TeamstatusOperatorState": {
         "type": "object",
         "required": [
           "lastEvaluation",
@@ -5452,7 +5452,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.User": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.User": {
         "type": "object",
         "required": [
           "metadata",
@@ -5480,7 +5480,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserList": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserList": {
         "type": "object",
         "required": [
           "metadata",
@@ -5506,7 +5506,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserSpec": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserSpec": {
         "type": "object",
         "required": [
           "disabled",
@@ -5549,7 +5549,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserStatus": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserStatus": {
         "type": "object",
         "properties": {
           "additionalFields": {
@@ -5568,7 +5568,7 @@
           }
         }
       },
-      "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserstatusOperatorState": {
+      "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1.UserstatusOperatorState": {
         "type": "object",
         "required": [
           "lastEvaluation",

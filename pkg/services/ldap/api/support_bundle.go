@@ -8,7 +8,7 @@ import (
 
 	"github.com/BurntSushi/toml"
 
-	"github.com/grafana/grafana/pkg/services/supportbundles"
+	"github.com/capitalrx/grafana/pkg/services/supportbundles"
 )
 
 func (s *Service) supportBundleCollector(context.Context) (*supportbundles.SupportItem, error) {

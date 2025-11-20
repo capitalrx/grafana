@@ -1,8 +1,8 @@
 package notifications
 
 import (
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 // AttachedFile struct represents email attached files.

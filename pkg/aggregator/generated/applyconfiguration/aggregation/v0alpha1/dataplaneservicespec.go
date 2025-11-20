@@ -5,7 +5,7 @@
 package v0alpha1
 
 import (
-	aggregationv0alpha1 "github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
+	aggregationv0alpha1 "github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
 )
 
 // DataPlaneServiceSpecApplyConfiguration represents a declarative configuration of the DataPlaneServiceSpec type for use

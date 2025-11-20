@@ -5,19 +5,19 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/grafana/grafana/pkg/api/apierrors"
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/api/response"
-	"github.com/grafana/grafana/pkg/api/routing"
-	"github.com/grafana/grafana/pkg/infra/metrics"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/dashboards/dashboardaccess"
-	"github.com/grafana/grafana/pkg/services/folder"
-	"github.com/grafana/grafana/pkg/services/libraryelements/model"
-	"github.com/grafana/grafana/pkg/util"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/api/apierrors"
+	"github.com/capitalrx/grafana/pkg/api/dtos"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	"github.com/capitalrx/grafana/pkg/api/routing"
+	"github.com/capitalrx/grafana/pkg/infra/metrics"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/dashboards/dashboardaccess"
+	"github.com/capitalrx/grafana/pkg/services/folder"
+	"github.com/capitalrx/grafana/pkg/services/libraryelements/model"
+	"github.com/capitalrx/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 const REDACTED = "redacted"
@@ -283,7 +283,7 @@ func (hs *HTTPServer) DeleteFolder(c *contextmodel.ReqContext) response.Response
 	(https://github.com/grafana/grafana-enterprise/issues/5144),
 	remove the previous call to hs.LibraryElementService.DeleteLibraryElementsInFolder
 	and remove "user" from the signature of DeleteInFolder in the folder RegistryService.
-	Context: https://github.com/grafana/grafana/pull/69149#discussion_r1235057903
+	Context: https://github.com/capitalrx/grafana/pull/69149#discussion_r1235057903
 	*/
 
 	uid := web.Params(c.Req)[":uid"]

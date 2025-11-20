@@ -4,7 +4,7 @@ package ngalert.store.v1;
 
 import "google/protobuf/timestamp.proto";
 
-option go_package = "github.com/grafana/grafana/pkg/services/ngalert/store/proto/v1";
+option go_package = "github.com/capitalrx/grafana/pkg/services/ngalert/store/proto/v1";
 
 message AlertInstance {
     string labels_hash = 1;

@@ -7,15 +7,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	pluginsCfg "github.com/grafana/grafana/pkg/plugins/config"
-	"github.com/grafana/grafana/pkg/plugins/log"
-	"github.com/grafana/grafana/pkg/plugins/manager/pipeline/bootstrap"
-	"github.com/grafana/grafana/pkg/plugins/manager/pipeline/discovery"
-	"github.com/grafana/grafana/pkg/plugins/manager/pipeline/initialization"
-	"github.com/grafana/grafana/pkg/plugins/manager/pipeline/termination"
-	"github.com/grafana/grafana/pkg/plugins/manager/pipeline/validation"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginerrs"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	pluginsCfg "github.com/capitalrx/grafana/pkg/plugins/config"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/pipeline/bootstrap"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/pipeline/discovery"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/pipeline/initialization"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/pipeline/termination"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/pipeline/validation"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginerrs"
 )
 
 const concurrencyLimit = 32

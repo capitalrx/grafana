@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 // SubPathRedirect Redirects URLs that are missing the configured subpath to an URL that contains the subpath.

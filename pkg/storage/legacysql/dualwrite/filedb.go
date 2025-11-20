@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 
 	"github.com/grafana/grafana-app-sdk/logging"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 // This format was used in early G12 provisioning config.  It should be removed after 12.1

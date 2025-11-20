@@ -15,11 +15,11 @@ import (
 	"k8s.io/apiserver/pkg/registry/rest"
 	"k8s.io/kube-openapi/pkg/spec3"
 
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/logger"
-	provisioningapis "github.com/grafana/grafana/pkg/registry/apis/provisioning"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/logger"
+	provisioningapis "github.com/capitalrx/grafana/pkg/registry/apis/provisioning"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 )
 
 type renderConnector struct {

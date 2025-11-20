@@ -17,13 +17,13 @@ import (
 	"github.com/grafana/authlib/cache"
 	"github.com/grafana/authlib/types"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/registry/apis/iam/legacy"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/authz/rbac/store"
-	"github.com/grafana/grafana/pkg/services/team"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/registry/apis/iam/legacy"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/authz/rbac/store"
+	"github.com/capitalrx/grafana/pkg/services/team"
 )
 
 func TestService_checkPermission(t *testing.T) {

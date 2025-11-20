@@ -19,11 +19,11 @@ import (
 	healthv1pb "google.golang.org/grpc/health/grpc_health_v1"
 	"google.golang.org/grpc/status"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/grpcserver"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/grpcserver"
+	"github.com/capitalrx/grafana/pkg/setting"
 
-	zlogger "github.com/grafana/grafana/pkg/services/authz/zanzana/logger"
+	zlogger "github.com/capitalrx/grafana/pkg/services/authz/zanzana/logger"
 )
 
 func NewOpenFGAServer(cfg setting.ZanzanaServerSettings, store storage.OpenFGADatastore) (*server.Server, error) {

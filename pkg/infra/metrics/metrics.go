@@ -5,10 +5,10 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/grafana/grafana/pkg/infra/metrics/metricutil"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	pubdash "github.com/grafana/grafana/pkg/services/publicdashboards/models"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/metrics/metricutil"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	pubdash "github.com/capitalrx/grafana/pkg/services/publicdashboards/models"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 // ExporterName is used as namespace for exposing prometheus metrics

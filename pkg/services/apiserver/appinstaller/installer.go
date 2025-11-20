@@ -9,7 +9,7 @@ import (
 
 	appsdkapiserver "github.com/grafana/grafana-app-sdk/k8s/apiserver"
 	"github.com/grafana/grafana-app-sdk/logging"
-	"github.com/grafana/grafana/pkg/storage/legacysql/dualwrite"
+	"github.com/capitalrx/grafana/pkg/storage/legacysql/dualwrite"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apiserver/pkg/admission"
@@ -19,10 +19,10 @@ import (
 	serverstore "k8s.io/apiserver/pkg/server/storage"
 	"k8s.io/kube-openapi/pkg/common"
 
-	grafanarest "github.com/grafana/grafana/pkg/apiserver/rest"
-	"github.com/grafana/grafana/pkg/services/apiserver/builder"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	grafanaapiserveroptions "github.com/grafana/grafana/pkg/services/apiserver/options"
+	grafanarest "github.com/capitalrx/grafana/pkg/apiserver/rest"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/builder"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	grafanaapiserveroptions "github.com/capitalrx/grafana/pkg/services/apiserver/options"
 )
 
 type LegacyStorageGetterFunc func(schema.GroupVersionResource) grafanarest.Storage

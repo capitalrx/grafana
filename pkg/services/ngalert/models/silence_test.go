@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 
 	"github.com/grafana/alerting/models"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 func TestSilenceGetRuleUID(t *testing.T) {

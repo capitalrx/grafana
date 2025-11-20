@@ -4,7 +4,7 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

@@ -8,7 +8,7 @@ import (
 	"github.com/prometheus/common/model"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 func TestValidate(t *testing.T) {

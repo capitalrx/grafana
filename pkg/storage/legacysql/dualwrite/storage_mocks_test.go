@@ -10,7 +10,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apiserver/pkg/registry/rest"
 
-	grafanarest "github.com/grafana/grafana/pkg/apiserver/rest"
+	grafanarest "github.com/capitalrx/grafana/pkg/apiserver/rest"
 )
 
 type storageMock struct {

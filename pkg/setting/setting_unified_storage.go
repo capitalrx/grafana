@@ -4,7 +4,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/grafana/grafana/pkg/apiserver/rest"
+	"github.com/capitalrx/grafana/pkg/apiserver/rest"
 )
 
 // read storage configs from ini file. They look like:

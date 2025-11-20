@@ -42,7 +42,7 @@ We provide release documentation in multiple places to address different needs:
 - [**What’s new**](https://grafana.com/docs/grafana/latest/whatsnew/?pg=blog&plcmt=body-txt) outlines new features debuting in each major and minor release.
 - [**Breaking changes**](https://grafana.com/docs/grafana/latest/breaking-changes/?pg=blog&plcmt=body-txt) notify you of updates included in major releases that could impact you and provide mitigation recommendations when needed.
 - [**Upgrade guides**](https://grafana.com/docs/grafana/latest/upgrade-guide/?pg=blog&plcmt=body-txt) instruct you on how to upgrade to a newer minor or major version.
-- And finally, a [**changelog**](https://github.com/grafana/grafana/blob/main/CHANGELOG.md) is generated for every release (major, minor, patching, security) and outlines all changes included in that release.
+- And finally, a [**changelog**](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md) is generated for every release (major, minor, patching, security) and outlines all changes included in that release.
 
 ## When to expect releases
 
@@ -168,7 +168,7 @@ Follow the “minor” strategy for the most flexibility, as you can also occasi
 
 ## How the Grafana team catches bugs and breaks during the release process
 
-1. Each team writes automated tests for their code and we run [automated tests](https://github.com/grafana/grafana/blob/HEAD/contribute/developer-guide.md#test-grafana) which include unit tests, integration tests, end-to-end tests, and load tests. For plugins specifically, we test the frontend and backend parts of a data source (unit), integrating a data source with a matrix of Grafana versions (E2E), and the contract between the data source and the API it consumes (integration).
+1. Each team writes automated tests for their code and we run [automated tests](https://github.com/capitalrx/grafana/blob/HEAD/contribute/developer-guide.md#test-grafana) which include unit tests, integration tests, end-to-end tests, and load tests. For plugins specifically, we test the frontend and backend parts of a data source (unit), integrating a data source with a matrix of Grafana versions (E2E), and the contract between the data source and the API it consumes (integration).
 2. We perform manual acceptance and smoke testing internally for new features by deploying to our internal observability stack. After that, we progressively roll out in Grafana Cloud, and then cut an OSS and Enterprise release. Each stage catches bugs.
 3. We ship new features in Experimental or Private Preview [release stages](https://grafana.com/docs/release-life-cycle/), behind feature toggles. This helps us improve the feature during development. If you are interested in gaining early access to features (including in your development or test environments), please let us know.
 4. We scan Grafana, all plugins and their dependencies continuously for security vulnerabilities.
@@ -189,9 +189,9 @@ Reduce the risk of bugs by staying current and rolling out upgrades across dev o
 
 ### Known breaking changes
 
-As a rule we always seek backward compatibility and migration, and reserve breaking changes for Grafana’s once-yearly major release. However occasionally small breaking changes (like updates to API payloads) will ship in minor releases. These are announced in [upgrade guides](https://grafana.com/docs/grafana/latest/upgrade-guide/), [What’s New](https://grafana.com/docs/grafana-cloud/whats-new/), and our [changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md).
+As a rule we always seek backward compatibility and migration, and reserve breaking changes for Grafana’s once-yearly major release. However occasionally small breaking changes (like updates to API payloads) will ship in minor releases. These are announced in [upgrade guides](https://grafana.com/docs/grafana/latest/upgrade-guide/), [What’s New](https://grafana.com/docs/grafana-cloud/whats-new/), and our [changelog](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md).
 
-Always read the [upgrade guide](https://grafana.com/docs/grafana/latest/upgrade-guide/) and [changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md) prior to upgrading to learn about and account for breaking changes.
+Always read the [upgrade guide](https://grafana.com/docs/grafana/latest/upgrade-guide/) and [changelog](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md) prior to upgrading to learn about and account for breaking changes.
 
 ### Plugin incompatibility
 

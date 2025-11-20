@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/infra/filestorage"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/infra/filestorage"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 const admin SystemUserType = "storageAdmin"

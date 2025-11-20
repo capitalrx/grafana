@@ -7,8 +7,8 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 
-	"github.com/grafana/grafana/pkg/infra/filestorage"
-	ac "github.com/grafana/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/infra/filestorage"
+	ac "github.com/capitalrx/grafana/pkg/services/accesscontrol"
 )
 
 type nestedTree struct {

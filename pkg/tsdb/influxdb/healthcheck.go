@@ -9,12 +9,12 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/tracing"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/tsdb/influxdb/flux"
-	"github.com/grafana/grafana/pkg/tsdb/influxdb/fsql"
-	"github.com/grafana/grafana/pkg/tsdb/influxdb/influxql"
-	"github.com/grafana/grafana/pkg/tsdb/influxdb/models"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/tsdb/influxdb/flux"
+	"github.com/capitalrx/grafana/pkg/tsdb/influxdb/fsql"
+	"github.com/capitalrx/grafana/pkg/tsdb/influxdb/influxql"
+	"github.com/capitalrx/grafana/pkg/tsdb/influxdb/models"
 )
 
 const (

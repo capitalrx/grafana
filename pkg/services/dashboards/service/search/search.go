@@ -5,11 +5,11 @@ import (
 	"encoding/json"
 	"fmt"
 
-	common "github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	common "github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 
-	"github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
 )
 
 var (

@@ -19,9 +19,9 @@ import (
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	es "github.com/grafana/grafana/pkg/tsdb/elasticsearch/client"
-	"github.com/grafana/grafana/pkg/tsdb/elasticsearch/instrumentation"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
+	es "github.com/capitalrx/grafana/pkg/tsdb/elasticsearch/client"
+	"github.com/capitalrx/grafana/pkg/tsdb/elasticsearch/instrumentation"
 )
 
 const (

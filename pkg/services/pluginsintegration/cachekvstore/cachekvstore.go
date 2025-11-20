@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/kvstore"
+	"github.com/capitalrx/grafana/pkg/infra/kvstore"
 )
 
 // keyLastUpdated is the key used to store the last updated time.

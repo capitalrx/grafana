@@ -6,8 +6,8 @@ import (
 	"fmt"
 
 	claims "github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
 )
 
 // ResourceResolver is called before authorization is performed.

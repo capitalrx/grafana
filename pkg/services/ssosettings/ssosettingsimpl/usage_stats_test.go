@@ -4,10 +4,10 @@ import (
 	"context"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/ssosettings/models"
-	"github.com/grafana/grafana/pkg/services/ssosettings/ssosettingstests"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/ssosettings/models"
+	"github.com/capitalrx/grafana/pkg/services/ssosettings/ssosettingstests"
+	"github.com/capitalrx/grafana/pkg/setting"
 	"github.com/stretchr/testify/require"
 )
 

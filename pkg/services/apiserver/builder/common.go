@@ -15,9 +15,9 @@ import (
 	"k8s.io/kube-openapi/pkg/common"
 	"k8s.io/kube-openapi/pkg/spec3"
 
-	grafanarest "github.com/grafana/grafana/pkg/apiserver/rest"
-	"github.com/grafana/grafana/pkg/services/apiserver/options"
-	"github.com/grafana/grafana/pkg/storage/unified/apistore"
+	grafanarest "github.com/capitalrx/grafana/pkg/apiserver/rest"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/options"
+	"github.com/capitalrx/grafana/pkg/storage/unified/apistore"
 )
 
 // TODO: this (or something like it) belongs in grafana-app-sdk,

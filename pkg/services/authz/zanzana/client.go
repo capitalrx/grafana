@@ -8,8 +8,8 @@ import (
 	authlib "github.com/grafana/authlib/types"
 	"github.com/prometheus/client_golang/prometheus"
 
-	authzextv1 "github.com/grafana/grafana/pkg/services/authz/proto/v1"
-	"github.com/grafana/grafana/pkg/services/authz/zanzana/client"
+	authzextv1 "github.com/capitalrx/grafana/pkg/services/authz/proto/v1"
+	"github.com/capitalrx/grafana/pkg/services/authz/zanzana/client"
 )
 
 // Client is a wrapper around [openfgav1.OpenFGAServiceClient]

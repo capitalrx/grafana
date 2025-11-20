@@ -6,12 +6,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/grafana/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 
-	ac "github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/dashboards/dashboardaccess"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+	ac "github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/dashboards/dashboardaccess"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 )
 
 var dashboardPermissionTranslation = map[dashboardaccess.PermissionType][]string{
@@ -493,7 +493,7 @@ func (m *managedFolderAlertActionsRepeatMigrator) Exec(sess *xorm.Session, mg *m
 			// should have been:
 			// if !hasAction(ac.<Action>, p) {
 			//
-			// see PR for explanation: https://github.com/grafana/grafana/pull/58054
+			// see PR for explanation: https://github.com/capitalrx/grafana/pull/58054
 			if hasFolderView(p) {
 				if !hasAction(ac.ActionAlertingRuleRead, p) {
 					toAdd = append(toAdd, ac.Permission{

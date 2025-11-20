@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 	"github.com/redis/go-redis/v9"
 )
 

@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	secretv1beta1 "github.com/grafana/grafana/apps/secret/pkg/apis/secret/v1beta1"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/xkube"
+	secretv1beta1 "github.com/capitalrx/grafana/apps/secret/pkg/apis/secret/v1beta1"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/xkube"
 )
 
 // HeaderGrafanaServiceIdentityName is used to pass the service identity in the gRPC request metadata.

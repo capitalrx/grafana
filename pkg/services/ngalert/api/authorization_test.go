@@ -9,8 +9,8 @@ import (
 	"github.com/go-openapi/loads"
 	"github.com/stretchr/testify/require"
 
-	acmock "github.com/grafana/grafana/pkg/services/accesscontrol/mock"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
+	acmock "github.com/capitalrx/grafana/pkg/services/accesscontrol/mock"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
 )
 
 func TestAuthorize(t *testing.T) {

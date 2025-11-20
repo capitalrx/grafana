@@ -52,8 +52,8 @@ import {
 } from './index';
 
 function getFolderUrl(uid: string, title: string): string {
-  // mimics https://github.com/grafana/grafana/blob/79fe8a9902335c7a28af30e467b904a4ccfac503/pkg/services/dashboards/models.go#L188
-  // Not the same slugify as on the backend https://github.com/grafana/grafana/blob/aac66e91198004bc044754105e18bfff8fbfd383/pkg/infra/slugify/slugify.go#L86
+  // mimics https://github.com/capitalrx/grafana/blob/79fe8a9902335c7a28af30e467b904a4ccfac503/pkg/services/dashboards/models.go#L188
+  // Not the same slugify as on the backend https://github.com/capitalrx/grafana/blob/aac66e91198004bc044754105e18bfff8fbfd383/pkg/infra/slugify/slugify.go#L86
   // Probably does not matter as it seems to be only for better human readability.
   const slug = kbn.slugifyForUrl(title);
   return `${config.appSubUrl}/dashboards/f/${uid}/${slug}`;
@@ -150,7 +150,7 @@ export function useGetFolderQueryFacade(uid?: string) {
         .map((i) => ({
           title: i.title,
           uid: i.name,
-          // No idea how to make slug, on the server it uses a go lib: https://github.com/grafana/grafana/blob/aac66e91198004bc044754105e18bfff8fbfd383/pkg/infra/slugify/slugify.go#L56
+          // No idea how to make slug, on the server it uses a go lib: https://github.com/capitalrx/grafana/blob/aac66e91198004bc044754105e18bfff8fbfd383/pkg/infra/slugify/slugify.go#L56
           // Don't think slug is needed for the URL to work though
           url: getFolderUrl(i.name, i.title),
         }));
@@ -436,7 +436,7 @@ const appPlatformFolderToLegacyFolder = (
     uid: name,
     title,
     // general folder does not come with url
-    // see https://github.com/grafana/grafana/blob/8a05378ef3ae5545c6f7429eae5c174d3c0edbfe/pkg/services/folder/folderimpl/folder_unifiedstorage.go#L88
+    // see https://github.com/capitalrx/grafana/blob/8a05378ef3ae5545c6f7429eae5c174d3c0edbfe/pkg/services/folder/folderimpl/folder_unifiedstorage.go#L88
     url: name === GENERAL_FOLDER_UID ? '' : getFolderUrl(name, title),
     created: creationTimestamp || '0001-01-01T00:00:00Z',
     updated: annotations?.[AnnoKeyUpdatedTimestamp] || '0001-01-01T00:00:00Z',

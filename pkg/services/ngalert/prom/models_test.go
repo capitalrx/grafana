@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/yaml.v3"
 
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 func TestPrometheusRuleGroup_Validate(t *testing.T) {

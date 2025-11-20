@@ -7,8 +7,8 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 func (hs *HTTPServer) pluginMetricsEndpoint(ctx *web.Context) {

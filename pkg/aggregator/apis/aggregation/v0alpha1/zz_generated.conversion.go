@@ -10,7 +10,7 @@ package v0alpha1
 import (
 	unsafe "unsafe"
 
-	aggregation "github.com/grafana/grafana/pkg/aggregator/apis/aggregation"
+	aggregation "github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation"
 	conversion "k8s.io/apimachinery/pkg/conversion"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 )

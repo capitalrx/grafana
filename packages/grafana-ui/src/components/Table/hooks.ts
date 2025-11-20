@@ -7,7 +7,7 @@ import { DataFrame } from '@grafana/data';
 import { GrafanaTableState } from './types';
 
 /**
-  To have the custom vertical scrollbar always visible (https://github.com/grafana/grafana/issues/52136),
+  To have the custom vertical scrollbar always visible (https://github.com/capitalrx/grafana/issues/52136),
   we need to bring the element from the VariableSizeList scope to the outer Table container scope,
   because the VariableSizeList scope has overflow. By moving scrollbar to container scope we will have
   it always visible since the entire width is in view.

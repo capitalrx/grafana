@@ -20,7 +20,7 @@ package main
 import (
 	"strings"
 
-	"github.com/grafana/grafana/pkg/build/wire"
+	"github.com/capitalrx/grafana/pkg/build/wire"
 )
 
 func inject() Foo {

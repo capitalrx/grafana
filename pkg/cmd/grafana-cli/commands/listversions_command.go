@@ -3,9 +3,9 @@ package commands
 import (
 	"errors"
 
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/logger"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/services"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/utils"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/logger"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/services"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/utils"
 )
 
 func validateVersionInput(c utils.CommandLine) error {

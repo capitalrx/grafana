@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/kinds/dataquery"
 )
 
 type LogsQuery struct {

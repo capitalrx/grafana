@@ -5,7 +5,7 @@ import (
 
 	"github.com/grafana/alerting/receivers"
 
-	"github.com/grafana/grafana/pkg/services/notifications"
+	"github.com/capitalrx/grafana/pkg/services/notifications"
 )
 
 type emailSender struct {

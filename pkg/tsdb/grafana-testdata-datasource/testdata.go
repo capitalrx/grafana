@@ -10,8 +10,8 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend/resource/httpadapter"
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 
-	"github.com/grafana/grafana/pkg/tsdb/grafana-testdata-datasource/kinds"
-	"github.com/grafana/grafana/pkg/tsdb/grafana-testdata-datasource/sims"
+	"github.com/capitalrx/grafana/pkg/tsdb/grafana-testdata-datasource/kinds"
+	"github.com/capitalrx/grafana/pkg/tsdb/grafana-testdata-datasource/sims"
 )
 
 // ensures that testdata implements all client functions

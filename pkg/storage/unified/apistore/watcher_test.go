@@ -31,17 +31,17 @@ import (
 	"k8s.io/apiserver/pkg/storage/storagebackend"
 	"k8s.io/apiserver/pkg/storage/storagebackend/factory"
 
-	grafanaregistry "github.com/grafana/grafana/pkg/apiserver/registry/generic"
-	storagetesting "github.com/grafana/grafana/pkg/apiserver/storage/testing"
-	infraDB "github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/storage/unified/apistore"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
-	"github.com/grafana/grafana/pkg/storage/unified/sql"
-	"github.com/grafana/grafana/pkg/storage/unified/sql/db/dbimpl"
-	"github.com/grafana/grafana/pkg/tests/testsuite"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	grafanaregistry "github.com/capitalrx/grafana/pkg/apiserver/registry/generic"
+	storagetesting "github.com/capitalrx/grafana/pkg/apiserver/storage/testing"
+	infraDB "github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/storage/unified/apistore"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/db/dbimpl"
+	"github.com/capitalrx/grafana/pkg/tests/testsuite"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 type StorageType string

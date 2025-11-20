@@ -398,13 +398,13 @@ describe('NewProvisionedFolderForm', () => {
   });
 
   it('should show PR link when PR URL is available', () => {
-    (usePullRequestParam as jest.Mock).mockReturnValue({ prURL: 'https://github.com/grafana/grafana/pull/1234' });
+    (usePullRequestParam as jest.Mock).mockReturnValue({ prURL: 'https://github.com/capitalrx/grafana/pull/1234' });
 
     setup();
 
     // PR alert should be visible - use text content instead of role
     expect(screen.getByText('Pull request created')).toBeInTheDocument();
-    expect(screen.getByRole('link')).toHaveTextContent('https://github.com/grafana/grafana/pull/1234');
+    expect(screen.getByRole('link')).toHaveTextContent('https://github.com/capitalrx/grafana/pull/1234');
   });
 
   it('should call onDismiss when cancel button is clicked', async () => {

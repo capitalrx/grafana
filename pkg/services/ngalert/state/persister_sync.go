@@ -8,8 +8,8 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	ngModels "github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	ngModels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 type SyncStatePersister struct {

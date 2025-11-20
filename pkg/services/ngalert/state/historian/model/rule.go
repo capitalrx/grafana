@@ -4,8 +4,8 @@ import (
 	"context"
 	"strconv"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 // RuleMeta is the metadata about a rule that is needed by state history.

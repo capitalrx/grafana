@@ -50,7 +50,7 @@ const fetchFilterValues = async (
   }
 
   // const timeRange = getTimeSrv().timeRange();
-  // As https://github.com/grafana/grafana/pull/76118/files#diff-260d46415915a2e3e7d294e313bd128666e9f0868aa94d8aee4d4a24a060b542L27-R26
+  // As https://github.com/capitalrx/grafana/pull/76118/files#diff-260d46415915a2e3e7d294e313bd128666e9f0868aa94d8aee4d4a24a060b542L27-R26
   const timeRange = getDefaultTimeRange();
 
   // Filter out the current filter key from the list of all filters

@@ -8,7 +8,7 @@ import (
 
 	"github.com/grafana/grafana-app-sdk/plugin/kubeconfig"
 	"github.com/grafana/grafana-app-sdk/simple"
-	"github.com/grafana/grafana/pkg/services/authz"
+	"github.com/capitalrx/grafana/pkg/services/authz"
 )
 
 const (

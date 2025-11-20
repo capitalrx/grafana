@@ -8,7 +8,7 @@ import (
 
 	"github.com/urfave/cli/v2"
 
-	"github.com/grafana/grafana/pkg/build/e2eutil"
+	"github.com/capitalrx/grafana/pkg/build/e2eutil"
 )
 
 func EndToEndTests(c *cli.Context) error {

@@ -57,7 +57,7 @@ interface DecodedNamespace {
 }
 
 /**
- * After https://github.com/grafana/grafana/pull/74600,
+ * After https://github.com/capitalrx/grafana/pull/74600,
  * Grafana folder names will be returned from the API as a combination of the folder name and parent UID in a format of JSON array,
  * where first element is parent UID and the second element is Title.
  *

@@ -7,9 +7,9 @@ package v0alpha1
 import (
 	context "context"
 
-	aggregationv0alpha1 "github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
-	applyconfigurationaggregationv0alpha1 "github.com/grafana/grafana/pkg/aggregator/generated/applyconfiguration/aggregation/v0alpha1"
-	scheme "github.com/grafana/grafana/pkg/aggregator/generated/clientset/versioned/scheme"
+	aggregationv0alpha1 "github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
+	applyconfigurationaggregationv0alpha1 "github.com/capitalrx/grafana/pkg/aggregator/generated/applyconfiguration/aggregation/v0alpha1"
+	scheme "github.com/capitalrx/grafana/pkg/aggregator/generated/clientset/versioned/scheme"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"

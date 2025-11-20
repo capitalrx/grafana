@@ -6,9 +6,9 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/clientauth/middleware"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/clientauth/middleware"
+	"github.com/capitalrx/grafana/pkg/setting"
 
 	authlib "github.com/grafana/authlib/authn"
 	gofeatureflag "github.com/open-feature/go-sdk-contrib/providers/go-feature-flag/pkg"

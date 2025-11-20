@@ -9,7 +9,7 @@ import (
 	"strconv"
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/logger"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/logger"
 )
 
 type KerberosLookup struct {

@@ -12,14 +12,14 @@ import (
 	"github.com/grafana/authlib/types"
 	"github.com/grafana/dskit/ring"
 	"github.com/grafana/dskit/services"
-	infraDB "github.com/grafana/grafana/pkg/infra/db"
-	secrets "github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
-	inlinesecurevalue "github.com/grafana/grafana/pkg/registry/apis/secret/inline"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
-	"github.com/grafana/grafana/pkg/storage/unified/sql/db/dbimpl"
+	infraDB "github.com/capitalrx/grafana/pkg/infra/db"
+	secrets "github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
+	inlinesecurevalue "github.com/capitalrx/grafana/pkg/registry/apis/secret/inline"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/db/dbimpl"
 )
 
 type QOSEnqueueDequeuer interface {

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/grafana/grafana/pkg/infra/filestorage"
-	ac "github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/infra/filestorage"
+	ac "github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 type SystemUserType string

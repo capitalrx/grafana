@@ -3,7 +3,7 @@ package licensingtest
 import (
 	"github.com/stretchr/testify/mock"
 
-	"github.com/grafana/grafana/pkg/services/licensing"
+	"github.com/capitalrx/grafana/pkg/services/licensing"
 )
 
 var _ licensing.Licensing = new(FakeLicensing)

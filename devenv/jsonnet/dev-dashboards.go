@@ -15,7 +15,7 @@ import (
 	"text/template"
 
 	"github.com/grafana/codejen"
-	dev_dashboards "github.com/grafana/grafana/devenv/dev-dashboards"
+	dev_dashboards "github.com/capitalrx/grafana/devenv/dev-dashboards"
 )
 
 var (

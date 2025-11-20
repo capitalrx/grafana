@@ -4,8 +4,8 @@ import (
 	"context"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	pref "github.com/grafana/grafana/pkg/services/preference"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	pref "github.com/capitalrx/grafana/pkg/services/preference"
 )
 
 type sqlStore struct {

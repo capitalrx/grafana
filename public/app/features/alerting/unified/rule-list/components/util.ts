@@ -43,7 +43,7 @@ export function calculateNextEvaluationEstimate(
 
   //when `nextEvaluationDate` is a past date it means lastEvaluation was more than one evaluation interval ago.
   //in this case we use the interval value to show a more generic estimate.
-  //See https://github.com/grafana/grafana/issues/65125
+  //See https://github.com/capitalrx/grafana/issues/65125
   const isPastDate = isBefore(nextEvaluationDate, new Date());
   if (isPastDate) {
     return {

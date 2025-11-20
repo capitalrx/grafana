@@ -28,13 +28,13 @@ import (
 	"k8s.io/klog/v2"
 	"k8s.io/kube-openapi/pkg/common"
 
-	"github.com/grafana/grafana/pkg/apiserver/endpoints/filters"
-	grafanarest "github.com/grafana/grafana/pkg/apiserver/rest"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	"github.com/grafana/grafana/pkg/services/apiserver/options"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/storage/legacysql/dualwrite"
-	"github.com/grafana/grafana/pkg/storage/unified/apistore"
+	"github.com/capitalrx/grafana/pkg/apiserver/endpoints/filters"
+	grafanarest "github.com/capitalrx/grafana/pkg/apiserver/rest"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/options"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/storage/legacysql/dualwrite"
+	"github.com/capitalrx/grafana/pkg/storage/unified/apistore"
 )
 
 type BuildHandlerChainFuncFromBuilders = func([]APIGroupBuilder) BuildHandlerChainFunc

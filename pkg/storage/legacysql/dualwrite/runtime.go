@@ -11,7 +11,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apiserver/pkg/registry/rest"
 
-	grafanarest "github.com/grafana/grafana/pkg/apiserver/rest"
+	grafanarest "github.com/capitalrx/grafana/pkg/apiserver/rest"
 )
 
 func (m *service) NewStorage(gr schema.GroupResource, legacy grafanarest.Storage, unified grafanarest.Storage) (grafanarest.Storage, error) {

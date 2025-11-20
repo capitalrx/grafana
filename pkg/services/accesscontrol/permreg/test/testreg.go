@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/services/accesscontrol/permreg"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol/permreg"
 )
 
 func ProvidePermissionRegistry(t *testing.T) permreg.PermissionRegistry {

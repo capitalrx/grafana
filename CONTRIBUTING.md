@@ -21,13 +21,13 @@ Interact and be heard:
 
 We welcome your technical contributions! Here are some examples:
 
-- Contribute to the Grafana codebase- check out these [help-wanted issues](<(https://github.com/grafana/grafana/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)>)
+- Contribute to the Grafana codebase- check out these [help-wanted issues](<(https://github.com/capitalrx/grafana/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)>)
 - Develop community [plugins](https://grafana.com/developers/plugin-tools)
-- Report [bugs](https://github.com/grafana/grafana/issues/new?template=0-bug-report.yaml)
-- [Triage issues](https://github.com/grafana/grafana/blob/4414b92e93440cc9ed0f281989ee71dc16216a15/contribute/triage-issues.md)
-- Report [security vulnerabilities](https://github.com/grafana/grafana/security/policy)
-- Submit a [feature request](https://github.com/grafana/grafana/issues/new?template=1-feature_requests.md)
-- Write [technical documentation](https://github.com/grafana/grafana/blob/4414b92e93440cc9ed0f281989ee71dc16216a15/contribute/documentation/README.md)
+- Report [bugs](https://github.com/capitalrx/grafana/issues/new?template=0-bug-report.yaml)
+- [Triage issues](https://github.com/capitalrx/grafana/blob/4414b92e93440cc9ed0f281989ee71dc16216a15/contribute/triage-issues.md)
+- Report [security vulnerabilities](https://github.com/capitalrx/grafana/security/policy)
+- Submit a [feature request](https://github.com/capitalrx/grafana/issues/new?template=1-feature_requests.md)
+- Write [technical documentation](https://github.com/capitalrx/grafana/blob/4414b92e93440cc9ed0f281989ee71dc16216a15/contribute/documentation/README.md)
 
 **Please note:** We do not currently accept contributions for translations. Please do not submit pull requests translating grafana.json files - they will be rejected. We do accept contributions to mark up phrases for translation. See [Internationalization](contribute/internationalization.md).
 
@@ -35,8 +35,8 @@ We welcome your technical contributions! Here are some examples:
 
 Unsure where to begin contributing to Grafana? Start by browsing issues labeled `beginner friendly` or `help wanted`.
 
-- [Beginner-friendly](https://github.com/grafana/grafana/issues?q=is%3Aopen+is%3Aissue+label%3A%22beginner+friendly%22) issues are generally straightforward to complete.
-- [Help wanted](https://github.com/grafana/grafana/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) issues are problems we would like the community to help us with regardless of complexity.
+- [Beginner-friendly](https://github.com/capitalrx/grafana/issues?q=is%3Aopen+is%3Aissue+label%3A%22beginner+friendly%22) issues are generally straightforward to complete.
+- [Help wanted](https://github.com/capitalrx/grafana/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) issues are problems we would like the community to help us with regardless of complexity.
 
 If you're looking to make a code change, see how to set up your environment for [local development](contribute/developer-guide.md).
 
@@ -48,9 +48,9 @@ Developing a Grafana plugin is a fantastic way to share your unique ideas with t
 
 ### Report bugs
 
-Before submitting a new issue, try to make sure someone hasn't already reported the problem. Look through the [existing issues](https://github.com/grafana/grafana/issues) for similar issues.
+Before submitting a new issue, try to make sure someone hasn't already reported the problem. Look through the [existing issues](https://github.com/capitalrx/grafana/issues) for similar issues.
 
-Report a bug by submitting a [bug report](https://github.com/grafana/grafana/issues/new?template=0-bug-report.yaml). Make sure that you provide as much information as possible on how to reproduce the bug.
+Report a bug by submitting a [bug report](https://github.com/capitalrx/grafana/issues/new?template=0-bug-report.yaml). Make sure that you provide as much information as possible on how to reproduce the bug.
 
 Follow the issue template and add additional information that will help us replicate the problem.
 
@@ -73,13 +73,13 @@ Read more about the ways you can [Triage issues](/contribute/triage-issues.md).
 
 #### Security issues
 
-If you believe you've found a security vulnerability, please read our [security policy](https://github.com/grafana/grafana/security/policy) for more details on reporting.
+If you believe you've found a security vulnerability, please read our [security policy](https://github.com/capitalrx/grafana/security/policy) for more details on reporting.
 
 ### Suggest enhancements
 
-If you have an idea of how to improve Grafana, submit a [feature request](https://github.com/grafana/grafana/issues/new?template=1-feature_requests.md).
+If you have an idea of how to improve Grafana, submit a [feature request](https://github.com/capitalrx/grafana/issues/new?template=1-feature_requests.md).
 
-We want to make Grafana accessible to even more people. Submit an [accessibility issue](https://github.com/grafana/grafana/issues/new?template=2-accessibility.md) to help us understand what we can improve.
+We want to make Grafana accessible to even more people. Submit an [accessibility issue](https://github.com/capitalrx/grafana/issues/new?template=2-accessibility.md) to help us understand what we can improve.
 
 ### Write documentation
 

@@ -7,8 +7,8 @@ package authinfotest
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/login"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/services/login"
+	"github.com/capitalrx/grafana/pkg/services/user"
 	mock "github.com/stretchr/testify/mock"
 )
 

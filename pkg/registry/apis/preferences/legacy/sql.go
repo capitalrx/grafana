@@ -9,11 +9,11 @@ import (
 	"time"
 
 	authlib "github.com/grafana/authlib/types"
-	preferences "github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	pref "github.com/grafana/grafana/pkg/services/preference"
-	"github.com/grafana/grafana/pkg/storage/legacysql"
-	"github.com/grafana/grafana/pkg/storage/unified/sql/sqltemplate"
+	preferences "github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	pref "github.com/capitalrx/grafana/pkg/services/preference"
+	"github.com/capitalrx/grafana/pkg/storage/legacysql"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/sqltemplate"
 )
 
 type dashboardStars struct {

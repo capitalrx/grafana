@@ -6,9 +6,9 @@ import (
 	"sort"
 	"time"
 
-	"github.com/grafana/grafana/pkg/services/authapi"
-	"github.com/grafana/grafana/pkg/services/cloudmigration"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/services/authapi"
+	"github.com/capitalrx/grafana/pkg/services/cloudmigration"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 var fixedDate = time.Date(2024, 6, 5, 17, 30, 40, 0, time.UTC)

@@ -5,11 +5,11 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	ac "github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/folder"
-	"github.com/grafana/grafana/pkg/services/libraryelements/model"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	ac "github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/folder"
+	"github.com/capitalrx/grafana/pkg/services/libraryelements/model"
 )
 
 const (

@@ -1,12 +1,12 @@
 package ngalert
 
 import (
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/datasources"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	ac "github.com/grafana/grafana/pkg/services/ngalert/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	ac "github.com/capitalrx/grafana/pkg/services/ngalert/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/org"
 )
 
 const AlertRolesGroup = "Alerting"

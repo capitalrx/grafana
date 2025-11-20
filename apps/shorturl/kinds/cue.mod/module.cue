@@ -1,2 +1,2 @@
-module: "github.com/grafana/grafana/apps/shorturl/kinds"
+module: "github.com/capitalrx/grafana/apps/shorturl/kinds"
 language: version: "v0.8.2"

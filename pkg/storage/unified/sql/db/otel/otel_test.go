@@ -13,9 +13,9 @@ import (
 	sdktracetest "go.opentelemetry.io/otel/sdk/trace/tracetest"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/grafana/grafana/pkg/storage/unified/sql/db"
-	dbmocks "github.com/grafana/grafana/pkg/storage/unified/sql/db/mocks"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/db"
+	dbmocks "github.com/capitalrx/grafana/pkg/storage/unified/sql/db/mocks"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 var errTest = errors.New("because of reasons")

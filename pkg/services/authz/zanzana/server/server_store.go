@@ -8,7 +8,7 @@ import (
 	"github.com/openfga/language/pkg/go/transformer"
 	"google.golang.org/protobuf/types/known/wrapperspb"
 
-	"github.com/grafana/grafana/pkg/services/authz/zanzana/schema"
+	"github.com/capitalrx/grafana/pkg/services/authz/zanzana/schema"
 )
 
 func (s *Server) getStoreInfo(ctx context.Context, namespace string) (*storeInfo, error) {

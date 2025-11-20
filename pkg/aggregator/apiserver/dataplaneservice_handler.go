@@ -5,13 +5,13 @@ import (
 	"sync/atomic"
 	"time"
 
-	grafanasemconv "github.com/grafana/grafana/pkg/semconv"
+	grafanasemconv "github.com/capitalrx/grafana/pkg/semconv"
 	semconv "go.opentelemetry.io/otel/semconv/v1.21.0"
 	"k8s.io/apiserver/pkg/endpoints/request"
 	"k8s.io/component-base/tracing"
 
-	aggregationv0alpha1 "github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
-	"github.com/grafana/grafana/pkg/aggregator/apiserver/plugin"
+	aggregationv0alpha1 "github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/aggregator/apiserver/plugin"
 )
 
 // dataPlaneServiceHandler provides a http.Handler which will proxy traffic to a plugin client.

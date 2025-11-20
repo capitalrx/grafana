@@ -9,12 +9,12 @@ import (
 	"github.com/stretchr/testify/require"
 
 	claims "github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/anonymous/anontest"
-	"github.com/grafana/grafana/pkg/services/authn"
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/services/org/orgtest"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/anonymous/anontest"
+	"github.com/capitalrx/grafana/pkg/services/authn"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/services/org/orgtest"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func TestAnonymous_Authenticate(t *testing.T) {

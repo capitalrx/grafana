@@ -3,19 +3,19 @@ package server
 import (
 	"github.com/stretchr/testify/mock"
 
-	"github.com/grafana/grafana/apps/provisioning/pkg/repository/github"
-	"github.com/grafana/grafana/apps/secret/pkg/decrypt"
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/infra/httpclient"
-	"github.com/grafana/grafana/pkg/plugins/manager/registry"
-	"github.com/grafana/grafana/pkg/services/auth"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/grpcserver"
-	"github.com/grafana/grafana/pkg/services/notifications"
-	"github.com/grafana/grafana/pkg/services/oauthtoken/oauthtokentest"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/repository/github"
+	"github.com/capitalrx/grafana/apps/secret/pkg/decrypt"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/httpclient"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/registry"
+	"github.com/capitalrx/grafana/pkg/services/auth"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/grpcserver"
+	"github.com/capitalrx/grafana/pkg/services/notifications"
+	"github.com/capitalrx/grafana/pkg/services/oauthtoken/oauthtokentest"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 func ProvideTestEnv(

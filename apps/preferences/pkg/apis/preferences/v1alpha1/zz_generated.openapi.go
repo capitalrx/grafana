@@ -14,20 +14,20 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.Preferences":                       schema_pkg_apis_preferences_v1alpha1_Preferences(ref),
-		"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesCookiePreferences":      schema_pkg_apis_preferences_v1alpha1_PreferencesCookiePreferences(ref),
-		"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesList":                   schema_pkg_apis_preferences_v1alpha1_PreferencesList(ref),
-		"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesNavbarPreference":       schema_pkg_apis_preferences_v1alpha1_PreferencesNavbarPreference(ref),
-		"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesQueryHistoryPreference": schema_pkg_apis_preferences_v1alpha1_PreferencesQueryHistoryPreference(ref),
-		"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesSpec":                   schema_pkg_apis_preferences_v1alpha1_PreferencesSpec(ref),
-		"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesStatus":                 schema_pkg_apis_preferences_v1alpha1_PreferencesStatus(ref),
-		"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesstatusOperatorState":    schema_pkg_apis_preferences_v1alpha1_PreferencesstatusOperatorState(ref),
-		"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.Stars":                             schema_pkg_apis_preferences_v1alpha1_Stars(ref),
-		"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsList":                         schema_pkg_apis_preferences_v1alpha1_StarsList(ref),
-		"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsResource":                     schema_pkg_apis_preferences_v1alpha1_StarsResource(ref),
-		"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsSpec":                         schema_pkg_apis_preferences_v1alpha1_StarsSpec(ref),
-		"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsStatus":                       schema_pkg_apis_preferences_v1alpha1_StarsStatus(ref),
-		"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsstatusOperatorState":          schema_pkg_apis_preferences_v1alpha1_StarsstatusOperatorState(ref),
+		"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.Preferences":                       schema_pkg_apis_preferences_v1alpha1_Preferences(ref),
+		"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesCookiePreferences":      schema_pkg_apis_preferences_v1alpha1_PreferencesCookiePreferences(ref),
+		"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesList":                   schema_pkg_apis_preferences_v1alpha1_PreferencesList(ref),
+		"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesNavbarPreference":       schema_pkg_apis_preferences_v1alpha1_PreferencesNavbarPreference(ref),
+		"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesQueryHistoryPreference": schema_pkg_apis_preferences_v1alpha1_PreferencesQueryHistoryPreference(ref),
+		"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesSpec":                   schema_pkg_apis_preferences_v1alpha1_PreferencesSpec(ref),
+		"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesStatus":                 schema_pkg_apis_preferences_v1alpha1_PreferencesStatus(ref),
+		"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesstatusOperatorState":    schema_pkg_apis_preferences_v1alpha1_PreferencesstatusOperatorState(ref),
+		"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.Stars":                             schema_pkg_apis_preferences_v1alpha1_Stars(ref),
+		"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsList":                         schema_pkg_apis_preferences_v1alpha1_StarsList(ref),
+		"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsResource":                     schema_pkg_apis_preferences_v1alpha1_StarsResource(ref),
+		"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsSpec":                         schema_pkg_apis_preferences_v1alpha1_StarsSpec(ref),
+		"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsStatus":                       schema_pkg_apis_preferences_v1alpha1_StarsStatus(ref),
+		"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsstatusOperatorState":          schema_pkg_apis_preferences_v1alpha1_StarsstatusOperatorState(ref),
 	}
 }
 
@@ -61,13 +61,13 @@ func schema_pkg_apis_preferences_v1alpha1_Preferences(ref common.ReferenceCallba
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec is the spec of the Preferences",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesSpec"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesStatus"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesStatus"),
 						},
 					},
 				},
@@ -75,7 +75,7 @@ func schema_pkg_apis_preferences_v1alpha1_Preferences(ref common.ReferenceCallba
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesSpec", "github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesSpec", "github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -142,7 +142,7 @@ func schema_pkg_apis_preferences_v1alpha1_PreferencesList(ref common.ReferenceCa
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.Preferences"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.Preferences"),
 									},
 								},
 							},
@@ -153,7 +153,7 @@ func schema_pkg_apis_preferences_v1alpha1_PreferencesList(ref common.ReferenceCa
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.Preferences", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.Preferences", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -254,26 +254,26 @@ func schema_pkg_apis_preferences_v1alpha1_PreferencesSpec(ref common.ReferenceCa
 					"queryHistory": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Explore query history preferences",
-							Ref:         ref("github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesQueryHistoryPreference"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesQueryHistoryPreference"),
 						},
 					},
 					"cookiePreferences": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Cookie preferences",
-							Ref:         ref("github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesCookiePreferences"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesCookiePreferences"),
 						},
 					},
 					"navbar": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Navigation preferences",
-							Ref:         ref("github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesNavbarPreference"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesNavbarPreference"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesCookiePreferences", "github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesNavbarPreference", "github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesQueryHistoryPreference"},
+			"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesCookiePreferences", "github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesNavbarPreference", "github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesQueryHistoryPreference"},
 	}
 }
 
@@ -292,7 +292,7 @@ func schema_pkg_apis_preferences_v1alpha1_PreferencesStatus(ref common.Reference
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesstatusOperatorState"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesstatusOperatorState"),
 									},
 								},
 							},
@@ -317,7 +317,7 @@ func schema_pkg_apis_preferences_v1alpha1_PreferencesStatus(ref common.Reference
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesstatusOperatorState"},
+			"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.PreferencesstatusOperatorState"},
 	}
 }
 
@@ -402,13 +402,13 @@ func schema_pkg_apis_preferences_v1alpha1_Stars(ref common.ReferenceCallback) co
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec is the spec of the Stars",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsSpec"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsStatus"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsStatus"),
 						},
 					},
 				},
@@ -416,7 +416,7 @@ func schema_pkg_apis_preferences_v1alpha1_Stars(ref common.ReferenceCallback) co
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsSpec", "github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsSpec", "github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -453,7 +453,7 @@ func schema_pkg_apis_preferences_v1alpha1_StarsList(ref common.ReferenceCallback
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.Stars"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.Stars"),
 									},
 								},
 							},
@@ -464,7 +464,7 @@ func schema_pkg_apis_preferences_v1alpha1_StarsList(ref common.ReferenceCallback
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.Stars", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.Stars", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -528,7 +528,7 @@ func schema_pkg_apis_preferences_v1alpha1_StarsSpec(ref common.ReferenceCallback
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsResource"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsResource"),
 									},
 								},
 							},
@@ -539,7 +539,7 @@ func schema_pkg_apis_preferences_v1alpha1_StarsSpec(ref common.ReferenceCallback
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsResource"},
+			"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsResource"},
 	}
 }
 
@@ -558,7 +558,7 @@ func schema_pkg_apis_preferences_v1alpha1_StarsStatus(ref common.ReferenceCallba
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsstatusOperatorState"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsstatusOperatorState"),
 									},
 								},
 							},
@@ -583,7 +583,7 @@ func schema_pkg_apis_preferences_v1alpha1_StarsStatus(ref common.ReferenceCallba
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsstatusOperatorState"},
+			"github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.StarsstatusOperatorState"},
 	}
 }
 

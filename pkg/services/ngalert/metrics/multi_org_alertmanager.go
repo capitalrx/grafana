@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/log"
 
 	"github.com/grafana/dskit/metrics"
 	"github.com/prometheus/client_golang/prometheus"

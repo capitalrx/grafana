@@ -22,7 +22,7 @@ const aliasPatterns: Record<string, string> = {
   label: `LABEL`,
 };
 
-// migrateAliasPatterns in the context of https://github.com/grafana/grafana/issues/48434
+// migrateAliasPatterns in the context of https://github.com/capitalrx/grafana/issues/48434
 export function migrateAliasPatterns(query: CloudWatchMetricsQuery): CloudWatchMetricsQuery {
   if (!query.hasOwnProperty('label')) {
     const newQuery = { ...query };

@@ -10,7 +10,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/oam"
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models/resources"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models/resources"
 )
 
 type RequestContextFactoryFunc func(ctx context.Context, region string) (reqCtx RequestContext, err error)

@@ -3,11 +3,11 @@ package api
 import (
 	"net/http"
 
-	"github.com/grafana/grafana/pkg/api/routing"
-	"github.com/grafana/grafana/pkg/api/webassets"
-	"github.com/grafana/grafana/pkg/middleware"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/util/errhttp"
+	"github.com/capitalrx/grafana/pkg/api/routing"
+	"github.com/capitalrx/grafana/pkg/api/webassets"
+	"github.com/capitalrx/grafana/pkg/middleware"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/util/errhttp"
 )
 
 func (hs *HTTPServer) registerSwaggerUI(r routing.RouteRegister) {

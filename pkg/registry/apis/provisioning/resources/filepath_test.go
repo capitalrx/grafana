@@ -3,7 +3,7 @@ package resources
 import (
 	"testing"
 
-	"github.com/grafana/grafana/apps/provisioning/pkg/safepath"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/safepath"
 	"github.com/stretchr/testify/require"
 )
 

@@ -5,9 +5,9 @@
 package applyconfiguration
 
 import (
-	v0alpha1 "github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
-	aggregationv0alpha1 "github.com/grafana/grafana/pkg/aggregator/generated/applyconfiguration/aggregation/v0alpha1"
-	internal "github.com/grafana/grafana/pkg/aggregator/generated/applyconfiguration/internal"
+	v0alpha1 "github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
+	aggregationv0alpha1 "github.com/capitalrx/grafana/pkg/aggregator/generated/applyconfiguration/aggregation/v0alpha1"
+	internal "github.com/capitalrx/grafana/pkg/aggregator/generated/applyconfiguration/internal"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	testing "k8s.io/client-go/testing"

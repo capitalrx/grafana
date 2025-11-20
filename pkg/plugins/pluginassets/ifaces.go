@@ -1,6 +1,6 @@
 package pluginassets
 
-import "github.com/grafana/grafana/pkg/plugins"
+import "github.com/capitalrx/grafana/pkg/plugins"
 
 type Provider interface {
 	Module(plugin PluginInfo) (string, error)

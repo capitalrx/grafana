@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 // PluginManagementCfg is the configuration for the plugin management system.
@@ -32,7 +32,7 @@ type Features struct {
 	SriChecksEnabled       bool
 	LocalizationForPlugins bool
 	// Needed only until Tempo Alerting / metrics TraceQL is stable
-	// https://github.com/grafana/grafana/issues/106888
+	// https://github.com/capitalrx/grafana/issues/106888
 	TempoAlertingEnabled bool
 	PluginAssetProvider  bool
 }

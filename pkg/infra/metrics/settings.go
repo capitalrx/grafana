@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/metrics/graphitebridge"
+	"github.com/capitalrx/grafana/pkg/infra/metrics/graphitebridge"
 )
 
 func (im *InternalMetricsService) readSettings() error {

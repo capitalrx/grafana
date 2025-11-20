@@ -3,7 +3,7 @@ package playlistimpl
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/playlist"
+	"github.com/capitalrx/grafana/pkg/services/playlist"
 )
 
 type store interface {

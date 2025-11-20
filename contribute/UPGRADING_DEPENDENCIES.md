@@ -67,7 +67,7 @@ Our CI builds run on Drone.
 
 The main build steps (in Drone) happen using a custom Docker image that comes pre-baked with some of the necessary dependencies.
 
-Link: [`grafana/build-container`](https://github.com/grafana/grafana/tree/main/scripts/build/ci-build)
+Link: [`grafana/build-container`](https://github.com/capitalrx/grafana/tree/main/scripts/build/ci-build)
 
 #### Dependencies
 

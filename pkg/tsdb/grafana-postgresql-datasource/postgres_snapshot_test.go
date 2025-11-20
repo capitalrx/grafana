@@ -16,8 +16,8 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/experimental"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/tsdb/grafana-postgresql-datasource/sqleng"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/tsdb/grafana-postgresql-datasource/sqleng"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 var updateGoldenFiles = false

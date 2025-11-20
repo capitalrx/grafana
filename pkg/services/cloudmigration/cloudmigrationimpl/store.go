@@ -3,7 +3,7 @@ package cloudmigrationimpl
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/cloudmigration"
+	"github.com/capitalrx/grafana/pkg/services/cloudmigration"
 )
 
 type store interface {

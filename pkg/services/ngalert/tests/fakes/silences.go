@@ -6,8 +6,8 @@ import (
 	"golang.org/x/exp/maps"
 
 	alertingNotify "github.com/grafana/alerting/notify"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 type Call struct {

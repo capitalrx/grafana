@@ -18,9 +18,9 @@ import (
 	"golang.org/x/exp/maps"
 	"gopkg.in/yaml.v3"
 
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util"
-	"github.com/grafana/grafana/pkg/util/cmputil"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/util/cmputil"
 )
 
 func TestSortAlertRulesByGroupKeyAndIndex(t *testing.T) {

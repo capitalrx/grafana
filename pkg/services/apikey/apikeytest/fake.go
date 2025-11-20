@@ -3,7 +3,7 @@ package apikeytest
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/apikey"
+	"github.com/capitalrx/grafana/pkg/services/apikey"
 )
 
 type Service struct {

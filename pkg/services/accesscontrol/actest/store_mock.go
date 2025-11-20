@@ -5,7 +5,7 @@ package actest
 import (
 	context "context"
 
-	accesscontrol "github.com/grafana/grafana/pkg/services/accesscontrol"
+	accesscontrol "github.com/capitalrx/grafana/pkg/services/accesscontrol"
 
 	mock "github.com/stretchr/testify/mock"
 )

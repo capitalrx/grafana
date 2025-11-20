@@ -1,8 +1,8 @@
 package ssoutils
 
 import (
-	ac "github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/setting"
+	ac "github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func EvalAuthenticationSettings(cfg *setting.Cfg) ac.Evaluator {

@@ -4,15 +4,15 @@ import (
 	"context"
 	"net/http"
 
-	preferences "github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1"
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/api/response"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	pref "github.com/grafana/grafana/pkg/services/preference"
-	"github.com/grafana/grafana/pkg/services/preference/prefapi"
-	"github.com/grafana/grafana/pkg/web"
+	preferences "github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1"
+	"github.com/capitalrx/grafana/pkg/api/dtos"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	pref "github.com/capitalrx/grafana/pkg/services/preference"
+	"github.com/capitalrx/grafana/pkg/services/preference/prefapi"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 // POST /api/preferences/set-home-dash

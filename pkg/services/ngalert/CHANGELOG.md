@@ -8,7 +8,7 @@ This is not a direct replacement of Grafana's "add to changelog" label. This is 
 
 ### `[CHANGED]`
 
-The CHANGED label is for features that has changed in a visible/impactful way, e.g. "[CHANGED] Time series visualization added in cloud rules editor. [#54950](https://github.com/grafana/grafana/pull/54950)"
+The CHANGED label is for features that has changed in a visible/impactful way, e.g. "[CHANGED] Time series visualization added in cloud rules editor. [#54950](https://github.com/capitalrx/grafana/pull/54950)"
 
 ### `[NEW]`
 

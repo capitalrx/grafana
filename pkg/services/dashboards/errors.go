@@ -3,8 +3,8 @@ package dashboards
 import (
 	"errors"
 
-	"github.com/grafana/grafana/pkg/apimachinery/errutil"
-	"github.com/grafana/grafana/pkg/services/dashboards/dashboardaccess"
+	"github.com/capitalrx/grafana/pkg/apimachinery/errutil"
+	"github.com/capitalrx/grafana/pkg/services/dashboards/dashboardaccess"
 )
 
 // Typed errors

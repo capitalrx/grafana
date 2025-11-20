@@ -5,8 +5,8 @@
 package service
 
 import (
-	internalinterfaces "github.com/grafana/grafana/pkg/generated/informers/externalversions/internalinterfaces"
-	v0alpha1 "github.com/grafana/grafana/pkg/generated/informers/externalversions/service/v0alpha1"
+	internalinterfaces "github.com/capitalrx/grafana/pkg/generated/informers/externalversions/internalinterfaces"
+	v0alpha1 "github.com/capitalrx/grafana/pkg/generated/informers/externalversions/service/v0alpha1"
 )
 
 // Interface provides access to each of this group's versions.

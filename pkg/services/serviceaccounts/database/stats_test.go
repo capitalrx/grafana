@@ -7,11 +7,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/components/satokengen"
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/services/serviceaccounts"
-	"github.com/grafana/grafana/pkg/services/serviceaccounts/tests"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/components/satokengen"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/services/serviceaccounts"
+	"github.com/capitalrx/grafana/pkg/services/serviceaccounts/tests"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 func TestIntegrationStore_UsageStats(t *testing.T) {

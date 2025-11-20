@@ -1,9 +1,9 @@
 package validation
 
 import (
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/login/social"
-	"github.com/grafana/grafana/pkg/services/ssosettings"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/login/social"
+	"github.com/capitalrx/grafana/pkg/services/ssosettings"
 )
 
 func Validate(info *social.OAuthInfo, requester identity.Requester, validators ...ssosettings.ValidateFunc[social.OAuthInfo]) error {

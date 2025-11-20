@@ -70,7 +70,7 @@ export function toRawSql({ sql, table }: SQLQuery): string {
 }
 
 // When the column name is *, do not wrap the column name in double-quotes.
-// See: https://github.com/grafana/grafana/issues/88008
+// See: https://github.com/capitalrx/grafana/issues/88008
 function formatTableName(parameter: string | undefined): string {
   if (parameter === '*') {
     return parameter;
