@@ -7,8 +7,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.opentelemetry.io/otel/trace/noop"
 
-	"github.com/grafana/grafana/pkg/infra/usagestats"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/encryption/cipher"
+	"github.com/capitalrx/grafana/pkg/infra/usagestats"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/encryption/cipher"
 )
 
 func newGcmService(t *testing.T) cipher.Cipher {

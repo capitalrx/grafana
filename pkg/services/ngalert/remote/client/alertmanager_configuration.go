@@ -8,7 +8,7 @@ import (
 
 	"github.com/grafana/alerting/definition"
 
-	apimodels "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
+	apimodels "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
 )
 
 const (

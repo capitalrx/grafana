@@ -24,7 +24,7 @@ Welcome to Grafana 11.1! This release contains some minor improvements following
 
 {{< youtube id="gjQX9-7Hsfs" >}}
 
-For even more detail about all the changes in this release, refer to the [changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md). For the specific steps we recommend when you upgrade to v11.1, check out our [Upgrade Guide](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/upgrade-guide/upgrade-v11.1/).
+For even more detail about all the changes in this release, refer to the [changelog](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md). For the specific steps we recommend when you upgrade to v11.1, check out our [Upgrade Guide](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/upgrade-guide/upgrade-v11.1/).
 
 ## Dashboards and visualizations
 
@@ -190,4 +190,4 @@ The majority of screen reader users [find things on a web page using headings](h
 
 ### Reduced motion support
 
-Users who are affected by a lot of animations on a web site have the possibility to configure [reduced motion settings](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion). Grafana now supports this, either by making animations simpler or removing them altogether. We have [implemented a rule](https://github.com/grafana/grafana/tree/main/packages/grafana-eslint-rules#no-unreduced-motion), which prohibits unhandled transitions and animations, ensuring that we can continuously support reduced motion.
+Users who are affected by a lot of animations on a web site have the possibility to configure [reduced motion settings](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion). Grafana now supports this, either by making animations simpler or removing them altogether. We have [implemented a rule](https://github.com/capitalrx/grafana/tree/main/packages/grafana-eslint-rules#no-unreduced-motion), which prohibits unhandled transitions and animations, ensuring that we can continuously support reduced motion.

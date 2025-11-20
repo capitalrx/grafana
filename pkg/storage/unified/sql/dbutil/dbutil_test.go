@@ -9,9 +9,9 @@ import (
 	"github.com/DATA-DOG/go-sqlmock"
 	"github.com/stretchr/testify/require"
 
-	sqltemplateMocks "github.com/grafana/grafana/pkg/storage/unified/sql/sqltemplate/mocks"
-	"github.com/grafana/grafana/pkg/storage/unified/sql/test"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	sqltemplateMocks "github.com/capitalrx/grafana/pkg/storage/unified/sql/sqltemplate/mocks"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/test"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 var (

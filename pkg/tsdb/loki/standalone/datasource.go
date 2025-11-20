@@ -8,7 +8,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend/instancemgmt"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/tracing"
 
-	loki "github.com/grafana/grafana/pkg/tsdb/loki"
+	loki "github.com/capitalrx/grafana/pkg/tsdb/loki"
 )
 
 var (

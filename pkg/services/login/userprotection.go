@@ -1,7 +1,7 @@
 package login
 
 import (
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 type UserProtectionService interface {

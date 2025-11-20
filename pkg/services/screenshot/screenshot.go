@@ -12,10 +12,10 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/services/rendering"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/services/rendering"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 const (
@@ -36,7 +36,7 @@ type screenshotFunc func(ctx context.Context, opts ScreenshotOptions) (*Screensh
 
 // ScreenshotService is an interface for taking screenshots.
 //
-//go:generate mockgen -destination=screenshot_mock.go -package=screenshot github.com/grafana/grafana/pkg/services/screenshot ScreenshotService
+//go:generate mockgen -destination=screenshot_mock.go -package=screenshot github.com/capitalrx/grafana/pkg/services/screenshot ScreenshotService
 type ScreenshotService interface {
 	Take(ctx context.Context, opts ScreenshotOptions) (*Screenshot, error)
 }

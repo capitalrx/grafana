@@ -3,7 +3,7 @@ package resource
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 )
 
 var (

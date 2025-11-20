@@ -15,7 +15,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apiserver/pkg/apis/example"
 
-	"github.com/grafana/grafana/pkg/apiserver/rest"
+	"github.com/capitalrx/grafana/pkg/apiserver/rest"
 )
 
 var now = time.Now()

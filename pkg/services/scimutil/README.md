@@ -47,8 +47,8 @@ func (s *SCIMUtil) AreNonProvisionedUsersAllowed(ctx context.Context, orgID int6
 ```go
 import (
     "context"
-    "github.com/grafana/grafana/pkg/services/apiserver/client"
-    "github.com/grafana/grafana/pkg/services/scimutil"
+    "github.com/capitalrx/grafana/pkg/services/apiserver/client"
+    "github.com/capitalrx/grafana/pkg/services/scimutil"
 )
 
 // Create a new SCIM utility instance

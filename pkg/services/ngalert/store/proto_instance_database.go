@@ -12,11 +12,11 @@ import (
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	pb "github.com/grafana/grafana/pkg/services/ngalert/store/proto/v1"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	pb "github.com/capitalrx/grafana/pkg/services/ngalert/store/proto/v1"
 )
 
 // ProtoInstanceDBStore is a store for alert instances that stores state of a rule as a single

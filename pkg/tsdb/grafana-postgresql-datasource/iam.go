@@ -105,6 +105,7 @@ func (m *iamManager) getIAMAuthToken(ctx context.Context, settings *backend.Data
 }
 
 func (m *iamManager) newIAMAuth(ctx context.Context, settings *backend.DataSourceInstanceSettings) (*iamAuth, error) {
+	println("generating new IAM auth")
 	awsSettings := &AWSDatesourceSettings{}
 	if err := json.Unmarshal(settings.JSONData, awsSettings); err != nil {
 		return nil, fmt.Errorf("could not unmarshal aws settings: %w", err)
@@ -124,11 +125,11 @@ func (m *iamManager) newIAMAuth(ctx context.Context, settings *backend.DataSourc
 		awsSess:  sess,
 		settings: settings,
 	}
-	go auth.refreshToken(cancellableCtx, DefaultTokenLifeTime, TokenRefreshWindow)
+	go auth.refreshToken(cancellableCtx, DefaultTokenLifeTime, TokenRefreshWindow, settings)
 	return auth, nil
 }
 
-func (auth *iamAuth) refreshToken(ctx context.Context, tokenLifeTime time.Duration, tokenRefreshWindow time.Duration) {
+func (auth *iamAuth) refreshToken(ctx context.Context, tokenLifeTime time.Duration, tokenRefreshWindow time.Duration, settings *backend.DataSourceInstanceSettings) {
 	ticker := time.NewTicker(tokenLifeTime - tokenRefreshWindow)
 	defer ticker.Stop()
 	for {
@@ -147,6 +148,8 @@ func (auth *iamAuth) refreshToken(ctx context.Context, tokenLifeTime time.Durati
 				ticker.Reset(RefreshRetryPeriod)
 				continue
 			}
+			println("token: %w", token)
+			settings.DecryptedSecureJSONData["password"] = token
 			auth.token = token
 			ticker.Reset(tokenLifeTime - tokenRefreshWindow)
 			iamLogger.Debug("successfully refreshed iam token")

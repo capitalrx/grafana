@@ -15,9 +15,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/tsdb/mssql/kerberos"
-	"github.com/grafana/grafana/pkg/tsdb/mssql/sqleng"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/tsdb/mssql/kerberos"
+	"github.com/capitalrx/grafana/pkg/tsdb/mssql/sqleng"
 )
 
 // To run this test, set runMssqlTests=true

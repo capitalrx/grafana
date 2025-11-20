@@ -68,7 +68,7 @@ PR_NUMBER=$(echo "$commit_message" | grep -o '#[0-9]\+' | head -n1 | tr -d '#')
 if [ -n "$PR_NUMBER" ]; then
     PR_TITLE=$(echo "$commit_message" | head -n1)
     echo "  PR: #$PR_NUMBER - $PR_TITLE"
-    echo "  Link: https://github.com/grafana/grafana/pull/$PR_NUMBER"
+    echo "  Link: https://github.com/capitalrx/grafana/pull/$PR_NUMBER"
 fi
 echo
 

@@ -3,7 +3,7 @@ package filters
 import (
 	"net/http"
 
-	"github.com/grafana/grafana/pkg/apiserver/endpoints/request"
+	"github.com/capitalrx/grafana/pkg/apiserver/endpoints/request"
 )
 
 // WithAcceptHeader adds the Accept header to the request context.

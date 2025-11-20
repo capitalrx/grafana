@@ -9,8 +9,8 @@ import (
 
 	"github.com/BurntSushi/toml"
 
-	"github.com/grafana/grafana/pkg/login/social"
-	"github.com/grafana/grafana/pkg/services/supportbundles"
+	"github.com/capitalrx/grafana/pkg/login/social"
+	"github.com/capitalrx/grafana/pkg/services/supportbundles"
 )
 
 func (ss *SocialService) registerSupportBundleCollectors(bundleRegistry supportbundles.Service) {

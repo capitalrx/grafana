@@ -3,7 +3,7 @@ package authimpl
 import (
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/services/auth"
+	"github.com/capitalrx/grafana/pkg/services/auth"
 )
 
 type userAuthToken struct {

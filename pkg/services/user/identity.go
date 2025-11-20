@@ -8,7 +8,7 @@ import (
 	authnlib "github.com/grafana/authlib/authn"
 	claims "github.com/grafana/authlib/types"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
 )
 
 const (

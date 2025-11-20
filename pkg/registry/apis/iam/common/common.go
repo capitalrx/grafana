@@ -5,12 +5,12 @@ import (
 	"strconv"
 
 	authlib "github.com/grafana/authlib/types"
-	iamv0alpha1 "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	legacyiamv0 "github.com/grafana/grafana/pkg/apis/iam/v0alpha1"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	"github.com/grafana/grafana/pkg/services/team"
+	iamv0alpha1 "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	legacyiamv0 "github.com/capitalrx/grafana/pkg/apis/iam/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	"github.com/capitalrx/grafana/pkg/services/team"
 )
 
 // OptonalFormatInt formats num as a string. If num is less or equal than 0

@@ -5,9 +5,9 @@ import (
 	"errors"
 
 	"github.com/grafana/grafana-plugin-sdk-go/data"
-	ngmodels "github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/ngalert/state"
-	history_model "github.com/grafana/grafana/pkg/services/ngalert/state/historian/model"
+	ngmodels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/state"
+	history_model "github.com/capitalrx/grafana/pkg/services/ngalert/state/historian/model"
 )
 
 type Backend interface {

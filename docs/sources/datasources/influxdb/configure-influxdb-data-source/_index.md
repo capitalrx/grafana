@@ -200,7 +200,7 @@ For more information about provisioning, and for available configuration options
 to [Provision Grafana](ref:provision-grafana).
 
 {{< admonition type="note" >}}
-The `database` [field is deprecated](https://github.com/grafana/grafana/pull/58647).
+The `database` [field is deprecated](https://github.com/capitalrx/grafana/pull/58647).
 Grafana recommends using the `dbName` field in `jsonData`. There is no need to change existing provisioning settings.
 {{< /admonition >}}
 

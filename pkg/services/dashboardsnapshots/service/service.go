@@ -3,10 +3,10 @@ package service
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/dashboardsnapshots"
-	"github.com/grafana/grafana/pkg/services/secrets"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/dashboardsnapshots"
+	"github.com/capitalrx/grafana/pkg/services/secrets"
 )
 
 type ServiceImpl struct {

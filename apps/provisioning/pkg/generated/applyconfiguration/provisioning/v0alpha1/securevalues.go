@@ -5,7 +5,7 @@
 package v0alpha1
 
 import (
-	commonv0alpha1 "github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1"
+	commonv0alpha1 "github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1"
 )
 
 // SecureValuesApplyConfiguration represents a declarative configuration of the SecureValues type for use

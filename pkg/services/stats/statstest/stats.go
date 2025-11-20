@@ -3,7 +3,7 @@ package statstest
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/stats"
+	"github.com/capitalrx/grafana/pkg/services/stats"
 )
 
 type FakeService struct {

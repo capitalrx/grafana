@@ -3,7 +3,7 @@ package pluginchecker
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginstore"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginstore"
 )
 
 type FakePluginUpdateChecker struct {

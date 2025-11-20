@@ -10,10 +10,10 @@ import (
 	genericapiserver "k8s.io/apiserver/pkg/server"
 	"k8s.io/kube-openapi/pkg/common"
 
-	service "github.com/grafana/grafana/pkg/apis/service/v0alpha1"
-	grafanaregistry "github.com/grafana/grafana/pkg/apiserver/registry/generic"
-	"github.com/grafana/grafana/pkg/services/apiserver/builder"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
+	service "github.com/capitalrx/grafana/pkg/apis/service/v0alpha1"
+	grafanaregistry "github.com/capitalrx/grafana/pkg/apiserver/registry/generic"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/builder"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
 )
 
 var _ builder.APIGroupBuilder = (*ServiceAPIBuilder)(nil)

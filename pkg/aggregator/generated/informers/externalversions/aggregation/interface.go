@@ -5,8 +5,8 @@
 package aggregation
 
 import (
-	v0alpha1 "github.com/grafana/grafana/pkg/aggregator/generated/informers/externalversions/aggregation/v0alpha1"
-	internalinterfaces "github.com/grafana/grafana/pkg/aggregator/generated/informers/externalversions/internalinterfaces"
+	v0alpha1 "github.com/capitalrx/grafana/pkg/aggregator/generated/informers/externalversions/aggregation/v0alpha1"
+	internalinterfaces "github.com/capitalrx/grafana/pkg/aggregator/generated/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.

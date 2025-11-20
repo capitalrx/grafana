@@ -11,8 +11,8 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/data"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/kinds/dataquery"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models"
 )
 
 const initialAlertPollPeriod = time.Second

@@ -3,7 +3,7 @@ package authinfotest
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/login"
+	"github.com/capitalrx/grafana/pkg/services/login"
 )
 
 type FakeService struct {

@@ -6,7 +6,7 @@ import (
 
 	"github.com/centrifugal/centrifuge"
 
-	"github.com/grafana/grafana/pkg/services/live/orgchannel"
+	"github.com/capitalrx/grafana/pkg/services/live/orgchannel"
 )
 
 type LocalSubscribersDataOutput struct {

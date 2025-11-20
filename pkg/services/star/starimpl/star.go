@@ -3,10 +3,10 @@ package starimpl
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrations"
-	"github.com/grafana/grafana/pkg/services/star"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrations"
+	"github.com/capitalrx/grafana/pkg/services/star"
 )
 
 type Service struct {

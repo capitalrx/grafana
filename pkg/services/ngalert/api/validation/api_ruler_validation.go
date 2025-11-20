@@ -9,13 +9,13 @@ import (
 
 	prommodels "github.com/prometheus/common/model"
 
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	. "github.com/grafana/grafana/pkg/services/ngalert/api/compat"
-	apimodels "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	ngmodels "github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/ngalert/store"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	. "github.com/capitalrx/grafana/pkg/services/ngalert/api/compat"
+	apimodels "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	ngmodels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/store"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 type RuleLimits struct {

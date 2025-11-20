@@ -78,7 +78,7 @@ export const getCheckboxStyles = (theme: GrafanaTheme2, invalid = false) => {
       display: 'inline-grid',
       alignItems: 'center',
       columnGap: theme.spacing(labelPadding),
-      // gridAutoRows is needed to prevent https://github.com/grafana/grafana/issues/68570 in safari
+      // gridAutoRows is needed to prevent https://github.com/capitalrx/grafana/issues/68570 in safari
       gridAutoRows: 'max-content',
       position: 'relative',
       verticalAlign: 'middle',

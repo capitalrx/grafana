@@ -19,7 +19,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/tracing"
 	"github.com/grafana/grafana-plugin-sdk-go/data"
-	"github.com/grafana/grafana/pkg/tsdb/grafana-testdata-datasource/kinds"
+	"github.com/capitalrx/grafana/pkg/tsdb/grafana-testdata-datasource/kinds"
 )
 
 type Scenario struct {

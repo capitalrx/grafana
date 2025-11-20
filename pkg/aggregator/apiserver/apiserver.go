@@ -14,13 +14,13 @@ import (
 	genericapiserver "k8s.io/apiserver/pkg/server"
 	serverstorage "k8s.io/apiserver/pkg/server/storage"
 
-	"github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
-	v0alpha1helper "github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1/helper"
-	"github.com/grafana/grafana/pkg/aggregator/apiserver/discovery"
-	"github.com/grafana/grafana/pkg/aggregator/apiserver/plugin"
-	clientset "github.com/grafana/grafana/pkg/aggregator/generated/clientset/versioned"
-	informers "github.com/grafana/grafana/pkg/aggregator/generated/informers/externalversions"
-	dataplaneservicerest "github.com/grafana/grafana/pkg/aggregator/registry/dataplaneservice/rest"
+	"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
+	v0alpha1helper "github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1/helper"
+	"github.com/capitalrx/grafana/pkg/aggregator/apiserver/discovery"
+	"github.com/capitalrx/grafana/pkg/aggregator/apiserver/plugin"
+	clientset "github.com/capitalrx/grafana/pkg/aggregator/generated/clientset/versioned"
+	informers "github.com/capitalrx/grafana/pkg/aggregator/generated/informers/externalversions"
+	dataplaneservicerest "github.com/capitalrx/grafana/pkg/aggregator/registry/dataplaneservice/rest"
 )
 
 type ExtraConfig struct {

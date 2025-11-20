@@ -1,9 +1,9 @@
 package service
 
 import (
-	"github.com/grafana/grafana/pkg/services/ldap"
-	"github.com/grafana/grafana/pkg/services/ldap/multildap"
-	"github.com/grafana/grafana/pkg/services/login"
+	"github.com/capitalrx/grafana/pkg/services/ldap"
+	"github.com/capitalrx/grafana/pkg/services/ldap/multildap"
+	"github.com/capitalrx/grafana/pkg/services/login"
 )
 
 type LDAPFakeService struct {

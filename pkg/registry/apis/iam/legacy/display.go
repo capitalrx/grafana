@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	claims "github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/pkg/storage/legacysql"
-	"github.com/grafana/grafana/pkg/storage/unified/sql/sqltemplate"
+	"github.com/capitalrx/grafana/pkg/storage/legacysql"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/sqltemplate"
 )
 
 type ListDisplayQuery struct {

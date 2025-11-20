@@ -15,8 +15,8 @@ import (
 	"github.com/prometheus/alertmanager/silence/silencepb"
 	"github.com/prometheus/common/model"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/ngalert/store"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/store"
 
 	alertingImages "github.com/grafana/alerting/images"
 )

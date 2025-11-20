@@ -12,7 +12,7 @@ import (
 
 	alertingCluster "github.com/grafana/alerting/cluster"
 
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 const (

@@ -7,9 +7,9 @@ import (
 	"github.com/stretchr/testify/require"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	dashboardV1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/resources"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	dashboardV1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/resources"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 // FIXME: do this tests make sense in their current form?

@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/require"
 
 	authlib "github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
 )
 
 func TestAuthzLimitedClient_Check(t *testing.T) {

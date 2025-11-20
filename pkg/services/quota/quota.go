@@ -3,7 +3,7 @@ package quota
 import (
 	"context"
 
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
 )
 
 type Service interface {

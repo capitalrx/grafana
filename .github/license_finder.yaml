@@ -43,70 +43,70 @@
     :versions: []
     :when: 2025-05-03 13:10:00.000000000 Z
 - - :license
-  - github.com/grafana/grafana/apps/advisor
+  - github.com/capitalrx/grafana/apps/advisor
   - unknown
   - :who: Carl Bergquist
     :why: repository is owned by Grafana Labs
     :versions: []
     :when: 2025-05-03 13:10:00.000000000 Z
 - - :license
-  - github.com/grafana/grafana/apps/alerting/notifications
+  - github.com/capitalrx/grafana/apps/alerting/notifications
   - unknown
   - :who: Carl Bergquist
     :why: repository is owned by Grafana Labs
     :versions: []
     :when: 2025-05-03 13:10:00.000000000 Z
 - - :license
-  - github.com/grafana/grafana/apps/dashboard
+  - github.com/capitalrx/grafana/apps/dashboard
   - unknown
   - :who: Carl Bergquist
     :why: repository is owned by Grafana Labs
     :versions: []
     :when: 2025-05-03 13:10:00.000000000 Z
 - - :license
-  - github.com/grafana/grafana/apps/folder
+  - github.com/capitalrx/grafana/apps/folder
   - unknown
   - :who: Carl Bergquist
     :why: repository is owned by Grafana Labs
     :versions: []
     :when: 2025-05-03 13:10:00.000000000 Z
 - - :license
-  - github.com/grafana/grafana/apps/investigations
+  - github.com/capitalrx/grafana/apps/investigations
   - unknown
   - :who: Carl Bergquist
     :why: repository is owned by Grafana Labs
     :versions: []
     :when: 2025-05-03 13:10:00.000000000 Z
 - - :license
-  - github.com/grafana/grafana/apps/playlist
+  - github.com/capitalrx/grafana/apps/playlist
   - unknown
   - :who: Carl Bergquist
     :why: repository is owned by Grafana Labs
     :versions: []
     :when: 2025-05-03 13:10:00.000000000 Z
 - - :license
-  - github.com/grafana/grafana/pkg/aggregator
+  - github.com/capitalrx/grafana/pkg/aggregator
   - unknown
   - :who: Carl Bergquist
     :why: repository is owned by Grafana Labs
     :versions: []
     :when: 2025-05-03 13:10:00.000000000 Z
 - - :license
-  - github.com/grafana/grafana/pkg/apimachinery
+  - github.com/capitalrx/grafana/pkg/apimachinery
   - unknown
   - :who: Carl Bergquist
     :why: repository is owned by Grafana Labs
     :versions: []
     :when: 2025-05-03 13:10:00.000000000 Z
 - - :license
-  - github.com/grafana/grafana/apps/secret
+  - github.com/capitalrx/grafana/apps/secret
   - unknown
   - :who: Carl Bergquist
     :why: repository is owned by Grafana Labs
     :versions: []
     :when: 2025-05-03 13:10:00.000000000 Z
 - - :license
-  - github.com/grafana/grafana/pkg/apiserver
+  - github.com/capitalrx/grafana/pkg/apiserver
   - unknown
   - :who: Carl Bergquist
     :why: repository is owned by Grafana Labs

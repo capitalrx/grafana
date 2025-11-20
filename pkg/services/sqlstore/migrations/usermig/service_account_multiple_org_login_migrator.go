@@ -3,8 +3,8 @@ package usermig
 import (
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
-	"github.com/grafana/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 )
 
 const (

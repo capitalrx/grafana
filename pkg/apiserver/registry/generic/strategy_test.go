@@ -3,7 +3,7 @@ package generic_test
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/apiserver/registry/generic"
+	"github.com/capitalrx/grafana/pkg/apiserver/registry/generic"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

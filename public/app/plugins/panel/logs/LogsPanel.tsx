@@ -350,7 +350,7 @@ export const LogsPanel = ({
     }
     /**
      * In dashboards, users with newest logs at the bottom have the expectation of keeping the scroll at the bottom
-     * when new data is received. See https://github.com/grafana/grafana/pull/37634
+     * when new data is received. See https://github.com/capitalrx/grafana/pull/37634
      */
     if (panelData.request?.app === CoreApp.Dashboard || panelData.request?.app === CoreApp.PanelEditor) {
       scrollElement.scrollTo(0, isAscending ? logsContainerRef.current.scrollHeight : 0);
@@ -500,7 +500,7 @@ export const LogsPanel = ({
   const initialScrollPosition = useMemo(() => {
     /**
      * In dashboards, users with newest logs at the bottom have the expectation of keeping the scroll at the bottom
-     * when new data is received. See https://github.com/grafana/grafana/pull/37634
+     * when new data is received. See https://github.com/capitalrx/grafana/pull/37634
      */
     if (app === CoreApp.Dashboard || app === CoreApp.PanelEditor) {
       return sortOrder === LogsSortOrder.Ascending ? 'bottom' : 'top';

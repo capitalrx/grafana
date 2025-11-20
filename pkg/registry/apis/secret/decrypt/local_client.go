@@ -4,10 +4,10 @@ import (
 	"context"
 
 	"github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/apps/secret/pkg/decrypt"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/xkube"
+	"github.com/capitalrx/grafana/apps/secret/pkg/decrypt"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/xkube"
 )
 
 type LocalDecryptClient struct {

@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/resources"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/resources"
 )
 
 //go:generate mockery --name Signer --structname MockSigner --inpackage --filename signer_mock.go --with-expecter

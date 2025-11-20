@@ -12,7 +12,7 @@ import (
 	"time"
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
-	es "github.com/grafana/grafana/pkg/tsdb/elasticsearch/client"
+	es "github.com/capitalrx/grafana/pkg/tsdb/elasticsearch/client"
 )
 
 const ErrorBodyMaxSize = 200

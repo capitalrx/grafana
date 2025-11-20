@@ -14,10 +14,10 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	field "k8s.io/apimachinery/pkg/util/validation/field"
 
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
-	"github.com/grafana/grafana/apps/provisioning/pkg/repository"
-	"github.com/grafana/grafana/apps/provisioning/pkg/repository/git"
-	common "github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/repository"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/repository/git"
+	common "github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1"
 )
 
 func TestNewGitHub(t *testing.T) {
@@ -744,9 +744,9 @@ func TestGitHubRepositoryResourceURLs(t *testing.T) {
 			},
 			expectedURLs: &provisioning.RepositoryURLs{
 				RepositoryURL:     "https://github.com/grafana/grafana",
-				SourceURL:         "https://github.com/grafana/grafana/blob/feature-branch/dashboards/test.json",
-				CompareURL:        "https://github.com/grafana/grafana/compare/main...feature-branch",
-				NewPullRequestURL: "https://github.com/grafana/grafana/compare/main...feature-branch?quick_pull=1&labels=grafana",
+				SourceURL:         "https://github.com/capitalrx/grafana/blob/feature-branch/dashboards/test.json",
+				CompareURL:        "https://github.com/capitalrx/grafana/compare/main...feature-branch",
+				NewPullRequestURL: "https://github.com/capitalrx/grafana/compare/main...feature-branch?quick_pull=1&labels=grafana",
 			},
 		},
 		{
@@ -765,7 +765,7 @@ func TestGitHubRepositoryResourceURLs(t *testing.T) {
 			},
 			expectedURLs: &provisioning.RepositoryURLs{
 				RepositoryURL: "https://github.com/grafana/grafana",
-				SourceURL:     "https://github.com/grafana/grafana/blob/main/dashboards/test.json",
+				SourceURL:     "https://github.com/capitalrx/grafana/blob/main/dashboards/test.json",
 			},
 		},
 		{
@@ -840,9 +840,9 @@ func TestGitHubRepositoryRefURLs(t *testing.T) {
 				},
 			},
 			expectedURLs: &provisioning.RepositoryURLs{
-				SourceURL:         "https://github.com/grafana/grafana/tree/feature-branch",
-				CompareURL:        "https://github.com/grafana/grafana/compare/main...feature-branch",
-				NewPullRequestURL: "https://github.com/grafana/grafana/compare/main...feature-branch?quick_pull=1&labels=grafana",
+				SourceURL:         "https://github.com/capitalrx/grafana/tree/feature-branch",
+				CompareURL:        "https://github.com/capitalrx/grafana/compare/main...feature-branch",
+				NewPullRequestURL: "https://github.com/capitalrx/grafana/compare/main...feature-branch?quick_pull=1&labels=grafana",
 			},
 		},
 		{
@@ -857,7 +857,7 @@ func TestGitHubRepositoryRefURLs(t *testing.T) {
 				},
 			},
 			expectedURLs: &provisioning.RepositoryURLs{
-				SourceURL: "https://github.com/grafana/grafana/tree/main",
+				SourceURL: "https://github.com/capitalrx/grafana/tree/main",
 			},
 		},
 		{
@@ -1074,12 +1074,12 @@ func TestGitHubRepositoryDelegation(t *testing.T) {
 			{
 				Name:   "main",
 				Hash:   "abc123def456",
-				RefURL: "https://github.com/grafana/grafana/tree/main",
+				RefURL: "https://github.com/capitalrx/grafana/tree/main",
 			},
 			{
 				Name:   "feature",
 				Hash:   "def456ghi789",
-				RefURL: "https://github.com/grafana/grafana/tree/feature",
+				RefURL: "https://github.com/capitalrx/grafana/tree/feature",
 			},
 		}
 		assert.Equal(t, expectedRefs, result)

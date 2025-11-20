@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/grafana/grafana/pkg/services/anonymous"
-	"github.com/grafana/grafana/pkg/services/anonymous/anonimpl/anonstore"
+	"github.com/capitalrx/grafana/pkg/services/anonymous"
+	"github.com/capitalrx/grafana/pkg/services/anonymous/anonimpl/anonstore"
 )
 
 type FakeService struct {

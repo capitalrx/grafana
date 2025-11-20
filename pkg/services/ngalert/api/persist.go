@@ -3,10 +3,10 @@ package api
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/services/folder"
-	"github.com/grafana/grafana/pkg/services/ngalert/accesscontrol"
-	ngmodels "github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/services/folder"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/accesscontrol"
+	ngmodels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 // RuleStore is the interface for persisting alert rules and instances

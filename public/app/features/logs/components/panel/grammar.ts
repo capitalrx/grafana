@@ -55,8 +55,8 @@ export const generateLogGrammar = (log: LogListModel) => {
 export const generateTextMatchGrammar = (highlightWords: string[] | undefined = [], search?: string): Grammar => {
   /**
    * See:
-   * - https://github.com/grafana/grafana/blob/96f1582c36f94cf4ac7621b7af86bc9e2ad626fb/public/app/features/logs/components/LogRowMessage.tsx#L67
-   * - https://github.com/grafana/grafana/blob/96f1582c36f94cf4ac7621b7af86bc9e2ad626fb/packages/grafana-data/src/text/text.ts#L12
+   * - https://github.com/capitalrx/grafana/blob/96f1582c36f94cf4ac7621b7af86bc9e2ad626fb/public/app/features/logs/components/LogRowMessage.tsx#L67
+   * - https://github.com/capitalrx/grafana/blob/96f1582c36f94cf4ac7621b7af86bc9e2ad626fb/packages/grafana-data/src/text/text.ts#L12
    */
   const expressions = highlightWords
     .map((word) => {

@@ -21,7 +21,7 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/data/utils/jsoniter"
 
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 )
 
 // Convert the the protobuf model into k8s (will decode each value)

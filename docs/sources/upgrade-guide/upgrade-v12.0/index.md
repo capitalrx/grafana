@@ -25,17 +25,17 @@ weight: 500
 
 **Ensure that your data source UIDs follow the correct standard**
 
-We've had standard ways to define UIDs for Grafana objects for years (at least [since Grafana v5](https://github.com/grafana/grafana/issues/7883)). While all of our internal code complies with this format, we haven't strictly enforced this format in REST APIs and provisioning paths that allow the creation and update of data sources.
+We've had standard ways to define UIDs for Grafana objects for years (at least [since Grafana v5](https://github.com/capitalrx/grafana/issues/7883)). While all of our internal code complies with this format, we haven't strictly enforced this format in REST APIs and provisioning paths that allow the creation and update of data sources.
 
-In Grafana v11.1, we [introduced](https://github.com/grafana/grafana/pull/86598) a warning that is sent to Grafana server logs every time a data source instance is created or updated using an invalid UID format.
+In Grafana v11.1, we [introduced](https://github.com/capitalrx/grafana/pull/86598) a warning that is sent to Grafana server logs every time a data source instance is created or updated using an invalid UID format.
 
-In Grafana v11.2, we [added](https://github.com/grafana/grafana/pull/89363/files) a new feature flag called `failWrongDSUID` that is turned off by default. When enabled, the REST APIs and provisioning reject any requests to create or update data source instances that have an incorrect UID.
+In Grafana v11.2, we [added](https://github.com/capitalrx/grafana/pull/89363/files) a new feature flag called `failWrongDSUID` that is turned off by default. When enabled, the REST APIs and provisioning reject any requests to create or update data source instances that have an incorrect UID.
 
 In Grafana v12.0, we're turning the feature flag `failWrongDSUID` on by default.
 
 #### Correct UID format
 
-You can find the exact regex definition [in the `grafana/grafana` repository](https://github.com/grafana/grafana/blob/c92f5169d1c83508beb777f71a93336179fe426e/pkg/util/shortid_generator.go#L32-L45).
+You can find the exact regex definition [in the `grafana/grafana` repository](https://github.com/capitalrx/grafana/blob/c92f5169d1c83508beb777f71a93336179fe426e/pkg/util/shortid_generator.go#L32-L45).
 
 A data source UID can only contain:
 
@@ -51,7 +51,7 @@ A data source UID can only contain:
 curl http://localhost:3000/api/datasources | jq '.[] | select((.uid | test("^[a-zA-Z0-9\\-_]+$") | not) or (.uid | length > 40)) | {id, uid, name, type}'
 ```
 
-- Alternatively, you can check the server logs for the `Invalid datasource uid` [error](https://github.com/grafana/grafana/blob/68751ed3107c4d15d33f34b15183ee276611785c/pkg/services/datasources/service/store.go#L429).
+- Alternatively, you can check the server logs for the `Invalid datasource uid` [error](https://github.com/capitalrx/grafana/blob/68751ed3107c4d15d33f34b15183ee276611785c/pkg/services/datasources/service/store.go#L429).
 
 #### What do I do if I'm affected?
 

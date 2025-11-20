@@ -3,7 +3,7 @@ package dashvertest
 import (
 	"context"
 
-	dashver "github.com/grafana/grafana/pkg/services/dashboardversion"
+	dashver "github.com/capitalrx/grafana/pkg/services/dashboardversion"
 )
 
 type FakeDashboardVersionService struct {

@@ -1,12 +1,12 @@
 package osskmsproviders
 
 import (
-	"github.com/grafana/grafana/pkg/services/encryption"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/kmsproviders"
-	grafana "github.com/grafana/grafana/pkg/services/kmsproviders/defaultprovider"
-	"github.com/grafana/grafana/pkg/services/secrets"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/services/encryption"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/kmsproviders"
+	grafana "github.com/capitalrx/grafana/pkg/services/kmsproviders/defaultprovider"
+	"github.com/capitalrx/grafana/pkg/services/secrets"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type Service struct {

@@ -10,7 +10,7 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
-	"github.com/grafana/grafana/pkg/tsdb/grafana-postgresql-datasource/sqleng"
+	"github.com/capitalrx/grafana/pkg/tsdb/grafana-postgresql-datasource/sqleng"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

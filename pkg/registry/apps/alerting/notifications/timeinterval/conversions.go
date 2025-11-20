@@ -7,12 +7,12 @@ import (
 	"k8s.io/apimachinery/pkg/fields"
 	"k8s.io/apimachinery/pkg/types"
 
-	model "github.com/grafana/grafana/apps/alerting/notifications/pkg/apis/alerting/v0alpha1"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	gapiutil "github.com/grafana/grafana/pkg/services/apiserver/utils"
-	"github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	ngmodels "github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/ngalert/provisioning"
+	model "github.com/capitalrx/grafana/apps/alerting/notifications/pkg/apis/alerting/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	gapiutil "github.com/capitalrx/grafana/pkg/services/apiserver/utils"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	ngmodels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/provisioning"
 )
 
 func ConvertToK8sResources(orgID int64, intervals []definitions.MuteTimeInterval, namespacer request.NamespaceMapper, selector fields.Selector) (*model.TimeIntervalList, error) {

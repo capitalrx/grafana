@@ -19,10 +19,10 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/kinds/dataquery"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/loganalytics"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/macros"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/types"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/loganalytics"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/macros"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/types"
 )
 
 // AzureResourceGraphResponse is the json response object from the Azure Resource Graph Analytics API.

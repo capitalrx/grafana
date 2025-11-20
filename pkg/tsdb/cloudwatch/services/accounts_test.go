@@ -10,8 +10,8 @@ import (
 	oamtypes "github.com/aws/aws-sdk-go-v2/service/oam/types"
 	"github.com/aws/smithy-go"
 
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/mocks"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models/resources"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/mocks"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models/resources"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"

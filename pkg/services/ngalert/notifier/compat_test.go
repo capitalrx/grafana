@@ -8,7 +8,7 @@ import (
 	"github.com/prometheus/alertmanager/config"
 	"github.com/stretchr/testify/require"
 
-	apimodels "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
+	apimodels "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
 )
 
 func TestPostableGrafanaReceiverToGrafanaIntegrationConfig(t *testing.T) {

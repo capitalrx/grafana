@@ -7,9 +7,9 @@ import (
 	authlib "github.com/grafana/authlib/types"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
-	"github.com/grafana/grafana/pkg/services/authn/grpcutils"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
+	"github.com/capitalrx/grafana/pkg/services/authn/grpcutils"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func ProvideInlineSecureValueService(

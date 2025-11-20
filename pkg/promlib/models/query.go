@@ -58,7 +58,7 @@ type PrometheusQueryProperties struct {
 	EditorMode QueryEditorMode `json:"editorMode,omitempty"`
 
 	// Used to specify how many times to divide max data points by. We use max data points under query options
-	// See https://github.com/grafana/grafana/issues/48081
+	// See https://github.com/capitalrx/grafana/issues/48081
 	// Deprecated: use interval
 	IntervalFactor int64 `json:"intervalFactor,omitempty"`
 

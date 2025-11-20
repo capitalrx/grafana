@@ -7,7 +7,7 @@ export const RoadmapLinks = () => {
     <div>
       <Space v={2} />
       <TextLink
-        href="https://github.com/grafana/grafana/issues/new?assignees=&labels=area%2Fdatasource%2Ctype%2Fnew-plugin-request&projects=&template=3-data_source_request.yaml&title=%5BNew+Data+Source%5D%3A+%3Cname-of-service%3E"
+        href="https://github.com/capitalrx/grafana/issues/new?assignees=&labels=area%2Fdatasource%2Ctype%2Fnew-plugin-request&projects=&template=3-data_source_request.yaml&title=%5BNew+Data+Source%5D%3A+%3Cname-of-service%3E"
         onClick={() => reportInteraction('connections_data_source_request_clicked')}
         external
       >

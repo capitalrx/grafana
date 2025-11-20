@@ -157,7 +157,7 @@ The SQL conversion path:
 
 Grafana maintains a complete list of supported SQL keywords, operators, and functions in the SQL expressions query validator implementation.
 
-For the most up-to-date reference of all supported SQL functionality, refer to the `allowedNode` and `allowedFunction` definitions in the Grafana [codebase](https://github.com/grafana/grafana/blob/main/pkg/expr/sql/parser_allow.go).
+For the most up-to-date reference of all supported SQL functionality, refer to the `allowedNode` and `allowedFunction` definitions in the Grafana [codebase](https://github.com/capitalrx/grafana/blob/main/pkg/expr/sql/parser_allow.go).
 
 ## Alerting and recording rules
 

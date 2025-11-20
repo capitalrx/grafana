@@ -3,12 +3,12 @@ package httpclientprovider
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/services/validations"
+	"github.com/capitalrx/grafana/pkg/services/validations"
 
 	"github.com/grafana/grafana-aws-sdk/pkg/awsauth"
 	sdkhttpclient "github.com/grafana/grafana-plugin-sdk-go/backend/httpclient"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/setting"
 	"github.com/stretchr/testify/require"
 )
 

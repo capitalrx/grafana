@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/util/sqlite"
-	"github.com/grafana/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/util/sqlite"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 )
 
 type SQLite3 struct {

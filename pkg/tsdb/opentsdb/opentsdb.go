@@ -18,10 +18,10 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend/instancemgmt"
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/infra/httpclient"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/infra/httpclient"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 var logger = log.New("tsdb.opentsdb")
@@ -200,7 +200,7 @@ func parseResponseLT24(responseData []OpenTsdbResponse, refID string, frames dat
 	for _, val := range responseData {
 		frame := createInitialFrame(val.OpenTsdbCommon, len(val.DataPoints), refID)
 
-		// Order the timestamps in ascending order to avoid issues like https://github.com/grafana/grafana/issues/38729
+		// Order the timestamps in ascending order to avoid issues like https://github.com/capitalrx/grafana/issues/38729
 		timestamps := make([]string, 0, len(val.DataPoints))
 		for timestamp := range val.DataPoints {
 			timestamps = append(timestamps, timestamp)

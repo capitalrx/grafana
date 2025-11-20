@@ -10,10 +10,10 @@ import (
 	"k8s.io/client-go/tools/cache"
 
 	"github.com/grafana/grafana-app-sdk/logging"
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
-	client "github.com/grafana/grafana/apps/provisioning/pkg/generated/clientset/versioned/typed/provisioning/v0alpha1"
-	informer "github.com/grafana/grafana/apps/provisioning/pkg/generated/informers/externalversions/provisioning/v0alpha1"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	client "github.com/capitalrx/grafana/apps/provisioning/pkg/generated/clientset/versioned/typed/provisioning/v0alpha1"
+	informer "github.com/capitalrx/grafana/apps/provisioning/pkg/generated/informers/externalversions/provisioning/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
 )
 
 const (

@@ -1,6 +1,6 @@
 package pluginchecker
 
-import "github.com/grafana/grafana/pkg/setting"
+import "github.com/capitalrx/grafana/pkg/setting"
 
 type Preinstall interface {
 	IsPreinstalled(pluginID string) bool

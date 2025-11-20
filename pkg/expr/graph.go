@@ -15,9 +15,9 @@ import (
 	"gonum.org/v1/gonum/graph/simple"
 	"gonum.org/v1/gonum/graph/topo"
 
-	"github.com/grafana/grafana/pkg/expr/mathexp"
-	"github.com/grafana/grafana/pkg/expr/sql"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/expr/mathexp"
+	"github.com/capitalrx/grafana/pkg/expr/sql"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
 )
 
 // NodeType is the type of a DPNode. Currently either a expression command or datasource query.

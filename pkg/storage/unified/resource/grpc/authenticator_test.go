@@ -10,7 +10,7 @@ import (
 	claims "github.com/grafana/authlib/types"
 	"go.opentelemetry.io/otel/trace/noop"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
 )
 
 func TestBasicEncodeDecode(t *testing.T) {

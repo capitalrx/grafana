@@ -9,9 +9,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	grafanaregistry "github.com/grafana/grafana/pkg/apiserver/registry/generic"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	grafanaregistry "github.com/capitalrx/grafana/pkg/apiserver/registry/generic"
 	"github.com/prometheus/client_golang/prometheus"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"

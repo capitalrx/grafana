@@ -3,7 +3,7 @@ package apiserver
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/services/user"
 	"github.com/stretchr/testify/require"
 )
 

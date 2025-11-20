@@ -13,8 +13,8 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apiserver/pkg/registry/rest"
 
-	query "github.com/grafana/grafana/pkg/apis/query/v0alpha1"
-	"github.com/grafana/grafana/pkg/web"
+	query "github.com/capitalrx/grafana/pkg/apis/query/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 type pluginClientConversion interface {

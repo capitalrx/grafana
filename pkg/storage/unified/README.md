@@ -111,7 +111,7 @@ users:
     username: <username>
     password: <password>
 ```
-Where `<username>` and `<password>` are credentials for basic auth against Grafana. For example, with the [default credentials](https://github.com/grafana/grafana/blob/HEAD/contribute/developer-guide.md#backend):
+Where `<username>` and `<password>` are credentials for basic auth against Grafana. For example, with the [default credentials](https://github.com/capitalrx/grafana/blob/HEAD/contribute/developer-guide.md#backend):
 ```yaml
     username: admin
     password: admin

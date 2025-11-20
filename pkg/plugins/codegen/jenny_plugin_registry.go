@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"github.com/grafana/codejen"
-	"github.com/grafana/grafana/pkg/plugins/codegen/pfs"
+	"github.com/capitalrx/grafana/pkg/plugins/codegen/pfs"
 )
 
 var registryPath = filepath.Join("pkg", "registry", "schemas")

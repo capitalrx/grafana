@@ -258,7 +258,7 @@ export const Table = memo((props: Props) => {
     // Reset page index when data changes
     // This is needed because react-table does not do this automatically
     // autoResetPage is set to false because setting it to true causes the issue described in
-    // https://github.com/grafana/grafana/pull/67477
+    // https://github.com/capitalrx/grafana/pull/67477
     if (data.length / pageSize < state.pageIndex) {
       gotoPage(0);
     }

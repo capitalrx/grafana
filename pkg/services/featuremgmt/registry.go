@@ -11,7 +11,7 @@ import (
 	"embed"
 	"encoding/json"
 
-	featuretoggle "github.com/grafana/grafana/pkg/apis/featuretoggle/v0alpha1"
+	featuretoggle "github.com/capitalrx/grafana/pkg/apis/featuretoggle/v0alpha1"
 )
 
 var (

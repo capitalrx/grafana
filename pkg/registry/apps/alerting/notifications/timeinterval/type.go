@@ -7,8 +7,8 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 
-	model "github.com/grafana/grafana/apps/alerting/notifications/pkg/apis/alerting/v0alpha1"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
+	model "github.com/capitalrx/grafana/apps/alerting/notifications/pkg/apis/alerting/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
 )
 
 var kind = model.TimeIntervalKind()

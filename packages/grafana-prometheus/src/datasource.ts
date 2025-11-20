@@ -409,8 +409,8 @@ export class PrometheusDatasource
     // - When using the browser's time zone, the UTC offset is derived from the request range object.
     // - When the user selects a custom time zone, the UTC offset must be calculated accordingly.
     // More details:
-    // - Issue that led to the introduction of utcOffsetSec: https://github.com/grafana/grafana/issues/17278
-    // - Implementation PR: https://github.com/grafana/grafana/pull/17477
+    // - Issue that led to the introduction of utcOffsetSec: https://github.com/capitalrx/grafana/issues/17278
+    // - Implementation PR: https://github.com/capitalrx/grafana/pull/17477
     let utcOffset = request.range.to.utcOffset();
     if (request.timezone === 'browser') {
       // we need to check if the request is a relative or absolute range.

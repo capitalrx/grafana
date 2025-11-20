@@ -1,9 +1,9 @@
 package manager
 
 import (
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/services/serviceaccounts"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/services/serviceaccounts"
 )
 
 func RegisterRoles(service accesscontrol.Service) error {

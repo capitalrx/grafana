@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"k8s.io/apiserver/pkg/endpoints/request"
 
-	"github.com/grafana/grafana/pkg/apimachinery/errutil"
+	"github.com/capitalrx/grafana/pkg/apimachinery/errutil"
 )
 
 func TestWrite(t *testing.T) {

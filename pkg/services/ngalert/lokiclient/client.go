@@ -12,10 +12,10 @@ import (
 	"time"
 
 	"github.com/grafana/dskit/instrument"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/services/ngalert/client"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/client"
+	"github.com/capitalrx/grafana/pkg/setting"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

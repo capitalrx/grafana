@@ -18,7 +18,7 @@ import (
 	"k8s.io/apiserver/pkg/storage"
 	"k8s.io/apiserver/pkg/storage/names"
 
-	"github.com/grafana/grafana/pkg/aggregator/apis/aggregation"
+	"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation"
 	"sigs.k8s.io/structured-merge-diff/v4/fieldpath"
 )
 

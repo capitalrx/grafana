@@ -7,14 +7,14 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"go.opentelemetry.io/otel"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/metrics"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/metrics"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
 )
 
-var tracer = otel.Tracer("github.com/grafana/grafana/pkg/services/accesscontrol/acimpl")
+var tracer = otel.Tracer("github.com/capitalrx/grafana/pkg/services/accesscontrol/acimpl")
 
 var _ accesscontrol.AccessControl = new(AccessControl)
 

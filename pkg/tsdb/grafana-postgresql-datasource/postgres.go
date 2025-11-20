@@ -15,13 +15,13 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend/instancemgmt"
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 	"github.com/grafana/grafana-plugin-sdk-go/data/sqlutil"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/setting"
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/lib/pq"
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
-	"github.com/grafana/grafana/pkg/tsdb/grafana-postgresql-datasource/sqleng"
+	"github.com/capitalrx/grafana/pkg/tsdb/grafana-postgresql-datasource/sqleng"
 )
 
 func ProvideService(cfg *setting.Cfg, features featuremgmt.FeatureToggles) *Service {

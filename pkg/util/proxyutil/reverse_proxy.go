@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	glog "github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/middleware/requestmeta"
-	"github.com/grafana/grafana/pkg/services/contexthandler"
+	glog "github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/middleware/requestmeta"
+	"github.com/capitalrx/grafana/pkg/services/contexthandler"
 )
 
 // StatusClientClosedRequest A non-standard status code introduced by nginx

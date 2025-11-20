@@ -139,7 +139,7 @@ describe('Graphite query model', () => {
 
       This is due to the core functionality of parsing changed targets by reducing them, 
       where each function is wrapped in another function
-      https://github.com/grafana/grafana/blob/main/public/app/plugins/datasource/graphite/graphite_query.ts#LL187C8-L187C8
+      https://github.com/capitalrx/grafana/blob/main/public/app/plugins/datasource/graphite/graphite_query.ts#LL187C8-L187C8
 
       Parsing the second "function as param" as a string fixes this issue 
 

@@ -16,7 +16,7 @@ Create a new module when:
 
 ```bash
 cd pkg/your/new/module
-go mod init github.com/grafana/grafana/pkg/your/new/module
+go mod init github.com/capitalrx/grafana/pkg/your/new/module
 ```
 
 2. Update the workspace:
@@ -32,7 +32,7 @@ make update-workspace
 
 ```go
 // In your module's go.mod
-replace github.com/grafana/grafana/pkg/<my-module> => ../../../<my-module>
+replace github.com/capitalrx/grafana/pkg/<my-module> => ../../../<my-module>
 ```
 
 5. Upadte `Dockerfile` to include the new module

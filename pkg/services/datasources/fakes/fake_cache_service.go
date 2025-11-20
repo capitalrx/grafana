@@ -3,8 +3,8 @@ package datasources
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
 )
 
 type FakeCacheService struct {

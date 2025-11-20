@@ -5,7 +5,7 @@ package publicdashboards
 import (
 	context "context"
 
-	models "github.com/grafana/grafana/pkg/services/publicdashboards/models"
+	models "github.com/capitalrx/grafana/pkg/services/publicdashboards/models"
 	mock "github.com/stretchr/testify/mock"
 )
 

@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models/resources"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/services"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models/resources"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/services"
 )
 
 func Test_Namespaces_Route(t *testing.T) {

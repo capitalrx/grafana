@@ -3,7 +3,7 @@ package dashboard
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/db"
 )
 
 type DataSourceRef struct {
@@ -68,7 +68,7 @@ func CreateDatasourceLookup(rows []*DatasourceQueryResult) DatasourceLookup {
 	}
 	if defaultDS == nil {
 		// fallback replicated from /pkg/api/frontendsettings.go
-		// https://github.com/grafana/grafana/blob/7ef21662f9ad74b80d832b9f2aa9db2fb4192741/pkg/api/frontendsettings.go#L51-L56
+		// https://github.com/capitalrx/grafana/blob/7ef21662f9ad74b80d832b9f2aa9db2fb4192741/pkg/api/frontendsettings.go#L51-L56
 		defaultDS = grafanaDs
 	}
 

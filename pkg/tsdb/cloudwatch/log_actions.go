@@ -20,9 +20,9 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/features"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/kinds/dataquery"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/features"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models"
 )
 
 const (

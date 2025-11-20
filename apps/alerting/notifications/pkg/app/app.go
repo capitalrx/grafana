@@ -7,7 +7,7 @@ import (
 	"github.com/grafana/grafana-app-sdk/logging"
 	"github.com/grafana/grafana-app-sdk/simple"
 
-	"github.com/grafana/grafana/apps/alerting/notifications/pkg/apis"
+	"github.com/capitalrx/grafana/apps/alerting/notifications/pkg/apis"
 )
 
 func New(cfg app.Config) (app.App, error) {

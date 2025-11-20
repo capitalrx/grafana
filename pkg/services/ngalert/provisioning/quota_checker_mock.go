@@ -5,7 +5,7 @@ package provisioning
 import (
 	context "context"
 
-	quota "github.com/grafana/grafana/pkg/services/quota"
+	quota "github.com/capitalrx/grafana/pkg/services/quota"
 	mock "github.com/stretchr/testify/mock"
 )
 

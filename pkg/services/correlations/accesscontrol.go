@@ -1,7 +1,7 @@
 package correlations
 
 import (
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
 )
 
 var (

@@ -3,11 +3,11 @@ package bootstrap
 import (
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/config"
-	"github.com/grafana/grafana/pkg/plugins/log"
-	"github.com/grafana/grafana/pkg/plugins/manager/loader/assetpath"
-	"github.com/grafana/grafana/pkg/plugins/pluginassets"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/config"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/loader/assetpath"
+	"github.com/capitalrx/grafana/pkg/plugins/pluginassets"
 )
 
 type pluginFactoryFunc func(p *plugins.FoundBundle, pluginClass plugins.Class, sig plugins.Signature) (*plugins.Plugin, error)

@@ -8,8 +8,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 const (

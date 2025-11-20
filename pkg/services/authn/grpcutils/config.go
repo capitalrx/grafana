@@ -1,7 +1,7 @@
 package grpcutils
 
 import (
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type GrpcClientConfig struct {

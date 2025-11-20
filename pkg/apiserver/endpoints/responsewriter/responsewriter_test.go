@@ -13,7 +13,7 @@ import (
 	"k8s.io/apiserver/pkg/authentication/user"
 	"k8s.io/apiserver/pkg/endpoints/request"
 
-	grafanaresponsewriter "github.com/grafana/grafana/pkg/apiserver/endpoints/responsewriter"
+	grafanaresponsewriter "github.com/capitalrx/grafana/pkg/apiserver/endpoints/responsewriter"
 )
 
 func TestResponseAdapter(t *testing.T) {

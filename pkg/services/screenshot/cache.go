@@ -12,7 +12,7 @@ import (
 
 // CacheService caches screenshots.
 //
-//go:generate mockgen -destination=cache_mock.go -package=screenshot github.com/grafana/grafana/pkg/services/screenshot CacheService
+//go:generate mockgen -destination=cache_mock.go -package=screenshot github.com/capitalrx/grafana/pkg/services/screenshot CacheService
 type CacheService interface {
 	// Get returns the screenshot for the options or false if a screenshot with these
 	// options does not exist.

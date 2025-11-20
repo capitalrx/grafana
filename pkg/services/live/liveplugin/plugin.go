@@ -7,11 +7,11 @@ import (
 	"github.com/centrifugal/centrifuge"
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/services/datasources"
-	"github.com/grafana/grafana/pkg/services/live/orgchannel"
-	"github.com/grafana/grafana/pkg/services/live/pipeline"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/plugincontext"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/pkg/services/live/orgchannel"
+	"github.com/capitalrx/grafana/pkg/services/live/pipeline"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/plugincontext"
 )
 
 type ChannelLocalPublisher struct {

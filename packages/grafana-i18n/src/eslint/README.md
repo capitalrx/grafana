@@ -136,7 +136,7 @@ const placeholder = t('form.username-placeholder', 'Username');
 return <input type="value" placeholder={placeholder} />;
 ```
 
-Check more info about how translations work in Grafana in [Internationalization.md](https://github.com/grafana/grafana/blob/main/contribute/internationalization.md)
+Check more info about how translations work in Grafana in [Internationalization.md](https://github.com/capitalrx/grafana/blob/main/contribute/internationalization.md)
 
 ### `no-translation-top-level`
 

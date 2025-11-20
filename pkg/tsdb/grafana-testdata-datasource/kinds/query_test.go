@@ -14,7 +14,7 @@ func TestQueryTypeDefinitions(t *testing.T) {
 		schemabuilder.BuilderOptions{
 			PluginID: []string{"grafana-testdata-datasource", "testdata"},
 			ScanCode: []schemabuilder.CodePaths{{
-				BasePackage: "github.com/grafana/grafana/pkg/tsdb/grafana-testdata-datasource/kinds",
+				BasePackage: "github.com/capitalrx/grafana/pkg/tsdb/grafana-testdata-datasource/kinds",
 				CodePath:    "./",
 			}},
 			Enums: []reflect.Type{

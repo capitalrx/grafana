@@ -1,6 +1,6 @@
 package ualert
 
-import "github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+import "github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 
 // AddStateResolvedAtColumns adds columns to alert_instance to represent ResolvedAt and LastSentAt.
 func AddStateResolvedAtColumns(mg *migrator.Migrator) {

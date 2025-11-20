@@ -3,7 +3,7 @@ package rbac
 import (
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
 )
 
 // Mapping maps a verb to a RBAC action and a resource name to a RBAC scope.

@@ -21,7 +21,7 @@ weight: -33
 
 Welcome to Grafana v9.2, a hefty minor release with a swath of improvements that help you create and share dashboards and alerts.
 Read on to learn about progress on public dashboards, our new panel help menu, custom branding in Grafana Enterprise, and improvements to access control.
-If you'd prefer to dig into the details, check out the complete [changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md).
+If you'd prefer to dig into the details, check out the complete [changelog](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md).
 
 ## Panel help menu
 
@@ -32,7 +32,7 @@ Shorten your communication time when reporting issues and requesting help from G
 This will help the support team reproduce, diagnose, and fix the issue as quickly as possible.
 See our [documentation](/docs/grafana/latest/troubleshooting/send-panel-to-grafana-support/) for more info.
 
-For details, see [GitHub issue #55005](https://github.com/grafana/grafana/issues/55005) and ["Send a panel to Grafana Labs support"](/docs/grafana/latest/troubleshooting/send-panel-to-grafana-support/) in the documentation.
+For details, see [GitHub issue #55005](https://github.com/capitalrx/grafana/issues/55005) and ["Send a panel to Grafana Labs support"](/docs/grafana/latest/troubleshooting/send-panel-to-grafana-support/) in the documentation.
 
 {{< figure src="/static/img/docs/panels/panel-help-9-2.gif" max-width="750px" caption="Retrieving a panel's query response data and panel settings" >}}
 
@@ -67,7 +67,7 @@ _Generally available in all editions._
 The Alertmanager used for Grafana-managed alert rules is now based on the latest release of the Prometheus Alertmanager, v0.24.
 We continue to unify the different Alertmanagers that you can use with Grafana Alertmanager and will provide updates on this topic in a future release of Grafana.
 
-For details, see [GitHub pull request #53555](https://github.com/grafana/grafana/pull/53555).
+For details, see [GitHub pull request #53555](https://github.com/capitalrx/grafana/pull/53555).
 
 ## Grafana Alerting alert rules now return an Error state by default on execution error or timeout
 
@@ -79,7 +79,7 @@ You can change this default to either `Alerting` or `OK`.
 
 This change does not update existing alert rules.
 
-For details on this change, see [GitHub pull request #55345](https://github.com/grafana/grafana/pull/55345).
+For details on this change, see [GitHub pull request #55345](https://github.com/capitalrx/grafana/pull/55345).
 For more information about alerting states, see the [alerting documentation](/docs/grafana/latest/alerting/fundamentals/state-and-health/).
 
 ## Configure external alertmanagers as data sources
@@ -98,7 +98,7 @@ _To enable public dashboards, you must enable a feature flag or request this fea
 [Public dashboards](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/dashboards/share-dashboards-panels/shared-dashboards) launched as an experimental feature in Grafana v9.1.
 We've received lots of great feedback on this much-anticipated feature and thank everyone who has helped us improve it.
 The team has been hard at work polishing public dashboards, and we've closed quite a few bugs related to community reports.
-If you're trying out public dashboards, let us know how it is going in the [open discussion in GitHub](https://github.com/grafana/grafana/discussions/49253).
+If you're trying out public dashboards, let us know how it is going in the [open discussion in GitHub](https://github.com/capitalrx/grafana/discussions/49253).
 Beyond bug fixes, we're excited to share some new features:
 
 ### Expression support
@@ -141,7 +141,7 @@ Plugin developers can mark certain fields as secure to encrypt those fields in G
 This is important for sensitive fields like data source passwords or API keys.
 Previously, plugin developers needed to manually track which fields were labeled secure.
 We have extended our plugins platform to simplify this, which means one less thing for developers to worry about and better security for all users' data.
-For details on using this functionality, see [GitHub pull request #55313](https://github.com/grafana/grafana/pull/55313) and our [plugin examples](https://github.com/grafana/grafana-plugin-examples) repository.
+For details on using this functionality, see [GitHub pull request #55313](https://github.com/capitalrx/grafana/pull/55313) and our [plugin examples](https://github.com/grafana/grafana-plugin-examples) repository.
 
 ## Transformations: INNER JOINs
 

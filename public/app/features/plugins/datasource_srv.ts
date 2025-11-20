@@ -99,7 +99,7 @@ export class DatasourceSrv implements DataSourceService {
   ): DataSourceInstanceSettings | undefined {
     let nameOrUid = getNameOrUid(ref);
 
-    // Expressions has a new UID as __expr__ See: https://github.com/grafana/grafana/pull/62510/
+    // Expressions has a new UID as __expr__ See: https://github.com/capitalrx/grafana/pull/62510/
     // But we still have dashboards/panels with old expression UID (-100)
     // To support both UIDs until we migrate them all to new one, this check is necessary
     if (isExpressionReference(nameOrUid)) {

@@ -118,7 +118,7 @@ After enabling **Receive Grafana Alerts** in the Data Source Settings, you must 
 All Grafana-managed alerts are forwarded to Alertmanagers marked as `Receiving Grafana-managed alerts`.
 
 {{< admonition type="note" >}}
-Grafana Alerting does not support forwarding Grafana-managed alerts to the AlertManager in Amazon Managed Service for Prometheus. For more details, refer to [this GitHub issue](https://github.com/grafana/grafana/issues/64064).
+Grafana Alerting does not support forwarding Grafana-managed alerts to the AlertManager in Amazon Managed Service for Prometheus. For more details, refer to [this GitHub issue](https://github.com/capitalrx/grafana/issues/64064).
 {{< /admonition >}}
 
 ## Use an Alertmanager as a contact point to receive specific alerts

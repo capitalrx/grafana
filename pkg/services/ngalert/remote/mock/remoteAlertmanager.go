@@ -7,13 +7,13 @@ import (
 
 	alertingmodels "github.com/grafana/alerting/models"
 
-	definitions "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
+	definitions "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
 
 	mock "github.com/stretchr/testify/mock"
 
-	models "github.com/grafana/grafana/pkg/services/ngalert/models"
+	models "github.com/capitalrx/grafana/pkg/services/ngalert/models"
 
-	notifier "github.com/grafana/grafana/pkg/services/ngalert/notifier"
+	notifier "github.com/capitalrx/grafana/pkg/services/ngalert/notifier"
 
 	notify "github.com/grafana/alerting/notify"
 

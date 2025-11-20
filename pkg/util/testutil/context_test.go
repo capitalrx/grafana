@@ -10,7 +10,7 @@ import (
 	"go.opencensus.io/stats/view"
 	"go.uber.org/goleak"
 
-	"github.com/grafana/grafana/pkg/util/testutil/mocks"
+	"github.com/capitalrx/grafana/pkg/util/testutil/mocks"
 )
 
 func TestMain(m *testing.M) {

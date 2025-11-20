@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/services/live/telemetry"
-	"github.com/grafana/grafana/pkg/services/live/telemetry/telegraf"
+	"github.com/capitalrx/grafana/pkg/services/live/telemetry"
+	"github.com/capitalrx/grafana/pkg/services/live/telemetry/telegraf"
 )
 
 type Converter struct {

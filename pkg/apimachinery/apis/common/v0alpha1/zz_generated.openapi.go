@@ -15,12 +15,12 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1.InlineSecureValue": InlineSecureValue{}.OpenAPIDefinition(),
-		"github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1.ObjectReference":   schema_apimachinery_apis_common_v0alpha1_ObjectReference(ref),
-		"github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1.Scope":             schema_apimachinery_apis_common_v0alpha1_Scope(ref),
-		"github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1.ScopeFilter":       schema_apimachinery_apis_common_v0alpha1_ScopeFilter(ref),
-		"github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1.ScopeSpec":         schema_apimachinery_apis_common_v0alpha1_ScopeSpec(ref),
-		"github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1.Unstructured":      Unstructured{}.OpenAPIDefinition(),
+		"github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1.InlineSecureValue": InlineSecureValue{}.OpenAPIDefinition(),
+		"github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1.ObjectReference":   schema_apimachinery_apis_common_v0alpha1_ObjectReference(ref),
+		"github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1.Scope":             schema_apimachinery_apis_common_v0alpha1_Scope(ref),
+		"github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1.ScopeFilter":       schema_apimachinery_apis_common_v0alpha1_ScopeFilter(ref),
+		"github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1.ScopeSpec":         schema_apimachinery_apis_common_v0alpha1_ScopeSpec(ref),
+		"github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1.Unstructured":      Unstructured{}.OpenAPIDefinition(),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroup":                                      schema_pkg_apis_meta_v1_APIGroup(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroupList":                                  schema_pkg_apis_meta_v1_APIGroupList(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.APIResource":                                   schema_pkg_apis_meta_v1_APIResource(ref),
@@ -168,14 +168,14 @@ func schema_apimachinery_apis_common_v0alpha1_Scope(ref common.ReferenceCallback
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1.ScopeSpec"),
+							Ref:     ref("github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1.ScopeSpec"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1.ScopeSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1.ScopeSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -262,7 +262,7 @@ func schema_apimachinery_apis_common_v0alpha1_ScopeSpec(ref common.ReferenceCall
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1.ScopeFilter"),
+										Ref:     ref("github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1.ScopeFilter"),
 									},
 								},
 							},
@@ -273,7 +273,7 @@ func schema_apimachinery_apis_common_v0alpha1_ScopeSpec(ref common.ReferenceCall
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1.ScopeFilter"},
+			"github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1.ScopeFilter"},
 	}
 }
 

@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/grafana/grafana/apps/provisioning/pkg/loki"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/loki"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
@@ -16,7 +16,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/types"
 
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
 )
 
 func TestLokiJobHistory_WriteJob(t *testing.T) {

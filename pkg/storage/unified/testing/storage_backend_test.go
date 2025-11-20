@@ -7,7 +7,7 @@ import (
 	badger "github.com/dgraph-io/badger/v4"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
 )
 
 func TestBadgerKVStorageBackend(t *testing.T) {

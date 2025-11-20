@@ -3,9 +3,9 @@ package secretkeeper
 import (
 	"go.opentelemetry.io/otel/trace"
 
-	secretv1beta1 "github.com/grafana/grafana/apps/secret/pkg/apis/secret/v1beta1"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/secretkeeper/sqlkeeper"
+	secretv1beta1 "github.com/capitalrx/grafana/apps/secret/pkg/apis/secret/v1beta1"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/secretkeeper/sqlkeeper"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

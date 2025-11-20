@@ -35,7 +35,7 @@ const setup = () => {
 };
 
 describe('Alerting Settings', () => {
-  //see https://github.com/grafana/grafana/issues/51417
+  //see https://github.com/capitalrx/grafana/issues/51417
   it('should not show the option to select alertmanager data sources', () => {
     setup();
     expect(screen.queryByText('Alertmanager data source')).not.toBeInTheDocument();

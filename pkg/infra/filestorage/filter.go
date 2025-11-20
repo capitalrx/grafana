@@ -5,7 +5,7 @@ import (
 
 	"github.com/armon/go-radix"
 
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
 )
 
 type treeValue string

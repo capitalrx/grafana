@@ -13,7 +13,7 @@ import (
 	"github.com/grafana/grafana-app-sdk/app"
 	"github.com/grafana/grafana-app-sdk/resource"
 
-	v1alpha1 "github.com/grafana/grafana/apps/shorturl/pkg/apis/shorturl/v1alpha1"
+	v1alpha1 "github.com/capitalrx/grafana/apps/shorturl/pkg/apis/shorturl/v1alpha1"
 )
 
 var (

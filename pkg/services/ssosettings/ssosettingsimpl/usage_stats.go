@@ -3,7 +3,7 @@ package ssosettingsimpl
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/ssosettings/models"
+	"github.com/capitalrx/grafana/pkg/services/ssosettings/models"
 )
 
 func (s *Service) getUsageStats(ctx context.Context) (map[string]any, error) {

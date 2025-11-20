@@ -9,8 +9,8 @@ import (
 	"path"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/plugins/config"
-	"github.com/grafana/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins/config"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
 )
 
 const (
@@ -92,7 +92,7 @@ func (m *Manager) PluginVersion(ctx context.Context, pluginID, version string, c
 		return VersionData{}, err
 	}
 
-	isGrafanaCorePlugin := strings.HasPrefix(compatibleVer.URL, "https://github.com/grafana/grafana/tree/main/public/app/plugins/")
+	isGrafanaCorePlugin := strings.HasPrefix(compatibleVer.URL, "https://github.com/capitalrx/grafana/tree/main/public/app/plugins/")
 	_, hasAnyArch := compatibleVer.Arch["any"]
 	if isGrafanaCorePlugin && hasAnyArch {
 		// Trying to install a coupled core plugin

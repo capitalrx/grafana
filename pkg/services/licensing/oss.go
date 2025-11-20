@@ -1,11 +1,11 @@
 package licensing
 
 import (
-	"github.com/grafana/grafana/pkg/api/dtos"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/hooks"
-	"github.com/grafana/grafana/pkg/services/navtree"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/api/dtos"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/hooks"
+	"github.com/capitalrx/grafana/pkg/services/navtree"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 const (

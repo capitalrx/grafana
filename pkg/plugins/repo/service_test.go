@@ -12,7 +12,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
 )
 
 const (
@@ -41,13 +41,13 @@ func TestGetPluginArchive(t *testing.T) {
 			name:     "Core plugin",
 			sha:      "69f698961b6ea651211a187874434821c4727cc22de022e3a7059116d21c75b1",
 			apiOpSys: "any",
-			apiUrl:   "https://github.com/grafana/grafana/tree/main/public/app/plugins/test",
+			apiUrl:   "https://github.com/capitalrx/grafana/tree/main/public/app/plugins/test",
 			err:      ErrCorePluginBase,
 		},
 		{
 			name:   "Decoupled core plugin",
 			sha:    "69f698961b6ea651211a187874434821c4727cc22de022e3a7059116d21c75b1",
-			apiUrl: "https://github.com/grafana/grafana/tree/main/public/app/plugins/test",
+			apiUrl: "https://github.com/capitalrx/grafana/tree/main/public/app/plugins/test",
 		},
 	}
 

@@ -1,6 +1,6 @@
 package satokengen
 
-import "github.com/grafana/grafana/pkg/components/apikeygen"
+import "github.com/capitalrx/grafana/pkg/components/apikeygen"
 
 type ErrInvalidApiKey struct {
 }

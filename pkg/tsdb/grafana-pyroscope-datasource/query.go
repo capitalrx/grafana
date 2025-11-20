@@ -19,8 +19,8 @@ import (
 	"go.opentelemetry.io/otel/trace"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/grafana/grafana/pkg/tsdb/grafana-pyroscope-datasource/annotation"
-	"github.com/grafana/grafana/pkg/tsdb/grafana-pyroscope-datasource/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/grafana-pyroscope-datasource/annotation"
+	"github.com/capitalrx/grafana/pkg/tsdb/grafana-pyroscope-datasource/kinds/dataquery"
 )
 
 type queryModel struct {

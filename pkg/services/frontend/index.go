@@ -9,9 +9,9 @@ import (
 	"syscall"
 
 	"github.com/grafana/grafana-app-sdk/logging"
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/middleware"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/api/dtos"
+	"github.com/capitalrx/grafana/pkg/middleware"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type IndexProvider struct {

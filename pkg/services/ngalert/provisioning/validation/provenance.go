@@ -1,7 +1,7 @@
 package validation
 
 import (
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 // CanUpdateProvenanceInRuleGroup checks if a provenance can be updated for a rule group and its alerts.

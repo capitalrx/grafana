@@ -6,8 +6,8 @@ import (
 
 	"k8s.io/apiserver/pkg/authorization/authorizer"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/registry/apis/preferences/utils"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/registry/apis/preferences/utils"
 )
 
 func (b *APIBuilder) GetAuthorizer() authorizer.Authorizer {

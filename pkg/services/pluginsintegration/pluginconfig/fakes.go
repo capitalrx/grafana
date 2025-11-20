@@ -3,7 +3,7 @@ package pluginconfig
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/plugins/auth"
+	"github.com/capitalrx/grafana/pkg/plugins/auth"
 )
 
 var _ PluginRequestConfigProvider = (*FakePluginRequestConfigProvider)(nil)

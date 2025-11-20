@@ -3,7 +3,7 @@ package validation
 import (
 	"testing"
 
-	. "github.com/grafana/grafana/pkg/services/publicdashboards/models"
+	. "github.com/capitalrx/grafana/pkg/services/publicdashboards/models"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

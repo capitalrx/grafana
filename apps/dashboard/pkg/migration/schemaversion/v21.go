@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	"github.com/grafana/grafana/apps/dashboard/pkg/migration/utils"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/migration/utils"
 )
 
 // V21 migrates data links to replace __series.labels with __field.labels.

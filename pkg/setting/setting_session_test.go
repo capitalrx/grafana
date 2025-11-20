@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/infra/log/logtest"
+	"github.com/capitalrx/grafana/pkg/infra/log/logtest"
 )
 
 func TestSessionSettings(t *testing.T) {

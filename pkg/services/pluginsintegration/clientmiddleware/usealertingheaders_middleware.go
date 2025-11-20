@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
-	"github.com/grafana/grafana/pkg/services/contexthandler"
-	ngalertmodels "github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/contexthandler"
+	ngalertmodels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 func NewUseAlertHeadersMiddleware() backend.HandlerMiddleware {

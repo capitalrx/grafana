@@ -5,7 +5,7 @@ import (
 
 	authnlib "github.com/grafana/authlib/authn"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
 )
 
 //go:generate mockery --name IDService --structname MockService --outpkg idtest --filename mock.go --output ./idtest/

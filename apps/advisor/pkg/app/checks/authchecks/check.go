@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checks"
-	"github.com/grafana/grafana/pkg/services/ssosettings"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checks"
+	"github.com/capitalrx/grafana/pkg/services/ssosettings"
 )
 
 const (

@@ -155,7 +155,7 @@ export class PanelQueryRunner {
                   streamingDataFrame &&
                   !streamingDataFrame.packetInfo.schemaChanged &&
                   // TODO: remove the condition below after fixing
-                  // https://github.com/grafana/grafana/pull/41492#issuecomment-970281430
+                  // https://github.com/capitalrx/grafana/pull/41492#issuecomment-970281430
                   lastProcessedFrames[0].fields.length === streamingDataFrame.fields.length
                 ) {
                   processedData = {

@@ -13,10 +13,10 @@ import (
 	dto "github.com/prometheus/client_model/go"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/backendplugin"
-	"github.com/grafana/grafana/pkg/plugins/instrumentationutils"
-	"github.com/grafana/grafana/pkg/plugins/manager/fakes"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/backendplugin"
+	"github.com/capitalrx/grafana/pkg/plugins/instrumentationutils"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/fakes"
 )
 
 const (

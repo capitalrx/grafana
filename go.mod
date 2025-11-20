@@ -1,4 +1,4 @@
-module github.com/grafana/grafana
+module github.com/capitalrx/grafana
 
 go 1.25.3
 
@@ -231,21 +231,21 @@ require (
 )
 
 require (
-	github.com/grafana/grafana/apps/advisor v0.0.0 // @grafana/plugins-platform-backend
-	github.com/grafana/grafana/apps/alerting/notifications v0.0.0 // @grafana/alerting-backend
-	github.com/grafana/grafana/apps/dashboard v0.0.0 // @grafana/grafana-app-platform-squad @grafana/dashboards-squad
-	github.com/grafana/grafana/apps/folder v0.0.0 // @grafana/grafana-search-and-storage
-	github.com/grafana/grafana/apps/iam v0.0.0 // @grafana/identity-access-team
-	github.com/grafana/grafana/apps/investigations v0.0.0 // @fcjack @matryer
-	github.com/grafana/grafana/apps/playlist v0.0.0 // @grafana/grafana-app-platform-squad
-	github.com/grafana/grafana/apps/plugins v0.0.0 // @grafana/plugins-platform-backend
-	github.com/grafana/grafana/apps/preferences v0.0.0 // @grafana/grafana-app-platform-squad
-	github.com/grafana/grafana/apps/provisioning v0.0.0 // @grafana/grafana-app-platform-squad
-	github.com/grafana/grafana/apps/secret v0.0.0 // @grafana/grafana-operator-experience-squad
-	github.com/grafana/grafana/apps/shorturl v0.0.0 // @grafana/sharing-squad
-	github.com/grafana/grafana/pkg/aggregator v0.0.0 // @grafana/grafana-app-platform-squad
-	github.com/grafana/grafana/pkg/apimachinery v0.0.0 // @grafana/grafana-app-platform-squad
-	github.com/grafana/grafana/pkg/apiserver v0.0.0 // @grafana/grafana-app-platform-squad
+	github.com/capitalrx/grafana/apps/advisor v0.0.0 // @grafana/plugins-platform-backend
+	github.com/capitalrx/grafana/apps/alerting/notifications v0.0.0 // @grafana/alerting-backend
+	github.com/capitalrx/grafana/apps/dashboard v0.0.0 // @grafana/grafana-app-platform-squad @grafana/dashboards-squad
+	github.com/capitalrx/grafana/apps/folder v0.0.0 // @grafana/grafana-search-and-storage
+	github.com/capitalrx/grafana/apps/iam v0.0.0 // @grafana/identity-access-team
+	github.com/capitalrx/grafana/apps/investigations v0.0.0 // @fcjack @matryer
+	github.com/capitalrx/grafana/apps/playlist v0.0.0 // @grafana/grafana-app-platform-squad
+	github.com/capitalrx/grafana/apps/plugins v0.0.0 // @grafana/plugins-platform-backend
+	github.com/capitalrx/grafana/apps/preferences v0.0.0 // @grafana/grafana-app-platform-squad
+	github.com/capitalrx/grafana/apps/provisioning v0.0.0 // @grafana/grafana-app-platform-squad
+	github.com/capitalrx/grafana/apps/secret v0.0.0 // @grafana/grafana-operator-experience-squad
+	github.com/capitalrx/grafana/apps/shorturl v0.0.0 // @grafana/sharing-squad
+	github.com/capitalrx/grafana/pkg/aggregator v0.0.0 // @grafana/grafana-app-platform-squad
+	github.com/capitalrx/grafana/pkg/apimachinery v0.0.0 // @grafana/grafana-app-platform-squad
+	github.com/capitalrx/grafana/pkg/apiserver v0.0.0 // @grafana/grafana-app-platform-squad
 
 	// This needs to be here for other projects that import grafana/grafana
 	// For local development grafana/grafana will always use the local files
@@ -256,24 +256,24 @@ require (
 
 // Replace the workspace versions
 replace (
-	github.com/grafana/grafana/apps/advisor => ./apps/advisor
-	github.com/grafana/grafana/apps/alerting/alertenrichment => ./apps/alerting/alertenrichment
-	github.com/grafana/grafana/apps/alerting/notifications => ./apps/alerting/notifications
-	github.com/grafana/grafana/apps/dashboard => ./apps/dashboard
-	github.com/grafana/grafana/apps/folder => ./apps/folder
-	github.com/grafana/grafana/apps/iam => ./apps/iam
-	github.com/grafana/grafana/apps/investigations => ./apps/investigations
-	github.com/grafana/grafana/apps/playlist => ./apps/playlist
-	github.com/grafana/grafana/apps/plugins => ./apps/plugins
-	github.com/grafana/grafana/apps/preferences => ./apps/preferences
-	github.com/grafana/grafana/apps/provisioning => ./apps/provisioning
-	github.com/grafana/grafana/apps/secret => ./apps/secret
-	github.com/grafana/grafana/apps/shorturl => ./apps/shorturl
+	github.com/capitalrx/grafana/apps/advisor => ./apps/advisor
+	github.com/capitalrx/grafana/apps/alerting/alertenrichment => ./apps/alerting/alertenrichment
+	github.com/capitalrx/grafana/apps/alerting/notifications => ./apps/alerting/notifications
+	github.com/capitalrx/grafana/apps/dashboard => ./apps/dashboard
+	github.com/capitalrx/grafana/apps/folder => ./apps/folder
+	github.com/capitalrx/grafana/apps/iam => ./apps/iam
+	github.com/capitalrx/grafana/apps/investigations => ./apps/investigations
+	github.com/capitalrx/grafana/apps/playlist => ./apps/playlist
+	github.com/capitalrx/grafana/apps/plugins => ./apps/plugins
+	github.com/capitalrx/grafana/apps/preferences => ./apps/preferences
+	github.com/capitalrx/grafana/apps/provisioning => ./apps/provisioning
+	github.com/capitalrx/grafana/apps/secret => ./apps/secret
+	github.com/capitalrx/grafana/apps/shorturl => ./apps/shorturl
 
 	// Packages
-	github.com/grafana/grafana/pkg/aggregator => ./pkg/aggregator
-	github.com/grafana/grafana/pkg/apimachinery => ./pkg/apimachinery
-	github.com/grafana/grafana/pkg/apiserver => ./pkg/apiserver
+	github.com/capitalrx/grafana/pkg/aggregator => ./pkg/aggregator
+	github.com/capitalrx/grafana/pkg/apimachinery => ./pkg/apimachinery
+	github.com/capitalrx/grafana/pkg/apiserver => ./pkg/apiserver
 )
 
 require (

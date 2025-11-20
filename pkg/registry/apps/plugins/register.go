@@ -4,19 +4,19 @@ import (
 	"github.com/grafana/grafana-app-sdk/app"
 	appsdkapiserver "github.com/grafana/grafana-app-sdk/k8s/apiserver"
 	"github.com/grafana/grafana-app-sdk/simple"
-	"github.com/grafana/grafana/apps/plugins/pkg/apis"
-	"github.com/grafana/grafana/pkg/services/apiserver/appinstaller"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/apps/plugins/pkg/apis"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/appinstaller"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/setting"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apiserver/pkg/authorization/authorizer"
 	"k8s.io/apiserver/pkg/registry/generic"
 	"k8s.io/apiserver/pkg/registry/rest"
 	restclient "k8s.io/client-go/rest"
 
-	pluginsv0alpha1 "github.com/grafana/grafana/apps/plugins/pkg/apis/plugins/v0alpha1"
-	pluginsapp "github.com/grafana/grafana/apps/plugins/pkg/app"
+	pluginsv0alpha1 "github.com/capitalrx/grafana/apps/plugins/pkg/apis/plugins/v0alpha1"
+	pluginsapp "github.com/capitalrx/grafana/apps/plugins/pkg/app"
 )
 
 var (

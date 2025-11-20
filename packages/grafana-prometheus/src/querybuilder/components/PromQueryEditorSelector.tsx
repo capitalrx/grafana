@@ -1,4 +1,4 @@
-// Core Grafana history https://github.com/grafana/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/querybuilder/components/PromQueryEditorSelector.tsx
+// Core Grafana history https://github.com/capitalrx/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/querybuilder/components/PromQueryEditorSelector.tsx
 import { isEqual } from 'lodash';
 import { memo, SyntheticEvent, useCallback, useEffect, useState } from 'react';
 

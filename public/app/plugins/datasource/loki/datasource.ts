@@ -165,7 +165,7 @@ export class LokiDatasource
     this.supportsAdjustableWindow = true;
   }
 
-  // Flag marking datasource as supporting adjusting the time range window in the logs context window: https://github.com/grafana/grafana/pull/109901
+  // Flag marking datasource as supporting adjusting the time range window in the logs context window: https://github.com/capitalrx/grafana/pull/109901
   public supportsAdjustableWindow;
 
   /**

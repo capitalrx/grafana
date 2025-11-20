@@ -7,7 +7,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 	"gocloud.dev/blob"
 
-	"github.com/grafana/grafana/pkg/infra/filestorage"
+	"github.com/capitalrx/grafana/pkg/infra/filestorage"
 )
 
 const rootStorageTypeDisk = "disk"

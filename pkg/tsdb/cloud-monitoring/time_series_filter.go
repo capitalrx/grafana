@@ -12,7 +12,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 	"github.com/huandu/xstrings"
 
-	"github.com/grafana/grafana/pkg/tsdb/cloud-monitoring/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloud-monitoring/kinds/dataquery"
 )
 
 func (timeSeriesFilter *cloudMonitoringTimeSeriesList) run(ctx context.Context, req *backend.QueryDataRequest,
@@ -156,7 +156,7 @@ func (timeSeriesFilter *cloudMonitoringTimeSeriesList) getFilter() string {
 func (timeSeriesFilter *cloudMonitoringTimeSeriesList) setPreprocessor() {
 	// In case a preprocessor is defined, the preprocessor becomes the primary aggregation
 	// and the aggregation that is specified in the UI becomes the secondary aggregation
-	// Rules are specified in this issue: https://github.com/grafana/grafana/issues/30866
+	// Rules are specified in this issue: https://github.com/capitalrx/grafana/issues/30866
 	if timeSeriesFilter.parameters.Preprocessor != nil && toPreprocessorType(string(*timeSeriesFilter.parameters.Preprocessor)) != PreprocessorTypeNone {
 		// Move aggregation to secondaryAggregations
 		timeSeriesFilter.parameters.SecondaryAlignmentPeriod = timeSeriesFilter.parameters.AlignmentPeriod

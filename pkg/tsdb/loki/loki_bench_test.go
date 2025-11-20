@@ -12,7 +12,7 @@ import (
 )
 
 // when memory-profiling these benchmarks these commands are recommended
-// - go test -benchmem -run=^$ -benchtime 1x -memprofile memprofile.out -memprofilerate 1 -bench ^BenchmarkMatrixJson$ github.com/grafana/grafana/pkg/tsdb/loki
+// - go test -benchmem -run=^$ -benchtime 1x -memprofile memprofile.out -memprofilerate 1 -bench ^BenchmarkMatrixJson$ github.com/capitalrx/grafana/pkg/tsdb/loki
 // - go tool pprof -http=localhost:6061 memprofile.out
 func BenchmarkMatrixJson(b *testing.B) {
 	bytes := createJsonTestData(1642000000, 1, 300, 400)

@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/util/testutil"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 func TestIntegrationStarQueryInQueryHistory(t *testing.T) {

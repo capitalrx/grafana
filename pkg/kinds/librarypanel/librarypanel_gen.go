@@ -12,7 +12,7 @@ package librarypanel
 import (
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	"github.com/grafana/grafana/pkg/kinds"
+	"github.com/capitalrx/grafana/pkg/kinds"
 )
 
 // Resource is the kubernetes style representation of LibraryPanel. (TODO be better)

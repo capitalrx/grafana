@@ -1,9 +1,9 @@
 package keystore
 
 import (
-	"github.com/grafana/grafana/pkg/infra/kvstore"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/cachekvstore"
+	"github.com/capitalrx/grafana/pkg/infra/kvstore"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/cachekvstore"
 )
 
 // Service is a service for storing and retrieving public keys.

@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/resources"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/resources"
 )
 
 func TestSignerFactory_New(t *testing.T) {

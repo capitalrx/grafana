@@ -332,6 +332,6 @@ jobs:
           body: |
             :rocket: Your submission is now being built and packaged.
 
-            - [GitHub Actions Build](https://github.com/grafana/grafana/actions/runs/${{ github.run_id }})
+            - [GitHub Actions Build](https://github.com/capitalrx/grafana/actions/runs/${{ github.run_id }})
             - Version: ${{ needs.setup.outputs.version }}
           edit-mode: replace

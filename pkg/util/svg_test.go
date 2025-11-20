@@ -3,7 +3,7 @@ package util_test
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 func TestIsSvg(t *testing.T) {

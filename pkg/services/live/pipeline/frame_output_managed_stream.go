@@ -5,7 +5,7 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 
-	"github.com/grafana/grafana/pkg/services/live/managedstream"
+	"github.com/capitalrx/grafana/pkg/services/live/managedstream"
 )
 
 type ManagedStreamFrameOutput struct {

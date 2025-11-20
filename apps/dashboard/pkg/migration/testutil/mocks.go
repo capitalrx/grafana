@@ -3,7 +3,7 @@ package testutil
 import (
 	"context"
 
-	"github.com/grafana/grafana/apps/dashboard/pkg/migration/schemaversion"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/migration/schemaversion"
 )
 
 type TestDataSourceProvider struct{}

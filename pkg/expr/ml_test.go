@@ -12,10 +12,10 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/expr/metrics"
-	"github.com/grafana/grafana/pkg/expr/ml"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/expr/metrics"
+	"github.com/capitalrx/grafana/pkg/expr/ml"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 func TestMLNodeExecute(t *testing.T) {

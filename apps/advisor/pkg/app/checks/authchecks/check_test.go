@@ -5,9 +5,9 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/services/ssosettings"
-	"github.com/grafana/grafana/pkg/services/ssosettings/models"
-	"github.com/grafana/grafana/pkg/services/ssosettings/ssosettingstests" // Correct import path for the mock
+	"github.com/capitalrx/grafana/pkg/services/ssosettings"
+	"github.com/capitalrx/grafana/pkg/services/ssosettings/models"
+	"github.com/capitalrx/grafana/pkg/services/ssosettings/ssosettingstests" // Correct import path for the mock
 	"github.com/stretchr/testify/require"
 )
 

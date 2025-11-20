@@ -12,14 +12,14 @@ import (
 
 	"github.com/grafana/authlib/types"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	grafanaregistry "github.com/grafana/grafana/pkg/apiserver/registry/generic"
-	grafanarest "github.com/grafana/grafana/pkg/apiserver/rest"
-	"github.com/grafana/grafana/pkg/registry/apis/dashboard/legacy"
-	gapiutil "github.com/grafana/grafana/pkg/services/apiserver/utils"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/storage/unified/apistore"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	grafanaregistry "github.com/capitalrx/grafana/pkg/apiserver/registry/generic"
+	grafanarest "github.com/capitalrx/grafana/pkg/apiserver/rest"
+	"github.com/capitalrx/grafana/pkg/registry/apis/dashboard/legacy"
+	gapiutil "github.com/capitalrx/grafana/pkg/services/apiserver/utils"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/storage/unified/apistore"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
 )
 
 type DashboardStorage struct {
@@ -79,7 +79,7 @@ func (s *storeWrapper) Create(ctx context.Context, obj runtime.Object, createVal
 	meta, metaErr := utils.MetaAccessor(obj)
 	if metaErr == nil {
 		// Reconstruct the same UID as done at the storage level
-		// https://github.com/grafana/grafana/blob/a84e96fba29c3a1bb384fdbad1c9c658cc79ec8f/pkg/registry/apis/dashboard/legacy/sql_dashboards.go#L287
+		// https://github.com/capitalrx/grafana/blob/a84e96fba29c3a1bb384fdbad1c9c658cc79ec8f/pkg/registry/apis/dashboard/legacy/sql_dashboards.go#L287
 		// This is necessary because the UID generated during the creation via legacy storage is actually never stored in the database
 		// and the one returned here is wrong.
 		meta.SetUID(gapiutil.CalculateClusterWideUID(obj))

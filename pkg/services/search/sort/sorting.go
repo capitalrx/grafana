@@ -3,8 +3,8 @@ package sort
 import (
 	"sort"
 
-	"github.com/grafana/grafana/pkg/services/search/model"
-	"github.com/grafana/grafana/pkg/services/sqlstore/searchstore"
+	"github.com/capitalrx/grafana/pkg/services/search/model"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/searchstore"
 )
 
 // sort is separated into its own service to allow the dashboard service to use it in the k8s

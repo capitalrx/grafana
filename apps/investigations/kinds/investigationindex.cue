@@ -17,7 +17,7 @@ investigationIndex: {
 					generateObjectMeta: true
 					generateClient:     true
 					k8sLike:           true
-					package:           "github.com/grafana/grafana/apps/investigations"
+					package:           "github.com/capitalrx/grafana/apps/investigations"
 				}
 			}
 			schema: {

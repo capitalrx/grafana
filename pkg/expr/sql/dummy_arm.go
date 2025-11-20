@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/grafana/grafana-plugin-sdk-go/data"
-	"github.com/grafana/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
 )
 
 type DB struct{}

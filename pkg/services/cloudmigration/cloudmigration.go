@@ -3,8 +3,8 @@ package cloudmigration
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/authapi"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/services/authapi"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 const (

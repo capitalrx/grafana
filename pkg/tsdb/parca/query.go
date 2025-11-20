@@ -22,7 +22,7 @@ import (
 	"go.opentelemetry.io/otel/trace"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/grafana/grafana/pkg/tsdb/parca/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/parca/kinds/dataquery"
 )
 
 type queryModel struct {

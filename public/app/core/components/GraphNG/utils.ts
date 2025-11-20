@@ -131,8 +131,8 @@ export function preparePlotFrame(frames: DataFrame[], dimFields: XYFieldMatchers
     keepOriginIndices: true,
 
     // the join transformer force-deletes our state.displayName cache unless keepDisplayNames: true
-    // https://github.com/grafana/grafana/pull/31121
-    // https://github.com/grafana/grafana/pull/71806
+    // https://github.com/capitalrx/grafana/pull/31121
+    // https://github.com/capitalrx/grafana/pull/71806
     keepDisplayNames: true,
 
     // prevent minesweeper-expansion of nulls (gaps) when joining bars

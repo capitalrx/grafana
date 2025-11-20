@@ -12,7 +12,7 @@ import (
 	"github.com/grafana/grafana-app-sdk/app"
 	"github.com/grafana/grafana-app-sdk/resource"
 	"github.com/grafana/grafana-app-sdk/simple"
-	shorturlv1alpha1 "github.com/grafana/grafana/apps/shorturl/pkg/apis/shorturl/v1alpha1"
+	shorturlv1alpha1 "github.com/capitalrx/grafana/apps/shorturl/pkg/apis/shorturl/v1alpha1"
 )
 
 // Local error definitions to avoid importing the main shorturls package

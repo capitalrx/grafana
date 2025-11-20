@@ -7,14 +7,14 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/services/auth/idtest"
-	"github.com/grafana/grafana/pkg/services/notifications"
-	tempuser "github.com/grafana/grafana/pkg/services/temp_user"
-	"github.com/grafana/grafana/pkg/services/temp_user/tempusertest"
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/services/user/usertest"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/services/auth/idtest"
+	"github.com/capitalrx/grafana/pkg/services/notifications"
+	tempuser "github.com/capitalrx/grafana/pkg/services/temp_user"
+	"github.com/capitalrx/grafana/pkg/services/temp_user/tempusertest"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/services/user/usertest"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func TestVerifier_Start(t *testing.T) {

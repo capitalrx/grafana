@@ -3,7 +3,7 @@ package v0alpha1
 import (
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
 )
 
 func (u User) AuthID() string {

@@ -21,7 +21,7 @@ type Options struct {
 	Constraint Nullable[string]
 	// CombinedExecutable was introduced in Grafana 9.4; it combined the `grafana-server` and `grafana-cli` commands into one `grafana` executable.
 	CombinedExecutable Nullable[bool]
-	// DebPreRM defines the 'prerm' script in the debian installer, introduced by this PR: https://github.com/grafana/grafana/pull/59580 in v9.5.0. Versions before v9.5.0 do not have the 'prerm' script in the grafana package.
+	// DebPreRM defines the 'prerm' script in the debian installer, introduced by this PR: https://github.com/capitalrx/grafana/pull/59580 in v9.5.0. Versions before v9.5.0 do not have the 'prerm' script in the grafana package.
 	DebPreRM Nullable[bool]
 
 	// Automcplete (in packaging/autocomplete) was added in Grafana 9.4.0, so we should not try to include this folder in the package before then.

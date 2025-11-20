@@ -5,10 +5,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/infra/usagestats"
-	encryptionprovider "github.com/grafana/grafana/pkg/services/encryption/provider"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/infra/usagestats"
+	encryptionprovider "github.com/capitalrx/grafana/pkg/services/encryption/provider"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func SetupTestService(tb testing.TB) *Service {

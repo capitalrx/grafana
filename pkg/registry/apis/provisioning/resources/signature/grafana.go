@@ -3,8 +3,8 @@ package signature
 import (
 	"context"
 
-	"github.com/grafana/grafana/apps/provisioning/pkg/repository"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/repository"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
 )
 
 type grafanaSigner struct{}

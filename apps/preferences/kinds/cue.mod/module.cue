@@ -1,4 +1,4 @@
-module: "github.com/grafana/grafana/apps/preferences/kinds"
+module: "github.com/capitalrx/grafana/apps/preferences/kinds"
 language: {
 	version: "v0.9.0"
 }

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/grafana/grafana/pkg/services/featuremgmt/strcase"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt/strcase"
 )
 
 type SettingsSource int

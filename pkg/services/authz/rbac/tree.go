@@ -3,7 +3,7 @@ package rbac
 import (
 	"iter"
 
-	"github.com/grafana/grafana/pkg/services/authz/rbac/store"
+	"github.com/capitalrx/grafana/pkg/services/authz/rbac/store"
 )
 
 func newFolderTree(folders []store.Folder) folderTree {

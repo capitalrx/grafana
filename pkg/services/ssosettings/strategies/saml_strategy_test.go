@@ -7,7 +7,7 @@ import (
 
 	"gopkg.in/ini.v1"
 
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/setting"
 	"github.com/stretchr/testify/require"
 )
 

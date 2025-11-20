@@ -19,10 +19,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/kinds/dataquery"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/testdata"
-	azTime "github.com/grafana/grafana/pkg/tsdb/azuremonitor/time"
-	"github.com/grafana/grafana/pkg/tsdb/azuremonitor/types"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/testdata"
+	azTime "github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/time"
+	"github.com/capitalrx/grafana/pkg/tsdb/azuremonitor/types"
 )
 
 func Pointer[T any](v T) *T { return &v }

@@ -21,7 +21,7 @@ weight: -33
 
 # What's new in Grafana v8.0
 
-This topic includes the release notes for Grafana v8.0. For all details, read the full [CHANGELOG.md](https://github.com/grafana/grafana/blob/main/CHANGELOG.md).
+This topic includes the release notes for Grafana v8.0. For all details, read the full [CHANGELOG.md](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md).
 
 ## Grafana OSS features
 
@@ -288,7 +288,7 @@ Stat panel is available as plugin.
 
 ### Grafana license update
 
-Grafana has updated its license from Apache 2.0 to the GNU Affero General Public License (AGPL). Please see the related [blog post](/blog/2021/04/20/grafana-loki-tempo-relicensing-to-agplv3/), [Q&A](/blog/2021/04/20/qa-with-our-ceo-on-relicensing/) and [license](https://github.com/grafana/grafana/blob/main/LICENSE) for more details.
+Grafana has updated its license from Apache 2.0 to the GNU Affero General Public License (AGPL). Please see the related [blog post](/blog/2021/04/20/grafana-loki-tempo-relicensing-to-agplv3/), [Q&A](/blog/2021/04/20/qa-with-our-ceo-on-relicensing/) and [license](https://github.com/capitalrx/grafana/blob/main/LICENSE) for more details.
 
 ## Enterprise features
 

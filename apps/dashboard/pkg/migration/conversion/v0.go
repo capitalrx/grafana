@@ -4,16 +4,16 @@ import (
 	"context"
 
 	"github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
 	"k8s.io/apimachinery/pkg/conversion"
 	"k8s.io/utils/ptr"
 
-	dashv0 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1"
-	dashv1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
-	dashv2alpha1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v2alpha1"
-	dashv2beta1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v2beta1"
-	"github.com/grafana/grafana/apps/dashboard/pkg/migration"
-	"github.com/grafana/grafana/apps/dashboard/pkg/migration/schemaversion"
+	dashv0 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1"
+	dashv1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
+	dashv2alpha1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v2alpha1"
+	dashv2beta1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v2beta1"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/migration"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/migration/schemaversion"
 	"k8s.io/apiserver/pkg/endpoints/request"
 )
 

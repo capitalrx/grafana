@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/models"
-	"github.com/grafana/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/models"
+	"github.com/capitalrx/grafana/pkg/plugins"
 )
 
 func TestVersionComparison(t *testing.T) {

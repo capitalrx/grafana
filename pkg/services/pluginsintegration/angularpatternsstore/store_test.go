@@ -8,7 +8,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/infra/kvstore"
+	"github.com/capitalrx/grafana/pkg/infra/kvstore"
 )
 
 func TestAngularPatternsStore(t *testing.T) {

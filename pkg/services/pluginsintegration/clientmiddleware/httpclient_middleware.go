@@ -7,7 +7,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/httpclient"
 
-	ngalertmodels "github.com/grafana/grafana/pkg/services/ngalert/models"
+	ngalertmodels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 const forwardPluginRequestHTTPHeaders = "forward-plugin-request-http-headers"

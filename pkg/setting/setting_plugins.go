@@ -7,7 +7,7 @@ import (
 
 	"gopkg.in/ini.v1"
 
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 const (

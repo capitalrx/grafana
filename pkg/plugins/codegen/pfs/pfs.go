@@ -9,7 +9,7 @@ import (
 	"cuelang.org/go/cue"
 	"cuelang.org/go/cue/errors"
 	"cuelang.org/go/cue/load"
-	"github.com/grafana/grafana/pkg/codegen"
+	"github.com/capitalrx/grafana/pkg/codegen"
 )
 
 // PackageName is the name of the CUE package that Grafana will load when
@@ -62,7 +62,7 @@ func init() {
 // This function parses exactly one plugin. It does not descend into
 // subdirectories to search for additional plugin.json or .cue files.
 //
-// [GrafanaPlugin]: https://github.com/grafana/grafana/blob/main/pkg/plugins/pfs/grafanaplugin.cue
+// [GrafanaPlugin]: https://github.com/capitalrx/grafana/blob/main/pkg/plugins/pfs/grafanaplugin.cue
 func ParsePluginFS(ctx *cue.Context, fsys fs.FS, dir string) (ParsedPlugin, error) {
 	if fsys == nil {
 		return ParsedPlugin{}, ErrEmptyFS

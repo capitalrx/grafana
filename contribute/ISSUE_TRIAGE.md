@@ -58,7 +58,7 @@ To get started with issue triage and finding issues that haven't been triaged yo
 
 #### Browse unlabeled issues
 
-The easiest and most straightforward way of getting started and finding issues that haven't been triaged is to browse [unlabeled issues](https://github.com/grafana/grafana/issues?q=is%3Aopen+is%3Aissue+no%3Alabel), and then work on them starting from the bottom to the top.
+The easiest and most straightforward way of getting started and finding issues that haven't been triaged is to browse [unlabeled issues](https://github.com/capitalrx/grafana/issues?q=is%3Aopen+is%3Aissue+no%3Alabel), and then work on them starting from the bottom to the top.
 
 #### Subscribe to all notifications
 
@@ -74,7 +74,7 @@ Before triaging an issue very far, make sure that the issue's author provided th
 
 #### Standard issue information that must be included
 
-Grafana uses various [issue templates](https://github.com/grafana/grafana/issues/new/choose) to collect information from the issue reporter. The following list describes the standard information that is included.
+Grafana uses various [issue templates](https://github.com/capitalrx/grafana/issues/new/choose) to collect information from the issue reporter. The following list describes the standard information that is included.
 
 ##### Bug reports
 
@@ -89,7 +89,7 @@ Bug reports should explain what happened, what was expected, and how to reproduc
 
 ##### Enhancement requests
 
-> **Note:** Prior to August, 2023, community-submitted feature requests were submitted as [GitHub discussions](https://github.com/grafana/grafana/discussions). These are now submitted using the [feature request issue template](https://github.com/grafana/grafana/issues/new?assignees=&labels=type%2Ffeature-request&projects=&template=1-feature_requests.md).
+> **Note:** Prior to August, 2023, community-submitted feature requests were submitted as [GitHub discussions](https://github.com/capitalrx/grafana/discussions). These are now submitted using the [feature request issue template](https://github.com/capitalrx/grafana/issues/new?assignees=&labels=type%2Ffeature-request&projects=&template=1-feature_requests.md).
 
 When submitting an enhancement request we ask that users focus on the problem they'd like to solve and why it’s a problem rather than focusing on the solution itself. To facilitate these objectives, the feature requests template includes the following:
 
@@ -291,7 +291,7 @@ In certain areas there probably exist domain experts who may be able to help:
 
 ### Investigation of issues
 
-When an issue has all basic information provided, but the triage responsible hasn't been able to reproduce the reported problem at a first glance, the issue is labeled [`triage/needs-confirmation`](https://github.com/grafana/grafana/labels/triage%2Fneeds-confirmation). Depending on the perceived severity and/or number of [upvotes](https://github.blog/2016-03-10-add-reactions-to-pull-requests-issues-and-comments), the investigation will either be delegated to another maintainer for further investigation or put on hold until someone else (maintainer or contributor) picks it up and eventually starts investigating it.
+When an issue has all basic information provided, but the triage responsible hasn't been able to reproduce the reported problem at a first glance, the issue is labeled [`triage/needs-confirmation`](https://github.com/capitalrx/grafana/labels/triage%2Fneeds-confirmation). Depending on the perceived severity and/or number of [upvotes](https://github.blog/2016-03-10-add-reactions-to-pull-requests-issues-and-comments), the investigation will either be delegated to another maintainer for further investigation or put on hold until someone else (maintainer or contributor) picks it up and eventually starts investigating it.
 
 Investigating issues can be a very time consuming task, especially for the maintainers, given the huge number of combinations of plugins, data sources, platforms, databases, browsers, hardware, integrations, cloud services, and so on, that are used with Grafana. There are a certain number of combinations that are more common than others, and these are in general easier for maintainers to investigate.
 
@@ -301,15 +301,15 @@ Even if you don't have the time or knowledge to investigate an issue we highly r
 
 ### Automation
 
-We have some automation that triggers on comments or labels being added to issues. Many of these automated behaviors are defined in [commands.json](https://github.com/grafana/grafana/blob/main/.github/commands.json). Or in other [GitHub Actions](https://github.com/grafana/grafana/tree/main/.github/workflows)
+We have some automation that triggers on comments or labels being added to issues. Many of these automated behaviors are defined in [commands.json](https://github.com/capitalrx/grafana/blob/main/.github/commands.json). Or in other [GitHub Actions](https://github.com/capitalrx/grafana/tree/main/.github/workflows)
 
-To learn more about bot actions, refer to our [bot documentation](https://github.com/grafana/grafana/blob/main/.github/bot.md).
+To learn more about bot actions, refer to our [bot documentation](https://github.com/capitalrx/grafana/blob/main/.github/bot.md).
 
 ### External PRs
 
 Part of issue triage should also be triaging of external PRs. The main goal should be to make sure PRs from external contributors have an owner and aren't forgotten.
 
-1. Check new external PRs which don't have a reviewer. You can easily search for pull requests made by external contributors by using the label: `pr/external` in your [query search](https://github.com/grafana/grafana/pulls?q=is%3Aopen+is%3Apr+label%3Apr%2Fexternal) Note: external PRs are automatically labeled with `pr/external` upon creation.
+1. Check new external PRs which don't have a reviewer. You can easily search for pull requests made by external contributors by using the label: `pr/external` in your [query search](https://github.com/capitalrx/grafana/pulls?q=is%3Aopen+is%3Apr+label%3Apr%2Fexternal) Note: external PRs are automatically labeled with `pr/external` upon creation.
 1. Check if there is a link to an existing issue. The link to a existing issue should be in the description section, underneath “Which issue(s) does this PR fix?:”. If not, and you know which issue it is solving, add the link yourself. Otherwise, ask the author to link the issue or create one.
 1. Assign a reviewer based on who was handling the linked issue or what code or feature the PR touches (if all else fails, look at who was the last to make changes).
 

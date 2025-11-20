@@ -69,7 +69,7 @@ export const IconButton = React.forwardRef<HTMLButtonElement, Props>((props, ref
     buttonRef = ref;
   }
 
-  // When using tooltip, ref is forwarded to Tooltip component instead for https://github.com/grafana/grafana/issues/65632
+  // When using tooltip, ref is forwarded to Tooltip component instead for https://github.com/capitalrx/grafana/issues/65632
   if ('tooltip' in props) {
     const { name, iconType, className, tooltip, tooltipPlacement, ...restProps } = props;
     return (

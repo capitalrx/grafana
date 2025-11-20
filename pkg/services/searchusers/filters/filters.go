@@ -1,8 +1,8 @@
 package filters
 
 import (
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 const activeLast30Days = "activeLast30Days"

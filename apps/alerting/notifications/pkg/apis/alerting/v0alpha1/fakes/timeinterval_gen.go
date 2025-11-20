@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/grafana/grafana/apps/alerting/notifications/pkg/apis/alerting/v0alpha1"
+	"github.com/capitalrx/grafana/apps/alerting/notifications/pkg/apis/alerting/v0alpha1"
 )
 
 var UTCLocation = "UTC"

@@ -7,7 +7,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend/httpclient"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/instancemgmt"
 
-	jaeger "github.com/grafana/grafana/pkg/tsdb/jaeger"
+	jaeger "github.com/capitalrx/grafana/pkg/tsdb/jaeger"
 )
 
 var (

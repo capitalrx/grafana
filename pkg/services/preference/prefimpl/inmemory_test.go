@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sort"
 
-	pref "github.com/grafana/grafana/pkg/services/preference"
+	pref "github.com/capitalrx/grafana/pkg/services/preference"
 )
 
 // preferenceKey represents the primarily used index to access

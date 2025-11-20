@@ -3,8 +3,8 @@ package alerting
 import (
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/provisioning/values"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/provisioning/values"
 )
 
 type configVersion struct {

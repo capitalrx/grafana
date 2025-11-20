@@ -3,9 +3,9 @@ package schedule
 import (
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/eval"
-	ngmodels "github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/ngalert/state"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/eval"
+	ngmodels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/state"
 )
 
 var _ eval.AlertingResultsReader = AlertingResultsFromRuleState{}

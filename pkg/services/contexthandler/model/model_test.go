@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 func TestQueryBoolWithDefault(t *testing.T) {

@@ -3,7 +3,7 @@ package folder
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
 )
 
 type RegistryService interface {

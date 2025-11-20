@@ -11,16 +11,16 @@ import (
 
 	claims "github.com/grafana/authlib/types"
 
-	"github.com/grafana/grafana/pkg/api/response"
-	"github.com/grafana/grafana/pkg/api/routing"
-	"github.com/grafana/grafana/pkg/middleware"
-	"github.com/grafana/grafana/pkg/middleware/requestmeta"
-	ac "github.com/grafana/grafana/pkg/services/accesscontrol"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	"github.com/capitalrx/grafana/pkg/api/routing"
+	"github.com/capitalrx/grafana/pkg/middleware"
+	"github.com/capitalrx/grafana/pkg/middleware/requestmeta"
+	ac "github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
-var tracer = otel.Tracer("github.com/grafana/grafana/pkg/services/accesscontrol/api")
+var tracer = otel.Tracer("github.com/capitalrx/grafana/pkg/services/accesscontrol/api")
 
 func NewAccessControlAPI(router routing.RouteRegister, accesscontrol ac.AccessControl, service ac.Service, userSvc user.Service) *AccessControlAPI {
 	return &AccessControlAPI{

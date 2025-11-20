@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	ngmodels "github.com/grafana/grafana/pkg/services/ngalert/models"
+	ngmodels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 func TestJitter(t *testing.T) {

@@ -6,10 +6,10 @@ import (
 	authnlib "github.com/grafana/authlib/authn"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/grafana/grafana/apps/secret/pkg/decrypt"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
-	"github.com/grafana/grafana/pkg/services/authn/grpcutils"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/apps/secret/pkg/decrypt"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
+	"github.com/capitalrx/grafana/pkg/services/authn/grpcutils"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func ProvideDecryptService(cfg *setting.Cfg, tracer trace.Tracer, decryptStorage contracts.DecryptStorage) (decrypt.DecryptService, error) {

@@ -5,7 +5,7 @@ package provisioning
 import (
 	context "context"
 
-	models "github.com/grafana/grafana/pkg/services/ngalert/models"
+	models "github.com/capitalrx/grafana/pkg/services/ngalert/models"
 	mock "github.com/stretchr/testify/mock"
 )
 

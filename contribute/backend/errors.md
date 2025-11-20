@@ -1,6 +1,6 @@
 # Errors
 
-Grafana includes its own error type [github.com/grafana/grafana/pkg/util/errutil.Error](../../pkg/util/errutil/errors.go).
+Grafana includes its own error type [github.com/capitalrx/grafana/pkg/util/errutil.Error](../../pkg/util/errutil/errors.go).
 Introduced in June 2022, the type is built on top of the Go `error` interface.
 It extends the interface to contain all the information necessary by Grafana to handle errors in an informative and safe way.
 
@@ -74,7 +74,7 @@ package main
 
 import (
   "errors"
-  "github.com/grafana/grafana/pkg/util/errutil"
+  "github.com/capitalrx/grafana/pkg/util/errutil"
   "example.org/thing"
 )
 
@@ -95,7 +95,7 @@ Errors are considered to be part of `errutil.Base` and
 `errors.Is` function.a
 
 Refer to the package and method documentation for
-`github.com/grafana/grafana/pkg/util/errutil` for details on how to
+`github.com/capitalrx/grafana/pkg/util/errutil` for details on how to
 construct and use Grafana style errors.
 This documentation isn't readily available on `pkg.go.dev`, but it can be viewed using [godoc](https://go.dev/cmd/godoc/) from the Grafana directory.
 
@@ -108,8 +108,8 @@ The error source information is used in the API layer to distinguish between Gra
 
 ## Handle errors in the API
 
-API handlers use the `github.com/grafana/grafana/pkg/api/response.Err`
-or `github.com/grafana/grafana/pkg/api/response.ErrWithFallback`
+API handlers use the `github.com/capitalrx/grafana/pkg/api/response.Err`
+or `github.com/capitalrx/grafana/pkg/api/response.ErrWithFallback`
 (same signature as `response.Error`) function to create responses based
 on `errutil.Error`.
 

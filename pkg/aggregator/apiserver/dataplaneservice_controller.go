@@ -19,9 +19,9 @@ import (
 	"k8s.io/client-go/util/workqueue"
 	"k8s.io/klog/v2"
 
-	v0alpha1 "github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
-	informers "github.com/grafana/grafana/pkg/aggregator/generated/informers/externalversions/aggregation/v0alpha1"
-	listers "github.com/grafana/grafana/pkg/aggregator/generated/listers/aggregation/v0alpha1"
+	v0alpha1 "github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
+	informers "github.com/capitalrx/grafana/pkg/aggregator/generated/informers/externalversions/aggregation/v0alpha1"
+	listers "github.com/capitalrx/grafana/pkg/aggregator/generated/listers/aggregation/v0alpha1"
 )
 
 // DataPlaneHandlerManager defines the behaviour that an API handler should have.

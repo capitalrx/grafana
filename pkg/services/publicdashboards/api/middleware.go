@@ -3,11 +3,11 @@ package api
 import (
 	"net/http"
 
-	"github.com/grafana/grafana/pkg/infra/metrics"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/publicdashboards"
-	"github.com/grafana/grafana/pkg/services/publicdashboards/validation"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/infra/metrics"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/publicdashboards"
+	"github.com/capitalrx/grafana/pkg/services/publicdashboards/validation"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 // SetPublicDashboardOrgIdOnContext Adds orgId to context based on org of public dashboard

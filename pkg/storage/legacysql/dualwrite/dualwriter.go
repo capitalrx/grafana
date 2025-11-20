@@ -14,8 +14,8 @@ import (
 
 	"github.com/grafana/grafana-app-sdk/logging"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	grafanarest "github.com/grafana/grafana/pkg/apiserver/rest"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	grafanarest "github.com/capitalrx/grafana/pkg/apiserver/rest"
 )
 
 var (

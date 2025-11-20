@@ -14,7 +14,7 @@ import (
 	openfgav1 "github.com/openfga/api/proto/openfga/v1"
 	"go.opentelemetry.io/otel/attribute"
 
-	"github.com/grafana/grafana/pkg/services/authz/zanzana/common"
+	"github.com/capitalrx/grafana/pkg/services/authz/zanzana/common"
 )
 
 func (s *Server) List(ctx context.Context, r *authzv1.ListRequest) (*authzv1.ListResponse, error) {

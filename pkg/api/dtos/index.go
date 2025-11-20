@@ -3,7 +3,7 @@ package dtos
 import (
 	"html/template"
 
-	"github.com/grafana/grafana/pkg/services/navtree"
+	"github.com/capitalrx/grafana/pkg/services/navtree"
 )
 
 type IndexViewData struct {

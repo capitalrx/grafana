@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/grafana/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
 
 	"go.opentelemetry.io/otel/attribute"
 )

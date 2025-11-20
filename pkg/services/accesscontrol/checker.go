@@ -1,7 +1,7 @@
 package accesscontrol
 
 import (
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
 )
 
 func Checker(user identity.Requester, action string) func(scopes ...string) bool {

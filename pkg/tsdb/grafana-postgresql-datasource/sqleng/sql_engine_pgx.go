@@ -20,7 +20,7 @@ import (
 )
 
 func NewQueryDataHandlerPGX(userFacingDefaultError string, p *pgxpool.Pool, config DataPluginConfiguration, queryResultTransformer SqlQueryResultTransformer,
-	macroEngine SQLMacroEngine, log log.Logger, cleanup func() (*DataSourceHandler, error) {
+	macroEngine SQLMacroEngine, log log.Logger, cleanup func()) (*DataSourceHandler, error) {
 	queryDataHandler := DataSourceHandler{
 		queryResultTransformer: queryResultTransformer,
 		macroEngine:            macroEngine,

@@ -5,7 +5,7 @@ package tests
 import (
 	context "context"
 
-	extsvcauth "github.com/grafana/grafana/pkg/services/extsvcauth"
+	extsvcauth "github.com/capitalrx/grafana/pkg/services/extsvcauth"
 	mock "github.com/stretchr/testify/mock"
 )
 

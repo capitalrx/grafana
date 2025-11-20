@@ -261,7 +261,7 @@ async function setTimeRange(
 
 const isTimeCorrect = (inUtc: string, inTz: string, offset: number): boolean => {
   if (inUtc === inTz) {
-    // we need to catch issues when timezone isn't changed for some reason like https://github.com/grafana/grafana/issues/35504
+    // we need to catch issues when timezone isn't changed for some reason like https://github.com/capitalrx/grafana/issues/35504
     return false;
   }
 

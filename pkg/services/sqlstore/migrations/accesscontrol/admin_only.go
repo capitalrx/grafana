@@ -3,10 +3,10 @@ package accesscontrol
 import (
 	"strings"
 
-	"github.com/grafana/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 )
 
 func AddAdminOnlyMigration(mg *migrator.Migrator) {

@@ -1,7 +1,7 @@
 package kinds
 
 import (
-	"github.com/grafana/grafana/apps/iam/kinds/v0alpha1"
+	"github.com/capitalrx/grafana/apps/iam/kinds/v0alpha1"
 )
 
 roleKind: {

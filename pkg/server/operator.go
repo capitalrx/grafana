@@ -1,8 +1,8 @@
 package server
 
 import (
-	"github.com/grafana/grafana/pkg/services/apiserver/standalone"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/standalone"
+	"github.com/capitalrx/grafana/pkg/setting"
 	"github.com/urfave/cli/v2"
 )
 

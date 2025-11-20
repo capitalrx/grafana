@@ -9,7 +9,7 @@ import (
 	"cuelang.org/go/cue"
 	"github.com/grafana/codejen"
 	"github.com/grafana/cog"
-	"github.com/grafana/grafana/pkg/plugins/codegen/pfs"
+	"github.com/capitalrx/grafana/pkg/plugins/codegen/pfs"
 )
 
 // TODO this is duplicative of other Go type jennies. Remove it in favor of a better-abstracted version in thema itself

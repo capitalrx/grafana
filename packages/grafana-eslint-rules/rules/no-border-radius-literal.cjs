@@ -1,7 +1,7 @@
 const { ESLintUtils, AST_NODE_TYPES } = require('@typescript-eslint/utils');
 
 const createRule = ESLintUtils.RuleCreator(
-  (name) => `https://github.com/grafana/grafana/blob/main/packages/grafana-eslint-rules/README.md#${name}`
+  (name) => `https://github.com/capitalrx/grafana/blob/main/packages/grafana-eslint-rules/README.md#${name}`
 );
 
 const BORDER_RADIUS_PROPERTIES = [

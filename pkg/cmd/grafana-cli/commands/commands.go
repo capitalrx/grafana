@@ -7,14 +7,14 @@ import (
 
 	"github.com/urfave/cli/v2"
 
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/commands/datamigrations"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/commands/secretsconsolidation"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/commands/secretsmigrations"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/logger"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/utils"
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/server"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/commands/datamigrations"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/commands/secretsconsolidation"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/commands/secretsmigrations"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/logger"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/utils"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/server"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func runRunnerCommand(command func(commandLine utils.CommandLine, runner server.Runner) error) func(context *cli.Context) error {

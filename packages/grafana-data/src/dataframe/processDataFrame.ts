@@ -108,7 +108,7 @@ function convertTimeSeriesToDataFrame(timeSeries: TimeSeries): DataFrame {
 
 /**
  * This is added temporarily while we convert the LogsModel
- * to DataFrame.  See: https://github.com/grafana/grafana/issues/18528
+ * to DataFrame.  See: https://github.com/capitalrx/grafana/issues/18528
  */
 function convertGraphSeriesToDataFrame(graphSeries: GraphSeriesXY): DataFrame {
   const x: GraphSeriesValue[] = [];

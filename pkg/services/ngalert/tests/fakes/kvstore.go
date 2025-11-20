@@ -6,7 +6,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/infra/kvstore"
+	"github.com/capitalrx/grafana/pkg/infra/kvstore"
 )
 
 type FakeKVStore struct {

@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/util/xorm/core"
+	"github.com/capitalrx/grafana/pkg/util/xorm/core"
 )
 
 // tbNameWithSchema will automatically add schema prefix on table name

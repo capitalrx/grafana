@@ -14,13 +14,13 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneService":          schema_aggregator_apis_aggregation_v0alpha1_DataPlaneService(ref),
-		"github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceCondition": schema_aggregator_apis_aggregation_v0alpha1_DataPlaneServiceCondition(ref),
-		"github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceList":      schema_aggregator_apis_aggregation_v0alpha1_DataPlaneServiceList(ref),
-		"github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceSpec":      schema_aggregator_apis_aggregation_v0alpha1_DataPlaneServiceSpec(ref),
-		"github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceStatus":    schema_aggregator_apis_aggregation_v0alpha1_DataPlaneServiceStatus(ref),
-		"github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1.QueryDataResponse":         schema_aggregator_apis_aggregation_v0alpha1_QueryDataResponse(ref),
-		"github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1.Service":                   schema_aggregator_apis_aggregation_v0alpha1_Service(ref),
+		"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneService":          schema_aggregator_apis_aggregation_v0alpha1_DataPlaneService(ref),
+		"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceCondition": schema_aggregator_apis_aggregation_v0alpha1_DataPlaneServiceCondition(ref),
+		"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceList":      schema_aggregator_apis_aggregation_v0alpha1_DataPlaneServiceList(ref),
+		"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceSpec":      schema_aggregator_apis_aggregation_v0alpha1_DataPlaneServiceSpec(ref),
+		"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceStatus":    schema_aggregator_apis_aggregation_v0alpha1_DataPlaneServiceStatus(ref),
+		"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1.QueryDataResponse":         schema_aggregator_apis_aggregation_v0alpha1_QueryDataResponse(ref),
+		"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1.Service":                   schema_aggregator_apis_aggregation_v0alpha1_Service(ref),
 	}
 }
 
@@ -53,20 +53,20 @@ func schema_aggregator_apis_aggregation_v0alpha1_DataPlaneService(ref common.Ref
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceSpec"),
+							Ref:     ref("github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceStatus"),
+							Ref:     ref("github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceSpec", "github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceSpec", "github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -155,7 +155,7 @@ func schema_aggregator_apis_aggregation_v0alpha1_DataPlaneServiceList(ref common
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneService"),
+										Ref:     ref("github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneService"),
 									},
 								},
 							},
@@ -166,7 +166,7 @@ func schema_aggregator_apis_aggregation_v0alpha1_DataPlaneServiceList(ref common
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneService", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneService", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -222,7 +222,7 @@ func schema_aggregator_apis_aggregation_v0alpha1_DataPlaneServiceSpec(ref common
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1.Service"),
+										Ref:     ref("github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1.Service"),
 									},
 								},
 							},
@@ -233,7 +233,7 @@ func schema_aggregator_apis_aggregation_v0alpha1_DataPlaneServiceSpec(ref common
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1.Service"},
+			"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1.Service"},
 	}
 }
 
@@ -260,7 +260,7 @@ func schema_aggregator_apis_aggregation_v0alpha1_DataPlaneServiceStatus(ref comm
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceCondition"),
+										Ref:     ref("github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceCondition"),
 									},
 								},
 							},
@@ -270,7 +270,7 @@ func schema_aggregator_apis_aggregation_v0alpha1_DataPlaneServiceStatus(ref comm
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceCondition"},
+			"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1.DataPlaneServiceCondition"},
 	}
 }
 

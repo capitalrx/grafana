@@ -21,7 +21,7 @@ weight: -30
 
 # What's new in Grafana v7.3
 
-This topic includes the release notes for Grafana v7.3. For all details, read the full [CHANGELOG.md](https://github.com/grafana/grafana/blob/main/CHANGELOG.md) or the [Patch release notes](#patch-release-notes).
+This topic includes the release notes for Grafana v7.3. For all details, read the full [CHANGELOG.md](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md) or the [Patch release notes](#patch-release-notes).
 
 The main highlights are:
 
@@ -70,7 +70,7 @@ As this new option is a standard field option it works in every panel. Here is a
 
 ## CSV exports for Excel
 
-In v7.0, we introduced a new table panel and inspect mode with Download CSV enabled. However, CSV export to Excel was removed. Due to a large number of inquiries and requests, this [community contribution from tomdaly](https://github.com/grafana/grafana/pull/27284) brought the feature back.
+In v7.0, we introduced a new table panel and inspect mode with Download CSV enabled. However, CSV export to Excel was removed. Due to a large number of inquiries and requests, this [community contribution from tomdaly](https://github.com/capitalrx/grafana/pull/27284) brought the feature back.
 
 For more information, refer to [Download raw query results](../../panels-visualizations/panel-inspector/#download-raw-query-results).
 
@@ -154,7 +154,7 @@ IdP-initiated single sign on (SSO) allows the user to log in directly from the S
 
 ## Changelog
 
-Check out [CHANGELOG.md](https://github.com/grafana/grafana/blob/main/CHANGELOG.md) for a complete list of new features, changes, and bug fixes.
+Check out [CHANGELOG.md](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md) for a complete list of new features, changes, and bug fixes.
 
 ## Patch release notes
 

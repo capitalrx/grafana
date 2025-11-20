@@ -72,7 +72,7 @@ grafana::codegen:run() {
     --with-watch \
     --with-applyconfig \
     --output-dir ${generate_root}/generated \
-    --output-pkg github.com/grafana/grafana/${generate_root}/generated \
+    --output-pkg github.com/capitalrx/grafana/${generate_root}/generated \
     --boilerplate "${SCRIPT_ROOT}/hack/boilerplate.go.txt" \
     ${generate_root}/apis
 

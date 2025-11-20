@@ -25,7 +25,7 @@ async function postMigrateRequest<TQuery extends DataQuery>(queries: TQuery[]): 
   }
 
   // Obtaining the GroupName from the plugin ID as done in the backend, this is temporary until we have a better way to obtain it
-  // https://github.com/grafana/grafana/blob/e013cd427cb0457177e11f19ebd30bc523b36c76/pkg/plugins/apiserver.go#L10
+  // https://github.com/capitalrx/grafana/blob/e013cd427cb0457177e11f19ebd30bc523b36c76/pkg/plugins/apiserver.go#L10
   const dsnameURL = queries[0].datasource?.type?.replace(/^(grafana-)?(.*?)(-datasource)?$/, '$2');
   const groupName = `${dsnameURL}.datasource.grafana.app`;
   // Asuming apiVersion is v0alpha1, we'll need to obtain it from a trusted source

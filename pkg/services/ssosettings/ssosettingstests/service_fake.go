@@ -3,9 +3,9 @@ package ssosettingstests
 import (
 	context "context"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/services/ssosettings"
-	models "github.com/grafana/grafana/pkg/services/ssosettings/models"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/services/ssosettings"
+	models "github.com/capitalrx/grafana/pkg/services/ssosettings/models"
 )
 
 var _ ssosettings.Service = (*FakeService)(nil)

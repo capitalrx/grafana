@@ -8,8 +8,8 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 
-	aggregationv0alpha1 "github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
-	"github.com/grafana/grafana/pkg/aggregator/apiserver/plugin/admission"
+	aggregationv0alpha1 "github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/aggregator/apiserver/plugin/admission"
 )
 
 type PluginClient interface {

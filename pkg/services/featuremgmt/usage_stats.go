@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/services/featuremgmt/strcase"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt/strcase"
 )
 
 func (fm *FeatureManager) GetUsageStats(ctx context.Context) map[string]any {

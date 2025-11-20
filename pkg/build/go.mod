@@ -1,4 +1,4 @@
-module github.com/capitalrx/grafana/pkg/build
+module github.com/grafana/grafana/pkg/build
 
 go 1.25.3
 

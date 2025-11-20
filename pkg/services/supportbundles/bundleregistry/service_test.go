@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/services/supportbundles"
+	"github.com/capitalrx/grafana/pkg/services/supportbundles"
 )
 
 func TestService_RegisterSupportItemCollector(t *testing.T) {

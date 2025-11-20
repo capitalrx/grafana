@@ -8,7 +8,7 @@ const config = {
       executablePath: '/usr/bin/google-chrome',
       args: ['--no-sandbox'],
     },
-    // see https://github.com/grafana/grafana/pull/41693#issuecomment-979921463 for context
+    // see https://github.com/capitalrx/grafana/pull/41693#issuecomment-979921463 for context
     // on why we're ignoring singleValue/react-select-*-placeholder elements
     hideElements: '#updateVersion, [class*="-singleValue"], [id^="react-select-"][id$="-placeholder"]',
     reporters: ['cli', ['json', { fileName: './pa11y-ci-results.json' }]],
@@ -62,7 +62,7 @@ const config = {
     },
     {
       url: '${HOST}/d/O6f11TZWk/panel-tests-bar-gauge?orgId=1&editview=permissions',
-      // TODO: improve the accessibility of the permission tab https://github.com/grafana/grafana/issues/77203
+      // TODO: improve the accessibility of the permission tab https://github.com/capitalrx/grafana/issues/77203
       threshold: 5,
     },
     {
@@ -78,7 +78,7 @@ const config = {
     {
       url: '${HOST}/alerting/list',
       // the unified alerting promotion alert's content contrast is too low
-      // see https://github.com/grafana/grafana/pull/41829
+      // see https://github.com/capitalrx/grafana/pull/41829
       threshold: 7,
     },
     {

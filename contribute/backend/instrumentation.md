@@ -14,7 +14,7 @@ Use the [pkg/infra/log](/pkg/infra/log/) package to create a named, structured l
 import (
   "fmt"
 
-  "github.com/grafana/grafana/pkg/infra/log"
+  "github.com/capitalrx/grafana/pkg/infra/log"
 )
 
 logger := log.New("my-logger")
@@ -64,7 +64,7 @@ import (
   "context"
   "fmt"
 
-  "github.com/grafana/grafana/pkg/infra/log"
+  "github.com/capitalrx/grafana/pkg/infra/log"
 )
 
 var logger = log.New("my-logger")
@@ -171,7 +171,7 @@ Grafana uses [OpenTelemetry](https://opentelemetry.io/) for distributed tracing.
    Using the package location as the provided name allows us to determine where the trace is coming from in the event of a naming collision.
 
    ```Go
-   var tracer = otel.Tracer("github.com/grafana/grafana/pkg/services/dashboards")
+   var tracer = otel.Tracer("github.com/capitalrx/grafana/pkg/services/dashboards")
    ```
 
    For enterprise, refer to the enterprise repo
@@ -275,12 +275,12 @@ Complete example
 import (
    "fmt"
 
-   "github.com/grafana/grafana/pkg/infra/tracing"
+   "github.com/capitalrx/grafana/pkg/infra/tracing"
    "go.opentelemetry.io/otel/attribute"
    "go.opentelemetry.io/otel/trace"
 )
 
-var tracer = otel.Tracer("github.com/grafana/grafana/pkg/services/myservice")
+var tracer = otel.Tracer("github.com/capitalrx/grafana/pkg/services/myservice")
 
 func (s *MyService) Hello(ctx context.Context, name string) (string, error) {
    ctx, span := s.tracer.Start(ctx, "MyService.Hello", trace.WithAttributes(
@@ -380,7 +380,7 @@ attribute.Key("org_id").Int64(proxy.ctx.SignedInUser.OrgID)
 
 1. Search/browse collected logs and traces in Grafana Explore
 
-   You need provisioned `gdev-jaeger` and `gdev-loki` data sources. Refer to [developer dashboard and data sources](https://github.com/grafana/grafana/tree/main/devenv#developer-dashboards-and-data-sources) for set up instructions.
+   You need provisioned `gdev-jaeger` and `gdev-loki` data sources. Refer to [developer dashboard and data sources](https://github.com/capitalrx/grafana/tree/main/devenv#developer-dashboards-and-data-sources) for set up instructions.
 
    Open Grafana explore and select the `gdev-loki` data source and use the query `{filename="/var/log/grafana/grafana.log"} | logfmt`.
 

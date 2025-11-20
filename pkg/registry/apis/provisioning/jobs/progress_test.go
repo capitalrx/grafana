@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -20,9 +20,9 @@ func TestJobProgressRecorderSetRefURLs(t *testing.T) {
 
 	// Test setting RefURLs
 	expectedRefURLs := &provisioning.RepositoryURLs{
-		SourceURL:         "https://github.com/grafana/grafana/tree/feature-branch",
-		CompareURL:        "https://github.com/grafana/grafana/compare/main...feature-branch",
-		NewPullRequestURL: "https://github.com/grafana/grafana/compare/main...feature-branch?quick_pull=1&labels=grafana",
+		SourceURL:         "https://github.com/capitalrx/grafana/tree/feature-branch",
+		CompareURL:        "https://github.com/capitalrx/grafana/compare/main...feature-branch",
+		NewPullRequestURL: "https://github.com/capitalrx/grafana/compare/main...feature-branch?quick_pull=1&labels=grafana",
 	}
 
 	recorder.SetRefURLs(ctx, expectedRefURLs)
@@ -70,7 +70,7 @@ func TestJobProgressRecorderCompleteIncludesRefURLs(t *testing.T) {
 
 	// Set some RefURLs
 	refURLs := &provisioning.RepositoryURLs{
-		SourceURL: "https://github.com/grafana/grafana/tree/test-branch",
+		SourceURL: "https://github.com/capitalrx/grafana/tree/test-branch",
 	}
 	recorder.SetRefURLs(ctx, refURLs)
 

@@ -253,8 +253,8 @@ describe('shared actions', () => {
       });
     });
 
-    // Fix for https://github.com/grafana/grafana/issues/28791
-    it('fix for https://github.com/grafana/grafana/issues/28791', async () => {
+    // Fix for https://github.com/capitalrx/grafana/issues/28791
+    it('fix for https://github.com/capitalrx/grafana/issues/28791', async () => {
       setVariableQueryRunner(new VariableQueryRunner());
       const key = 'key';
       const stats = queryBuilder()

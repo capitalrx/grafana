@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/utils"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/utils"
 )
 
 func removeCommand(c utils.CommandLine) error {

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/grafana/grafana/pkg/plugins/manager/loader/angular/angulardetector"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/loader/angular/angulardetector"
 )
 
 // gcomAngularPatternsPath is the relative path to the GCOM API handler that returns angular detection patterns.

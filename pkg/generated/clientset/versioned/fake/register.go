@@ -5,7 +5,7 @@
 package fake
 
 import (
-	servicev0alpha1 "github.com/grafana/grafana/pkg/apis/service/v0alpha1"
+	servicev0alpha1 "github.com/capitalrx/grafana/pkg/apis/service/v0alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

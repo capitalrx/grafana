@@ -5,7 +5,7 @@ package tests
 import (
 	context "context"
 
-	serviceaccounts "github.com/grafana/grafana/pkg/services/serviceaccounts"
+	serviceaccounts "github.com/capitalrx/grafana/pkg/services/serviceaccounts"
 	mock "github.com/stretchr/testify/mock"
 )
 

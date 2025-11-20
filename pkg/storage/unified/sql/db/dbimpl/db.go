@@ -4,7 +4,7 @@ import (
 	"context"
 	"database/sql"
 
-	"github.com/grafana/grafana/pkg/storage/unified/sql/db"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/db"
 )
 
 // NewDB converts a *sql.DB to a db.DB.

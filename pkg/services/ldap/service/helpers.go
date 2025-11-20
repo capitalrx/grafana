@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/grafana/grafana/pkg/services/ldap"
+	"github.com/capitalrx/grafana/pkg/services/ldap"
 )
 
 func resolveBool(input any, defaultValue bool) bool {

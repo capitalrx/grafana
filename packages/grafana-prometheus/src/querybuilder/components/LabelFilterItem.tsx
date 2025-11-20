@@ -1,4 +1,4 @@
-// Core Grafana history https://github.com/grafana/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/querybuilder/components/LabelFilterItem.tsx
+// Core Grafana history https://github.com/capitalrx/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/querybuilder/components/LabelFilterItem.tsx
 import debounce from 'debounce-promise';
 import { useState } from 'react';
 
@@ -43,7 +43,7 @@ export function LabelFilterItem({
     isLoadingLabelValues?: boolean;
   }>({});
   // there's a bug in react-select where the menu doesn't recalculate its position when the options are loaded asynchronously
-  // see https://github.com/grafana/grafana/issues/63558
+  // see https://github.com/capitalrx/grafana/issues/63558
   // instead, we explicitly control the menu visibility and prevent showing it until the options have fully loaded
   const [labelNamesMenuOpen, setLabelNamesMenuOpen] = useState(false);
   const [labelValuesMenuOpen, setLabelValuesMenuOpen] = useState(false);

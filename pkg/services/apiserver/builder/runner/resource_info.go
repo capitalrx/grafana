@@ -4,7 +4,7 @@ import (
 	"strings"
 
 	"github.com/grafana/grafana-app-sdk/resource"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
 	"k8s.io/apimachinery/pkg/runtime"
 )
 

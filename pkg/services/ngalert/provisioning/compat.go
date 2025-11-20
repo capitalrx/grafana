@@ -5,9 +5,9 @@ import (
 
 	alertingNotify "github.com/grafana/alerting/notify"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 func EmbeddedContactPointToGrafanaIntegrationConfig(e definitions.EmbeddedContactPoint) (alertingNotify.GrafanaIntegrationConfig, error) {

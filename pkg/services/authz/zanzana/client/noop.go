@@ -4,7 +4,7 @@ import (
 	"context"
 
 	authlib "github.com/grafana/authlib/types"
-	authzextv1 "github.com/grafana/grafana/pkg/services/authz/proto/v1"
+	authzextv1 "github.com/capitalrx/grafana/pkg/services/authz/proto/v1"
 )
 
 var _ authlib.AccessClient = (*NoopClient)(nil)

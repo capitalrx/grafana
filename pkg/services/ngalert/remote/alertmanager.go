@@ -30,16 +30,16 @@ import (
 	common_config "github.com/prometheus/common/config"
 	"gopkg.in/yaml.v3"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	apimodels "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	"github.com/grafana/grafana/pkg/services/ngalert/metrics"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/ngalert/notifier"
-	"github.com/grafana/grafana/pkg/services/ngalert/notifier/legacy_storage"
-	remoteClient "github.com/grafana/grafana/pkg/services/ngalert/remote/client"
-	"github.com/grafana/grafana/pkg/services/ngalert/sender"
-	"github.com/grafana/grafana/pkg/util/cmputil"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	apimodels "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/metrics"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/notifier"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/notifier/legacy_storage"
+	remoteClient "github.com/capitalrx/grafana/pkg/services/ngalert/remote/client"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/sender"
+	"github.com/capitalrx/grafana/pkg/util/cmputil"
 )
 
 type stateStore interface {

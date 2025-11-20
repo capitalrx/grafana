@@ -9,15 +9,15 @@ import (
 	"k8s.io/apiserver/pkg/registry/rest"
 	"k8s.io/kube-openapi/pkg/spec3"
 
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
-	provisioningapis "github.com/grafana/grafana/pkg/registry/apis/provisioning"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/jobs"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/resources"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/webhooks/pullrequest"
-	"github.com/grafana/grafana/pkg/services/apiserver"
-	"github.com/grafana/grafana/pkg/services/rendering"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	provisioningapis "github.com/capitalrx/grafana/pkg/registry/apis/provisioning"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/jobs"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/resources"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/webhooks/pullrequest"
+	"github.com/capitalrx/grafana/pkg/services/apiserver"
+	"github.com/capitalrx/grafana/pkg/services/rendering"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
 )
 
 // WebhookExtraBuilder is a function that returns an ExtraBuilder.

@@ -12,12 +12,12 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/experimental/apis/data/v0alpha1"
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/expr"
-	"github.com/grafana/grafana/pkg/services/datasources"
-	"github.com/grafana/grafana/pkg/services/dsquerierclient"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/api/dtos"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/expr"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/pkg/services/dsquerierclient"
+	"github.com/capitalrx/grafana/pkg/setting"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/codes"
 	errorsK8s "k8s.io/apimachinery/pkg/api/errors"
@@ -26,12 +26,12 @@ import (
 	"k8s.io/apiserver/pkg/endpoints/request"
 	"k8s.io/apiserver/pkg/registry/rest"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	query "github.com/grafana/grafana/pkg/apis/query/v0alpha1"
-	"github.com/grafana/grafana/pkg/infra/log"
-	ds_service "github.com/grafana/grafana/pkg/services/datasources/service"
-	service "github.com/grafana/grafana/pkg/services/query"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	query "github.com/capitalrx/grafana/pkg/apis/query/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	ds_service "github.com/capitalrx/grafana/pkg/services/datasources/service"
+	service "github.com/capitalrx/grafana/pkg/services/query"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 type queryREST struct {

@@ -11,7 +11,7 @@ import (
 	"github.com/Bose/minisentinel"
 	"github.com/alicebob/miniredis/v2"
 	dstls "github.com/grafana/dskit/crypto/tls"
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/log"
 	"github.com/madflojo/testcerts"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/stretchr/testify/require"

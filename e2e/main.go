@@ -6,7 +6,7 @@ import (
 	"os"
 	"os/signal"
 
-	"github.com/grafana/grafana/e2e/internal/cmd"
+	"github.com/capitalrx/grafana/e2e/internal/cmd"
 )
 
 func main() {

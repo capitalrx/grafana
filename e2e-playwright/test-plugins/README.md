@@ -1,11 +1,11 @@
 # Test plugins
 
-The [e2e test server](https://github.com/grafana/grafana/blob/main/scripts/grafana-server/start-server) automatically scans and looks for plugins in this directory.
+The [e2e test server](https://github.com/capitalrx/grafana/blob/main/scripts/grafana-server/start-server) automatically scans and looks for plugins in this directory.
 
 ### To add a new test plugin:
 
-1. If provisioning is required you may update the YAML config file in [`/devenv`](https://github.com/grafana/grafana/tree/main/devenv).
-2. Add the plugin ID to the `allow_loading_unsigned_plugins` setting in the test server's [configuration file](https://github.com/grafana/grafana/blob/main/scripts/grafana-server/custom.ini).
+1. If provisioning is required you may update the YAML config file in [`/devenv`](https://github.com/capitalrx/grafana/tree/main/devenv).
+2. Add the plugin ID to the `allow_loading_unsigned_plugins` setting in the test server's [configuration file](https://github.com/capitalrx/grafana/blob/main/scripts/grafana-server/custom.ini).
 
 ### Building a test plugin with webpack
 

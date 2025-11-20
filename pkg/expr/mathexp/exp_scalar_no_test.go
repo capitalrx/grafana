@@ -4,7 +4,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
 	"github.com/stretchr/testify/assert"
 )
 

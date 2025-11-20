@@ -10,10 +10,10 @@ import (
 	"google.golang.org/grpc/codes"
 	grpcstatus "google.golang.org/grpc/status"
 
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/instrumentationutils"
-	"github.com/grafana/grafana/pkg/plugins/manager/registry"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/instrumentationutils"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/registry"
 )
 
 // pluginMetrics contains the prometheus metrics used by the MetricsMiddleware.

@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/pkg/services/team"
+	"github.com/capitalrx/grafana/pkg/services/team"
 	"github.com/stretchr/testify/require"
 )
 

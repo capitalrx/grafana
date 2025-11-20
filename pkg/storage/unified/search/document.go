@@ -4,10 +4,10 @@ import (
 	"context"
 
 	claims "github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/store/kind/dashboard"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/store/kind/dashboard"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
 )
 
 // The default list of open source document builders

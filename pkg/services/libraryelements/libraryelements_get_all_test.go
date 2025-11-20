@@ -7,13 +7,13 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/kinds/librarypanel"
-	"github.com/grafana/grafana/pkg/services/folder"
-	"github.com/grafana/grafana/pkg/services/libraryelements/model"
-	"github.com/grafana/grafana/pkg/services/org"
-	searchmodel "github.com/grafana/grafana/pkg/services/search/model"
-	"github.com/grafana/grafana/pkg/services/search/sort"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/kinds/librarypanel"
+	"github.com/capitalrx/grafana/pkg/services/folder"
+	"github.com/capitalrx/grafana/pkg/services/libraryelements/model"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	searchmodel "github.com/capitalrx/grafana/pkg/services/search/model"
+	"github.com/capitalrx/grafana/pkg/services/search/sort"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 func TestIntegration_GetAllLibraryElements(t *testing.T) {

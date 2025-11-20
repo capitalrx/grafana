@@ -10,9 +10,9 @@ import (
 	"go.opentelemetry.io/otel/trace/embedded"
 	"google.golang.org/grpc"
 
-	"github.com/grafana/grafana/pkg/plugins/backendplugin"
-	"github.com/grafana/grafana/pkg/plugins/backendplugin/pluginextensionv2"
-	"github.com/grafana/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins/backendplugin"
+	"github.com/capitalrx/grafana/pkg/plugins/backendplugin/pluginextensionv2"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
 )
 
 // Handshake is the HandshakeConfig used to configure clients and servers.

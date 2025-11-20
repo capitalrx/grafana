@@ -7,9 +7,9 @@ import (
 
 	"go.opentelemetry.io/otel"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	ac "github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/folder"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	ac "github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/folder"
 )
 
 const (
@@ -43,7 +43,7 @@ var (
 	ScopeFoldersAll         = ScopeFoldersProvider.GetResourceAllScope()
 	ScopeDashboardsProvider = ac.NewScopeProvider(ScopeDashboardsRoot)
 	ScopeDashboardsAll      = ScopeDashboardsProvider.GetResourceAllScope()
-	tracer                  = otel.Tracer("github.com/grafana/grafana/pkg/services/dashboards")
+	tracer                  = otel.Tracer("github.com/capitalrx/grafana/pkg/services/dashboards")
 )
 
 type UIDLookup = func(ctx context.Context, orgID int64, id int64) (string, error)

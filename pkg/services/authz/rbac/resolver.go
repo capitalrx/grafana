@@ -7,8 +7,8 @@ import (
 	"strings"
 
 	"github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/pkg/registry/apis/iam/legacy"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/registry/apis/iam/legacy"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
 )
 
 type ScopeResolverFunc func(scope string) (string, error)

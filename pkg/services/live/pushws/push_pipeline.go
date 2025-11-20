@@ -5,9 +5,9 @@ import (
 
 	"github.com/gorilla/websocket"
 
-	"github.com/grafana/grafana/pkg/services/live/convert"
-	"github.com/grafana/grafana/pkg/services/live/livecontext"
-	"github.com/grafana/grafana/pkg/services/live/pipeline"
+	"github.com/capitalrx/grafana/pkg/services/live/convert"
+	"github.com/capitalrx/grafana/pkg/services/live/livecontext"
+	"github.com/capitalrx/grafana/pkg/services/live/pipeline"
 )
 
 // PipelinePushHandler handles WebSocket client connections that push data to Live Pipeline.

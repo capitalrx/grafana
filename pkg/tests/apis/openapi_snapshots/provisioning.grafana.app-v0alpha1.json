@@ -4673,7 +4673,7 @@
         "type": "object",
         "properties": {
           "classic": {
-            "description": "For non-k8s native formats, what did this start as\n\nPossible enum values:\n - `\"access-control\"` Access control https://github.com/grafana/grafana/blob/v11.3.1/conf/provisioning/access-control/sample.yaml\n - `\"alerting\"` Alert configuration https://github.com/grafana/grafana/blob/v11.3.1/conf/provisioning/alerting/sample.yaml\n - `\"dashboard\"` Dashboard JSON\n - `\"datasources\"` Datasource definitions eg: https://github.com/grafana/grafana/blob/v11.3.1/conf/provisioning/datasources/sample.yaml",
+            "description": "For non-k8s native formats, what did this start as\n\nPossible enum values:\n - `\"access-control\"` Access control https://github.com/capitalrx/grafana/blob/v11.3.1/conf/provisioning/access-control/sample.yaml\n - `\"alerting\"` Alert configuration https://github.com/capitalrx/grafana/blob/v11.3.1/conf/provisioning/alerting/sample.yaml\n - `\"dashboard\"` Dashboard JSON\n - `\"datasources\"` Datasource definitions eg: https://github.com/capitalrx/grafana/blob/v11.3.1/conf/provisioning/datasources/sample.yaml",
             "type": "string",
             "enum": [
               "access-control",

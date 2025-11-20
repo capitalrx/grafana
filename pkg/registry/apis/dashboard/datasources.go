@@ -3,8 +3,8 @@ package dashboard
 import (
 	"context"
 
-	"github.com/grafana/grafana/apps/dashboard/pkg/migration/schemaversion"
-	"github.com/grafana/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/migration/schemaversion"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
 )
 
 type datasourceInfoProvider struct {

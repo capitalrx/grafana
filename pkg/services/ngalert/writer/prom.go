@@ -13,8 +13,8 @@ import (
 	"github.com/grafana/dataplane/sdata/numeric"
 	"github.com/m3db/prometheus_remote_client_golang/promremote"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/ngalert/metrics"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/metrics"
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend/httpclient"
 	"github.com/grafana/grafana-plugin-sdk-go/data"

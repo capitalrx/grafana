@@ -6,8 +6,8 @@ import (
 	"mime"
 	"path/filepath"
 
-	"github.com/grafana/grafana/pkg/infra/filestorage"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/infra/filestorage"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 func (s *standardStorageService) sanitizeUploadRequest(ctx context.Context, user *user.SignedInUser, req *UploadRequest, storagePath string) (*filestorage.UpsertFileCommand, error) {

@@ -5,7 +5,7 @@ package signature
 import (
 	context "context"
 
-	utils "github.com/grafana/grafana/pkg/apimachinery/utils"
+	utils "github.com/capitalrx/grafana/pkg/apimachinery/utils"
 	mock "github.com/stretchr/testify/mock"
 )
 

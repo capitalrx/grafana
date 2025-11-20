@@ -3,7 +3,7 @@ package queryhistory
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
 	"github.com/stretchr/testify/require"
 )
 

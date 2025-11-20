@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	apimodels "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
+	apimodels "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
 )
 
 // TODO: We no longer do apimodels at this layer, move it to the API.

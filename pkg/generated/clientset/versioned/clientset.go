@@ -8,7 +8,7 @@ import (
 	fmt "fmt"
 	http "net/http"
 
-	servicev0alpha1 "github.com/grafana/grafana/pkg/generated/clientset/versioned/typed/service/v0alpha1"
+	servicev0alpha1 "github.com/capitalrx/grafana/pkg/generated/clientset/versioned/typed/service/v0alpha1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

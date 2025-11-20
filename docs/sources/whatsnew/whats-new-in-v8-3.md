@@ -25,13 +25,13 @@ Grafana 8.3 is an exciting release for Grafana Labs. This release includes the n
 
 For Open Source users it also marks the first time Grafana Alerting, formerly unified alerting, is enabled by default for new Grafana installations. Grafana Alerting in 8.3 is the flexible, single pane of glass for all your alerts. Included in this release is expanded provisioning support for notifiers, contact points, and alert rules, alongside auditing and role-based access control for our Enterprise customers.
 
-We’ve summarized what’s new in the release here, but you might also be interested in the announcement blog post as well. If you’d like all the details you can check out the complete [CHANGELOG.md](https://github.com/grafana/grafana/blob/main/CHANGELOG.md).
+We’ve summarized what’s new in the release here, but you might also be interested in the announcement blog post as well. If you’d like all the details you can check out the complete [CHANGELOG.md](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md).
 
 ## Grafana OSS
 
 ### Community Contributions
 
-Grafana 8.3 includes many community contributions including the ability to interpolate variables in tags ([#42318](https://github.com/grafana/grafana/pull/42318)), fly-out sub-menu support ([#41647](https://github.com/grafana/grafana/pull/41647)), the addition of AWS RoboMaker & AWS Global Accelerator metrics to the AWS CloudWatch data source ([#41450](https://github.com/grafana/grafana/pull/41450), [#41236](https://github.com/grafana/grafana/pull/41236)), as well as updates to the news panel ([#41193](https://github.com/grafana/grafana/pull/41193)), the plugin catalog ([#40917](https://github.com/grafana/grafana/pull/40917)), and many more. The Grafana Labs team is deeply grateful for all those who take the time to contribute and participate in the development of Grafana.
+Grafana 8.3 includes many community contributions including the ability to interpolate variables in tags ([#42318](https://github.com/capitalrx/grafana/pull/42318)), fly-out sub-menu support ([#41647](https://github.com/capitalrx/grafana/pull/41647)), the addition of AWS RoboMaker & AWS Global Accelerator metrics to the AWS CloudWatch data source ([#41450](https://github.com/capitalrx/grafana/pull/41450), [#41236](https://github.com/capitalrx/grafana/pull/41236)), as well as updates to the news panel ([#41193](https://github.com/capitalrx/grafana/pull/41193)), the plugin catalog ([#40917](https://github.com/capitalrx/grafana/pull/40917)), and many more. The Grafana Labs team is deeply grateful for all those who take the time to contribute and participate in the development of Grafana.
 
 ### Accessibility
 

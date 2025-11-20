@@ -7,10 +7,10 @@ import (
 	"github.com/gorilla/websocket"
 	liveDto "github.com/grafana/grafana-plugin-sdk-go/live"
 
-	"github.com/grafana/grafana/pkg/services/live/convert"
-	"github.com/grafana/grafana/pkg/services/live/livecontext"
-	"github.com/grafana/grafana/pkg/services/live/managedstream"
-	"github.com/grafana/grafana/pkg/services/live/pushurl"
+	"github.com/capitalrx/grafana/pkg/services/live/convert"
+	"github.com/capitalrx/grafana/pkg/services/live/livecontext"
+	"github.com/capitalrx/grafana/pkg/services/live/managedstream"
+	"github.com/capitalrx/grafana/pkg/services/live/pushurl"
 )
 
 // Handler handles WebSocket client connections that push data to Live.

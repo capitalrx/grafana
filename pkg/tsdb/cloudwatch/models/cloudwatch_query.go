@@ -17,7 +17,7 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/kinds/dataquery"
 )
 
 type (
@@ -392,7 +392,7 @@ func (q *CloudWatchQuery) validateAndSetDefaults(refId string, metricsDataQuery 
 // getStatistic determines the value of Statistic in a CloudWatchQuery from the metricsDataQuery input
 // migrates queries that has a `statistics` field to use the `statistic` field instead.
 // In case the query used more than one stat, the first stat in the slice will be used in the statistic field
-// Read more here https://github.com/grafana/grafana/issues/30629
+// Read more here https://github.com/capitalrx/grafana/issues/30629
 func getStatistic(query metricsDataQuery) string {
 	// If there's not a statistic property in the json, we know it's the legacy format and then it has to be migrated
 	if query.Statistic == nil {

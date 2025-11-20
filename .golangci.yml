@@ -40,11 +40,11 @@ linters:
             - ./pkg/aggregator/*
             - ./pkg/aggregator/**/*
           allow:
-            - github.com/grafana/grafana/pkg/aggregator
+            - github.com/capitalrx/grafana/pkg/aggregator
             - github.com/grafana/grafana/pkg/semconv
-            - github.com/grafana/grafana/pkg/apimachinery
+            - github.com/capitalrx/grafana/pkg/apimachinery
           deny:
-            - pkg: github.com/grafana/grafana/pkg
+            - pkg: github.com/capitalrx/grafana/pkg
               desc: apimachinery is not allowed to import grafana core
         apimachinery:
           list-mode: lax
@@ -52,9 +52,9 @@ linters:
             - '**/pkg/apimachinery/*'
             - '**/pkg/apimachinery/**/*'
           allow:
-            - github.com/grafana/grafana/pkg/apimachinery
+            - github.com/capitalrx/grafana/pkg/apimachinery
           deny:
-            - pkg: github.com/grafana/grafana/pkg
+            - pkg: github.com/capitalrx/grafana/pkg
               desc: apimachinery is not allowed to import grafana core
         apiserver:
           list-mode: lax
@@ -62,10 +62,10 @@ linters:
             - '**/pkg/apiserver/*'
             - '**/pkg/apiserver/**/*'
           allow:
-            - github.com/grafana/grafana/pkg/apimachinery
-            - github.com/grafana/grafana/pkg/apiserver
+            - github.com/capitalrx/grafana/pkg/apimachinery
+            - github.com/capitalrx/grafana/pkg/apiserver
           deny:
-            - pkg: github.com/grafana/grafana/pkg
+            - pkg: github.com/capitalrx/grafana/pkg
               desc: apiserver is not allowed to import grafana core
         apps-investigation:
           list-mode: lax
@@ -73,7 +73,7 @@ linters:
             - ./apps/investigations/*
             - ./apps/investigations/**/*
           deny:
-            - pkg: github.com/grafana/grafana/pkg
+            - pkg: github.com/capitalrx/grafana/pkg
               desc: apps/investigations is not allowed to import grafana core
         apps-playlist:
           list-mode: lax
@@ -81,7 +81,7 @@ linters:
             - ./apps/playlist/*
             - ./apps/playlist/**/*
           deny:
-            - pkg: github.com/grafana/grafana/pkg
+            - pkg: github.com/capitalrx/grafana/pkg
               desc: apps/playlist is not allowed to import grafana core
         apps-secret:  
           list-mode: lax
@@ -89,7 +89,7 @@ linters:
             - ./apps/secret/*
             - ./apps/secret/**/*
           deny:
-            - pkg: github.com/grafana/grafana/pkg
+            - pkg: github.com/capitalrx/grafana/pkg
               desc: apps/secret is not allowed to import grafana core
         coreplugins:
           files:
@@ -116,61 +116,61 @@ linters:
             - '**/pkg/tsdb/jaeger/*'
             - '**/pkg/tsdb/jaeger/**/*'
           deny:
-            - pkg: github.com/grafana/grafana/pkg/api
+            - pkg: github.com/capitalrx/grafana/pkg/api
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/cmd
+            - pkg: github.com/capitalrx/grafana/pkg/cmd
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/cuectx
+            - pkg: github.com/capitalrx/grafana/pkg/cuectx
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/extensions
+            - pkg: github.com/capitalrx/grafana/pkg/extensions
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/kinds
+            - pkg: github.com/capitalrx/grafana/pkg/kinds
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/middleware
+            - pkg: github.com/capitalrx/grafana/pkg/middleware
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/modules
+            - pkg: github.com/capitalrx/grafana/pkg/modules
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/registry
+            - pkg: github.com/capitalrx/grafana/pkg/registry
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/services
+            - pkg: github.com/capitalrx/grafana/pkg/services
               desc: Core plugins are not allowed to depend on Grafana core packages
             - pkg: github.com/grafana/grafana/pkg/build
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/codegen
+            - pkg: github.com/capitalrx/grafana/pkg/codegen
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/events
+            - pkg: github.com/capitalrx/grafana/pkg/events
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/ifaces
+            - pkg: github.com/capitalrx/grafana/pkg/ifaces
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/kindsysreport
+            - pkg: github.com/capitalrx/grafana/pkg/kindsysreport
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/mocks
+            - pkg: github.com/capitalrx/grafana/pkg/mocks
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/plugins
+            - pkg: github.com/capitalrx/grafana/pkg/plugins
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/setting
+            - pkg: github.com/capitalrx/grafana/pkg/setting
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/util
+            - pkg: github.com/capitalrx/grafana/pkg/util
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/bus
+            - pkg: github.com/capitalrx/grafana/pkg/bus
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/components
+            - pkg: github.com/capitalrx/grafana/pkg/components
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/expr
+            - pkg: github.com/capitalrx/grafana/pkg/expr
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/infra
+            - pkg: github.com/capitalrx/grafana/pkg/infra
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/login
+            - pkg: github.com/capitalrx/grafana/pkg/login
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/models
+            - pkg: github.com/capitalrx/grafana/pkg/models
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/server
+            - pkg: github.com/capitalrx/grafana/pkg/server
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/tests
+            - pkg: github.com/capitalrx/grafana/pkg/tests
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/web
+            - pkg: github.com/capitalrx/grafana/pkg/web
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/grafana/grafana/pkg/tsdb/intervalv2
+            - pkg: github.com/capitalrx/grafana/pkg/tsdb/intervalv2
               desc: Core plugins are not allowed to depend on Grafana core packages
         main:
           deny:
@@ -193,7 +193,7 @@ linters:
           allow:
             - github.com/grafana/grafana/pkg/promlib
           deny:
-            - pkg: github.com/grafana/grafana/pkg
+            - pkg: github.com/capitalrx/grafana/pkg
               desc: promlib is not allowed to import grafana core
         storage-unified-apistore:
           list-mode: lax
@@ -201,11 +201,11 @@ linters:
             - ./pkg/storage/unified/apistore/*
             - ./pkg/storage/unified/apistore/**/*
           allow:
-            - github.com/grafana/grafana/pkg/apimachinery
-            - github.com/grafana/grafana/pkg/apiserver
-            - github.com/grafana/grafana/pkg/unified/resource
+            - github.com/capitalrx/grafana/pkg/apimachinery
+            - github.com/capitalrx/grafana/pkg/apiserver
+            - github.com/capitalrx/grafana/pkg/unified/resource
           deny:
-            - pkg: github.com/grafana/grafana/pkg
+            - pkg: github.com/capitalrx/grafana/pkg
               desc: pkg/storage/unified/apistore is not allowed to import grafana core
         storage-unified-resource:
           list-mode: lax
@@ -213,9 +213,9 @@ linters:
             - ./pkg/storage/unified/resource/*
             - ./pkg/storage/unified/resource/**/*
           allow:
-            - github.com/grafana/grafana/pkg/apimachinery
+            - github.com/capitalrx/grafana/pkg/apimachinery
           deny:
-            - pkg: github.com/grafana/grafana/pkg
+            - pkg: github.com/capitalrx/grafana/pkg
               desc: pkg/storage/unified/resource is not allowed to import grafana core
     exhaustive:
       default-signifies-exhaustive: true

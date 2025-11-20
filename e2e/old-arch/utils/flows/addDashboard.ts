@@ -106,7 +106,7 @@ export type AddVariableConfig = AddVariableDefault & AddVariableOptional & AddVa
  *
  * @see{@link AddVariableConfig}
  *
- * @see{@link https://github.com/grafana/grafana/blob/main/e2e/cloud-plugins-suite/azure-monitor.spec.ts Azure Monitor Tests for full examples}
+ * @see{@link https://github.com/capitalrx/grafana/blob/main/e2e/cloud-plugins-suite/azure-monitor.spec.ts Azure Monitor Tests for full examples}
  */
 export const addDashboard = (config?: Partial<AddDashboardConfig>) => {
   const fullConfig: AddDashboardConfig = {

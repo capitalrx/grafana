@@ -3,13 +3,13 @@ package migrations
 import (
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"xorm.io/builder"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 )
 
 type deletionMarkerMigrator struct {

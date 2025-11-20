@@ -10,7 +10,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/gtime"
 
-	"github.com/grafana/grafana/pkg/tsdb/loki/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/loki/kinds/dataquery"
 )
 
 const (
@@ -55,7 +55,7 @@ func interpolateVariables(expr string, interval time.Duration, timeRange time.Du
 	}
 
 	// this is duplicated code, hopefully this can be handled in a nicer way when
-	// https://github.com/grafana/grafana/issues/42928 is done.
+	// https://github.com/capitalrx/grafana/issues/42928 is done.
 	expr = strings.ReplaceAll(expr, varIntervalMsAlt, intervalMsText)
 	expr = strings.ReplaceAll(expr, varIntervalAlt, intervalText)
 	expr = strings.ReplaceAll(expr, varRangeMsAlt, rangeMsText)

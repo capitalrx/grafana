@@ -18,7 +18,7 @@ import (
 	"github.com/grafana/alerting/definition"
 	alertingmodels "github.com/grafana/alerting/models"
 
-	"github.com/grafana/grafana/pkg/apimachinery/errutil"
+	"github.com/capitalrx/grafana/pkg/apimachinery/errutil"
 )
 
 // swagger:route POST /alertmanager/{DatasourceUID}/config/api/v1/alerts alertmanager RoutePostAlertingConfig

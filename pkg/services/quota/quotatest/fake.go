@@ -3,8 +3,8 @@ package quotatest
 import (
 	"context"
 
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/quota"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/quota"
 )
 
 type FakeQuotaService struct {

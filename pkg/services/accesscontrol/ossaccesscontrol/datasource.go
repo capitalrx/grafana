@@ -3,17 +3,17 @@ package ossaccesscontrol
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/accesscontrol/resourcepermissions"
-	"github.com/grafana/grafana/pkg/services/datasources"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol/resourcepermissions"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/setting"
 	"go.opentelemetry.io/otel"
 )
 
-var tracer = otel.Tracer("github.com/grafana/grafana/pkg/accesscontrol/ossaccesscontrol")
+var tracer = otel.Tracer("github.com/capitalrx/grafana/pkg/accesscontrol/ossaccesscontrol")
 
 // DatasourceQueryActions contains permissions to read information
 // about a data source and submit arbitrary queries to it.

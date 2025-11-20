@@ -12,25 +12,25 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend/gtime"
 	"go.opentelemetry.io/otel"
 
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/metrics"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/annotations"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/dashboards/dashboardaccess"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/licensing"
-	"github.com/grafana/grafana/pkg/services/publicdashboards"
-	. "github.com/grafana/grafana/pkg/services/publicdashboards/models"
-	"github.com/grafana/grafana/pkg/services/publicdashboards/service/intervalv2"
-	"github.com/grafana/grafana/pkg/services/publicdashboards/validation"
-	"github.com/grafana/grafana/pkg/services/query"
-	"github.com/grafana/grafana/pkg/services/sqlstore/searchstore"
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/api/dtos"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/metrics"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/annotations"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/dashboards/dashboardaccess"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/licensing"
+	"github.com/capitalrx/grafana/pkg/services/publicdashboards"
+	. "github.com/capitalrx/grafana/pkg/services/publicdashboards/models"
+	"github.com/capitalrx/grafana/pkg/services/publicdashboards/service/intervalv2"
+	"github.com/capitalrx/grafana/pkg/services/publicdashboards/validation"
+	"github.com/capitalrx/grafana/pkg/services/query"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/searchstore"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 // PublicDashboardServiceImpl Define the Service Implementation. We're generating mock implementation
@@ -50,7 +50,7 @@ type PublicDashboardServiceImpl struct {
 }
 
 var LogPrefix = "publicdashboards.service"
-var tracer = otel.Tracer("github.com/grafana/grafana/pkg/services/publicdashboards/service")
+var tracer = otel.Tracer("github.com/capitalrx/grafana/pkg/services/publicdashboards/service")
 
 // Gives us compile time error if the service does not adhere to the contract of
 // the interface

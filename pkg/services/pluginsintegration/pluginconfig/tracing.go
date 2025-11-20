@@ -3,9 +3,9 @@ package pluginconfig
 import (
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	pCfg "github.com/grafana/grafana/pkg/plugins/config"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	pCfg "github.com/capitalrx/grafana/pkg/plugins/config"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 // newTracingCfg creates a plugins tracing configuration based on the provided Grafana tracing config.

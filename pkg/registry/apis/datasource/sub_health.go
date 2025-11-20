@@ -9,7 +9,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apiserver/pkg/registry/rest"
 
-	datasource "github.com/grafana/grafana/pkg/apis/datasource/v0alpha1"
+	datasource "github.com/capitalrx/grafana/pkg/apis/datasource/v0alpha1"
 )
 
 type subHealthREST struct {

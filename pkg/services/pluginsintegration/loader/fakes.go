@@ -3,7 +3,7 @@ package loader
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins"
 )
 
 type fakeErrorTracker struct {

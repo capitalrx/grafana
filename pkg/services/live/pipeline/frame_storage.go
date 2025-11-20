@@ -5,7 +5,7 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 
-	"github.com/grafana/grafana/pkg/services/live/orgchannel"
+	"github.com/capitalrx/grafana/pkg/services/live/orgchannel"
 )
 
 // FrameStorage keeps last channel frame in memory. Not usable in HA setup.

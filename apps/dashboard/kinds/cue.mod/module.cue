@@ -1,4 +1,4 @@
-module: "github.com/grafana/grafana/sdkkinds/dashboard"
+module: "github.com/capitalrx/grafana/sdkkinds/dashboard"
 language: {
 	version: "v0.9.0"
 }

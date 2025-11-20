@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/plugins/config"
+	"github.com/capitalrx/grafana/pkg/plugins/config"
 )
 
 const (

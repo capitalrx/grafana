@@ -4,7 +4,7 @@ import (
 	"context"
 	"log/slog"
 
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/log"
 )
 
 // InfraLoggerHandler adapts infra's log.Logger to an slog.Handler

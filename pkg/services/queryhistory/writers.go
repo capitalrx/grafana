@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 func writeStarredSQL(query SearchInQueryHistoryQuery, sqlStore db.DB, builder *db.SQLBuilder, isCount bool) {

@@ -14,16 +14,16 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.DashboardCreateCommand":         schema_pkg_apis_dashboardsnapshot_v0alpha1_DashboardCreateCommand(ref),
-		"github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.DashboardCreateResponse":        schema_pkg_apis_dashboardsnapshot_v0alpha1_DashboardCreateResponse(ref),
-		"github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.DashboardSnapshot":              schema_pkg_apis_dashboardsnapshot_v0alpha1_DashboardSnapshot(ref),
-		"github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.DashboardSnapshotList":          schema_pkg_apis_dashboardsnapshot_v0alpha1_DashboardSnapshotList(ref),
-		"github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.DashboardSnapshotWithDeleteKey": schema_pkg_apis_dashboardsnapshot_v0alpha1_DashboardSnapshotWithDeleteKey(ref),
-		"github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.FullDashboardSnapshot":          schema_pkg_apis_dashboardsnapshot_v0alpha1_FullDashboardSnapshot(ref),
-		"github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SharingOptions":                 schema_pkg_apis_dashboardsnapshot_v0alpha1_SharingOptions(ref),
-		"github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SharingOptionsList":             schema_pkg_apis_dashboardsnapshot_v0alpha1_SharingOptionsList(ref),
-		"github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotInfo":                   schema_pkg_apis_dashboardsnapshot_v0alpha1_SnapshotInfo(ref),
-		"github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotSharingOptions":         schema_pkg_apis_dashboardsnapshot_v0alpha1_SnapshotSharingOptions(ref),
+		"github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.DashboardCreateCommand":         schema_pkg_apis_dashboardsnapshot_v0alpha1_DashboardCreateCommand(ref),
+		"github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.DashboardCreateResponse":        schema_pkg_apis_dashboardsnapshot_v0alpha1_DashboardCreateResponse(ref),
+		"github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.DashboardSnapshot":              schema_pkg_apis_dashboardsnapshot_v0alpha1_DashboardSnapshot(ref),
+		"github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.DashboardSnapshotList":          schema_pkg_apis_dashboardsnapshot_v0alpha1_DashboardSnapshotList(ref),
+		"github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.DashboardSnapshotWithDeleteKey": schema_pkg_apis_dashboardsnapshot_v0alpha1_DashboardSnapshotWithDeleteKey(ref),
+		"github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.FullDashboardSnapshot":          schema_pkg_apis_dashboardsnapshot_v0alpha1_FullDashboardSnapshot(ref),
+		"github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SharingOptions":                 schema_pkg_apis_dashboardsnapshot_v0alpha1_SharingOptions(ref),
+		"github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SharingOptionsList":             schema_pkg_apis_dashboardsnapshot_v0alpha1_SharingOptionsList(ref),
+		"github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotInfo":                   schema_pkg_apis_dashboardsnapshot_v0alpha1_SnapshotInfo(ref),
+		"github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotSharingOptions":         schema_pkg_apis_dashboardsnapshot_v0alpha1_SnapshotSharingOptions(ref),
 	}
 }
 
@@ -59,7 +59,7 @@ func schema_pkg_apis_dashboardsnapshot_v0alpha1_DashboardCreateCommand(ref commo
 					"dashboard": {
 						SchemaProps: spec.SchemaProps{
 							Description: "The complete dashboard model. required:true",
-							Ref:         ref("github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1.Unstructured"),
+							Ref:         ref("github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1.Unstructured"),
 						},
 					},
 					"expires": {
@@ -83,7 +83,7 @@ func schema_pkg_apis_dashboardsnapshot_v0alpha1_DashboardCreateCommand(ref commo
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1.Unstructured"},
+			"github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1.Unstructured"},
 	}
 }
 
@@ -177,7 +177,7 @@ func schema_pkg_apis_dashboardsnapshot_v0alpha1_DashboardSnapshot(ref common.Ref
 						SchemaProps: spec.SchemaProps{
 							Description: "Snapshot summary info",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotInfo"),
+							Ref:         ref("github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotInfo"),
 						},
 					},
 				},
@@ -185,7 +185,7 @@ func schema_pkg_apis_dashboardsnapshot_v0alpha1_DashboardSnapshot(ref common.Ref
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotInfo", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotInfo", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -222,7 +222,7 @@ func schema_pkg_apis_dashboardsnapshot_v0alpha1_DashboardSnapshotList(ref common
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.DashboardSnapshot"),
+										Ref:     ref("github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.DashboardSnapshot"),
 									},
 								},
 							},
@@ -233,7 +233,7 @@ func schema_pkg_apis_dashboardsnapshot_v0alpha1_DashboardSnapshotList(ref common
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.DashboardSnapshot", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.DashboardSnapshot", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -268,7 +268,7 @@ func schema_pkg_apis_dashboardsnapshot_v0alpha1_DashboardSnapshotWithDeleteKey(r
 						SchemaProps: spec.SchemaProps{
 							Description: "Snapshot summary info",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotInfo"),
+							Ref:         ref("github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotInfo"),
 						},
 					},
 					"deleteKey": {
@@ -283,7 +283,7 @@ func schema_pkg_apis_dashboardsnapshot_v0alpha1_DashboardSnapshotWithDeleteKey(r
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotInfo", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotInfo", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -318,13 +318,13 @@ func schema_pkg_apis_dashboardsnapshot_v0alpha1_FullDashboardSnapshot(ref common
 						SchemaProps: spec.SchemaProps{
 							Description: "Snapshot summary info",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotInfo"),
+							Ref:         ref("github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotInfo"),
 						},
 					},
 					"dashboard": {
 						SchemaProps: spec.SchemaProps{
 							Description: "The raw dashboard (unstructured for now)",
-							Ref:         ref("github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1.Unstructured"),
+							Ref:         ref("github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1.Unstructured"),
 						},
 					},
 				},
@@ -332,7 +332,7 @@ func schema_pkg_apis_dashboardsnapshot_v0alpha1_FullDashboardSnapshot(ref common
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1.Unstructured", "github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotInfo", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1.Unstructured", "github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotInfo", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -367,7 +367,7 @@ func schema_pkg_apis_dashboardsnapshot_v0alpha1_SharingOptions(ref common.Refere
 						SchemaProps: spec.SchemaProps{
 							Description: "Show the options inline",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotSharingOptions"),
+							Ref:         ref("github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotSharingOptions"),
 						},
 					},
 				},
@@ -375,7 +375,7 @@ func schema_pkg_apis_dashboardsnapshot_v0alpha1_SharingOptions(ref common.Refere
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotSharingOptions", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SnapshotSharingOptions", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -413,7 +413,7 @@ func schema_pkg_apis_dashboardsnapshot_v0alpha1_SharingOptionsList(ref common.Re
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SharingOptions"),
+										Ref:     ref("github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SharingOptions"),
 									},
 								},
 							},
@@ -424,7 +424,7 @@ func schema_pkg_apis_dashboardsnapshot_v0alpha1_SharingOptionsList(ref common.Re
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SharingOptions", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/pkg/apis/dashboardsnapshot/v0alpha1.SharingOptions", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 

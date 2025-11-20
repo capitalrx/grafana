@@ -4,9 +4,9 @@ import (
 	"net/url"
 	"testing"
 
-	fswebassets "github.com/grafana/grafana/pkg/services/frontend/webassets"
-	"github.com/grafana/grafana/pkg/services/licensing/licensingtest"
-	"github.com/grafana/grafana/pkg/setting"
+	fswebassets "github.com/capitalrx/grafana/pkg/services/frontend/webassets"
+	"github.com/capitalrx/grafana/pkg/services/licensing/licensingtest"
+	"github.com/capitalrx/grafana/pkg/setting"
 	"github.com/stretchr/testify/assert"
 )
 

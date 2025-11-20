@@ -11,13 +11,13 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	pb "github.com/grafana/grafana/pkg/services/ngalert/store/proto/v1"
-	"github.com/grafana/grafana/pkg/services/ngalert/tests"
-	"github.com/grafana/grafana/pkg/util"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	pb "github.com/capitalrx/grafana/pkg/services/ngalert/store/proto/v1"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/tests"
+	"github.com/capitalrx/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 const baseIntervalSeconds = 10

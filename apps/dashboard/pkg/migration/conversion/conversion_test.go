@@ -17,16 +17,16 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	"github.com/grafana/grafana/apps/dashboard/pkg/apis"
-	dashv0 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1"
-	dashv1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
-	dashv2alpha1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v2alpha1"
-	dashv2beta1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v2beta1"
-	"github.com/grafana/grafana/apps/dashboard/pkg/migration"
-	"github.com/grafana/grafana/apps/dashboard/pkg/migration/schemaversion"
-	migrationtestutil "github.com/grafana/grafana/apps/dashboard/pkg/migration/testutil"
-	common "github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/apis"
+	dashv0 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1"
+	dashv1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
+	dashv2alpha1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v2alpha1"
+	dashv2beta1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v2beta1"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/migration"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/migration/schemaversion"
+	migrationtestutil "github.com/capitalrx/grafana/apps/dashboard/pkg/migration/testutil"
+	common "github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
 )
 
 func TestConversionMatrixExist(t *testing.T) {

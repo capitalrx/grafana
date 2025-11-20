@@ -4,8 +4,8 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 
-	aggregation "github.com/grafana/grafana/pkg/aggregator/apis/aggregation"
-	v0alpha1 "github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
+	aggregation "github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation"
+	v0alpha1 "github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
 )
 
 // Install registers the API group and adds types to a scheme

@@ -5,11 +5,11 @@ import (
 	"slices"
 
 	"github.com/Masterminds/semver"
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/log"
 
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/managedplugins"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginstore"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/provisionedplugins"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/managedplugins"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginstore"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/provisionedplugins"
 )
 
 type PluginUpdateChecker interface {

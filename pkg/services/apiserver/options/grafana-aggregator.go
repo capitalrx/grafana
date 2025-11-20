@@ -13,11 +13,11 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
-	aggregatorapiserver "github.com/grafana/grafana/pkg/aggregator/apiserver"
-	aggregatorscheme "github.com/grafana/grafana/pkg/aggregator/apiserver/scheme"
-	commonv0alpha1 "github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1"
-	"github.com/grafana/grafana/pkg/storage/unified/apistore"
+	"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
+	aggregatorapiserver "github.com/capitalrx/grafana/pkg/aggregator/apiserver"
+	aggregatorscheme "github.com/capitalrx/grafana/pkg/aggregator/apiserver/scheme"
+	commonv0alpha1 "github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/storage/unified/apistore"
 )
 
 // GrafanaAggregatorOptions contains the state for the aggregator apiserver

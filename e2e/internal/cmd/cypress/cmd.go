@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/grafana/grafana/e2e/internal/fpaths"
-	"github.com/grafana/grafana/e2e/internal/outs"
+	"github.com/capitalrx/grafana/e2e/internal/fpaths"
+	"github.com/capitalrx/grafana/e2e/internal/outs"
 	"github.com/urfave/cli/v3"
 )
 

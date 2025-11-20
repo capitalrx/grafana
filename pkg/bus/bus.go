@@ -8,7 +8,7 @@ import (
 
 	"go.opentelemetry.io/otel/attribute"
 
-	"github.com/grafana/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
 )
 
 // HandlerFunc defines a handler function interface.

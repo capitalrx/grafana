@@ -3,7 +3,7 @@ package schemaversion
 import (
 	"context"
 
-	"github.com/grafana/grafana/apps/dashboard/pkg/migration/utils"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/migration/utils"
 )
 
 // V23 migrates multi variables to ensure their current property is aligned with their multi property.

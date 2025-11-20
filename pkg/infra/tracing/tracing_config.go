@@ -7,7 +7,7 @@ import (
 
 	"go.opentelemetry.io/otel/attribute"
 
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type TracingConfig struct {

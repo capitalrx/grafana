@@ -4,7 +4,7 @@ import (
 	"context"
 	"sync"
 
-	"github.com/grafana/grafana/pkg/services/annotations"
+	"github.com/capitalrx/grafana/pkg/services/annotations"
 )
 
 type fakeAnnotationsRepo struct {

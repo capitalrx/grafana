@@ -12,7 +12,7 @@ import (
 	"github.com/grafana/cuetsy"
 	"github.com/grafana/cuetsy/ts"
 	"github.com/grafana/cuetsy/ts/ast"
-	"github.com/grafana/grafana/pkg/codegen/generators"
+	"github.com/capitalrx/grafana/pkg/codegen/generators"
 )
 
 // TSVeneerIndexJenny generates an index.gen.ts file with references to all

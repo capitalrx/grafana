@@ -1,7 +1,7 @@
 package contracts
 
 import (
-	secretv1beta1 "github.com/grafana/grafana/apps/secret/pkg/apis/secret/v1beta1"
+	secretv1beta1 "github.com/capitalrx/grafana/apps/secret/pkg/apis/secret/v1beta1"
 	"k8s.io/apiserver/pkg/admission"
 )
 

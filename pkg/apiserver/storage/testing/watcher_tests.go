@@ -33,7 +33,7 @@ import (
 	featuregatetesting "k8s.io/component-base/featuregate/testing"
 	"k8s.io/utils/ptr"
 
-	"github.com/grafana/grafana/pkg/apiserver/registry/generic"
+	"github.com/capitalrx/grafana/pkg/apiserver/registry/generic"
 )
 
 func RunTestWatch(ctx context.Context, t *testing.T, store storage.Interface) {

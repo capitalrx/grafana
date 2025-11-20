@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	iamv0alpha1 "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1"
+	iamv0alpha1 "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1"
 	"github.com/stretchr/testify/require"
 	"k8s.io/apiserver/pkg/endpoints/request"
 )

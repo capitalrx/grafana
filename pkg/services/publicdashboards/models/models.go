@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/grafana/grafana/pkg/kinds/dashboard"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/kinds/dashboard"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 // PublicDashboardErr represents a dashboard error.

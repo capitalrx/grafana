@@ -7,9 +7,9 @@ import (
 	"io"
 	"regexp"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/log"
-	"github.com/grafana/grafana/pkg/plugins/manager/loader/angular/angulardetector"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/loader/angular/angulardetector"
 )
 
 // Inspector can inspect a plugin and determine if it's an Angular plugin or not.

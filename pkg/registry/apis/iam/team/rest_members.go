@@ -8,12 +8,12 @@ import (
 	"k8s.io/apiserver/pkg/registry/rest"
 
 	claims "github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/pkg/api/dtos"
-	iamv0 "github.com/grafana/grafana/pkg/apis/iam/v0alpha1"
-	"github.com/grafana/grafana/pkg/registry/apis/iam/common"
-	"github.com/grafana/grafana/pkg/registry/apis/iam/legacy"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/api/dtos"
+	iamv0 "github.com/capitalrx/grafana/pkg/apis/iam/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/registry/apis/iam/common"
+	"github.com/capitalrx/grafana/pkg/registry/apis/iam/legacy"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 var (

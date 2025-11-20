@@ -3,7 +3,7 @@ package authorizer
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/setting"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	k8suser "k8s.io/apiserver/pkg/authentication/user"
 	"k8s.io/apiserver/pkg/authorization/authorizer"

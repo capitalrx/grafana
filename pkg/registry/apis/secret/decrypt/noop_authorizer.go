@@ -3,8 +3,8 @@ package decrypt
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/xkube"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/xkube"
 )
 
 // NoopAlwaysAllowedAuthorizer is a no-op implementation of the DecryptAuthorizer which always returns `allowed=true`.

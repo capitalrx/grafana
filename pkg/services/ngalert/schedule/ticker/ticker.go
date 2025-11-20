@@ -6,7 +6,7 @@ import (
 
 	"github.com/benbjohnson/clock"
 
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/log"
 )
 
 // Ticker emits ticks at regular time intervals. it's like a time.Ticker, except:

@@ -43,7 +43,7 @@ There are a few utilities that can be useful for debugging tests:
 
 ## Testing select components
 
-Here, the [OrgRolePicker](https://github.com/grafana/grafana/blob/38863844e7ac72c7756038a1097f89632f9985ff/public/app/features/admin/OrgRolePicker.tsx) component is used as an example. This component essentially serves as a wrapper for the `Select` component, complete with its own set of options.
+Here, the [OrgRolePicker](https://github.com/capitalrx/grafana/blob/38863844e7ac72c7756038a1097f89632f9985ff/public/app/features/admin/OrgRolePicker.tsx) component is used as an example. This component essentially serves as a wrapper for the `Select` component, complete with its own set of options.
 
 ```tsx
 import { OrgRole } from '@grafana/data';
@@ -172,7 +172,7 @@ jest.mock('@grafana/runtime', () => ({
 
 Use the `AsyncSelect` component to asynchronously load options. This component often relies on the `getBackendSrv` for loading the options.
 
-Here's what the test looks like for this [OrgPicker](https://github.com/grafana/grafana/blob/38863844e7ac72c7756038a1097f89632f9985ff/public/app/core/components/Select/OrgPicker.tsx) component, which uses `AsyncSelect` under the hood:
+Here's what the test looks like for this [OrgPicker](https://github.com/capitalrx/grafana/blob/38863844e7ac72c7756038a1097f89632f9985ff/public/app/core/components/Select/OrgPicker.tsx) component, which uses `AsyncSelect` under the hood:
 
 ```tsx
 import { screen, render } from '@testing-library/react';

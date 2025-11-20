@@ -4,8 +4,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 func TestIntegrationMemcachedCacheStorage(t *testing.T) {

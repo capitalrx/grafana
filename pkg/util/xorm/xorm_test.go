@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	_ "github.com/grafana/grafana/pkg/util/sqlite"
+	_ "github.com/capitalrx/grafana/pkg/util/sqlite"
 	"github.com/stretchr/testify/require"
 )
 

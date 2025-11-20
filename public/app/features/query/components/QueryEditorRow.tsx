@@ -637,7 +637,7 @@ function AdaptiveTelemetryQueryActions({ query }: { query: DataQuery }) {
     });
   } catch (error) {
     // If `usePluginComponents` isn't properly resolved, tests will fail with 'setPluginComponentsHook(options) can only be used after the Grafana instance has started.'
-    // This will be resolved in https://github.com/grafana/grafana/pull/92983
+    // This will be resolved in https://github.com/capitalrx/grafana/pull/92983
     // In this case, Return `null` like when there are no extensions.
     return null;
   }

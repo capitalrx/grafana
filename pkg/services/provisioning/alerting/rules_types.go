@@ -9,9 +9,9 @@ import (
 
 	"github.com/prometheus/common/model"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/provisioning/values"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/provisioning/values"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 type RuleDelete struct {

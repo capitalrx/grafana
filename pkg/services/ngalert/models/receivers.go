@@ -14,7 +14,7 @@ import (
 
 	alertingNotify "github.com/grafana/alerting/notify"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/notifier/channels_config"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/notifier/channels_config"
 )
 
 // GetReceiverQuery represents a query for a single receiver.

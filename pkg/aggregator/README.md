@@ -125,5 +125,5 @@ curl 'http://admin:admin@localhost:3000/apis/prometheus.grafana.app/v0alpha1/nam
 
 ### Research/PoC's
 
-* [PoC Alternate HTTP backend](https://github.com/grafana/grafana/pull/100697)
+* [PoC Alternate HTTP backend](https://github.com/capitalrx/grafana/pull/100697)
 * [PoC Plugin SDK <--> App SDK Adapter](https://github.com/grafana/grafana-app-sdk/pull/493)

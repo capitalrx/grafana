@@ -9,10 +9,10 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/util/version"
 
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/tests/testinfra"
-	"github.com/grafana/grafana/pkg/tests/testsuite"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/tests/testinfra"
+	"github.com/capitalrx/grafana/pkg/tests/testsuite"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 func TestMain(m *testing.M) {
@@ -48,7 +48,7 @@ func TestIntegrationOpenAPIs(t *testing.T) {
 		// Check the v3 path resolves properly
 		// NOTE: fetching the v2 schema sometimes returns a 503 in our test infrastructure
 		// Removing the explicit `OneOf` properties from InlineSecureValue in:
-		// https://github.com/grafana/grafana/blob/main/pkg/apimachinery/apis/common/v0alpha1/secure_values.go#L78
+		// https://github.com/capitalrx/grafana/blob/main/pkg/apimachinery/apis/common/v0alpha1/secure_values.go#L78
 		// will consistently support V2, however kubectl and everything else continues to work
 		paths, err := disco.OpenAPIV3().Paths()
 

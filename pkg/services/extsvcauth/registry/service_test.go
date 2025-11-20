@@ -4,10 +4,10 @@ import (
 	"context"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/serverlock"
-	"github.com/grafana/grafana/pkg/services/extsvcauth"
-	"github.com/grafana/grafana/pkg/services/extsvcauth/tests"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/serverlock"
+	"github.com/capitalrx/grafana/pkg/services/extsvcauth"
+	"github.com/capitalrx/grafana/pkg/services/extsvcauth/tests"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 )

@@ -14,16 +14,16 @@ import (
 	//nolint:staticcheck
 	"golang.org/x/exp/rand"
 
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/folder"
-	. "github.com/grafana/grafana/pkg/services/ngalert/api/compat"
-	apimodels "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/ngalert/store"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/folder"
+	. "github.com/capitalrx/grafana/pkg/services/ngalert/api/compat"
+	apimodels "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/store"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/util"
 
-	. "github.com/grafana/grafana/pkg/services/ngalert/api/validation"
+	. "github.com/capitalrx/grafana/pkg/services/ngalert/api/validation"
 )
 
 var allNoData = []apimodels.NoDataState{

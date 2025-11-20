@@ -3,7 +3,7 @@ package resource
 import (
 	"regexp"
 
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 )
 
 var validNameCharPattern = `a-zA-Z0-9:\-\_\.`

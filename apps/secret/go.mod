@@ -4,7 +4,7 @@ go 1.25.3
 
 require (
 	github.com/grafana/grafana-app-sdk v0.40.3
-	github.com/grafana/grafana/pkg/apimachinery v0.0.0-20250710134100-1f3dc0533caf
+	github.com/capitalrx/grafana/pkg/apimachinery v0.0.0-20250710134100-1f3dc0533caf
 	github.com/stretchr/testify v1.10.0
 	google.golang.org/grpc v1.74.2
 	google.golang.org/protobuf v1.36.6

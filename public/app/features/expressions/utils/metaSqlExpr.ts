@@ -36,7 +36,7 @@ export async function fetchSQLFields(query: Partial<SQLQuery>, queries: DataQuer
   return mapFieldsToTypes(fields);
 }
 
-// based off https://github.com/grafana/grafana/blob/main/pkg/expr/sql/parser_allow.go
+// based off https://github.com/capitalrx/grafana/blob/main/pkg/expr/sql/parser_allow.go
 export const ALLOWED_FUNCTIONS = [
   'if',
   'coalesce',

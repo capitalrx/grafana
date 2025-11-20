@@ -5,16 +5,16 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/live/model"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/live/model"
 )
 
 var (
 	logger = log.New("live.features") // scoped to all features?
 )
 
-//go:generate mockgen -destination=broadcast_mock.go -package=features github.com/grafana/grafana/pkg/services/live/features LiveMessageStore
+//go:generate mockgen -destination=broadcast_mock.go -package=features github.com/capitalrx/grafana/pkg/services/live/features LiveMessageStore
 
 type LiveMessageStore interface {
 	SaveLiveMessage(query *model.SaveLiveMessageQuery) error

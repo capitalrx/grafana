@@ -46,18 +46,18 @@ You must use relative references when linking to docs within the Grafana repo. P
 
 ### Transformations\*
 
-In panels using the extract fields transformation, where one of the extracted names collides with one of the already existing fields, the extracted field will be renamed. Issue [#77569](https://github.com/grafana/grafana/issues/77569).
+In panels using the extract fields transformation, where one of the extracted names collides with one of the already existing fields, the extracted field will be renamed. Issue [#77569](https://github.com/capitalrx/grafana/issues/77569).
 
 If you use the Table visualization, you might see some inconsistencies in your panels. We have updated the table column naming. This will potentially affect field transformations and/or field overrides. To resolve this, either:
 
 - Update the transformation you are using
-- Update field override. Issue [#76899](https://github.com/grafana/grafana/issues/76899).
+- Update field override. Issue [#76899](https://github.com/capitalrx/grafana/issues/76899).
 
-Users who have transformations with the Time field might see their transformations are not working. Those panels that have broken transformations will fail to render. This is because we changed the field key. See related PR: [#69865](https://github.com/grafana/grafana/pull/69865). To resolve this, either:
+Users who have transformations with the Time field might see their transformations are not working. Those panels that have broken transformations will fail to render. This is because we changed the field key. See related PR: [#69865](https://github.com/capitalrx/grafana/pull/69865). To resolve this, either:
 
 - Remove the affected panel and re-create it
 - Select the Time field again
-- Edit the time field as Time for transformation in panel.json or dashboard.json. Issue [#76641](https://github.com/grafana/grafana/issues/76641).
+- Edit the time field as Time for transformation in panel.json or dashboard.json. Issue [#76641](https://github.com/capitalrx/grafana/issues/76641).
 
 ### Data source permissions\*
 

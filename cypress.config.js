@@ -41,7 +41,7 @@ module.exports = defineConfig({
 
       on('task', {
         getJSONFilesFromDir: async ({ relativePath }) => {
-          // CWD is set for plugins in the cli but not for the main grafana repo: https://github.com/grafana/grafana/blob/main/packages/grafana-e2e/cli.js#L12
+          // CWD is set for plugins in the cli but not for the main grafana repo: https://github.com/capitalrx/grafana/blob/main/packages/grafana-e2e/cli.js#L12
           const projectPath = config.env.CWD || config.fileServerFolder || process.cwd();
           const directoryPath = path.join(projectPath, relativePath);
           const jsonFiles = fs.readdirSync(directoryPath);

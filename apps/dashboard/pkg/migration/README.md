@@ -194,7 +194,7 @@ type ConversionError struct {
 Metrics must be registered with Prometheus during service initialization:
 
 ```go
-import "github.com/grafana/grafana/apps/dashboard/pkg/migration"
+import "github.com/capitalrx/grafana/apps/dashboard/pkg/migration"
 
 // Register metrics with Prometheus
 migration.RegisterMetrics(prometheusRegistry)
@@ -294,4 +294,4 @@ yarn test DashboardMigratorToBackend.test.ts
 
 ## Related documentation
 
-- [PR #110178 - Dashboard migration: Add missing metrics registration](https://github.com/grafana/grafana/pull/110178)
+- [PR #110178 - Dashboard migration: Add missing metrics registration](https://github.com/capitalrx/grafana/pull/110178)

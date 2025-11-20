@@ -5,7 +5,7 @@ import (
 	"hash/crc32"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 const GrafanaPrefix = "gl"

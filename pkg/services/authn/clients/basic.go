@@ -3,8 +3,8 @@ package clients
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/apimachinery/errutil"
-	"github.com/grafana/grafana/pkg/services/authn"
+	"github.com/capitalrx/grafana/pkg/apimachinery/errutil"
+	"github.com/capitalrx/grafana/pkg/services/authn"
 )
 
 var errDecodingBasicAuthHeader = errutil.BadRequest("basic-auth.invalid-header", errutil.WithPublicMessage("Invalid Basic Auth Header"))

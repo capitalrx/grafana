@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/registry/apis/secret/encryption"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/encryption/cipher"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/encryption"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/encryption/cipher"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 const (

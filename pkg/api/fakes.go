@@ -3,8 +3,8 @@ package api
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/services/rendering"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/services/rendering"
 )
 
 type fakePluginInstaller struct {

@@ -142,7 +142,7 @@ function UnifiedAlertList(props: PanelProps<UnifiedAlertListOptions>) {
   const shouldFetchGrafanaRules = (!dataSourceName || dataSourceName === GRAFANA_RULES_SOURCE_NAME) && gmaViewAllowed;
 
   //For grafana managed rules, get the result using RTK Query to avoid the need of using the redux store
-  //See https://github.com/grafana/grafana/pull/70482
+  //See https://github.com/capitalrx/grafana/pull/70482
   const {
     currentData: grafanaPromRules = [],
     isLoading: grafanaRulesLoading,

@@ -159,7 +159,7 @@ Knobs are deprecated in favor of using controls.
 
 #### Migrating a story from Knobs to Controls
 
-As a test, we migrated the [button story](https://github.com/grafana/grafana/blob/main/packages/grafana-ui/src/components/Button/Button.story.tsx).
+As a test, we migrated the [button story](https://github.com/capitalrx/grafana/blob/main/packages/grafana-ui/src/components/Button/Button.story.tsx).
 
 Here's the guide on how to migrate a story to controls.
 

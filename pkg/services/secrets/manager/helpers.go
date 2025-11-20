@@ -6,14 +6,14 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/ini.v1"
 
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/infra/usagestats"
-	encryptionprovider "github.com/grafana/grafana/pkg/services/encryption/provider"
-	encryptionservice "github.com/grafana/grafana/pkg/services/encryption/service"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/kmsproviders/osskmsproviders"
-	"github.com/grafana/grafana/pkg/services/secrets"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/infra/usagestats"
+	encryptionprovider "github.com/capitalrx/grafana/pkg/services/encryption/provider"
+	encryptionservice "github.com/capitalrx/grafana/pkg/services/encryption/service"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/kmsproviders/osskmsproviders"
+	"github.com/capitalrx/grafana/pkg/services/secrets"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 func SetupTestService(tb testing.TB, store secrets.Store) *SecretsService {

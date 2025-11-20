@@ -10,7 +10,7 @@ import (
 	"github.com/golang/snappy"
 	"github.com/prometheus/common/model"
 
-	"github.com/grafana/grafana/pkg/components/loki/logproto"
+	"github.com/capitalrx/grafana/pkg/components/loki/logproto"
 )
 
 // batch holds pending log streams waiting to be sent to Loki, and it's used

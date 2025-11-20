@@ -7,10 +7,10 @@ import (
 
 	"gopkg.in/yaml.v3"
 
-	"github.com/grafana/grafana/pkg/api/response"
-	"github.com/grafana/grafana/pkg/apimachinery/errutil"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	apimodels "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/api/response"
+	"github.com/capitalrx/grafana/pkg/apimachinery/errutil"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	apimodels "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
 )
 
 var errorUnsupportedMediaType = errutil.UnsupportedMediaType("alerting.unsupportedMediaType")

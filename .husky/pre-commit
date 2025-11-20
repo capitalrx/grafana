@@ -25,6 +25,6 @@ echo "  $ make lefthook-install"
 echo "Or, silence this message by cleaning up the old hooks"
 echo "  $ make cleanup-old-git-hooks"
 echo "\nPre-commit hooks will not run on this commit and it will be committed even if it contains lint errors."
-echo "See https://github.com/grafana/grafana/blob/main/contribute/developer-guide.md#configure-precommit-hooks for more info\n"
+echo "See https://github.com/capitalrx/grafana/blob/main/contribute/developer-guide.md#configure-precommit-hooks for more info\n"
 
 exit 0

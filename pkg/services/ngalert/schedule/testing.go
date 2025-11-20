@@ -9,8 +9,8 @@ import (
 
 	"github.com/stretchr/testify/mock"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 // waitForTimeChannel blocks the execution until either the channel ch has some data or a timeout of 10 second expires.

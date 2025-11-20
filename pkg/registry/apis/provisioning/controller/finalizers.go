@@ -12,11 +12,11 @@ import (
 	"k8s.io/client-go/dynamic"
 
 	"github.com/grafana/grafana-app-sdk/logging"
-	folders "github.com/grafana/grafana/apps/folder/pkg/apis/folder/v1beta1"
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
-	"github.com/grafana/grafana/apps/provisioning/pkg/repository"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/resources"
+	folders "github.com/capitalrx/grafana/apps/folder/pkg/apis/folder/v1beta1"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/repository"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/resources"
 )
 
 // RemoveOrphanResourcesFinalizer removes everything this repo created

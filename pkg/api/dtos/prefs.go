@@ -1,7 +1,7 @@
 package dtos
 
 import (
-	pref "github.com/grafana/grafana/pkg/services/preference"
+	pref "github.com/capitalrx/grafana/pkg/services/preference"
 )
 
 // swagger:model

@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	query "github.com/grafana/grafana/pkg/apis/query/v0alpha1"
+	query "github.com/capitalrx/grafana/pkg/apis/query/v0alpha1"
 )
 
 func TestParseQueriesIntoQueryDataRequest(t *testing.T) {

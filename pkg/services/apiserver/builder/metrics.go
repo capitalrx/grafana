@@ -1,7 +1,7 @@
 package builder
 
 import (
-	grafanarest "github.com/grafana/grafana/pkg/apiserver/rest"
+	grafanarest "github.com/capitalrx/grafana/pkg/apiserver/rest"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 )

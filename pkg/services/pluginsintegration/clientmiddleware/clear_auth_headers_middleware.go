@@ -5,7 +5,7 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 
-	"github.com/grafana/grafana/pkg/services/contexthandler"
+	"github.com/capitalrx/grafana/pkg/services/contexthandler"
 )
 
 // NewClearAuthHeadersMiddleware creates a new backend.HandlerMiddleware

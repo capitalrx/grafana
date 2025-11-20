@@ -23,16 +23,16 @@ import (
 	"go.uber.org/atomic"
 	"go.uber.org/goleak"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/infra/log/logtest"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	authzextv1 "github.com/grafana/grafana/pkg/services/authz/proto/v1"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/store/kind/dashboard"
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/infra/log/logtest"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	authzextv1 "github.com/capitalrx/grafana/pkg/services/authz/proto/v1"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/store/kind/dashboard"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 )
 
 // This verifies that we close all indexes properly and shutdown all background goroutines from our tests.
@@ -42,7 +42,7 @@ func TestMain(m *testing.M) {
 		goleak.IgnoreTopFunction("github.com/open-feature/go-sdk/openfeature.(*eventExecutor).startEventListener.func1.1"),
 		goleak.IgnoreTopFunction("go.opencensus.io/stats/view.(*worker).start"),
 		goleak.IgnoreTopFunction("github.com/blevesearch/bleve_index_api.AnalysisWorker"),                                       // These don't stop when index is closed.
-		goleak.IgnoreAnyFunction("github.com/grafana/grafana/pkg/storage/unified/search.(*bleveBackend).updateIndexSizeMetric"), // We don't have a way to stop this one yet.
+		goleak.IgnoreAnyFunction("github.com/capitalrx/grafana/pkg/storage/unified/search.(*bleveBackend).updateIndexSizeMetric"), // We don't have a way to stop this one yet.
 	)
 }
 

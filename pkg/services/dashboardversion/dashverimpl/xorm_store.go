@@ -4,9 +4,9 @@ import (
 	"context"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	dashver "github.com/grafana/grafana/pkg/services/dashboardversion"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	dashver "github.com/capitalrx/grafana/pkg/services/dashboardversion"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 )
 
 type sqlStore struct {

@@ -5,7 +5,7 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 
-	"github.com/grafana/grafana/pkg/api/response"
+	"github.com/capitalrx/grafana/pkg/api/response"
 )
 
 type FakeCommand struct {

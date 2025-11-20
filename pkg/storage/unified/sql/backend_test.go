@@ -12,13 +12,13 @@ import (
 	"github.com/stretchr/testify/require"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
-	"github.com/grafana/grafana/pkg/storage/unified/sql/db/dbimpl"
-	"github.com/grafana/grafana/pkg/storage/unified/sql/test"
-	"github.com/grafana/grafana/pkg/util/sqlite"
-	"github.com/grafana/grafana/pkg/util/testutil"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/db/dbimpl"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/test"
+	"github.com/capitalrx/grafana/pkg/util/sqlite"
+	"github.com/capitalrx/grafana/pkg/util/testutil"
 )
 
 var (

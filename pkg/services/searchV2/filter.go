@@ -9,8 +9,8 @@ import (
 	"github.com/blugelabs/bluge/search/searcher"
 	"github.com/blugelabs/bluge/search/similarity"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/store/entity"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/store/entity"
 )
 
 type PermissionFilter struct {

@@ -15,7 +15,7 @@ import (
 	"filippo.io/age"
 	"go.opentelemetry.io/otel/attribute"
 
-	"github.com/grafana/grafana/pkg/services/supportbundles"
+	"github.com/capitalrx/grafana/pkg/services/supportbundles"
 )
 
 var ErrCollectorPanicked = errors.New("collector panicked")

@@ -18,20 +18,20 @@ import (
 	"k8s.io/kube-openapi/pkg/spec3"
 	"k8s.io/kube-openapi/pkg/validation/spec"
 
-	dashboardv0alpha1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1"
-	folders "github.com/grafana/grafana/apps/folder/pkg/apis/folder/v1beta1"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/apiserver/builder"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	dashboardsearch "github.com/grafana/grafana/pkg/services/dashboards/service/search"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	foldermodel "github.com/grafana/grafana/pkg/services/folder"
-	"github.com/grafana/grafana/pkg/storage/legacysql/dualwrite"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
-	"github.com/grafana/grafana/pkg/storage/unified/search"
-	"github.com/grafana/grafana/pkg/util/errhttp"
+	dashboardv0alpha1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1"
+	folders "github.com/capitalrx/grafana/apps/folder/pkg/apis/folder/v1beta1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/builder"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	dashboardsearch "github.com/capitalrx/grafana/pkg/services/dashboards/service/search"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	foldermodel "github.com/capitalrx/grafana/pkg/services/folder"
+	"github.com/capitalrx/grafana/pkg/storage/legacysql/dualwrite"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/storage/unified/search"
+	"github.com/capitalrx/grafana/pkg/util/errhttp"
 )
 
 // The DTO returns everything the UI needs in a single request
@@ -53,8 +53,8 @@ func NewSearchHandler(tracer trace.Tracer, dual dualwrite.Service, legacyDashboa
 }
 
 func (s *SearchHandler) GetAPIRoutes(defs map[string]common.OpenAPIDefinition) *builder.APIRoutes {
-	searchResults := defs["github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1.SearchResults"].Schema
-	sortableFields := defs["github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1.SortableFields"].Schema
+	searchResults := defs["github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1.SearchResults"].Schema
+	sortableFields := defs["github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1.SortableFields"].Schema
 
 	return &builder.APIRoutes{
 		Namespace: []builder.APIRouteHandler{

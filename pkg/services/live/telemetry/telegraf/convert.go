@@ -9,8 +9,8 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/data/converters"
 	influx "github.com/influxdata/line-protocol"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/live/telemetry"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/live/telemetry"
 )
 
 var (

@@ -1,6 +1,6 @@
 package ualert
 
-import "github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+import "github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 
 // AddAlertRuleMissingSeriesEvalsToResolve adds missing_series_evals_to_resolve column to alert_rule and alert_rule_version tables.
 func AddAlertRuleMissingSeriesEvalsToResolve(mg *migrator.Migrator) {

@@ -3,7 +3,7 @@ package legacy_storage
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 // AMStore is a store of Alertmanager configurations.

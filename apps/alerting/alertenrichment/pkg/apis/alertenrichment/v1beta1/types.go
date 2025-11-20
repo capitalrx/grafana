@@ -3,7 +3,7 @@ package v1beta1
 import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	common "github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1"
+	common "github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1"
 )
 
 // JSONSchema descriptions help the enrichment suggest API to generate enrichment configurations.

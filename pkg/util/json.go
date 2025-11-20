@@ -5,7 +5,7 @@ import (
 
 	"github.com/jmespath-community/go-jmespath"
 
-	"github.com/grafana/grafana/pkg/apimachinery/errutil"
+	"github.com/capitalrx/grafana/pkg/apimachinery/errutil"
 )
 
 // DynMap defines a dynamic map interface.

@@ -9,8 +9,8 @@ import (
 	"github.com/grafana/authlib/cache"
 	"go.opentelemetry.io/otel/attribute"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
 )
 
 func userIdentifierCacheKey(namespace, userUID string) string {

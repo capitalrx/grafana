@@ -4,12 +4,12 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/dashboards"
-	"github.com/grafana/grafana/pkg/services/plugindashboards"
-	pluginDashboardsManager "github.com/grafana/grafana/pkg/services/pluginsintegration/dashboards"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/plugindashboards"
+	pluginDashboardsManager "github.com/capitalrx/grafana/pkg/services/pluginsintegration/dashboards"
 )
 
 func ProvideService(pluginDashboardStore pluginDashboardsManager.FileStore, dashboardPluginService dashboards.PluginService) *Service {

@@ -3,8 +3,8 @@ package validation
 import (
 	"github.com/google/uuid"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/gtime"
-	. "github.com/grafana/grafana/pkg/services/publicdashboards/models"
-	"github.com/grafana/grafana/pkg/util"
+	. "github.com/capitalrx/grafana/pkg/services/publicdashboards/models"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 func ValidatePublicDashboard(dto *SavePublicDashboardDTO) error {

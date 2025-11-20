@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/apps/dashboard/pkg/migration/schemaversion"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/migration/schemaversion"
 )
 
 func TestGetSchemaVersion(t *testing.T) {

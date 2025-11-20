@@ -310,7 +310,7 @@ describe('AutoSizeInput', () => {
 
   it('should render null values as expected', () => {
     // @ts-expect-error - look - the types forbid this, but we previously fixed an issue if the value is null
-    // so lets test it just in case https://github.com/grafana/grafana/pull/94078
+    // so lets test it just in case https://github.com/capitalrx/grafana/pull/94078
     render(<AutoSizeInput value={null} />);
 
     const input: HTMLInputElement = screen.getByTestId('autosize-input');

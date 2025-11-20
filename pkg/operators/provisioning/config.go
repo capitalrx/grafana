@@ -13,20 +13,20 @@ import (
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/transport"
 
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/services/apiserver"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/storage/unified"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/services/apiserver"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/storage/unified"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
 
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
-	authrt "github.com/grafana/grafana/apps/provisioning/pkg/auth"
-	client "github.com/grafana/grafana/apps/provisioning/pkg/generated/clientset/versioned"
-	"github.com/grafana/grafana/apps/provisioning/pkg/repository"
-	"github.com/grafana/grafana/apps/provisioning/pkg/repository/github"
-	"github.com/grafana/grafana/apps/provisioning/pkg/repository/local"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/resources"
-	secretdecrypt "github.com/grafana/grafana/pkg/registry/apis/secret/decrypt"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	authrt "github.com/capitalrx/grafana/apps/provisioning/pkg/auth"
+	client "github.com/capitalrx/grafana/apps/provisioning/pkg/generated/clientset/versioned"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/repository"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/repository/github"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/repository/local"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/resources"
+	secretdecrypt "github.com/capitalrx/grafana/pkg/registry/apis/secret/decrypt"
 )
 
 // provisioningControllerConfig contains the configuration that overlaps for the jobs and repo controllers

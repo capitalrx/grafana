@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	v0alpha1 "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1"
-	"github.com/grafana/grafana/pkg/storage/legacysql"
+	v0alpha1 "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/storage/legacysql"
 	"github.com/stretchr/testify/require"
 )
 

@@ -4,16 +4,16 @@ import (
 	"context"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/api/routing"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	"github.com/grafana/grafana/pkg/services/apikey"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/serviceaccounts"
-	"github.com/grafana/grafana/pkg/services/serviceaccounts/api"
-	"github.com/grafana/grafana/pkg/services/serviceaccounts/extsvcaccounts"
-	"github.com/grafana/grafana/pkg/services/serviceaccounts/manager"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/api/routing"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	"github.com/capitalrx/grafana/pkg/services/apikey"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/serviceaccounts"
+	"github.com/capitalrx/grafana/pkg/services/serviceaccounts/api"
+	"github.com/capitalrx/grafana/pkg/services/serviceaccounts/extsvcaccounts"
+	"github.com/capitalrx/grafana/pkg/services/serviceaccounts/manager"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 // ServiceAccountsProxy is a proxy for the serviceaccounts.Service interface

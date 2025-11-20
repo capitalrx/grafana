@@ -5,7 +5,7 @@ package ssosettingstests
 import (
 	context "context"
 
-	models "github.com/grafana/grafana/pkg/services/ssosettings/models"
+	models "github.com/capitalrx/grafana/pkg/services/ssosettings/models"
 	mock "github.com/stretchr/testify/mock"
 )
 

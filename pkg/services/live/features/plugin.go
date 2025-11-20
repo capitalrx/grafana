@@ -7,14 +7,14 @@ import (
 	"github.com/centrifugal/centrifuge"
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/services/live/model"
-	"github.com/grafana/grafana/pkg/services/live/orgchannel"
-	"github.com/grafana/grafana/pkg/services/live/runstream"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/services/live/model"
+	"github.com/capitalrx/grafana/pkg/services/live/orgchannel"
+	"github.com/capitalrx/grafana/pkg/services/live/runstream"
 )
 
-//go:generate mockgen -destination=plugin_mock.go -package=features github.com/grafana/grafana/pkg/services/live/features PluginContextGetter
+//go:generate mockgen -destination=plugin_mock.go -package=features github.com/capitalrx/grafana/pkg/services/live/features PluginContextGetter
 
 type PluginContextGetter interface {
 	GetPluginContext(ctx context.Context, user identity.Requester, pluginID string, datasourceUID string, skipCache bool) (backend.PluginContext, error)

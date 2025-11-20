@@ -6,7 +6,7 @@ inputs:
       metadata:
         kind: core
       cue_imports:
-        - '%__config_dir%/../packages/grafana-schema/src/common:github.com/grafana/grafana/packages/grafana-schema/src/common'
+        - '%__config_dir%/../packages/grafana-schema/src/common:github.com/capitalrx/grafana/packages/grafana-schema/src/common'
 
 output:
   directory: '%__config_dir%/../packages/grafana-schema/src/schema/dashboard/'

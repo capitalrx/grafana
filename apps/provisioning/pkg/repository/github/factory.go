@@ -7,7 +7,7 @@ import (
 	"github.com/google/go-github/v70/github"
 	"golang.org/x/oauth2"
 
-	common "github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1"
+	common "github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1"
 )
 
 // Factory creates new GitHub clients.

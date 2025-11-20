@@ -7,7 +7,7 @@ import (
 	"github.com/grafana/dskit/modules"
 	"github.com/grafana/dskit/services"
 
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/log"
 )
 
 var _ services.ManagerListener = (*serviceListener)(nil)

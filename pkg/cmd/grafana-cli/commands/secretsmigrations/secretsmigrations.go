@@ -3,8 +3,8 @@ package secretsmigrations
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/utils"
-	"github.com/grafana/grafana/pkg/server"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/utils"
+	"github.com/capitalrx/grafana/pkg/server"
 )
 
 func ReEncryptDEKS(_ utils.CommandLine, runner server.Runner) error {

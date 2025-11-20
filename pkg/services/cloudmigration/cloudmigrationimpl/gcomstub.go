@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/grafana/grafana/pkg/services/gcom"
+	"github.com/capitalrx/grafana/pkg/services/gcom"
 )
 
 type gcomStub struct {

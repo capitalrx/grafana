@@ -8,12 +8,12 @@ import (
 	"github.com/prometheus/alertmanager/config"
 	"github.com/prometheus/common/model"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	ngalertapi "github.com/grafana/grafana/pkg/services/ngalert/api/compat"
-	"github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	"github.com/grafana/grafana/pkg/services/ngalert/provisioning"
-	"github.com/grafana/grafana/pkg/services/user"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
+	ngalertapi "github.com/capitalrx/grafana/pkg/services/ngalert/api/compat"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/provisioning"
+	"github.com/capitalrx/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type muteTimeInterval struct {

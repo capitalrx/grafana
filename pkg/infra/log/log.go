@@ -24,9 +24,9 @@ import (
 	"gopkg.in/ini.v1"
 
 	"github.com/grafana/grafana-app-sdk/logging"
-	"github.com/grafana/grafana/pkg/infra/log/term"
-	"github.com/grafana/grafana/pkg/infra/log/text"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/infra/log/term"
+	"github.com/capitalrx/grafana/pkg/infra/log/text"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 var (

@@ -3,8 +3,8 @@ package apikeyimpl
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/services/apikey"
-	"github.com/grafana/grafana/pkg/services/quota"
+	"github.com/capitalrx/grafana/pkg/services/apikey"
+	"github.com/capitalrx/grafana/pkg/services/quota"
 )
 
 type store interface {

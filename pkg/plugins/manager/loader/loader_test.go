@@ -11,17 +11,17 @@ import (
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/config"
-	"github.com/grafana/grafana/pkg/plugins/manager/fakes"
-	"github.com/grafana/grafana/pkg/plugins/manager/pipeline/bootstrap"
-	"github.com/grafana/grafana/pkg/plugins/manager/pipeline/discovery"
-	"github.com/grafana/grafana/pkg/plugins/manager/pipeline/initialization"
-	"github.com/grafana/grafana/pkg/plugins/manager/pipeline/termination"
-	"github.com/grafana/grafana/pkg/plugins/manager/pipeline/validation"
-	"github.com/grafana/grafana/pkg/plugins/manager/sources"
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginerrs"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/config"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/fakes"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/pipeline/bootstrap"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/pipeline/discovery"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/pipeline/initialization"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/pipeline/termination"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/pipeline/validation"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/sources"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginerrs"
 )
 
 var compareOpts = []cmp.Option{cmpopts.IgnoreFields(plugins.Plugin{}, "client", "log", "mu"), fsComparer}
@@ -89,7 +89,7 @@ func TestLoader_Load(t *testing.T) {
 								Large: "public/plugins/cloudwatch/img/amazon-web-services.png",
 							},
 							Links: []plugins.InfoLink{
-								{Name: "Raise issue", URL: "https://github.com/grafana/grafana/issues/new"},
+								{Name: "Raise issue", URL: "https://github.com/capitalrx/grafana/issues/new"},
 								{Name: "Documentation", URL: "https://grafana.com/docs/grafana/latest/datasources/aws-cloudwatch/"},
 							},
 						},

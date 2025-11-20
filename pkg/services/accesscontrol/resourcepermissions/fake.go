@@ -1,6 +1,6 @@
 package resourcepermissions
 
-import "github.com/grafana/grafana/pkg/services/accesscontrol"
+import "github.com/capitalrx/grafana/pkg/services/accesscontrol"
 
 type FakeActionSetSvc struct {
 	ExpectedErr         error

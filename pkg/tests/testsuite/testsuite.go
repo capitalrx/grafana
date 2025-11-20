@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/db"
 )
 
 func Run(m *testing.M) {

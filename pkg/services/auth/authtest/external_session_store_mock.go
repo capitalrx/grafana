@@ -5,7 +5,7 @@ package authtest
 import (
 	context "context"
 
-	auth "github.com/grafana/grafana/pkg/services/auth"
+	auth "github.com/capitalrx/grafana/pkg/services/auth"
 
 	mock "github.com/stretchr/testify/mock"
 )

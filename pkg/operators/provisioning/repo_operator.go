@@ -10,17 +10,17 @@ import (
 	"time"
 
 	"github.com/grafana/grafana-app-sdk/logging"
-	appcontroller "github.com/grafana/grafana/apps/provisioning/pkg/controller"
+	appcontroller "github.com/capitalrx/grafana/apps/provisioning/pkg/controller"
 	"github.com/urfave/cli/v2"
 	"k8s.io/client-go/tools/cache"
 
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/controller"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/jobs"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/resources"
-	"github.com/grafana/grafana/pkg/services/apiserver/standalone"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/controller"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/jobs"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/resources"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/standalone"
+	"github.com/capitalrx/grafana/pkg/setting"
 
-	informer "github.com/grafana/grafana/apps/provisioning/pkg/generated/informers/externalversions"
+	informer "github.com/capitalrx/grafana/apps/provisioning/pkg/generated/informers/externalversions"
 )
 
 func RunRepoController(opts standalone.BuildInfo, c *cli.Context, cfg *setting.Cfg) error {

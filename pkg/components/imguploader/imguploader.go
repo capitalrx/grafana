@@ -6,9 +6,9 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/grafana/grafana/pkg/components/imguploader/gcs"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/components/imguploader/gcs"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 const (
@@ -16,7 +16,7 @@ const (
 	defaultGCSSignedURLExpiration = 7 * 24 * time.Hour // 7 days
 )
 
-//go:generate mockgen -destination=mock.go -package=imguploader github.com/grafana/grafana/pkg/components/imguploader ImageUploader
+//go:generate mockgen -destination=mock.go -package=imguploader github.com/capitalrx/grafana/pkg/components/imguploader ImageUploader
 type ImageUploader interface {
 	Upload(ctx context.Context, path string) (string, error)
 }

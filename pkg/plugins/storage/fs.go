@@ -12,8 +12,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
 )
 
 var _ ZipExtractor = (*FS)(nil)

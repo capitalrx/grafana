@@ -10,7 +10,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
 
 	"github.com/grafana/grafana/pkg/promlib"
-	"github.com/grafana/grafana/pkg/tsdb/prometheus/azureauth"
+	"github.com/capitalrx/grafana/pkg/tsdb/prometheus/azureauth"
 )
 
 type Service struct {

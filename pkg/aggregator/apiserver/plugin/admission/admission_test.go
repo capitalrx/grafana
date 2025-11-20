@@ -13,7 +13,7 @@ import (
 	example "k8s.io/apiserver/pkg/apis/example/v1"
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
-	"github.com/grafana/grafana/pkg/aggregator/apiserver/plugin/admission"
+	"github.com/capitalrx/grafana/pkg/aggregator/apiserver/plugin/admission"
 	"github.com/stretchr/testify/require"
 )
 

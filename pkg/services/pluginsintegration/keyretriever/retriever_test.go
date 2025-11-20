@@ -4,11 +4,11 @@ import (
 	"context"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/infra/kvstore"
-	"github.com/grafana/grafana/pkg/plugins/manager/signature/statickey"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/keyretriever/dynamic"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/keystore"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/kvstore"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/signature/statickey"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/keyretriever/dynamic"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/keystore"
+	"github.com/capitalrx/grafana/pkg/setting"
 	"github.com/stretchr/testify/require"
 )
 

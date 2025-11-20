@@ -6,7 +6,7 @@ import (
 	"google.golang.org/grpc/reflection"
 	"google.golang.org/grpc/reflection/grpc_reflection_v1alpha"
 
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 // ReflectionService implements the gRPC Server Reflection Protocol:

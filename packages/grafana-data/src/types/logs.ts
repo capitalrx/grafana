@@ -184,7 +184,7 @@ export interface DataSourceWithLogsContextSupport<TQuery extends DataQuery = Dat
     scopedVars?: ScopedVars
   ): React.ReactNode;
 
-  // Does the datasource support the user adjusting the time range in the logs context window? https://github.com/grafana/grafana/pull/109901
+  // Does the datasource support the user adjusting the time range in the logs context window? https://github.com/capitalrx/grafana/pull/109901
   supportsAdjustableWindow?: boolean;
 }
 

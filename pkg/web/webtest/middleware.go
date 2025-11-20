@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"net/http/httptest"
 
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 type Context struct {

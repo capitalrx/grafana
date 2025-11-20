@@ -3,13 +3,13 @@ package advisor
 import (
 	"github.com/grafana/grafana-app-sdk/app"
 	"github.com/grafana/grafana-app-sdk/simple"
-	"github.com/grafana/grafana/apps/advisor/pkg/apis"
-	advisorv0alpha1 "github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1"
-	advisorapp "github.com/grafana/grafana/apps/advisor/pkg/app"
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checkregistry"
-	"github.com/grafana/grafana/pkg/services/apiserver/builder"
-	"github.com/grafana/grafana/pkg/services/apiserver/builder/runner"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/apis"
+	advisorv0alpha1 "github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1"
+	advisorapp "github.com/capitalrx/grafana/apps/advisor/pkg/app"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checkregistry"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/builder"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/builder/runner"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type AdvisorAppProvider struct {

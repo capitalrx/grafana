@@ -8,9 +8,9 @@ import (
 	"hash/fnv"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/infra/log"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
 )
 
 func (s *SearchOptions) HashString() (string, error) {

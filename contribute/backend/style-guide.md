@@ -31,7 +31,7 @@ Tests must use the standard library, `testing`. For assertions, prefer using [te
 
 ### Test Suite and Database Tests
 
-We have a [testsuite](https://github.com/grafana/grafana/tree/main/pkg/tests/testsuite) package which provides utilities for package-level setup and teardown.
+We have a [testsuite](https://github.com/capitalrx/grafana/tree/main/pkg/tests/testsuite) package which provides utilities for package-level setup and teardown.
 
 Currently, this is just used to ensure that test databases are correctly set up and torn down, but it also provides a place we can attach future tasks.
 
@@ -43,7 +43,7 @@ package mypkg
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/tests/testsuite"
+	"github.com/capitalrx/grafana/pkg/tests/testsuite"
 )
 
 func TestMain(m *testing.M) {
@@ -207,7 +207,7 @@ In database related code, we follow certain patterns.
 ### Foreign keys
 
 While they can be useful, we don't generally use foreign key constraints in Grafana, for historical and
-technical reasons. See this [comment](https://github.com/grafana/grafana/issues/3269#issuecomment-383328548) by Torkel
+technical reasons. See this [comment](https://github.com/capitalrx/grafana/issues/3269#issuecomment-383328548) by Torkel
 for context.
 
 ### Unique columns

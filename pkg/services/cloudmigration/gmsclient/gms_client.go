@@ -13,9 +13,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/cloudmigration"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/cloudmigration"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 // NewGMSClient returns an implementation of Client that queries GrafanaMigrationService

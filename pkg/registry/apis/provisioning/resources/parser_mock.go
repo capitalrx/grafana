@@ -5,7 +5,7 @@ package resources
 import (
 	context "context"
 
-	repository "github.com/grafana/grafana/apps/provisioning/pkg/repository"
+	repository "github.com/capitalrx/grafana/apps/provisioning/pkg/repository"
 	mock "github.com/stretchr/testify/mock"
 )
 

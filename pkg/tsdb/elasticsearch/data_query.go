@@ -15,8 +15,8 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	es "github.com/grafana/grafana/pkg/tsdb/elasticsearch/client"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
+	es "github.com/capitalrx/grafana/pkg/tsdb/elasticsearch/client"
 )
 
 const (

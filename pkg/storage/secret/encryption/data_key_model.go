@@ -3,7 +3,7 @@ package encryption
 import (
 	"time"
 
-	"github.com/grafana/grafana/pkg/registry/apis/secret/encryption"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/encryption"
 )
 
 // SecretDataKey does not have a mirrored K8s resource

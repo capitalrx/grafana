@@ -8,9 +8,9 @@ import (
 
 	data "github.com/grafana/grafana-plugin-sdk-go/experimental/apis/data/v0alpha1"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
 )
 
 // LegacyDataSourceRetriever supports finding a reference to datasources using the name or internal ID

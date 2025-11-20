@@ -13,10 +13,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"k8s.io/component-base/tracing"
 
-	"github.com/grafana/grafana/pkg/infra/log/logtest"
-	"github.com/grafana/grafana/pkg/services/ngalert/eval"
-	ngmodels "github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/infra/log/logtest"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/eval"
+	ngmodels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 func TestSyncPersister_saveAlertStates(t *testing.T) {

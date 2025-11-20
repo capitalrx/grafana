@@ -21,7 +21,7 @@ import (
 
 	"github.com/grafana/codejen"
 	"github.com/grafana/cuetsy"
-	"github.com/grafana/grafana/pkg/codegen"
+	"github.com/capitalrx/grafana/pkg/codegen"
 )
 
 // CoreDefParentPath is the path, relative to the repository root, where

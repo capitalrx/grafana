@@ -714,7 +714,7 @@ describe('given dashboard with row and panel repeat', () => {
   });
 });
 
-// fix for https://github.com/grafana/grafana/issues/38805
+// fix for https://github.com/capitalrx/grafana/issues/38805
 describe('given dashboard with row and repeats on same row', () => {
   it('should set correct gridPos when row is expanding', () => {
     const ROW1 = 1;

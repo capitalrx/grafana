@@ -18,11 +18,11 @@ import (
 	"github.com/prometheus/prometheus/prompb"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/util"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/metrics"
-	ngmodels "github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/metrics"
+	ngmodels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 func TestPointsFromFrames(t *testing.T) {

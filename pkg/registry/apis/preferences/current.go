@@ -10,12 +10,12 @@ import (
 	"k8s.io/kube-openapi/pkg/spec3"
 	"k8s.io/kube-openapi/pkg/validation/spec"
 
-	preferences "github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/registry/apis/preferences/legacy"
-	"github.com/grafana/grafana/pkg/services/apiserver/builder"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util/errhttp"
+	preferences "github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/registry/apis/preferences/legacy"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/builder"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/util/errhttp"
 )
 
 type calculator struct {
@@ -36,7 +36,7 @@ func newCalculator(cfg *setting.Cfg, sql *legacy.LegacySQL) *calculator {
 }
 
 func (s *calculator) GetAPIRoutes(defs map[string]common.OpenAPIDefinition) *builder.APIRoutes {
-	schema := defs["github.com/grafana/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.Preference"].Schema
+	schema := defs["github.com/capitalrx/grafana/apps/preferences/pkg/apis/preferences/v1alpha1.Preference"].Schema
 
 	return &builder.APIRoutes{
 		Namespace: []builder.APIRouteHandler{

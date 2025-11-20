@@ -5,7 +5,7 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/grafana/grafana/pkg/storage/unified/sql/sqltemplate/mocks"
+	"github.com/capitalrx/grafana/pkg/storage/unified/sql/sqltemplate/mocks"
 	"k8s.io/utils/ptr"
 )
 

@@ -9,9 +9,9 @@ import (
 	sync "sync"
 	time "time"
 
-	versioned "github.com/grafana/grafana/pkg/aggregator/generated/clientset/versioned"
-	aggregation "github.com/grafana/grafana/pkg/aggregator/generated/informers/externalversions/aggregation"
-	internalinterfaces "github.com/grafana/grafana/pkg/aggregator/generated/informers/externalversions/internalinterfaces"
+	versioned "github.com/capitalrx/grafana/pkg/aggregator/generated/clientset/versioned"
+	aggregation "github.com/capitalrx/grafana/pkg/aggregator/generated/informers/externalversions/aggregation"
+	internalinterfaces "github.com/capitalrx/grafana/pkg/aggregator/generated/informers/externalversions/internalinterfaces"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

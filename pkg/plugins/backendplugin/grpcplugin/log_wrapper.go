@@ -7,7 +7,7 @@ import (
 
 	"github.com/hashicorp/go-hclog"
 
-	plog "github.com/grafana/grafana/pkg/plugins/log"
+	plog "github.com/capitalrx/grafana/pkg/plugins/log"
 )
 
 type logWrapper struct {

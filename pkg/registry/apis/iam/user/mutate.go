@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	iamv0alpha1 "github.com/grafana/grafana/apps/iam/pkg/apis/iam/v0alpha1"
+	iamv0alpha1 "github.com/capitalrx/grafana/apps/iam/pkg/apis/iam/v0alpha1"
 )
 
 func MutateOnCreate(ctx context.Context, obj *iamv0alpha1.User) error {

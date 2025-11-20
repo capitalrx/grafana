@@ -3,8 +3,8 @@ package pipeline
 import (
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/services/live/pipeline/pattern"
-	"github.com/grafana/grafana/pkg/services/live/pipeline/tree"
+	"github.com/capitalrx/grafana/pkg/services/live/pipeline/pattern"
+	"github.com/capitalrx/grafana/pkg/services/live/pipeline/tree"
 )
 
 func (r ChannelRule) Valid() (bool, string) {

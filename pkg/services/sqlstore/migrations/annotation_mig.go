@@ -3,9 +3,9 @@ package migrations
 import (
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 
-	. "github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+	. "github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 )
 
 func addAnnotationMig(mg *Migrator) {

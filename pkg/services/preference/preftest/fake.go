@@ -3,7 +3,7 @@ package preftest
 import (
 	"context"
 
-	pref "github.com/grafana/grafana/pkg/services/preference"
+	pref "github.com/capitalrx/grafana/pkg/services/preference"
 )
 
 type FakePreferenceService struct {

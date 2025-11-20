@@ -188,7 +188,7 @@ For Grafana versions prior to v9.2, additional information might also be availab
 For example, to view the release notes for Grafana v8.5.13, go to https://grafana.com/docs/grafana/v8.5/release-notes/.
 {{< /admonition >}}
 
-For a complete list of every change, with links to pull requests and related issues when available, see the [Changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md).
+For a complete list of every change, with links to pull requests and related issues when available, see the [Changelog](https://github.com/capitalrx/grafana/blob/main/CHANGELOG.md).
 
 ## Grafana 12
 

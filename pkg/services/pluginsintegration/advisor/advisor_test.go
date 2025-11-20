@@ -6,11 +6,11 @@ import (
 	"time"
 
 	"github.com/grafana/grafana-app-sdk/resource"
-	advisorv0alpha1 "github.com/grafana/grafana/apps/advisor/pkg/apis/advisor/v0alpha1"
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checks"
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checks/datasourcecheck"
-	"github.com/grafana/grafana/apps/advisor/pkg/app/checks/plugincheck"
-	"github.com/grafana/grafana/pkg/setting"
+	advisorv0alpha1 "github.com/capitalrx/grafana/apps/advisor/pkg/apis/advisor/v0alpha1"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checks"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checks/datasourcecheck"
+	"github.com/capitalrx/grafana/apps/advisor/pkg/app/checks/plugincheck"
+	"github.com/capitalrx/grafana/pkg/setting"
 	"github.com/stretchr/testify/assert"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )

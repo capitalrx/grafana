@@ -3,8 +3,8 @@ package shorturls
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/api/dtos"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 type Service interface {

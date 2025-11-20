@@ -32,8 +32,8 @@ export type Props = {
 
 /**
  * Order in which known link types are shown in the span details
- * This was added in https://github.com/grafana/grafana/pull/101881 to preserve the order of links
- * customers might have been used to. This will be revisted in https://github.com/grafana/grafana/issues/101925
+ * This was added in https://github.com/capitalrx/grafana/pull/101881 to preserve the order of links
+ * customers might have been used to. This will be revisted in https://github.com/capitalrx/grafana/issues/101925
  */
 const LINKS_ORDER = [
   SpanLinkType.Metrics,
@@ -81,7 +81,7 @@ export const getSpanDetailLinkButtons = (props: Props) => {
 
     // if in explore, use the plugin extension point to get the link
     // note: plugin extension point links are not currently supported in panel plugins
-    // TODO: create SpanLinkDef in createSpanLink (https://github.com/grafana/grafana/issues/101925)
+    // TODO: create SpanLinkDef in createSpanLink (https://github.com/capitalrx/grafana/issues/101925)
     if (linkToProfiles && app === CoreApp.Explore) {
       // ensure we have a profile link
       const profilesDrilldownPluginId = 'grafana-pyroscope-app';
@@ -214,7 +214,7 @@ const createLinkModel = (
         if (link.onClick) {
           link.onClick?.(event);
         } else {
-          // TODO: Replace with https://github.com/grafana/grafana/issues/103593
+          // TODO: Replace with https://github.com/capitalrx/grafana/issues/103593
           // We need to handle absolute and relative URLs correctly because when
           // there are multiple links we group them into a dropdown and not use
           // the grafana/ui DataLinkButton component which handles relative and

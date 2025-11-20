@@ -1,8 +1,8 @@
 package api
 
 import (
-	"github.com/grafana/grafana/pkg/services/ldap"
-	"github.com/grafana/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/services/ldap"
+	"github.com/capitalrx/grafana/pkg/services/org"
 )
 
 // swagger:parameters getUserFromLDAP

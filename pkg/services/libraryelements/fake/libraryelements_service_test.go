@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/services/libraryelements/fake"
-	"github.com/grafana/grafana/pkg/services/libraryelements/model"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/services/libraryelements/fake"
+	"github.com/capitalrx/grafana/pkg/services/libraryelements/model"
 )
 
 func TestLibraryElementService(t *testing.T) {

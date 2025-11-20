@@ -1,8 +1,8 @@
 package bundleregistry
 
 import (
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/supportbundles"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/supportbundles"
 )
 
 // Service is the service that registers support bundle collectors.

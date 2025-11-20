@@ -4,18 +4,18 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	queryService "github.com/grafana/grafana/pkg/services/query"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	queryService "github.com/capitalrx/grafana/pkg/services/query"
 )
 
 // Set of headers that we want to forward to the datasource api servers. Those are used i.e. for
 // cache control or identifying the source of the request.
 //
 // The headers related to grafana alerting (x-rule-*), should match the list at
-// https://github.com/grafana/grafana/blob/f8ae71e4583499dd461ebaed31451966be04220b/pkg/services/pluginsintegration/clientmiddleware/usealertingheaders_middleware.go#L23
+// https://github.com/capitalrx/grafana/blob/f8ae71e4583499dd461ebaed31451966be04220b/pkg/services/pluginsintegration/clientmiddleware/usealertingheaders_middleware.go#L23
 //
 // The headers related to grafana query should match the list at
-// https://github.com/grafana/grafana/blob/f8ae71e4583499dd461ebaed31451966be04220b/pkg/services/pluginsintegration/clientmiddleware/tracing_header_middleware.go#L36
+// https://github.com/capitalrx/grafana/blob/f8ae71e4583499dd461ebaed31451966be04220b/pkg/services/pluginsintegration/clientmiddleware/tracing_header_middleware.go#L36
 //
 // The usage of strings.ToLower is because the server would convert `FromAlert` to `Fromalert`. So the make matching
 // easier, we just match all headers in lower case.

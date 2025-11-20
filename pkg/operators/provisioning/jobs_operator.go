@@ -13,19 +13,19 @@ import (
 	"github.com/urfave/cli/v2"
 	"k8s.io/client-go/tools/cache"
 
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/jobs"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/jobs/export"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/jobs/migrate"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/jobs/move"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/jobs/sync"
-	"github.com/grafana/grafana/pkg/registry/apis/provisioning/resources"
-	"github.com/grafana/grafana/pkg/services/apiserver/standalone"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/jobs"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/jobs/export"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/jobs/migrate"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/jobs/move"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/jobs/sync"
+	"github.com/capitalrx/grafana/pkg/registry/apis/provisioning/resources"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/standalone"
+	"github.com/capitalrx/grafana/pkg/setting"
 
-	"github.com/grafana/grafana/apps/provisioning/pkg/controller"
-	informer "github.com/grafana/grafana/apps/provisioning/pkg/generated/informers/externalversions"
-	"github.com/grafana/grafana/apps/provisioning/pkg/repository"
-	deletepkg "github.com/grafana/grafana/pkg/registry/apis/provisioning/jobs/delete"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/controller"
+	informer "github.com/capitalrx/grafana/apps/provisioning/pkg/generated/informers/externalversions"
+	"github.com/capitalrx/grafana/apps/provisioning/pkg/repository"
+	deletepkg "github.com/capitalrx/grafana/pkg/registry/apis/provisioning/jobs/delete"
 )
 
 func RunJobController(opts standalone.BuildInfo, c *cli.Context, cfg *setting.Cfg) error {

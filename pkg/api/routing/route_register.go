@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/middleware"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/middleware"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 type Router interface {

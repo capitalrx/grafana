@@ -1,4 +1,4 @@
-// Core Grafana history https://github.com/grafana/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/dataquery.ts
+// Core Grafana history https://github.com/capitalrx/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/dataquery.ts
 import { Scope, ScopeSpec, ScopeSpecFilter } from '@grafana/data';
 import * as common from '@grafana/schema';
 
@@ -32,7 +32,7 @@ export interface Prometheus extends common.DataQuery {
   instant?: boolean;
   /**
    * @deprecated Used to specify how many times to divide max data points by. We use max data points under query options
-   * See https://github.com/grafana/grafana/issues/48081
+   * See https://github.com/capitalrx/grafana/issues/48081
    */
   intervalFactor?: number;
   /**

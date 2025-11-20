@@ -4,11 +4,11 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/clients"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/features"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models/resources"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/services"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/clients"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/features"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models/resources"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/services"
 
 	"github.com/patrickmn/go-cache"
 )

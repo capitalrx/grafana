@@ -3,8 +3,8 @@ package migrations
 import (
 	"fmt"
 
-	. "github.com/grafana/grafana/pkg/services/sqlstore/migrator"
-	"github.com/grafana/grafana/pkg/util/xorm"
+	. "github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 )
 
 // does not rely on dashboard table existing, can be run before dashboard migrations

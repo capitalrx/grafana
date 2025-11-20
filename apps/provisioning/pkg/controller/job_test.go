@@ -9,9 +9,9 @@ import (
 	"github.com/stretchr/testify/require"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
-	provisioningfake "github.com/grafana/grafana/apps/provisioning/pkg/generated/clientset/versioned/fake"
-	provisioninginformers "github.com/grafana/grafana/apps/provisioning/pkg/generated/informers/externalversions"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	provisioningfake "github.com/capitalrx/grafana/apps/provisioning/pkg/generated/clientset/versioned/fake"
+	provisioninginformers "github.com/capitalrx/grafana/apps/provisioning/pkg/generated/informers/externalversions"
 )
 
 func TestJobController_New(t *testing.T) {

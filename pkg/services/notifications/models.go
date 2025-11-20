@@ -4,7 +4,7 @@ import (
 	"crypto/tls"
 	"errors"
 
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 var ErrInvalidEmailCode = errors.New("invalid or expired email code")

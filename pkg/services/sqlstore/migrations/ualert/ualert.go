@@ -6,10 +6,10 @@ import (
 	"path/filepath"
 	"strconv"
 
-	"github.com/grafana/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 
-	ngmodels "github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+	ngmodels "github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 )
 
 var migTitle = "move dashboard alerts to unified alerting"

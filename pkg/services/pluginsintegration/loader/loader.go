@@ -3,15 +3,15 @@ package loader
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/config"
-	pluginsLoader "github.com/grafana/grafana/pkg/plugins/manager/loader"
-	"github.com/grafana/grafana/pkg/plugins/manager/pipeline/bootstrap"
-	"github.com/grafana/grafana/pkg/plugins/manager/pipeline/discovery"
-	"github.com/grafana/grafana/pkg/plugins/manager/pipeline/initialization"
-	"github.com/grafana/grafana/pkg/plugins/manager/pipeline/termination"
-	"github.com/grafana/grafana/pkg/plugins/manager/pipeline/validation"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginerrs"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/config"
+	pluginsLoader "github.com/capitalrx/grafana/pkg/plugins/manager/loader"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/pipeline/bootstrap"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/pipeline/discovery"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/pipeline/initialization"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/pipeline/termination"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/pipeline/validation"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginerrs"
 )
 
 var _ pluginsLoader.Service = (*Loader)(nil)

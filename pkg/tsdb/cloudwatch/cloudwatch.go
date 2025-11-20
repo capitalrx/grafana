@@ -20,9 +20,9 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/proxy"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/resource/httpadapter"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/clients"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/kinds/dataquery"
-	"github.com/grafana/grafana/pkg/tsdb/cloudwatch/models"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/clients"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/cloudwatch/models"
 	"github.com/patrickmn/go-cache"
 )
 
@@ -111,7 +111,7 @@ func NewDatasource(ctx context.Context, settings backend.DataSourceInstanceSetti
 
 // instrumentContext adds plugin key-values to the context; later, logger.FromContext(ctx) will provide a logger
 // that adds these values to its output.
-// TODO: move this into the sdk (see https://github.com/grafana/grafana/issues/82033)
+// TODO: move this into the sdk (see https://github.com/capitalrx/grafana/issues/82033)
 func instrumentContext(ctx context.Context, endpoint string, pCtx backend.PluginContext) context.Context {
 	p := []any{"endpoint", endpoint, "pluginId", pCtx.PluginID}
 	if pCtx.DataSourceInstanceSettings != nil {

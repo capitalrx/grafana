@@ -11,14 +11,14 @@ import (
 	"github.com/openfga/openfga/pkg/storage/sqlcommon"
 	"github.com/openfga/openfga/pkg/storage/sqlite"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/sqlstore"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/setting"
 
-	zlogger "github.com/grafana/grafana/pkg/services/authz/zanzana/logger"
-	"github.com/grafana/grafana/pkg/services/authz/zanzana/store/migration"
+	zlogger "github.com/capitalrx/grafana/pkg/services/authz/zanzana/logger"
+	"github.com/capitalrx/grafana/pkg/services/authz/zanzana/store/migration"
 )
 
 func NewStore(cfg *setting.Cfg, logger log.Logger) (storage.OpenFGADatastore, error) {

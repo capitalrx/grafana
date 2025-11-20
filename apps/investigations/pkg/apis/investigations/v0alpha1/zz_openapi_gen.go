@@ -12,26 +12,26 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.Investigation":                          schema_pkg_apis_investigations_v0alpha1_Investigation(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationCollectable":               schema_pkg_apis_investigations_v0alpha1_InvestigationCollectable(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationDatasourceRef":             schema_pkg_apis_investigations_v0alpha1_InvestigationDatasourceRef(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndex":                     schema_pkg_apis_investigations_v0alpha1_InvestigationIndex(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexCollectableSummary":   schema_pkg_apis_investigations_v0alpha1_InvestigationIndexCollectableSummary(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexInvestigationSummary": schema_pkg_apis_investigations_v0alpha1_InvestigationIndexInvestigationSummary(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexList":                 schema_pkg_apis_investigations_v0alpha1_InvestigationIndexList(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexPerson":               schema_pkg_apis_investigations_v0alpha1_InvestigationIndexPerson(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexSpec":                 schema_pkg_apis_investigations_v0alpha1_InvestigationIndexSpec(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexStatus":               schema_pkg_apis_investigations_v0alpha1_InvestigationIndexStatus(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexViewMode":             schema_pkg_apis_investigations_v0alpha1_InvestigationIndexViewMode(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexstatusOperatorState":  schema_pkg_apis_investigations_v0alpha1_InvestigationIndexstatusOperatorState(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationList":                      schema_pkg_apis_investigations_v0alpha1_InvestigationList(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationPerson":                    schema_pkg_apis_investigations_v0alpha1_InvestigationPerson(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationSpec":                      schema_pkg_apis_investigations_v0alpha1_InvestigationSpec(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationStatus":                    schema_pkg_apis_investigations_v0alpha1_InvestigationStatus(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationTimeRange":                 schema_pkg_apis_investigations_v0alpha1_InvestigationTimeRange(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationV0alpha1TimeRangeRaw":      schema_pkg_apis_investigations_v0alpha1_InvestigationV0alpha1TimeRangeRaw(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationViewMode":                  schema_pkg_apis_investigations_v0alpha1_InvestigationViewMode(ref),
-		"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationstatusOperatorState":       schema_pkg_apis_investigations_v0alpha1_InvestigationstatusOperatorState(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.Investigation":                          schema_pkg_apis_investigations_v0alpha1_Investigation(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationCollectable":               schema_pkg_apis_investigations_v0alpha1_InvestigationCollectable(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationDatasourceRef":             schema_pkg_apis_investigations_v0alpha1_InvestigationDatasourceRef(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndex":                     schema_pkg_apis_investigations_v0alpha1_InvestigationIndex(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexCollectableSummary":   schema_pkg_apis_investigations_v0alpha1_InvestigationIndexCollectableSummary(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexInvestigationSummary": schema_pkg_apis_investigations_v0alpha1_InvestigationIndexInvestigationSummary(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexList":                 schema_pkg_apis_investigations_v0alpha1_InvestigationIndexList(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexPerson":               schema_pkg_apis_investigations_v0alpha1_InvestigationIndexPerson(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexSpec":                 schema_pkg_apis_investigations_v0alpha1_InvestigationIndexSpec(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexStatus":               schema_pkg_apis_investigations_v0alpha1_InvestigationIndexStatus(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexViewMode":             schema_pkg_apis_investigations_v0alpha1_InvestigationIndexViewMode(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexstatusOperatorState":  schema_pkg_apis_investigations_v0alpha1_InvestigationIndexstatusOperatorState(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationList":                      schema_pkg_apis_investigations_v0alpha1_InvestigationList(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationPerson":                    schema_pkg_apis_investigations_v0alpha1_InvestigationPerson(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationSpec":                      schema_pkg_apis_investigations_v0alpha1_InvestigationSpec(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationStatus":                    schema_pkg_apis_investigations_v0alpha1_InvestigationStatus(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationTimeRange":                 schema_pkg_apis_investigations_v0alpha1_InvestigationTimeRange(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationV0alpha1TimeRangeRaw":      schema_pkg_apis_investigations_v0alpha1_InvestigationV0alpha1TimeRangeRaw(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationViewMode":                  schema_pkg_apis_investigations_v0alpha1_InvestigationViewMode(ref),
+		"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationstatusOperatorState":       schema_pkg_apis_investigations_v0alpha1_InvestigationstatusOperatorState(ref),
 	}
 }
 
@@ -65,13 +65,13 @@ func schema_pkg_apis_investigations_v0alpha1_Investigation(ref common.ReferenceC
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec is the spec of the Investigation",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationSpec"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationStatus"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationStatus"),
 						},
 					},
 				},
@@ -79,7 +79,7 @@ func schema_pkg_apis_investigations_v0alpha1_Investigation(ref common.ReferenceC
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationSpec", "github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationSpec", "github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -147,13 +147,13 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationCollectable(ref common
 					"timeRange": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationTimeRange"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationTimeRange"),
 						},
 					},
 					"datasource": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationDatasourceRef"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationDatasourceRef"),
 						},
 					},
 					"url": {
@@ -195,7 +195,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationCollectable(ref common
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationDatasourceRef", "github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationTimeRange"},
+			"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationDatasourceRef", "github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationTimeRange"},
 	}
 }
 
@@ -250,13 +250,13 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationIndex(ref common.Refer
 						SchemaProps: spec.SchemaProps{
 							Description: "Spec is the spec of the InvestigationIndex",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexSpec"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexStatus"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexStatus"),
 						},
 					},
 				},
@@ -264,7 +264,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationIndex(ref common.Refer
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexSpec", "github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexSpec", "github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -326,7 +326,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationIndexInvestigationSumm
 					"createdByProfile": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexPerson"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexPerson"),
 						},
 					},
 					"hasCustomName": {
@@ -360,7 +360,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationIndexInvestigationSumm
 					"viewMode": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexViewMode"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexViewMode"),
 						},
 					},
 					"collectableSummaries": {
@@ -375,7 +375,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationIndexInvestigationSumm
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexCollectableSummary"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexCollectableSummary"),
 									},
 								},
 							},
@@ -386,7 +386,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationIndexInvestigationSumm
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexCollectableSummary", "github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexPerson", "github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexViewMode"},
+			"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexCollectableSummary", "github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexPerson", "github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexViewMode"},
 	}
 }
 
@@ -423,7 +423,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationIndexList(ref common.R
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndex"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndex"),
 									},
 								},
 							},
@@ -434,7 +434,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationIndexList(ref common.R
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndex", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndex", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -494,7 +494,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationIndexSpec(ref common.R
 						SchemaProps: spec.SchemaProps{
 							Description: "The Person who owns this investigation index",
 							Default:     map[string]interface{}{},
-							Ref:         ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexPerson"),
+							Ref:         ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexPerson"),
 						},
 					},
 					"investigationSummaries": {
@@ -510,7 +510,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationIndexSpec(ref common.R
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexInvestigationSummary"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexInvestigationSummary"),
 									},
 								},
 							},
@@ -521,7 +521,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationIndexSpec(ref common.R
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexInvestigationSummary", "github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexPerson"},
+			"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexInvestigationSummary", "github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexPerson"},
 	}
 }
 
@@ -540,7 +540,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationIndexStatus(ref common
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexstatusOperatorState"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexstatusOperatorState"),
 									},
 								},
 							},
@@ -565,7 +565,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationIndexStatus(ref common
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexstatusOperatorState"},
+			"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationIndexstatusOperatorState"},
 	}
 }
 
@@ -687,7 +687,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationList(ref common.Refere
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.Investigation"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.Investigation"),
 									},
 								},
 							},
@@ -698,7 +698,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationList(ref common.Refere
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.Investigation", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.Investigation", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -757,7 +757,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationSpec(ref common.Refere
 					"createdByProfile": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationPerson"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationPerson"),
 						},
 					},
 					"hasCustomName": {
@@ -800,7 +800,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationSpec(ref common.Refere
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationCollectable"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationCollectable"),
 									},
 								},
 							},
@@ -809,7 +809,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationSpec(ref common.Refere
 					"viewMode": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationViewMode"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationViewMode"),
 						},
 					},
 				},
@@ -817,7 +817,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationSpec(ref common.Refere
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationCollectable", "github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationPerson", "github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationViewMode"},
+			"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationCollectable", "github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationPerson", "github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationViewMode"},
 	}
 }
 
@@ -836,7 +836,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationStatus(ref common.Refe
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationstatusOperatorState"),
+										Ref:     ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationstatusOperatorState"),
 									},
 								},
 							},
@@ -861,7 +861,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationStatus(ref common.Refe
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationstatusOperatorState"},
+			"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationstatusOperatorState"},
 	}
 }
 
@@ -889,7 +889,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationTimeRange(ref common.R
 					"raw": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationV0alpha1TimeRangeRaw"),
+							Ref:     ref("github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationV0alpha1TimeRangeRaw"),
 						},
 					},
 				},
@@ -897,7 +897,7 @@ func schema_pkg_apis_investigations_v0alpha1_InvestigationTimeRange(ref common.R
 			},
 		},
 		Dependencies: []string{
-			"github.com/grafana/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationV0alpha1TimeRangeRaw"},
+			"github.com/capitalrx/grafana/apps/investigations/pkg/apis/investigations/v0alpha1.InvestigationV0alpha1TimeRangeRaw"},
 	}
 }
 

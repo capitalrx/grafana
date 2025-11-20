@@ -7,7 +7,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/grafana/grafana/apps/dashboard/pkg/migration/schemaversion"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/migration/schemaversion"
 	"k8s.io/apimachinery/pkg/util/validation/field"
 
 	"cuelang.org/go/cue"

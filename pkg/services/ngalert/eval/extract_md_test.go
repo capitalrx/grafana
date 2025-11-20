@@ -6,8 +6,8 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/expr/classic"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/expr/classic"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 func TestExtractEvalString(t *testing.T) {

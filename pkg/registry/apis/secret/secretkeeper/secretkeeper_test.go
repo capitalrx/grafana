@@ -7,17 +7,17 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.opentelemetry.io/otel/trace/noop"
 
-	"github.com/grafana/grafana/pkg/infra/usagestats"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/encryption/cipher/service"
-	osskmsproviders "github.com/grafana/grafana/pkg/registry/apis/secret/encryption/kmsproviders"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/encryption/manager"
-	"github.com/grafana/grafana/pkg/registry/apis/secret/secretkeeper/sqlkeeper"
-	"github.com/grafana/grafana/pkg/services/sqlstore"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/storage/secret/database"
-	encryptionstorage "github.com/grafana/grafana/pkg/storage/secret/encryption"
-	"github.com/grafana/grafana/pkg/storage/secret/migrator"
-	"github.com/grafana/grafana/pkg/tests/testsuite"
+	"github.com/capitalrx/grafana/pkg/infra/usagestats"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/encryption/cipher/service"
+	osskmsproviders "github.com/capitalrx/grafana/pkg/registry/apis/secret/encryption/kmsproviders"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/encryption/manager"
+	"github.com/capitalrx/grafana/pkg/registry/apis/secret/secretkeeper/sqlkeeper"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/storage/secret/database"
+	encryptionstorage "github.com/capitalrx/grafana/pkg/storage/secret/encryption"
+	"github.com/capitalrx/grafana/pkg/storage/secret/migrator"
+	"github.com/capitalrx/grafana/pkg/tests/testsuite"
 )
 
 func TestMain(m *testing.M) {

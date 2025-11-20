@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
-	"github.com/grafana/grafana/pkg/tsdb/grafana-postgresql-datasource/sqleng"
+	"github.com/capitalrx/grafana/pkg/tsdb/grafana-postgresql-datasource/sqleng"
 )
 
 var validateCertFuncPgx = validateCertFilePathsPgx

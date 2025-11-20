@@ -3,9 +3,9 @@ package clients
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/apimachinery/errutil"
-	"github.com/grafana/grafana/pkg/services/authn"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/apimachinery/errutil"
+	"github.com/capitalrx/grafana/pkg/services/authn"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 var errBadForm = errutil.BadRequest("form-auth.invalid", errutil.WithPublicMessage("bad login data"))

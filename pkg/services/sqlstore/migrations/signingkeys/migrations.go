@@ -1,6 +1,6 @@
 package signingkeys
 
-import "github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+import "github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 
 func AddMigration(mg *migrator.Migrator) {
 	var signingKeysV1 = migrator.Table{

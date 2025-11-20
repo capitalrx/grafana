@@ -23,7 +23,7 @@ COPY public/views public/views
 COPY public/dashboards public/dashboards
 COPY public/app/plugins public/app/plugins
 
-# TODO: Remove below as part of https://github.com/grafana/grafana/issues/110350
+# TODO: Remove below as part of https://github.com/capitalrx/grafana/issues/110350
 COPY public/gazetteer public/gazetteer
 COPY public/maps public/maps
 COPY public/img/bg public/img/bg

@@ -7,12 +7,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	apimodels "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
-	"github.com/grafana/grafana/pkg/services/ngalert/notifier"
-	"github.com/grafana/grafana/pkg/services/ngalert/notifier/alertmanager_mock"
-	remote_alertmanager_mock "github.com/grafana/grafana/pkg/services/ngalert/remote/mock"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	apimodels "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/notifier"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/notifier/alertmanager_mock"
+	remote_alertmanager_mock "github.com/capitalrx/grafana/pkg/services/ngalert/remote/mock"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 )

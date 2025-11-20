@@ -1,4 +1,4 @@
-// Core Grafana history https://github.com/grafana/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/components/PromCheatSheet.tsx
+// Core Grafana history https://github.com/capitalrx/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/components/PromCheatSheet.tsx
 import { css } from '@emotion/css';
 
 import { GrafanaTheme2, QueryEditorHelpProps } from '@grafana/data';

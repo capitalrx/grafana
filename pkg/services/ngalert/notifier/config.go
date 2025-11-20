@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	api "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
+	api "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
 )
 
 func Load(rawConfig []byte) (*api.PostableUserConfig, error) {

@@ -4,8 +4,8 @@ import (
 	"context"
 	"path/filepath"
 
-	"github.com/grafana/grafana/pkg/services/provisioning"
-	"github.com/grafana/grafana/pkg/services/provisioning/dashboards"
+	"github.com/capitalrx/grafana/pkg/services/provisioning"
+	"github.com/capitalrx/grafana/pkg/services/provisioning/dashboards"
 )
 
 var (

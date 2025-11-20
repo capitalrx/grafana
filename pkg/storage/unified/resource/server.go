@@ -22,10 +22,10 @@ import (
 	claims "github.com/grafana/authlib/types"
 	"github.com/grafana/dskit/backoff"
 	"github.com/grafana/dskit/ring"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
-	secrets "github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
-	"github.com/grafana/grafana/pkg/util/scheduler"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
+	secrets "github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/util/scheduler"
 )
 
 // ResourceServer implements all gRPC services
@@ -458,7 +458,7 @@ func (s *server) newEvent(ctx context.Context, user claims.AuthInfo, key *resour
 	}
 
 	if obj.GetUID() == "" {
-		// TODO! once https://github.com/grafana/grafana/pull/96086 is deployed everywhere
+		// TODO! once https://github.com/capitalrx/grafana/pull/96086 is deployed everywhere
 		// return nil, NewBadRequestError("object is missing UID")
 		s.log.Error("object is missing UID", "key", key)
 	}

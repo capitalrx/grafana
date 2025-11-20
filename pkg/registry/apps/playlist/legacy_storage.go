@@ -13,9 +13,9 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apiserver/pkg/registry/rest"
 
-	playlist "github.com/grafana/grafana/apps/playlist/pkg/apis/playlist/v0alpha1"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	playlistsvc "github.com/grafana/grafana/pkg/services/playlist"
+	playlist "github.com/capitalrx/grafana/apps/playlist/pkg/apis/playlist/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	playlistsvc "github.com/capitalrx/grafana/pkg/services/playlist"
 )
 
 var (

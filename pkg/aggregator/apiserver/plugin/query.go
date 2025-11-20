@@ -13,8 +13,8 @@ import (
 	"k8s.io/component-base/tracing"
 	"k8s.io/klog/v2"
 
-	aggregationv0alpha1 "github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
-	"github.com/grafana/grafana/pkg/aggregator/apiserver/util"
+	aggregationv0alpha1 "github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/aggregator/apiserver/util"
 )
 
 func (h *PluginHandler) QueryDataHandler() http.HandlerFunc {

@@ -7,16 +7,16 @@ import (
 	"go.opentelemetry.io/otel"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/grafana/grafana/pkg/configprovider"
-	"github.com/grafana/grafana/pkg/infra/db"
-	"github.com/grafana/grafana/pkg/infra/log"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/quota"
+	"github.com/capitalrx/grafana/pkg/configprovider"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/quota"
 )
 
 // tracer is the global tracer for the quota service. Tracer pulls the globally
 // initialized tracer from the opentelemetry package.
-var tracer = otel.Tracer("github.com/grafana/grafana/pkg/services/quota/quotaimpl/service")
+var tracer = otel.Tracer("github.com/capitalrx/grafana/pkg/services/quota/quotaimpl/service")
 
 type serviceDisabled struct{}
 

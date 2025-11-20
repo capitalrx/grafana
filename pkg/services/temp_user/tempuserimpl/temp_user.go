@@ -3,9 +3,9 @@ package tempuserimpl
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/infra/db"
-	tempuser "github.com/grafana/grafana/pkg/services/temp_user"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/db"
+	tempuser "github.com/capitalrx/grafana/pkg/services/temp_user"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type Service struct {

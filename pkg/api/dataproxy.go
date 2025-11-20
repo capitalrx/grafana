@@ -1,6 +1,6 @@
 package api
 
-import contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
+import contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
 
 // swagger:route GET /datasources/proxy/{id}/{datasource_proxy_route} datasources datasourceProxyGETcalls
 //

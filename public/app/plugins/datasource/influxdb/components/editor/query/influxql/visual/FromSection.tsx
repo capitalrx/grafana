@@ -10,7 +10,7 @@ import { Seg } from './Seg';
 // unfortunately, IF the user has a retention-policy named "default",
 // and it is not the default-retention-policy in influxdb,
 // bad things will happen.
-// https://github.com/grafana/grafana/issues/4347 :-(
+// https://github.com/capitalrx/grafana/issues/4347 :-(
 // FIXME: we could maybe at least detect here that problem-is-happening,
 // and show an error message or something.
 // unfortunately, currently the ResponseParser does not return the

@@ -30,4 +30,4 @@ Additionally, the size of the feature requires different notice times between de
 
 | Name                                                                     | Announcement Date | Disabling date | Removal Date | Description                                                                                                             | Status  |
 | ------------------------------------------------------------------------ | ----------------- | -------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------- | ------- |
-| [Support for Mysql 5.7](https://github.com/grafana/grafana/issues/68446) | 2023-05-15        | October 2023   |              | MySQL 5.7 is being deprecated in October 2023 and Grafana's policy is to test against the officially supported version. | Planned |
+| [Support for Mysql 5.7](https://github.com/capitalrx/grafana/issues/68446) | 2023-05-15        | October 2023   |              | MySQL 5.7 is being deprecated in October 2023 and Grafana's policy is to test against the officially supported version. | Planned |

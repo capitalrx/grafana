@@ -11,7 +11,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/expr"
+	"github.com/capitalrx/grafana/pkg/expr"
 )
 
 func TestAlertQuery(t *testing.T) {

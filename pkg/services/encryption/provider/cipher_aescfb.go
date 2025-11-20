@@ -7,8 +7,8 @@ import (
 	"crypto/rand"
 	"io"
 
-	"github.com/grafana/grafana/pkg/services/encryption"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/capitalrx/grafana/pkg/services/encryption"
+	"github.com/capitalrx/grafana/pkg/util"
 )
 
 type aesCfbCipher struct{}

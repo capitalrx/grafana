@@ -11,7 +11,7 @@ import (
 	"k8s.io/apiserver/pkg/server"
 	"k8s.io/kube-openapi/pkg/common"
 
-	"github.com/grafana/grafana/pkg/services/apiserver/builder"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/builder"
 )
 
 func TestAddPostStartHooks(t *testing.T) {

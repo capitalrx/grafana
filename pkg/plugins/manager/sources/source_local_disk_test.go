@@ -10,8 +10,8 @@ import (
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/config"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/config"
 )
 
 var compareOpts = []cmp.Option{cmpopts.IgnoreFields(LocalSource{}, "log"), cmp.AllowUnexported(LocalSource{})}

@@ -8,7 +8,7 @@ import (
 	amv2 "github.com/prometheus/alertmanager/api/v2/models"
 	prometheusModel "github.com/prometheus/common/model"
 
-	apimodels "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions"
+	apimodels "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions"
 )
 
 type TestTemplatesResults = alertingNotify.TestTemplatesResults

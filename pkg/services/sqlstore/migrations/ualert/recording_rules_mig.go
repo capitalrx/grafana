@@ -1,6 +1,6 @@
 package ualert
 
-import "github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+import "github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 
 // AddRecordingRuleColumns adds columns to alert_rule to represent recording rules.
 func AddRecordingRuleColumns(mg *migrator.Migrator) {

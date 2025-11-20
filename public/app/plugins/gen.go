@@ -14,9 +14,9 @@ import (
 	"strings"
 
 	"github.com/grafana/codejen"
-	corecodegen "github.com/grafana/grafana/pkg/codegen"
-	"github.com/grafana/grafana/pkg/plugins/codegen"
-	"github.com/grafana/grafana/pkg/plugins/codegen/pfs"
+	corecodegen "github.com/capitalrx/grafana/pkg/codegen"
+	"github.com/capitalrx/grafana/pkg/plugins/codegen"
+	"github.com/capitalrx/grafana/pkg/plugins/codegen/pfs"
 )
 
 var skipPlugins = map[string]bool{

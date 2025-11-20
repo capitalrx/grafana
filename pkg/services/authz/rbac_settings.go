@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 type clientMode string

@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/grafana/grafana/pkg/promlib/models"
-	"github.com/grafana/grafana/pkg/tsdb/loki/kinds/dataquery"
+	"github.com/capitalrx/grafana/pkg/tsdb/loki/kinds/dataquery"
 )
 
 type QueryType = dataquery.LokiQueryType

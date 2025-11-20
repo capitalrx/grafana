@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/grafana/grafana/pkg/models"
+	"github.com/capitalrx/grafana/pkg/models"
 )
 
 var (

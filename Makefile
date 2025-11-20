@@ -67,7 +67,7 @@ swagger-oss-gen: ## Generate API Swagger specification
 	@echo "re-generating swagger for OSS"
 	rm -f $(SPEC_TARGET)
 	SWAGGER_GENERATE_EXTENSION=false GODEBUG=gotypesalias=0 $(swagger) generate spec -q -m -w pkg/server -o $(SPEC_TARGET) \
-	-x "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions" \
+	-x "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions" \
 	-x "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options" \
 	-x "github.com/prometheus/alertmanager" \
 	-i pkg/api/swagger_tags.json \
@@ -85,7 +85,7 @@ swagger-enterprise-gen: ## Generate API Swagger specification
 	@echo "re-generating swagger for enterprise"
 	rm -f $(ENTERPRISE_SPEC_TARGET)
 	SWAGGER_GENERATE_EXTENSION=false GODEBUG=gotypesalias=0 $(swagger) generate spec -q -m -w pkg/server -o $(ENTERPRISE_SPEC_TARGET) \
-	-x "github.com/grafana/grafana/pkg/services/ngalert/api/tooling/definitions" \
+	-x "github.com/capitalrx/grafana/pkg/services/ngalert/api/tooling/definitions" \
 	-x "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options" \
 	-x "github.com/prometheus/alertmanager" \
 	-i pkg/api/swagger_tags.json \
@@ -522,7 +522,7 @@ clean: ## Clean up intermediate build artifacts.
 gen-ts:
 	@echo "generating TypeScript definitions"
 	go get github.com/tkrajina/typescriptify-golang-structs/typescriptify@v0.1.7
-	tscriptify -interface -package=github.com/grafana/grafana/pkg/services/live/pipeline -import="import { FieldConfig } from '@grafana/data'" -target=public/app/features/live/pipeline/models.gen.ts pkg/services/live/pipeline/config.go
+	tscriptify -interface -package=github.com/capitalrx/grafana/pkg/services/live/pipeline -import="import { FieldConfig } from '@grafana/data'" -target=public/app/features/live/pipeline/models.gen.ts pkg/services/live/pipeline/config.go
 	go mod tidy
 
 .PHONY: go-race-is-enabled

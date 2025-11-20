@@ -6,9 +6,9 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/services/contexthandler"
-	"github.com/grafana/grafana/pkg/services/datasources"
+	"github.com/capitalrx/grafana/pkg/components/simplejson"
+	"github.com/capitalrx/grafana/pkg/services/contexthandler"
+	"github.com/capitalrx/grafana/pkg/services/datasources"
 )
 
 type parsedQuery struct {
@@ -42,7 +42,7 @@ func (pr parsedRequest) validateRequest(ctx context.Context) error {
 		}
 	}
 
-	// Skip header validation. See https://github.com/grafana/grafana/pull/58871
+	// Skip header validation. See https://github.com/capitalrx/grafana/pull/58871
 	if true {
 		return nil
 	}

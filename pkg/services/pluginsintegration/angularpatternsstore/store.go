@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/kvstore"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/cachekvstore"
+	"github.com/capitalrx/grafana/pkg/infra/kvstore"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/cachekvstore"
 )
 
 type Service interface {

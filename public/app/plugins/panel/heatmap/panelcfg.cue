@@ -15,7 +15,7 @@
 package grafanaplugin
 
 import (
-	ui "github.com/grafana/grafana/packages/grafana-schema/src/common"
+	ui "github.com/capitalrx/grafana/packages/grafana-schema/src/common"
 )
 
 composableKinds: PanelCfg: lineage: {

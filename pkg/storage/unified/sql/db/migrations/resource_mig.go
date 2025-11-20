@@ -3,7 +3,7 @@ package migrations
 import (
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 )
 
 func initResourceTables(mg *migrator.Migrator) string {

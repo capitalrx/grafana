@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/grafana/grafana/pkg/services/store/entity"
+	"github.com/capitalrx/grafana/pkg/services/store/entity"
 )
 
 // A reference accumulator can combine

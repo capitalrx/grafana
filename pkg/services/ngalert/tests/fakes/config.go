@@ -5,7 +5,7 @@ import (
 	"crypto/md5"
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/services/ngalert/models"
+	"github.com/capitalrx/grafana/pkg/services/ngalert/models"
 )
 
 type FakeAlertmanagerConfigStore struct {

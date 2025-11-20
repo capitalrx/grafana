@@ -12,25 +12,25 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/auth"
-	"github.com/grafana/grafana/pkg/plugins/backendplugin"
-	"github.com/grafana/grafana/pkg/plugins/config"
-	"github.com/grafana/grafana/pkg/plugins/log"
-	"github.com/grafana/grafana/pkg/plugins/manager/fakes"
-	"github.com/grafana/grafana/pkg/plugins/manager/loader/angular/angularinspector"
-	"github.com/grafana/grafana/pkg/plugins/manager/loader/assetpath"
-	"github.com/grafana/grafana/pkg/plugins/manager/process"
-	"github.com/grafana/grafana/pkg/plugins/manager/registry"
-	"github.com/grafana/grafana/pkg/plugins/manager/signature"
-	"github.com/grafana/grafana/pkg/plugins/manager/sources"
-	"github.com/grafana/grafana/pkg/plugins/pluginassets"
-	"github.com/grafana/grafana/pkg/plugins/pluginscdn"
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pipeline"
-	"github.com/grafana/grafana/pkg/services/pluginsintegration/pluginerrs"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins/auth"
+	"github.com/capitalrx/grafana/pkg/plugins/backendplugin"
+	"github.com/capitalrx/grafana/pkg/plugins/config"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/fakes"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/loader/angular/angularinspector"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/loader/assetpath"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/process"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/registry"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/signature"
+	"github.com/capitalrx/grafana/pkg/plugins/manager/sources"
+	"github.com/capitalrx/grafana/pkg/plugins/pluginassets"
+	"github.com/capitalrx/grafana/pkg/plugins/pluginscdn"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pipeline"
+	"github.com/capitalrx/grafana/pkg/services/pluginsintegration/pluginerrs"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 var compareOpts = []cmp.Option{cmpopts.IgnoreFields(plugins.Plugin{}, "client", "log", "mu"), fsComparer}
@@ -88,7 +88,7 @@ func TestLoader_Load(t *testing.T) {
 								Large: "public/plugins/cloudwatch/img/amazon-web-services.png",
 							},
 							Links: []plugins.InfoLink{
-								{Name: "Raise issue", URL: "https://github.com/grafana/grafana/issues/new"},
+								{Name: "Raise issue", URL: "https://github.com/capitalrx/grafana/issues/new"},
 								{Name: "Documentation", URL: "https://grafana.com/docs/grafana/latest/datasources/aws-cloudwatch/"},
 							},
 						},

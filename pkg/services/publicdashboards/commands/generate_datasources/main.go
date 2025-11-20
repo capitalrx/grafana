@@ -7,7 +7,7 @@ import (
 	"os"
 	"text/template"
 
-	"github.com/grafana/grafana/pkg/services/publicdashboards/commands/generate_datasources"
+	"github.com/capitalrx/grafana/pkg/services/publicdashboards/commands/generate_datasources"
 )
 
 var tsDatasourcesTemplate = `

@@ -9,7 +9,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 const DEFAULT_NONSENSE_HASH string = "9e107d9d372bb6826bd81d3542a419d6"

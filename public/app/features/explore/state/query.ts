@@ -781,7 +781,7 @@ export const runLoadMoreLogsQueries = createAsyncThunk<void, RunLoadMoreLogsQuer
           return of({ ...queryResponse, state: LoadingState.Loading });
         }
         return decorateData(
-          // This shouldn't be needed after https://github.com/grafana/grafana/issues/57327 is fixed
+          // This shouldn't be needed after https://github.com/capitalrx/grafana/issues/57327 is fixed
           combinePanelData(queryResponse, data),
           queryResponse,
           decorateWithLogsResult({ absoluteRange, queries, deduplicate: true }),

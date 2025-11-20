@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
-	"github.com/grafana/grafana/pkg/tsdb/grafana-testdata-datasource/kinds"
+	"github.com/capitalrx/grafana/pkg/tsdb/grafana-testdata-datasource/kinds"
 )
 
 func (s *Service) registerRoutes() *http.ServeMux {

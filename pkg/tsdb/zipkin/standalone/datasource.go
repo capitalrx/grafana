@@ -7,7 +7,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend/httpclient"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/instancemgmt"
 
-	"github.com/grafana/grafana/pkg/tsdb/zipkin"
+	"github.com/capitalrx/grafana/pkg/tsdb/zipkin"
 )
 
 var (

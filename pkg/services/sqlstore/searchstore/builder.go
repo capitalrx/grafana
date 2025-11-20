@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/search/model"
-	"github.com/grafana/grafana/pkg/services/sqlstore/migrator"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/search/model"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore/migrator"
 )
 
 // Builder defaults to returning a SQL query to get a list of all dashboards

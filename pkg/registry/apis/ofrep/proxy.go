@@ -13,8 +13,8 @@ import (
 	"path"
 	"strconv"
 
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/logger"
-	"github.com/grafana/grafana/pkg/util/proxyutil"
+	"github.com/capitalrx/grafana/pkg/cmd/grafana-cli/logger"
+	"github.com/capitalrx/grafana/pkg/util/proxyutil"
 
 	goffmodel "github.com/thomaspoignant/go-feature-flag/cmd/relayproxy/model"
 )

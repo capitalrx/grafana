@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	authzextv1 "github.com/grafana/grafana/pkg/services/authz/proto/v1"
-	"github.com/grafana/grafana/pkg/services/authz/zanzana"
+	authzextv1 "github.com/capitalrx/grafana/pkg/services/authz/proto/v1"
+	"github.com/capitalrx/grafana/pkg/services/authz/zanzana"
 )
 
 type ZanzanaPermissionStore struct {

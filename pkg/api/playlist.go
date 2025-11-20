@@ -9,16 +9,16 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/client-go/dynamic"
 
-	"github.com/grafana/grafana/apps/playlist/pkg/apis/playlist/v0alpha1"
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/api/routing"
-	internalplaylist "github.com/grafana/grafana/pkg/registry/apps/playlist"
-	grafanaapiserver "github.com/grafana/grafana/pkg/services/apiserver"
-	"github.com/grafana/grafana/pkg/services/apiserver/endpoints/request"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/playlist"
-	"github.com/grafana/grafana/pkg/util/errhttp"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/apps/playlist/pkg/apis/playlist/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/api/dtos"
+	"github.com/capitalrx/grafana/pkg/api/routing"
+	internalplaylist "github.com/capitalrx/grafana/pkg/registry/apps/playlist"
+	grafanaapiserver "github.com/capitalrx/grafana/pkg/services/apiserver"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/endpoints/request"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/playlist"
+	"github.com/capitalrx/grafana/pkg/util/errhttp"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 func (hs *HTTPServer) registerPlaylistAPI(apiRoute routing.RouteRegister) {

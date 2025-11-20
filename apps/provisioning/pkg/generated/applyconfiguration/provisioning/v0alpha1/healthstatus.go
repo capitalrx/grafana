@@ -5,7 +5,7 @@
 package v0alpha1
 
 import (
-	provisioningv0alpha1 "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	provisioningv0alpha1 "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
 )
 
 // HealthStatusApplyConfiguration represents a declarative configuration of the HealthStatus type for use

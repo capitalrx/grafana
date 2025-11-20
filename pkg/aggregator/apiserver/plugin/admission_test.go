@@ -15,8 +15,8 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 
-	"github.com/grafana/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
-	"github.com/grafana/grafana/pkg/aggregator/apiserver/plugin/fakes"
+	"github.com/capitalrx/grafana/pkg/aggregator/apis/aggregation/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/aggregator/apiserver/plugin/fakes"
 )
 
 func TestAdmissionMutation(t *testing.T) {

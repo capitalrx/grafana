@@ -7,14 +7,14 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/grafana/grafana/pkg/components/satokengen"
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	"github.com/grafana/grafana/pkg/services/accesscontrol"
-	accesscontrolmock "github.com/grafana/grafana/pkg/services/accesscontrol/mock"
-	"github.com/grafana/grafana/pkg/services/apikey"
-	grpccontext "github.com/grafana/grafana/pkg/services/grpcserver/context"
-	"github.com/grafana/grafana/pkg/services/org"
-	"github.com/grafana/grafana/pkg/services/user"
+	"github.com/capitalrx/grafana/pkg/components/satokengen"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
+	accesscontrolmock "github.com/capitalrx/grafana/pkg/services/accesscontrol/mock"
+	"github.com/capitalrx/grafana/pkg/services/apikey"
+	grpccontext "github.com/capitalrx/grafana/pkg/services/grpcserver/context"
+	"github.com/capitalrx/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/services/user"
 )
 
 func TestAuthenticator_Authenticate(t *testing.T) {

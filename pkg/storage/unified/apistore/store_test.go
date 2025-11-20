@@ -29,10 +29,10 @@ import (
 	"k8s.io/apiserver/pkg/storage/storagebackend"
 
 	claims "github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	storagetesting "github.com/grafana/grafana/pkg/apiserver/storage/testing"
-	"github.com/grafana/grafana/pkg/storage/unified/apistore"
-	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	storagetesting "github.com/capitalrx/grafana/pkg/apiserver/storage/testing"
+	"github.com/capitalrx/grafana/pkg/storage/unified/apistore"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resourcepb"
 )
 
 func init() {

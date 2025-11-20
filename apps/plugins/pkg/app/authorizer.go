@@ -5,7 +5,7 @@ import (
 
 	"k8s.io/apiserver/pkg/authorization/authorizer"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
 )
 
 func GetAuthorizer() authorizer.Authorizer {

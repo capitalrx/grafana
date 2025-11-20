@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/grafana/grafana/apps/dashboard/pkg/migration/schemaversion"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/migration/schemaversion"
 )
 
 // Initialize provides the migrator singleton with required dependencies and builds the map of migrations.

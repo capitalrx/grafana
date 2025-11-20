@@ -10,7 +10,7 @@ import (
 	"github.com/VividCortex/mysqlerr"
 	"github.com/go-sql-driver/mysql"
 
-	"github.com/grafana/grafana/pkg/util/xorm"
+	"github.com/capitalrx/grafana/pkg/util/xorm"
 )
 
 type MySQLDialect struct {

@@ -8,8 +8,8 @@ import (
 	"k8s.io/apiserver/pkg/endpoints/request"
 
 	claims "github.com/grafana/authlib/types"
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	"github.com/capitalrx/grafana/pkg/setting"
 )
 
 // NamespaceMapper converts an orgID into a namespace

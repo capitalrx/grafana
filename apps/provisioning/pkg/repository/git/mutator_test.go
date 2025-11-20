@@ -8,7 +8,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 
-	provisioning "github.com/grafana/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
+	provisioning "github.com/capitalrx/grafana/apps/provisioning/pkg/apis/provisioning/v0alpha1"
 )
 
 func TestMutate(t *testing.T) {
@@ -105,7 +105,7 @@ func TestMutate(t *testing.T) {
 				Spec: provisioning.RepositorySpec{
 					Type: provisioning.GitRepositoryType,
 					Git: &provisioning.GitRepositoryConfig{
-						URL: "https://github.com/grafana/grafana/",
+						URL: "https://github.com/capitalrx/grafana/",
 					},
 				},
 			},

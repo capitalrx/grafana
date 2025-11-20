@@ -1,6 +1,6 @@
 package legacy_storage
 
-import "github.com/grafana/grafana/pkg/apimachinery/errutil"
+import "github.com/capitalrx/grafana/pkg/apimachinery/errutil"
 
 var (
 	ErrNoAlertmanagerConfiguration  = errutil.Internal("alerting.notification.configMissing", errutil.WithPublicMessage("No alertmanager configuration present in this organization"))

@@ -115,7 +115,7 @@ Configured address to serve Grafana: http://yourdomain.com/existingsubpath/grafa
 
 - This can be achieved by configuring the IIS config file by running this in a cmd prompt
   `%windir%\system32\inetsrv\appcmd.exe set config -section:system.webServer/proxy -preserveHostHeader:true /commit:apphost`
-- More information here https://github.com/grafana/grafana/issues/45261
+- More information here https://github.com/capitalrx/grafana/issues/45261
 
 Finally, navigate to `http://yourdomain.com:8080/grafana` and you should come to the Grafana login page.
 

@@ -3,7 +3,7 @@ package pluginstore
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins"
 	"github.com/stretchr/testify/require"
 )
 

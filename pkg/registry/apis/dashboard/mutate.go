@@ -10,13 +10,13 @@ import (
 	"k8s.io/apiserver/pkg/admission"
 	"k8s.io/utils/ptr"
 
-	dashboardV0 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1"
-	dashboardV1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
-	dashboardV2alpha1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v2alpha1"
-	dashboardV2beta1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v2beta1"
-	"github.com/grafana/grafana/apps/dashboard/pkg/migration"
-	"github.com/grafana/grafana/apps/dashboard/pkg/migration/schemaversion"
-	"github.com/grafana/grafana/pkg/apimachinery/utils"
+	dashboardV0 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v0alpha1"
+	dashboardV1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
+	dashboardV2alpha1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v2alpha1"
+	dashboardV2beta1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v2beta1"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/migration"
+	"github.com/capitalrx/grafana/apps/dashboard/pkg/migration/schemaversion"
+	"github.com/capitalrx/grafana/pkg/apimachinery/utils"
 )
 
 func (b *DashboardsAPIBuilder) Mutate(ctx context.Context, a admission.Attributes, o admission.ObjectInterfaces) (err error) {

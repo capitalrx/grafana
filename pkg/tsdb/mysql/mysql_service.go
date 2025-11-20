@@ -8,7 +8,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend/instancemgmt"
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
-	"github.com/grafana/grafana/pkg/tsdb/mysql/sqleng"
+	"github.com/capitalrx/grafana/pkg/tsdb/mysql/sqleng"
 )
 
 type Service struct {

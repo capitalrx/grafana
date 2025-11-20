@@ -9,13 +9,13 @@ import (
 	"go.opentelemetry.io/otel"
 	"google.golang.org/grpc"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	authzextv1 "github.com/grafana/grafana/pkg/services/authz/proto/v1"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	authzextv1 "github.com/capitalrx/grafana/pkg/services/authz/proto/v1"
 )
 
 var _ authlib.AccessClient = (*Client)(nil)
 
-var tracer = otel.Tracer("github.com/grafana/grafana/pkg/services/authz/zanzana/client")
+var tracer = otel.Tracer("github.com/capitalrx/grafana/pkg/services/authz/zanzana/client")
 
 type Client struct {
 	logger         log.Logger

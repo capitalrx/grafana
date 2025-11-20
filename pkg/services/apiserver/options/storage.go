@@ -13,13 +13,13 @@ import (
 	"k8s.io/apiserver/pkg/server/options"
 	"k8s.io/client-go/rest"
 
-	"github.com/grafana/grafana/pkg/infra/tracing"
-	secret "github.com/grafana/grafana/pkg/registry/apis/secret/contracts"
-	inlinesecurevalue "github.com/grafana/grafana/pkg/registry/apis/secret/inline"
-	"github.com/grafana/grafana/pkg/services/authn/grpcutils"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/storage/unified/apistore"
-	"github.com/grafana/grafana/pkg/storage/unified/resource"
+	"github.com/capitalrx/grafana/pkg/infra/tracing"
+	secret "github.com/capitalrx/grafana/pkg/registry/apis/secret/contracts"
+	inlinesecurevalue "github.com/capitalrx/grafana/pkg/registry/apis/secret/inline"
+	"github.com/capitalrx/grafana/pkg/services/authn/grpcutils"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/storage/unified/apistore"
+	"github.com/capitalrx/grafana/pkg/storage/unified/resource"
 )
 
 type StorageType string

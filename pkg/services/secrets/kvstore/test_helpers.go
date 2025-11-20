@@ -5,11 +5,11 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
-	"github.com/grafana/grafana/pkg/services/secrets/fakes"
-	secretsmng "github.com/grafana/grafana/pkg/services/secrets/manager"
-	"github.com/grafana/grafana/pkg/services/sqlstore"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/services/secrets/fakes"
+	secretsmng "github.com/capitalrx/grafana/pkg/services/secrets/manager"
+	"github.com/capitalrx/grafana/pkg/services/sqlstore"
 )
 
 func NewFakeSQLSecretsKVStore(t *testing.T, sqlStore *sqlstore.SQLStore) *SecretsKVStoreSQL {

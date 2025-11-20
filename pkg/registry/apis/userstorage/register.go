@@ -12,10 +12,10 @@ import (
 	genericapiserver "k8s.io/apiserver/pkg/server"
 	"k8s.io/kube-openapi/pkg/common"
 
-	"github.com/grafana/grafana/pkg/apimachinery/identity"
-	userstorage "github.com/grafana/grafana/pkg/apis/userstorage/v0alpha1"
-	"github.com/grafana/grafana/pkg/services/apiserver/builder"
-	"github.com/grafana/grafana/pkg/services/featuremgmt"
+	"github.com/capitalrx/grafana/pkg/apimachinery/identity"
+	userstorage "github.com/capitalrx/grafana/pkg/apis/userstorage/v0alpha1"
+	"github.com/capitalrx/grafana/pkg/services/apiserver/builder"
+	"github.com/capitalrx/grafana/pkg/services/featuremgmt"
 )
 
 var _ builder.APIGroupBuilder = (*UserStorageAPIBuilder)(nil)

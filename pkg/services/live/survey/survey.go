@@ -11,7 +11,7 @@ import (
 
 	"github.com/centrifugal/centrifuge"
 
-	"github.com/grafana/grafana/pkg/services/live/managedstream"
+	"github.com/capitalrx/grafana/pkg/services/live/managedstream"
 )
 
 type Caller struct {

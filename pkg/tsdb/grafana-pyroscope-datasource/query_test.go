@@ -11,7 +11,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 	typesv1 "github.com/grafana/pyroscope/api/gen/proto/go/types/v1"
 
-	"github.com/grafana/grafana/pkg/tsdb/grafana-pyroscope-datasource/annotation"
+	"github.com/capitalrx/grafana/pkg/tsdb/grafana-pyroscope-datasource/annotation"
 )
 
 // This is where the tests for the datasource backend live.

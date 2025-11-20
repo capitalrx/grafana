@@ -5,7 +5,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/plugins/log"
+	"github.com/capitalrx/grafana/pkg/plugins/log"
 )
 
 type VersionData struct {

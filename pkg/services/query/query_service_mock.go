@@ -7,9 +7,9 @@ import (
 
 	backend "github.com/grafana/grafana-plugin-sdk-go/backend"
 
-	dtos "github.com/grafana/grafana/pkg/api/dtos"
+	dtos "github.com/capitalrx/grafana/pkg/api/dtos"
 
-	identity "github.com/grafana/grafana/pkg/apimachinery/identity"
+	identity "github.com/capitalrx/grafana/pkg/apimachinery/identity"
 
 	mock "github.com/stretchr/testify/mock"
 )

@@ -1,4 +1,4 @@
-// Core Grafana history https://github.com/grafana/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/configuration/ExemplarSetting.tsx
+// Core Grafana history https://github.com/capitalrx/grafana/blob/v11.0.0-preview/public/app/plugins/datasource/prometheus/configuration/ExemplarSetting.tsx
 import { useState } from 'react';
 
 import { DataSourceInstanceSettings } from '@grafana/data';

@@ -14,7 +14,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	sqltemplate "github.com/grafana/grafana/pkg/storage/unified/sql/sqltemplate"
+	sqltemplate "github.com/capitalrx/grafana/pkg/storage/unified/sql/sqltemplate"
 )
 
 func NewTestingSQLTemplate() sqltemplate.SQLTemplate {

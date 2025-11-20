@@ -8,13 +8,13 @@ import (
 
 	liveDto "github.com/grafana/grafana-plugin-sdk-go/live"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	contextmodel "github.com/grafana/grafana/pkg/services/contexthandler/model"
-	"github.com/grafana/grafana/pkg/services/live"
-	"github.com/grafana/grafana/pkg/services/live/convert"
-	"github.com/grafana/grafana/pkg/services/live/pushurl"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/web"
+	"github.com/capitalrx/grafana/pkg/infra/log"
+	contextmodel "github.com/capitalrx/grafana/pkg/services/contexthandler/model"
+	"github.com/capitalrx/grafana/pkg/services/live"
+	"github.com/capitalrx/grafana/pkg/services/live/convert"
+	"github.com/capitalrx/grafana/pkg/services/live/pushurl"
+	"github.com/capitalrx/grafana/pkg/setting"
+	"github.com/capitalrx/grafana/pkg/web"
 )
 
 var (

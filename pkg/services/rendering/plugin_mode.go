@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/plugins/backendplugin/pluginextensionv2"
+	"github.com/capitalrx/grafana/pkg/plugins/backendplugin/pluginextensionv2"
 )
 
 func (rs *RenderingService) renderViaPlugin(ctx context.Context, renderType RenderType, renderKey string, opts Opts) (*RenderResult, error) {

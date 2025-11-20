@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/grafana/grafana/pkg/plugins"
+	"github.com/capitalrx/grafana/pkg/plugins"
 )
 
 var (

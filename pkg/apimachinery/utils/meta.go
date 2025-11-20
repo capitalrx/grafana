@@ -14,7 +14,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/types"
 
-	common "github.com/grafana/grafana/pkg/apimachinery/apis/common/v0alpha1"
+	common "github.com/capitalrx/grafana/pkg/apimachinery/apis/common/v0alpha1"
 )
 
 // LabelKeyGetHistory is used to select object history for an given resource

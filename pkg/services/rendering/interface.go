@@ -5,9 +5,9 @@ import (
 	"errors"
 	"time"
 
-	"github.com/grafana/grafana/pkg/apimachinery/errutil"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/org"
+	"github.com/capitalrx/grafana/pkg/apimachinery/errutil"
+	"github.com/capitalrx/grafana/pkg/models"
+	"github.com/capitalrx/grafana/pkg/services/org"
 )
 
 var ErrTimeout = errors.New("timeout error - you can set timeout in seconds with &timeout url parameter")
@@ -111,7 +111,7 @@ type CapabilitySupportRequestResult struct {
 	SemverConstraint string
 }
 
-//go:generate go run go.uber.org/mock/mockgen@v0.5.2 -destination=mock.go -package=rendering github.com/grafana/grafana/pkg/services/rendering Service
+//go:generate go run go.uber.org/mock/mockgen@v0.5.2 -destination=mock.go -package=rendering github.com/capitalrx/grafana/pkg/services/rendering Service
 type Service interface {
 	IsAvailable(ctx context.Context) bool
 	Version() string

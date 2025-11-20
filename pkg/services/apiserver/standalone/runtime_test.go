@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	dashboardV1 "github.com/grafana/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
+	dashboardV1 "github.com/capitalrx/grafana/apps/dashboard/pkg/apis/dashboard/v1beta1"
 )
 
 func TestReadRuntimeCOnfig(t *testing.T) {
