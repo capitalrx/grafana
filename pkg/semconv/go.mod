@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/pkg/semconv
+module github.com/capitalrx/grafana/pkg/semconv
 
 go 1.25.3
 

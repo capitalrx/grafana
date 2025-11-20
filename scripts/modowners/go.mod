@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/scripts/modowners
+module github.com/capitalrx/grafana/scripts/modowners
 
 go 1.25.3
 

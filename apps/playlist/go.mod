@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/apps/playlist
+module github.com/capitalrx/grafana/apps/playlist
 
 go 1.25.3
 

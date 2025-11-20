@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/pkg/aggregator
+module github.com/capitalrx/grafana/pkg/aggregator
 
 go 1.25.3
 

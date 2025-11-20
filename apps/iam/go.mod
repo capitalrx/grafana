@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/apps/iam
+module github.com/capitalrx/grafana/apps/iam
 
 go 1.25.3
 

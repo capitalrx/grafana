@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/apps/alerting/notifications
+module github.com/capitalrx/grafana/apps/alerting/notifications
 
 go 1.25.3
 

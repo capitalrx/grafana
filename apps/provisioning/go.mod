@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/apps/provisioning
+module github.com/capitalrx/grafana/apps/provisioning
 
 go 1.25.3
 

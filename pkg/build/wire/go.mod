@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/pkg/build/wire
+module github.com/capitalrx/grafana/pkg/build/wire
 
 go 1.25.3
 

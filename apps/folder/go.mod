@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/apps/folder
+module github.com/capitalrx/grafana/apps/folder
 
 go 1.25.3
 

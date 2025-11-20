@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/pkg/codegen
+module github.com/capitalrx/grafana/pkg/codegen
 
 go 1.25.3
 

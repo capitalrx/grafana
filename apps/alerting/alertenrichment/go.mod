@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/apps/alerting/alertenrichment
+module github.com/capitalrx/grafana/apps/alerting/alertenrichment
 
 go 1.25.3
 

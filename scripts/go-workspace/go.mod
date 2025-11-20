@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/scripts/go-workspace
+module github.com/capitalrx/grafana/scripts/go-workspace
 
 go 1.25.3
 

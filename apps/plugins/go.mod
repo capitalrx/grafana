@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/apps/plugins
+module github.com/capitalrx/grafana/apps/plugins
 
 go 1.25.3
 

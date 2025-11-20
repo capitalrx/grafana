@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/pkg/apimachinery
+module github.com/capitalrx/grafana/pkg/apimachinery
 
 go 1.25.3
 

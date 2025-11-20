@@ -1,4 +1,4 @@
-module github.com/grafana/grafana/apps/shorturl
+module github.com/capitalrx/grafana/apps/shorturl
 
 go 1.25.3
 
