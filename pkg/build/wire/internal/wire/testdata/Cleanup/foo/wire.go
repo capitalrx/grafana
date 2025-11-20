@@ -18,7 +18,7 @@
 package main
 
 import (
-	"github.com/capitalrx/grafana/pkg/build/wire"
+	"github.com/grafana/grafana/pkg/build/wire"
 )
 
 func injectBar() (*Bar, func()) {

@@ -5,10 +5,10 @@ import (
 	"fmt"
 
 	"dagger.io/dagger"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/backend"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/containers"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/e2e"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/frontend"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/backend"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/containers"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/e2e"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/frontend"
 )
 
 // Verify uses the given package (.docker.tar.gz) and grafana source code (src) to run the e2e smoke tests.

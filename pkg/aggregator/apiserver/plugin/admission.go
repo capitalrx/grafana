@@ -8,7 +8,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/capitalrx/grafana/pkg/aggregator/apiserver/plugin/admission"
 	"github.com/capitalrx/grafana/pkg/aggregator/apiserver/util"
-	grafanasemconv "github.com/capitalrx/grafana/pkg/semconv"
+	grafanasemconv "github.com/grafana/grafana/pkg/semconv"
 	"k8s.io/component-base/tracing"
 	"k8s.io/klog/v2"
 )

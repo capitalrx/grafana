@@ -18,7 +18,7 @@
 // Package bar includes both wireinject and non-wireinject variants.
 package bar
 
-import "github.com/capitalrx/grafana/pkg/build/wire"
+import "github.com/grafana/grafana/pkg/build/wire"
 
 // Set provides an unfriendly user greeting.
 var Set = wire.NewSet(wire.Value("Bah humbug! This is the wrong variant!"))

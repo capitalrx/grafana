@@ -5,7 +5,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	grafanasemconv "github.com/capitalrx/grafana/pkg/semconv"
+	grafanasemconv "github.com/grafana/grafana/pkg/semconv"
 	semconv "go.opentelemetry.io/otel/semconv/v1.21.0"
 	"k8s.io/apiserver/pkg/endpoints/request"
 	"k8s.io/component-base/tracing"

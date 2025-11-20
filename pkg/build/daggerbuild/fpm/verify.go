@@ -5,11 +5,11 @@ import (
 	"fmt"
 
 	"dagger.io/dagger"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/backend"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/containers"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/e2e"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/frontend"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/gpg"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/backend"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/containers"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/e2e"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/frontend"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/gpg"
 )
 
 func VerifyDeb(ctx context.Context, d *dagger.Client, file *dagger.File, src *dagger.Directory, yarn *dagger.CacheVolume, distro backend.Distribution, enterprise bool) error {

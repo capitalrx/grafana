@@ -7,7 +7,7 @@ import (
 	"log/slog"
 
 	"dagger.io/dagger"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/cliutil"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/cliutil"
 	"github.com/urfave/cli/v2"
 )
 

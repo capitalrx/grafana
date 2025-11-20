@@ -3,7 +3,7 @@ package versions_test
 import (
 	"testing"
 
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/versions"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/versions"
 )
 
 func TestOptsFor(t *testing.T) {

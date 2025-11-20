@@ -1,6 +1,6 @@
 package containers
 
-import "github.com/capitalrx/grafana/pkg/build/daggerbuild/cliutil"
+import "github.com/grafana/grafana/pkg/build/daggerbuild/cliutil"
 
 // GCPOpts are options used when using Google Cloud Platform / the Google Cloud SDK.
 type GCPOpts struct {

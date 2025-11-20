@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/grafana/dskit/services"
-	"github.com/capitalrx/grafana/pkg/semconv"
+	"github.com/grafana/grafana/pkg/semconv"
 	"go.opentelemetry.io/otel/trace"
 )
 

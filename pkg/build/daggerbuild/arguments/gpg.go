@@ -1,7 +1,7 @@
 package arguments
 
 import (
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/pipeline"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/pipeline"
 	"github.com/urfave/cli/v2"
 )
 

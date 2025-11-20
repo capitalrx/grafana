@@ -18,7 +18,7 @@ import (
 	sdkapi "github.com/grafana/grafana-plugin-sdk-go/experimental/apis/data/v0alpha1"
 	"github.com/stretchr/testify/require"
 
-	"github.com/capitalrx/grafana/pkg/promlib/models"
+	"github.com/grafana/grafana/pkg/promlib/models"
 )
 
 var update = false

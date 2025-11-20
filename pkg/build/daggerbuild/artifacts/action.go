@@ -8,7 +8,7 @@ import (
 	"os"
 
 	"dagger.io/dagger"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/pipeline"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/pipeline"
 	"github.com/urfave/cli/v2"
 	"golang.org/x/sync/errgroup"
 	"golang.org/x/sync/semaphore"

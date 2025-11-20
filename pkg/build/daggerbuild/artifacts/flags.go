@@ -6,7 +6,7 @@ import (
 
 	"log/slog"
 
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/cmd/flags"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/cmd/flags"
 	"github.com/urfave/cli/v2"
 )
 

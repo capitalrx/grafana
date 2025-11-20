@@ -3,8 +3,8 @@ package packages_test
 import (
 	"testing"
 
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/backend"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/packages"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/backend"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/packages"
 )
 
 func TestFileName(t *testing.T) {

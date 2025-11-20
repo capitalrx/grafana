@@ -4,7 +4,7 @@ import (
 	"errors"
 
 	"dagger.io/dagger"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/cliutil"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/cliutil"
 )
 
 // PublishOpts fields are selectively used based on the protocol field of the destination.

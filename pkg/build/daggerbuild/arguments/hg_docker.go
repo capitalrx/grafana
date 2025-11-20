@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/cliutil"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/pipeline"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/cliutil"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/pipeline"
 	"github.com/urfave/cli/v2"
 )
 

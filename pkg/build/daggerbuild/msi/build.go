@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"dagger.io/dagger"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/containers"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/containers"
 )
 
 func Build(d *dagger.Client, builder *dagger.Container, targz *dagger.File, version string, enterprise bool) (*dagger.File, error) {

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/backend"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/backend"
 )
 
 type Name string

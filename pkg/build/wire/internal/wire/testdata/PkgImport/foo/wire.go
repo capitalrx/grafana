@@ -21,7 +21,7 @@ import (
 	_ "example.com/anon1" // intentionally duplicated
 	_ "example.com/anon1" // intentionally duplicated
 	_ "example.com/anon2"
-	"github.com/capitalrx/grafana/pkg/build/wire"
+	"github.com/grafana/grafana/pkg/build/wire"
 )
 
 func injectFooBar() FooBar {

@@ -15,7 +15,7 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/capitalrx/grafana/pkg/promlib/intervalv2"
+	"github.com/grafana/grafana/pkg/promlib/intervalv2"
 )
 
 // PromQueryFormat defines model for PromQueryFormat.

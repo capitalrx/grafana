@@ -3,7 +3,7 @@ package loki
 import (
 	"testing"
 
-	"github.com/capitalrx/grafana/pkg/promlib/models"
+	"github.com/grafana/grafana/pkg/promlib/models"
 	"github.com/stretchr/testify/require"
 )
 

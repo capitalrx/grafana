@@ -8,12 +8,12 @@ import (
 	"path/filepath"
 
 	"dagger.io/dagger"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/cliutil"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/containers"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/daggerutil"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/frontend"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/git"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/pipeline"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/cliutil"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/containers"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/daggerutil"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/frontend"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/git"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/pipeline"
 	"github.com/urfave/cli/v2"
 )
 

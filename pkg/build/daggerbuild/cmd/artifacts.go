@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/artifacts"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/artifacts"
 )
 
 var Artifacts = map[string]artifacts.Initializer{

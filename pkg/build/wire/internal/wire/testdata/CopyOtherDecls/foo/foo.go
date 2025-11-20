@@ -23,7 +23,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/capitalrx/grafana/pkg/build/wire"
+	"github.com/grafana/grafana/pkg/build/wire"
 )
 
 func main() {

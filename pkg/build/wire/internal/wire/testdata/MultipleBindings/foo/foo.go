@@ -18,7 +18,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/capitalrx/grafana/pkg/build/wire"
+	"github.com/grafana/grafana/pkg/build/wire"
 )
 
 type context struct{}

@@ -19,7 +19,7 @@ package main
 
 import (
 	"example.com/bar"
-	"github.com/capitalrx/grafana/pkg/build/wire"
+	"github.com/grafana/grafana/pkg/build/wire"
 )
 
 func injectedBar() string {

@@ -8,7 +8,7 @@ import (
 	"sync"
 
 	"dagger.io/dagger"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/cliutil"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/cliutil"
 )
 
 var (

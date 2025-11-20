@@ -213,8 +213,8 @@ require (
 	github.com/capitalrx/grafana/apps/secret v0.0.0 // indirect
 	github.com/capitalrx/grafana/pkg/aggregator v0.0.0 // indirect
 	github.com/capitalrx/grafana/pkg/apiserver v0.0.0 // indirect
-	github.com/capitalrx/grafana/pkg/promlib v0.0.8 // indirect
-	github.com/capitalrx/grafana/pkg/semconv v0.0.0-20250804150913-990f1c69ecc2 // indirect
+	github.com/grafana/grafana/pkg/promlib v0.0.8 // indirect
+	github.com/grafana/grafana/pkg/semconv v0.0.0-20250804150913-990f1c69ecc2 // indirect
 	github.com/grafana/otel-profiling-go v0.5.1 // indirect
 	github.com/grafana/pyroscope-go/godeltaprof v0.1.8 // indirect
 	github.com/grafana/regexp v0.0.0-20240518133315-a468a5bfb3bc // indirect

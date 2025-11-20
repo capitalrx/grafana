@@ -3,7 +3,7 @@ package loki
 import (
 	"time"
 
-	"github.com/capitalrx/grafana/pkg/promlib/models"
+	"github.com/grafana/grafana/pkg/promlib/models"
 	"github.com/capitalrx/grafana/pkg/tsdb/loki/kinds/dataquery"
 )
 

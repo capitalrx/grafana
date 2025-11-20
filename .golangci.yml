@@ -41,7 +41,7 @@ linters:
             - ./pkg/aggregator/**/*
           allow:
             - github.com/capitalrx/grafana/pkg/aggregator
-            - github.com/capitalrx/grafana/pkg/semconv
+            - github.com/grafana/grafana/pkg/semconv
             - github.com/capitalrx/grafana/pkg/apimachinery
           deny:
             - pkg: github.com/capitalrx/grafana/pkg
@@ -134,7 +134,7 @@ linters:
               desc: Core plugins are not allowed to depend on Grafana core packages
             - pkg: github.com/capitalrx/grafana/pkg/services
               desc: Core plugins are not allowed to depend on Grafana core packages
-            - pkg: github.com/capitalrx/grafana/pkg/build
+            - pkg: github.com/grafana/grafana/pkg/build
               desc: Core plugins are not allowed to depend on Grafana core packages
             - pkg: github.com/capitalrx/grafana/pkg/codegen
               desc: Core plugins are not allowed to depend on Grafana core packages
@@ -191,7 +191,7 @@ linters:
           files:
             - '**/pkg/promlib/**/*'
           allow:
-            - github.com/capitalrx/grafana/pkg/promlib
+            - github.com/grafana/grafana/pkg/promlib
           deny:
             - pkg: github.com/capitalrx/grafana/pkg
               desc: promlib is not allowed to import grafana core

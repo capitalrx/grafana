@@ -4,7 +4,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/capitalrx/grafana/pkg/promlib/models"
+	"github.com/grafana/grafana/pkg/promlib/models"
 )
 
 type Sampler interface {

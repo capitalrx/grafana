@@ -7,10 +7,10 @@ import (
 	"path/filepath"
 
 	"dagger.io/dagger"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/arguments"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/flags"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/frontend"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/pipeline"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/arguments"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/flags"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/frontend"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/pipeline"
 )
 
 var (

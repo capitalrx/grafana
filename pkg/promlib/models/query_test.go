@@ -13,8 +13,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.opentelemetry.io/otel"
 
-	"github.com/capitalrx/grafana/pkg/promlib/intervalv2"
-	"github.com/capitalrx/grafana/pkg/promlib/models"
+	"github.com/grafana/grafana/pkg/promlib/intervalv2"
+	"github.com/grafana/grafana/pkg/promlib/models"
 )
 
 var (
@@ -816,7 +816,7 @@ func TestQueryTypeDefinitions(t *testing.T) {
 		schemabuilder.BuilderOptions{
 			PluginID: []string{"prometheus"},
 			ScanCode: []schemabuilder.CodePaths{{
-				BasePackage: "github.com/capitalrx/grafana/pkg/promlib/models",
+				BasePackage: "github.com/grafana/grafana/pkg/promlib/models",
 				CodePath:    "./",
 			}},
 			Enums: []reflect.Type{

@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"dagger.io/dagger"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/arguments"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/pipeline"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/arguments"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/pipeline"
 )
 
 func GrafanaDir(ctx context.Context, state pipeline.StateHandler, enterprise bool) (*dagger.Directory, error) {

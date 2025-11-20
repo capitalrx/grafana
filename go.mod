@@ -1,4 +1,4 @@
-module github.com/grafana/grafana
+module github.com/capitalrx/grafana
 
 go 1.25.3
 
@@ -250,8 +250,8 @@ require (
 	// This needs to be here for other projects that import grafana/grafana
 	// For local development grafana/grafana will always use the local files
 	// Check go.work file for details
-	github.com/capitalrx/grafana/pkg/promlib v0.0.8 // @grafana/oss-big-tent
-	github.com/capitalrx/grafana/pkg/semconv v0.0.0-20250804150913-990f1c69ecc2 // @grafana/grafana-app-platform-squad
+	github.com/grafana/grafana/pkg/promlib v0.0.8 // @grafana/oss-big-tent
+	github.com/grafana/grafana/pkg/semconv v0.0.0-20250804150913-990f1c69ecc2 // @grafana/grafana-app-platform-squad
 )
 
 // Replace the workspace versions

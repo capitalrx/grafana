@@ -32,7 +32,7 @@ import (
 	"strings"
 
 	"github.com/google/subcommands"
-	"github.com/capitalrx/grafana/pkg/build/wire/internal/wire"
+	"github.com/grafana/grafana/pkg/build/wire/internal/wire"
 	"github.com/pmezard/go-difflib/difflib"
 	"golang.org/x/tools/go/types/typeutil"
 )

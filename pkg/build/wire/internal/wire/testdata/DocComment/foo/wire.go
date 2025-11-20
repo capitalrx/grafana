@@ -18,7 +18,7 @@
 package main
 
 import (
-	"github.com/capitalrx/grafana/pkg/build/wire"
+	"github.com/grafana/grafana/pkg/build/wire"
 )
 
 /* blockComment returns Foo and has a /*- style doc comment */

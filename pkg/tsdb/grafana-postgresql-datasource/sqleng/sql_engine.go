@@ -90,6 +90,7 @@ type DataSourceHandler struct {
 	rowLimit               int64
 	userError              string
 	pool                   *pgxpool.Pool
+	cleanup				   func()
 }
 
 type QueryJson struct {
@@ -115,7 +116,7 @@ func (e *DataSourceHandler) TransformQueryError(logger log.Logger, err error) er
 }
 
 func NewQueryDataHandler(userFacingDefaultError string, db *sql.DB, config DataPluginConfiguration, queryResultTransformer SqlQueryResultTransformer,
-	macroEngine SQLMacroEngine, log log.Logger, cleanup func() (*DataSourceHandler, error) {
+	macroEngine SQLMacroEngine, log log.Logger, cleanup func()) (*DataSourceHandler, error) {
 	queryDataHandler := DataSourceHandler{
 		queryResultTransformer: queryResultTransformer,
 		macroEngine:            macroEngine,

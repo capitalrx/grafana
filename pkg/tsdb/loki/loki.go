@@ -22,7 +22,7 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend/httpclient"
 
-	"github.com/capitalrx/grafana/pkg/promlib/models"
+	"github.com/grafana/grafana/pkg/promlib/models"
 	"github.com/capitalrx/grafana/pkg/tsdb/loki/kinds/dataquery"
 )
 

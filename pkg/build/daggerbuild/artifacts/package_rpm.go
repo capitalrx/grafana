@@ -8,13 +8,13 @@ import (
 	"strings"
 
 	"dagger.io/dagger"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/arguments"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/backend"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/flags"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/fpm"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/gpg"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/packages"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/pipeline"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/arguments"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/backend"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/flags"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/fpm"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/gpg"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/packages"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/pipeline"
 )
 
 var (

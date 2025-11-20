@@ -9,7 +9,7 @@ import (
 	"sync"
 
 	"dagger.io/dagger"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/containers"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/containers"
 )
 
 // The Storer stores the result of artifacts.

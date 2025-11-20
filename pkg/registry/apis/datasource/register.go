@@ -22,7 +22,7 @@ import (
 	query "github.com/capitalrx/grafana/pkg/apis/query/v0alpha1"
 	"github.com/capitalrx/grafana/pkg/infra/log"
 	"github.com/capitalrx/grafana/pkg/plugins"
-	"github.com/capitalrx/grafana/pkg/promlib/models"
+	"github.com/grafana/grafana/pkg/promlib/models"
 	"github.com/capitalrx/grafana/pkg/registry/apis/query/queryschema"
 	"github.com/capitalrx/grafana/pkg/services/accesscontrol"
 	"github.com/capitalrx/grafana/pkg/services/apiserver/builder"

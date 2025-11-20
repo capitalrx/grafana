@@ -19,7 +19,7 @@ package main
 
 import (
 	"example.com/foo"
-	"github.com/capitalrx/grafana/pkg/build/wire"
+	"github.com/grafana/grafana/pkg/build/wire"
 )
 
 func injectFooer() foo.Fooer {

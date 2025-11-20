@@ -15,9 +15,9 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/data/utils/maputil"
 	"github.com/prometheus/prometheus/promql/parser"
 
-	"github.com/capitalrx/grafana/pkg/promlib/client"
-	"github.com/capitalrx/grafana/pkg/promlib/models"
-	"github.com/capitalrx/grafana/pkg/promlib/utils"
+	"github.com/grafana/grafana/pkg/promlib/client"
+	"github.com/grafana/grafana/pkg/promlib/models"
+	"github.com/grafana/grafana/pkg/promlib/utils"
 )
 
 type Resource struct {

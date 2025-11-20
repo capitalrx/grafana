@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"dagger.io/dagger"
-	"github.com/capitalrx/grafana/pkg/build/e2eutil"
+	"github.com/grafana/grafana/pkg/build/e2eutil"
 )
 
 func ValidatePackage(ctx context.Context, d *dagger.Client, service *dagger.Service, src *dagger.Directory, yarnCacheVolume *dagger.CacheVolume, nodeVersion string) (*dagger.Container, error) {

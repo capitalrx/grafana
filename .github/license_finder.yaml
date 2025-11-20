@@ -113,14 +113,14 @@
     :versions: []
     :when: 2025-05-03 13:10:00.000000000 Z
 - - :license
-  - github.com/capitalrx/grafana/pkg/promlib
+  - github.com/grafana/grafana/pkg/promlib
   - unknown
   - :who: Carl Bergquist
     :why: repository is owned by Grafana Labs
     :versions: []
     :when: 2025-05-03 13:10:00.000000000 Z
 - - :license
-  - github.com/capitalrx/grafana/pkg/semconv
+  - github.com/grafana/grafana/pkg/semconv
   - unknown
   - :who: Carl Bergquist
     :why: repository is owned by Grafana Labs

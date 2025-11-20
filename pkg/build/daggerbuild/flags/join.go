@@ -1,6 +1,6 @@
 package flags
 
-import "github.com/capitalrx/grafana/pkg/build/daggerbuild/pipeline"
+import "github.com/grafana/grafana/pkg/build/daggerbuild/pipeline"
 
 func JoinFlags(f ...[]pipeline.Flag) []pipeline.Flag {
 	r := []pipeline.Flag{}

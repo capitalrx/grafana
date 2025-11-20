@@ -1,8 +1,8 @@
 package flags
 
 import (
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/packages"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/pipeline"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/packages"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/pipeline"
 )
 
 var DefaultTags = []string{

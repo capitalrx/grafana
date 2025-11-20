@@ -6,15 +6,15 @@ import (
 	"log/slog"
 
 	"dagger.io/dagger"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/arguments"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/backend"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/containers"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/e2e"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/flags"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/frontend"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/packages"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/pipeline"
-	"github.com/capitalrx/grafana/pkg/build/daggerbuild/targz"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/arguments"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/backend"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/containers"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/e2e"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/flags"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/frontend"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/packages"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/pipeline"
+	"github.com/grafana/grafana/pkg/build/daggerbuild/targz"
 )
 
 var (
