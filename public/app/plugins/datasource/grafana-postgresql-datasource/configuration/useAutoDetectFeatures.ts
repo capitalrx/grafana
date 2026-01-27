@@ -80,7 +80,6 @@ function isValidConfig(options: DataSourceSettings<PostgresOptions, SecureJsonDa
     (options.secureJsonData?.password || options.secureJsonFields?.password) &&
     (options.jsonData.sslmode === PostgresTLSModes.disable ||
       (options.jsonData.sslCertFile && options.jsonData.sslKeyFile && options.jsonData.sslRootCertFile)) &&
-    !options.jsonData.postgresVersion &&
-    !options.readOnly
+    !options.jsonData.postgresVersion
   );
 }
