@@ -29,7 +29,6 @@ func ProvideService(cfg *setting.Cfg, features featuremgmt.FeatureToggles) *Serv
 	s := &Service{
 		tlsManager:    newTLSManager(logger, cfg.DataPath),
 		pgxTlsManager: newPgxTlsManager(logger),
-		iamManager:    newIAMManager(),
 		logger:        logger,
 		features:      features,
 	}
@@ -40,7 +39,6 @@ func ProvideService(cfg *setting.Cfg, features featuremgmt.FeatureToggles) *Serv
 type Service struct {
 	tlsManager    tlsSettingsProvider
 	pgxTlsManager *pgxTlsManager
-	iamManager	  *iamManager
 	im            instancemgmt.InstanceManager
 	logger        log.Logger
 	features      featuremgmt.FeatureToggles
@@ -202,19 +200,6 @@ func (s *Service) newInstanceSettings() datasource.InstanceFactoryFunc {
 		}
 
 		var cleanup func()
-		if isIAMAuth(&settings) {
-			token, err := s.iamManager.getIAMAuthToken(ctx, &settings)
-			if err != nil {
-				return nil, err
-			}
-			if settings.DecryptedSecureJSONData == nil {
-				settings.DecryptedSecureJSONData = make(map[string]string)
-			}
-			settings.DecryptedSecureJSONData["password"] = token
-			cleanup = func() {
-				s.iamManager.Dispose(settings.UID)
-			}
-		}
 
 		dsInfo := sqleng.DataSourceInfo{
 			JsonData:                jsonData,
