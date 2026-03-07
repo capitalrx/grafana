@@ -41,7 +41,6 @@ func provisionTeam(ctx context.Context, t *TeamConfig, teamService team.Service,
 		return nil
 	}
 
-	// Create a background user with admin permissions for provisioning
 	provisionerUser := accesscontrol.BackgroundUser(
 		"team_provisioner",
 		orgID,

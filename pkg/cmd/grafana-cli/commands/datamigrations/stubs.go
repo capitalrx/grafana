@@ -69,7 +69,6 @@ func (s *stubProvisioning) RunInitProvisioners(ctx context.Context) error {
 	panic("unimplemented")
 }
 
-// ProvisionTeams implements provisioning.ProvisioningService.
 func (s *stubProvisioning) ProvisionTeams(ctx context.Context) error {
 	panic("unimplemented")
 }
