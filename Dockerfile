@@ -14,7 +14,7 @@ ARG JS_SRC=js-builder
 
 # Dependabot cannot update dependencies listed in ARGs
 # By using FROM instructions we can delegate dependency updates to dependabot
-FROM alpine:3.21.3 AS alpine-base
+FROM dhi.io/alpine-base:3.23-dev AS alpine-base
 FROM ubuntu:22.04 AS ubuntu-base
 FROM golang:1.25.9-alpine AS go-builder-base
 FROM --platform=${JS_PLATFORM} node:22-alpine AS js-builder-base
@@ -65,7 +65,7 @@ ARG BUILD_BRANCH=""
 ARG GO_BUILD_TAGS="oss"
 ARG WIRE_TAGS="oss"
 
-RUN if grep -i -q alpine /etc/issue; then \
+RUN if command -v apk > /dev/null 2>&1; then \
   apk add --no-cache \
   # This is required to allow building on arm64 due to https://github.com/golang/go/issues/22040
   binutils-gold \
@@ -166,24 +166,22 @@ ENV PATH="/usr/share/grafana/bin:$PATH" \
 WORKDIR $GF_PATHS_HOME
 
 # Install dependencies
-RUN if grep -i -q alpine /etc/issue; then \
+RUN if command -v apk > /dev/null 2>&1; then \
   apk add --no-cache ca-certificates bash curl tzdata musl-utils && \
   apk info -vv | sort; \
-  elif grep -i -q ubuntu /etc/issue; then \
+  elif command -v apt-get > /dev/null 2>&1; then \
   DEBIAN_FRONTEND=noninteractive && \
   apt-get update && \
   apt-get install -y ca-certificates curl tzdata musl && \
   apt-get autoremove -y && \
   rm -rf /var/lib/apt/lists/*; \
-  else \
-  echo 'ERROR: Unsupported base image' && /bin/false; \
   fi
 
 # glibc support for alpine x86_64 only
 # docker run --rm --env STDOUT=1 sgerrand/glibc-builder 2.40 /usr/glibc-compat > glibc-bin-2.40.tar.gz
 ARG GLIBC_VERSION=2.40
 
-RUN if grep -i -q alpine /etc/issue && [ `arch` = "x86_64" ]; then \
+RUN if command -v apk > /dev/null 2>&1 && [ `arch` = "x86_64" ]; then \
   wget -qO- "https://dl.grafana.com/glibc/glibc-bin-$GLIBC_VERSION.tar.gz" | tar zxf - -C / \
   usr/glibc-compat/lib/ld-linux-x86-64.so.2 \
   usr/glibc-compat/lib/libc.so.6 \
@@ -199,7 +197,7 @@ RUN if grep -i -q alpine /etc/issue && [ `arch` = "x86_64" ]; then \
 COPY --from=go-src /tmp/grafana/conf ./conf
 
 RUN if [ ! $(getent group "$GF_GID") ]; then \
-  if grep -i -q alpine /etc/issue; then \
+  if command -v apk > /dev/null 2>&1; then \
   addgroup -S -g $GF_GID grafana; \
   else \
   addgroup --system --gid $GF_GID grafana; \
@@ -207,7 +205,7 @@ RUN if [ ! $(getent group "$GF_GID") ]; then \
   fi && \
   GF_GID_NAME=$(getent group $GF_GID | cut -d':' -f1) && \
   mkdir -p "$GF_PATHS_HOME/.aws" && \
-  if grep -i -q alpine /etc/issue; then \
+  if command -v apk > /dev/null 2>&1; then \
   adduser -S -u $GF_UID -G "$GF_GID_NAME" grafana; \
   else \
   adduser --system --uid $GF_UID --ingroup "$GF_GID_NAME" grafana; \
