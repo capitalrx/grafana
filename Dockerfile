@@ -14,7 +14,8 @@ ARG JS_SRC=js-builder
 
 # Dependabot cannot update dependencies listed in ARGs
 # By using FROM instructions we can delegate dependency updates to dependabot
-FROM dhi.io/alpine-base:3.23-dev AS alpine-base
+FROM 727574948438.dkr.ecr.us-east-1.amazonaws.com/gold:alpine_fips AS alpine-base
+# dhi.io/alpine-base:3.23-dev AS alpine-base
 FROM ubuntu:22.04 AS ubuntu-base
 FROM golang:1.25.9-alpine AS go-builder-base
 FROM --platform=${JS_PLATFORM} node:22-alpine AS js-builder-base
