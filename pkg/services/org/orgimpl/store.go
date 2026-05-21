@@ -21,7 +21,7 @@ import (
 	"github.com/grafana/grafana/pkg/util"
 )
 
-const MainOrgName = "Main Org."
+const MainOrgName = "Judi Health"
 
 type store interface {
 	Get(context.Context, int64) (*org.Org, error)

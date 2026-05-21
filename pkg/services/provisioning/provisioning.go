@@ -38,8 +38,10 @@ import (
 	"github.com/grafana/grafana/pkg/services/provisioning/dashboards"
 	"github.com/grafana/grafana/pkg/services/provisioning/datasources"
 	"github.com/grafana/grafana/pkg/services/provisioning/plugins"
+	"github.com/grafana/grafana/pkg/services/provisioning/teams"
 	"github.com/grafana/grafana/pkg/services/quota"
 	"github.com/grafana/grafana/pkg/services/secrets"
+	"github.com/grafana/grafana/pkg/services/team"
 	"github.com/grafana/grafana/pkg/services/user"
 	"github.com/grafana/grafana/pkg/setting"
 	"github.com/grafana/grafana/pkg/storage/legacysql/dualwrite"
@@ -66,6 +68,7 @@ func ProvideService(
 	orgService org.Service,
 	userService user.Service,
 	resourcePermissions accesscontrol.ReceiverPermissionsService,
+	teamService team.Service,
 	tracer tracing.Tracer,
 	dual dualwrite.Service,
 	promTypeMigrationProvider promtypemigration.PromTypeMigrationProvider,
@@ -84,6 +87,7 @@ func ProvideService(
 		provisionDatasources:         datasources.Provision,
 		provisionPlugins:             plugins.Provision,
 		provisionAlerting:            prov_alerting.Provision,
+		provisionTeams:               teams.Provision,
 		dashboardProvisioningService: dashboardProvisioningService,
 		dashboardService:             dashboardService,
 		datasourceService:            datasourceService,
@@ -95,6 +99,7 @@ func ProvideService(
 		orgService:                   orgService,
 		userService:                  userService,
 		folderService:                folderService,
+		teamService:                  teamService,
 		resourcePermissions:          resourcePermissions,
 		tracer:                       tracer,
 		migratePrometheusType:        promTypeMigrationProvider.Run,
@@ -125,6 +130,11 @@ func (ps *ProvisioningServiceImpl) starting(ctx context.Context) error {
 
 	if err := ps.ProvisionAlerting(ctx); err != nil {
 		ps.log.Error("Failed to provision alerting", "error", err)
+		return err
+	}
+
+	if err := ps.ProvisionTeams(ctx); err != nil {
+		ps.log.Error("Failed to provision teams", "error", err)
 		return err
 	}
 
@@ -187,6 +197,7 @@ type ProvisioningService interface {
 	ProvisionPlugins(ctx context.Context) error
 	ProvisionDashboards(ctx context.Context) error
 	ProvisionAlerting(ctx context.Context) error
+	ProvisionTeams(ctx context.Context) error
 	GetDashboardProvisionerResolvedPath(name string) string
 	GetAllowUIUpdatesFromConfig(name string) bool
 }
@@ -203,6 +214,7 @@ func newProvisioningServiceImpl(
 		newDashboardProvisioner: newDashboardProvisioner,
 		provisionDatasources:    provisionDatasources,
 		provisionPlugins:        provisionPlugins,
+		provisionTeams:          teams.Provision,
 		Cfg:                     setting.NewCfg(),
 		migratePrometheusType:   migratePrometheusType,
 	}
@@ -234,6 +246,7 @@ type ProvisioningServiceImpl struct {
 	provisionDatasources         func(context.Context, string, datasources.BaseDataSourceService, datasources.CorrelationsStore, org.Service) error
 	provisionPlugins             func(context.Context, string, pluginstore.Store, pluginsettings.Service, org.Service) error
 	provisionAlerting            func(context.Context, prov_alerting.ProvisionerConfig) error
+	provisionTeams               func(context.Context, string, team.Service) error
 	mutex                        sync.Mutex
 	dashboardProvisioningService dashboardservice.DashboardProvisioningService
 	dashboardService             dashboardservice.DashboardService
@@ -243,6 +256,7 @@ type ProvisioningServiceImpl struct {
 	quotaService                 quota.Service
 	secretService                secrets.Service //nolint:staticcheck // SA1019: Legacy envelope encryption for single-tenant feature
 	folderService                folder.Service
+	teamService                  team.Service
 	resourcePermissions          accesscontrol.ReceiverPermissionsService
 	routesPermissions            accesscontrol.RoutePermissionsService
 	tracer                       tracing.Tracer
@@ -378,6 +392,18 @@ func (ps *ProvisioningServiceImpl) ProvisionAlerting(ctx context.Context) error 
 		TemplateService:            *templateService,
 	}
 	return ps.provisionAlerting(ctx, cfg)
+}
+
+func (ps *ProvisioningServiceImpl) ProvisionTeams(ctx context.Context) error {
+	ps.mutex.Lock()
+	defer ps.mutex.Unlock()
+	teamPath := filepath.Join(ps.Cfg.ProvisioningPath, "teams")
+	if err := ps.provisionTeams(ctx, teamPath, ps.teamService); err != nil {
+		err = fmt.Errorf("%v: %w", "team provisioning error", err)
+		ps.log.Error("Failed to provision teams", "error", err)
+		return err
+	}
+	return nil
 }
 
 func (ps *ProvisioningServiceImpl) GetDashboardProvisionerResolvedPath(name string) string {
