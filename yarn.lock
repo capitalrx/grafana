@@ -19848,10 +19848,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-document@github:webmodules/get-document#commit=a04ccb499d6e0433a368c3bb150b4899b698461f":
+"get-document@npm:1.0.0":
   version: 1.0.0
-  resolution: "get-document@https://github.com/webmodules/get-document.git#commit=a04ccb499d6e0433a368c3bb150b4899b698461f"
-  checksum: 10/5ec51321f3a5257a08c3ea9ac1984d64302a34c786f5d5691ae1ee00aba189eedac63f401e0cf746b0c77fb84091a4d2a9b66ac23dc0e872cbac860e5e0c5245
+  resolution: "get-document@npm:1.0.0"
+  checksum: 10/94312db44ea9d070cca8cc14272582d04c7638494d6b5c9c0d6f1d949ef2605b4102ee52f0ded11e571357aba45e9fcc98a5b0467d61e4943a66002167eb6e7a
   languageName: node
   linkType: hard
 
