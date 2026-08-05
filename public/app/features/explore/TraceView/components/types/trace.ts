@@ -60,6 +60,7 @@ export type TraceSpanData = {
   flags: number;
   errorIconColor?: string;
   dataFrameRowIndex?: number;
+  dataFrameIndex?: number;
   childSpanIds?: string[];
 };
 

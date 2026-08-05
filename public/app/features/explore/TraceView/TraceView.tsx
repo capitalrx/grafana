@@ -18,7 +18,13 @@ import {
   useDataLinksContext,
 } from '@grafana/data';
 import { Trans, t } from '@grafana/i18n';
-import { getTraceToLogsOptions, type TraceToMetricsData, type TraceToProfilesData } from '@grafana/o11y-ds-frontend';
+import {
+  getTraceToLogsOptions,
+  type TraceToLogsData,
+  type TraceToLogsOptionsV2,
+  type TraceToMetricsData,
+  type TraceToProfilesData,
+} from '@grafana/o11y-ds-frontend';
 import { getTemplateSrv } from '@grafana/runtime';
 import { type DataQuery } from '@grafana/schema';
 import { useStyles2 } from '@grafana/ui';
@@ -36,7 +42,7 @@ import { type TraceFlameGraphs } from './components/TraceTimelineViewer/SpanDeta
 import { type SpanBarOptionsData } from './components/settings/SpanBarSettings';
 import type TTraceTimeline from './components/types/TTraceTimeline';
 import { type SpanLinkFunc } from './components/types/links';
-import { type Trace } from './components/types/trace';
+import { type Trace, type TraceSpan } from './components/types/trace';
 import { createSpanLinkFactory } from './createSpanLink';
 import { useChildrenState } from './useChildrenState';
 import { useDetailState } from './useDetailState';
@@ -70,6 +76,7 @@ type Props = {
   spanFilters?: TraceSearchProps;
   timeRange: TimeRange;
   hideHeaderDetails?: boolean;
+  dataFrameDataSourceUids?: Array<string | undefined>;
 };
 
 export function TraceView(props: Props) {
@@ -147,6 +154,38 @@ export function TraceView(props: Props) {
   const traceToProfilesOptions = traceToProfilesData?.tracesToProfiles;
   const spanBarOptions: SpanBarOptionsData | undefined = instanceSettings?.jsonData;
 
+  const dataFrameDataSourceUids = props.dataFrameDataSourceUids;
+  const traceToLogsOptionsByDataSourceUid = useMemo(() => {
+    if (!dataFrameDataSourceUids) {
+      return undefined;
+    }
+    const optionsByUid: Record<string, TraceToLogsOptionsV2 | undefined> = {};
+    for (const uid of dataFrameDataSourceUids) {
+      if (uid && !(uid in optionsByUid)) {
+        const uidInstanceSettings = getDatasourceSrv().getInstanceSettings(uid);
+        const traceToLogsData: TraceToLogsData | undefined = uidInstanceSettings?.jsonData;
+        optionsByUid[uid] = getTraceToLogsOptions(traceToLogsData);
+      }
+    }
+    return optionsByUid;
+  }, [dataFrameDataSourceUids]);
+
+  const getTraceToLogsOptionsForSpan = useMemo(() => {
+    if (!traceToLogsOptionsByDataSourceUid || !dataFrameDataSourceUids) {
+      return undefined;
+    }
+    return (span: TraceSpan): TraceToLogsOptionsV2 | undefined => {
+      if (span.dataFrameIndex === undefined) {
+        return traceToLogsOptions;
+      }
+      const uid = dataFrameDataSourceUids[span.dataFrameIndex];
+      if (!uid) {
+        return traceToLogsOptions;
+      }
+      return traceToLogsOptionsByDataSourceUid[uid] ?? traceToLogsOptions;
+    };
+  }, [traceToLogsOptionsByDataSourceUid, dataFrameDataSourceUids, traceToLogsOptions]);
+
   const dataLinksContext = useDataLinksContext();
 
   const createSpanLink = useMemo(
@@ -155,9 +194,11 @@ export function TraceView(props: Props) {
       createSpanLinkFactory({
         splitOpenFn: props.splitOpenFn!,
         traceToLogsOptions,
+        getTraceToLogsOptionsForSpan,
         traceToMetricsOptions,
         traceToProfilesOptions,
         dataFrame: props.dataFrames[0],
+        dataFrames: props.dataFrames,
         createFocusSpanLink,
         trace: traceProp,
         dataLinkPostProcessor: dataLinksContext?.dataLinkPostProcessor,
@@ -165,6 +206,7 @@ export function TraceView(props: Props) {
     [
       props.splitOpenFn,
       traceToLogsOptions,
+      getTraceToLogsOptionsForSpan,
       traceToMetricsOptions,
       traceToProfilesOptions,
       props.dataFrames,

@@ -139,7 +139,7 @@ export function TraceToLogsSettings({ options, onOptionsChange }: Props) {
       <InlineFieldRow>
         <IntervalInput
           label={getTimeShiftLabel('start')}
-          tooltip={getTimeShiftTooltip('start', '0')}
+          tooltip={getTimeShiftTooltip('start', '-2m')}
           value={traceToLogs.spanStartTimeShift || ''}
           onChange={(val) => {
             updateTracesToLogs({ spanStartTimeShift: val });
@@ -151,7 +151,7 @@ export function TraceToLogsSettings({ options, onOptionsChange }: Props) {
       <InlineFieldRow>
         <IntervalInput
           label={getTimeShiftLabel('end')}
-          tooltip={getTimeShiftTooltip('end', '0')}
+          tooltip={getTimeShiftTooltip('end', '2m')}
           value={traceToLogs.spanEndTimeShift || ''}
           onChange={(val) => {
             updateTracesToLogs({ spanEndTimeShift: val });

@@ -31,9 +31,9 @@ export interface TracesPanelOptions {
 
 export const TracesPanel = ({ data, options, replaceVariables }: PanelProps<TracesPanelOptions>) => {
   const topOfViewRef = useRef<HTMLDivElement>(null);
-  const traceProp = useMemo(() => transformDataFrames(data.series[0]), [data.series]);
+  const traceProp = useMemo(() => transformDataFrames(data.series), [data.series]);
   const dataSource = useAsync(async () => {
-    const uid = data.request?.targets[0].datasource?.uid ?? options.datasource?.uid;
+    const uid = data.request?.targets?.[0]?.datasource?.uid ?? options?.datasource?.uid;
 
     if (!uid) {
       return undefined;
@@ -41,6 +41,14 @@ export const TracesPanel = ({ data, options, replaceVariables }: PanelProps<Trac
 
     return await getDataSourceSrv().get(uid);
   });
+  const dataFrameDataSourceUids = useMemo(
+    () =>
+      data.series.map((frame) => {
+        const target = data.request?.targets?.find((t) => t.refId === frame.refId);
+        return target?.datasource?.uid ?? data.request?.targets?.[0]?.datasource?.uid ?? options?.datasource?.uid;
+      }),
+    [data.series, data.request, options?.datasource]
+  );
 
   if (!data || !data.series.length || !traceProp) {
     return (
@@ -57,6 +65,7 @@ export const TracesPanel = ({ data, options, replaceVariables }: PanelProps<Trac
       <div ref={topOfViewRef}></div>
       <TraceView
         dataFrames={data.series}
+        dataFrameDataSourceUids={dataFrameDataSourceUids}
         scrollElementClass={styles.wrapper}
         traceProp={traceProp}
         datasource={dataSource.value}
