@@ -40,18 +40,34 @@ import { type Trace, type TraceSpan, type TraceSpanReference } from './component
 export function createSpanLinkFactory({
   splitOpenFn,
   traceToLogsOptions,
+  getTraceToLogsOptionsForSpan,
   traceToMetricsOptions,
   traceToProfilesOptions,
   dataFrame,
+  dataFrames,
   createFocusSpanLink,
   trace,
   dataLinkPostProcessor,
 }: {
   splitOpenFn: SplitOpen;
   traceToLogsOptions?: TraceToLogsOptionsV2;
+  /**
+   * Resolves the trace to logs options for a specific span. Useful when a trace is made up of spans from
+   * multiple tracing datasources (e.g. a panel using a Mixed datasource), where each span may need to link
+   * to a different logs datasource than the one configured on the "primary" datasource. Falls back to
+   * `traceToLogsOptions` when not provided or when it returns undefined for a given span.
+   */
+  getTraceToLogsOptionsForSpan?: (span: TraceSpan) => TraceToLogsOptionsV2 | undefined;
   traceToMetricsOptions?: TraceToMetricsOptions;
   traceToProfilesOptions?: TraceToProfilesOptions;
   dataFrame?: DataFrame;
+  /**
+   * All the data frames a trace was built from (e.g. when a panel uses a Mixed datasource with multiple
+   * queries, each merged into a single trace). Used so span links driven by field-level `config.links`
+   * (e.g. correlations) resolve against the specific frame each span actually came from, rather than
+   * always the first/primary one. Falls back to `[dataFrame]` when not provided.
+   */
+  dataFrames?: DataFrame[];
   createFocusSpanLink?: (traceId: string, spanId: string) => LinkModel<Field>;
   trace: Trace;
   dataLinkPostProcessor?: DataLinkPostProcessor;
@@ -60,8 +76,11 @@ export function createSpanLinkFactory({
     return undefined;
   }
 
+  const frames = dataFrames && dataFrames.length > 0 ? dataFrames : [dataFrame];
+  const getDataFrameForSpan = (span: TraceSpan): DataFrame =>
+    frames[span.dataFrameIndex ?? 0] ?? frames[0] ?? dataFrame;
+
   let scopedVars = scopedVarsFromTrace(trace.duration, trace.traceName, trace.traceID);
-  const hasLinks = dataFrame.fields.some((f) => Boolean(f.config.links?.length));
 
   const createSpanLinks = legacyCreateSpanLinkFactory(
     splitOpenFn,
@@ -72,11 +91,17 @@ export function createSpanLinkFactory({
     createFocusSpanLink,
     scopedVars,
     dataFrame,
-    dataLinkPostProcessor
+    dataLinkPostProcessor,
+    getTraceToLogsOptionsForSpan
   );
 
   return function SpanLink(span: TraceSpan): SpanLinkDef[] | undefined {
     let spanLinks = createSpanLinks(span);
+
+    // Resolve the correct originating frame for this specific span (relevant for e.g. Mixed datasource
+    // panels), since field-level `config.links` (e.g. correlations) can differ per query/datasource.
+    const spanDataFrame = getDataFrameForSpan(span);
+    const hasLinks = spanDataFrame.fields.some((f) => Boolean(f.config.links?.length));
 
     if (hasLinks) {
       scopedVars = {
@@ -85,7 +110,7 @@ export function createSpanLinkFactory({
         ...scopedVarsFromTags(span, traceToProfilesOptions),
       };
       // We should be here only if there are some links in the dataframe
-      const fields = dataFrame.fields.filter((f) => Boolean(f.config.links?.length))!;
+      const fields = spanDataFrame.fields.filter((f) => Boolean(f.config.links?.length))!;
       try {
         let profilesDataSourceSettings: DataSourceInstanceSettings<DataSourceJsonData> | undefined;
         if (traceToProfilesOptions?.datasourceUid) {
@@ -101,8 +126,16 @@ export function createSpanLinkFactory({
             field,
             rowIndex: span.dataFrameRowIndex!,
             splitOpenFn,
-            range: getTimeRangeFromSpan(span, undefined, undefined, shouldCreatePyroscopeLink),
-            dataFrame,
+            // Default to a 2 minute window around the span when the link doesn't define its own range.
+            // Default to a 2 minute window around the span, except for pyroscope links which already
+            // apply their own +/-60s adjustment on top of a 0 base (see getTimeRangeFromSpan).
+            range: getTimeRangeFromSpan(
+              span,
+              shouldCreatePyroscopeLink ? undefined : { startMs: -120000, endMs: 120000 },
+              undefined,
+              shouldCreatePyroscopeLink
+            ),
+            dataFrame: spanDataFrame,
             vars: scopedVars,
           });
           links = links.concat(fieldLinksForExplore);
@@ -154,14 +187,9 @@ function legacyCreateSpanLinkFactory(
   createFocusSpanLink?: (traceId: string, spanId: string) => LinkModel<Field>,
   scopedVars?: ScopedVars,
   dataFrame?: DataFrame,
-  dataLinkPostProcessor?: DataLinkPostProcessor
+  dataLinkPostProcessor?: DataLinkPostProcessor,
+  getTraceToLogsOptionsForSpan?: (span: TraceSpan) => TraceToLogsOptionsV2 | undefined
 ) {
-  let logsDataSourceSettings: DataSourceInstanceSettings<DataSourceJsonData> | undefined;
-  if (traceToLogsOptions?.datasourceUid) {
-    logsDataSourceSettings = getDatasourceSrv().getInstanceSettings(traceToLogsOptions.datasourceUid);
-  }
-  const isSplunkDS = logsDataSourceSettings?.type === 'grafana-splunk-datasource';
-
   let metricsDataSourceSettings: DataSourceInstanceSettings<DataSourceJsonData> | undefined;
   if (traceToMetricsOptions?.datasourceUid) {
     metricsDataSourceSettings = getDatasourceSrv().getInstanceSettings(traceToMetricsOptions.datasourceUid);
@@ -176,39 +204,52 @@ function legacyCreateSpanLinkFactory(
     let query: DataQuery | undefined;
     let tags = '';
 
+    // Resolve the trace to logs options for this specific span. Spans within a trace can originate from
+    // different tracing datasources (e.g. a panel using a Mixed datasource with multiple queries), each of
+    // which may be linked to a different logs datasource. Fall back to the "primary" traceToLogsOptions
+    // (from the datasource that was used to query/view the trace) when there is no per-span override.
+    const spanTraceToLogsOptions = getTraceToLogsOptionsForSpan?.(span) ?? traceToLogsOptions;
+    let logsDataSourceSettings: DataSourceInstanceSettings<DataSourceJsonData> | undefined;
+    if (spanTraceToLogsOptions?.datasourceUid) {
+      logsDataSourceSettings = getDatasourceSrv().getInstanceSettings(spanTraceToLogsOptions.datasourceUid);
+    }
+    const isSplunkDS = logsDataSourceSettings?.type === 'grafana-splunk-datasource';
+
     // TODO: This should eventually move into specific data sources and added to the data frame as we no longer use the
     //  deprecated blob format and we can map the link easily in data frame.
-    if (logsDataSourceSettings && traceToLogsOptions) {
-      const customQuery = traceToLogsOptions.customQuery ? traceToLogsOptions.query : undefined;
+    if (logsDataSourceSettings && spanTraceToLogsOptions) {
+      const customQuery = spanTraceToLogsOptions.customQuery ? spanTraceToLogsOptions.query : undefined;
       const tagsToUse =
-        traceToLogsOptions.tags && traceToLogsOptions.tags.length > 0 ? traceToLogsOptions.tags : defaultKeys;
+        spanTraceToLogsOptions.tags && spanTraceToLogsOptions.tags.length > 0
+          ? spanTraceToLogsOptions.tags
+          : defaultKeys;
       switch (logsDataSourceSettings?.type) {
         case 'loki':
           tags = getFormattedTags(span, tagsToUse);
-          query = getQueryForLoki(span, traceToLogsOptions, tags, customQuery);
+          query = getQueryForLoki(span, spanTraceToLogsOptions, tags, customQuery);
           break;
         case 'grafana-splunk-datasource':
           tags = getFormattedTags(span, tagsToUse, { joinBy: ' ' });
-          query = getQueryForSplunk(span, traceToLogsOptions, tags, customQuery);
+          query = getQueryForSplunk(span, spanTraceToLogsOptions, tags, customQuery);
           break;
         case 'elasticsearch':
         case 'grafana-opensearch-datasource':
           tags = getFormattedTags(span, tagsToUse, { labelValueSign: ':', joinBy: ' AND ' });
-          query = getQueryForElasticsearchOrOpensearch(span, traceToLogsOptions, tags, customQuery);
+          query = getQueryForElasticsearchOrOpensearch(span, spanTraceToLogsOptions, tags, customQuery);
           break;
         case 'grafana-falconlogscale-datasource':
           tags = getFormattedTags(span, tagsToUse, { joinBy: ' OR ' });
-          query = getQueryForFalconLogScale(span, traceToLogsOptions, tags, customQuery);
+          query = getQueryForFalconLogScale(span, spanTraceToLogsOptions, tags, customQuery);
           break;
         case 'googlecloud-logging-datasource':
           tags = getFormattedTags(span, tagsToUse, { joinBy: ' AND ' });
-          query = getQueryForGoogleCloudLogging(span, traceToLogsOptions, tags, customQuery);
+          query = getQueryForGoogleCloudLogging(span, spanTraceToLogsOptions, tags, customQuery);
           break;
         case 'victoriametrics-logs-datasource':
           // Build tag selector using strict equality (":=") required by LogsQL
           // See https://docs.victoriametrics.com/victorialogs/logsql/#exact-filter
           tags = getFormattedTags(span, tagsToUse, { labelValueSign: ':=', joinBy: ' AND ' });
-          query = getQueryForVictoriaLogs(span, traceToLogsOptions, tags, customQuery);
+          query = getQueryForVictoriaLogs(span, spanTraceToLogsOptions, tags, customQuery);
           break;
       }
 
@@ -225,12 +266,13 @@ function legacyCreateSpanLinkFactory(
             range: getTimeRangeFromSpan(
               span,
               {
-                startMs: traceToLogsOptions.spanStartTimeShift
-                  ? rangeUtil.intervalToMs(traceToLogsOptions.spanStartTimeShift)
-                  : 0,
-                endMs: traceToLogsOptions.spanEndTimeShift
-                  ? rangeUtil.intervalToMs(traceToLogsOptions.spanEndTimeShift)
-                  : 0,
+                // Default to a 2 minute window around the span when no explicit time shift is configured.
+                startMs: spanTraceToLogsOptions.spanStartTimeShift
+                  ? rangeUtil.intervalToMs(spanTraceToLogsOptions.spanStartTimeShift)
+                  : -120000,
+                endMs: spanTraceToLogsOptions.spanEndTimeShift
+                  ? rangeUtil.intervalToMs(spanTraceToLogsOptions.spanEndTimeShift)
+                  : 120000,
               },
               isSplunkDS
             ),

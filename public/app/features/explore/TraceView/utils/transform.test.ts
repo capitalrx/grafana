@@ -1,6 +1,6 @@
 import { createDataFrame } from '@grafana/data';
 
-import { transformTraceDataFrame } from './transform';
+import { transformDataFrames, transformTraceDataFrame } from './transform';
 
 describe('transformTraceDataFrame()', () => {
   const fields = [
@@ -62,5 +62,54 @@ describe('transformTraceDataFrame()', () => {
       serviceNamespace: 'production',
       tags: [],
     });
+  });
+});
+
+describe('transformDataFrames() with multiple frames', () => {
+  it('combines spans from multiple frames into a single trace and tags each span with its frame index', () => {
+    const frameA = createDataFrame({
+      refId: 'A',
+      fields: [
+        { name: 'traceID', values: ['trace1'] },
+        { name: 'spanID', values: ['span1'] },
+        { name: 'operationName', values: ['GET /api'] },
+        { name: 'startTime', values: [1000] },
+        { name: 'duration', values: [10] },
+      ],
+    });
+    const frameB = createDataFrame({
+      refId: 'B',
+      fields: [
+        { name: 'traceID', values: ['trace1'] },
+        { name: 'spanID', values: ['span2'] },
+        { name: 'operationName', values: ['GET /downstream'] },
+        { name: 'startTime', values: [1005] },
+        { name: 'duration', values: [3] },
+      ],
+    });
+
+    const trace = transformDataFrames([frameA, frameB]);
+    expect(trace).not.toBeNull();
+    expect(trace!.spans.map((s) => ({ spanID: s.spanID, dataFrameIndex: s.dataFrameIndex }))).toEqual([
+      { spanID: 'span1', dataFrameIndex: 0 },
+      { spanID: 'span2', dataFrameIndex: 1 },
+    ]);
+  });
+
+  it('does not set dataFrameIndex when only a single frame is provided', () => {
+    const frame = createDataFrame({
+      refId: 'A',
+      fields: [
+        { name: 'traceID', values: ['trace1'] },
+        { name: 'spanID', values: ['span1'] },
+        { name: 'operationName', values: ['GET /api'] },
+        { name: 'startTime', values: [1000] },
+        { name: 'duration', values: [10] },
+      ],
+    });
+
+    const trace = transformDataFrames([frame]);
+    expect(trace).not.toBeNull();
+    expect(trace!.spans[0].dataFrameIndex).toBeUndefined();
   });
 });

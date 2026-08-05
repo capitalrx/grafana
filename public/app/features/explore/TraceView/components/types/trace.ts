@@ -60,6 +60,13 @@ export type TraceSpanData = {
   flags: number;
   errorIconColor?: string;
   dataFrameRowIndex?: number;
+  /**
+   * Index of the DataFrame (within the list of frames backing the trace) that this span originated from.
+   * Only set when a trace is built from more than one frame, e.g. a panel using a Mixed datasource with
+   * multiple queries. Used to resolve the correct linked datasource (trace to logs/metrics/profiles) for
+   * this specific span instead of always using the datasource of the first query.
+   */
+  dataFrameIndex?: number;
   childSpanIds?: string[];
 };
 
