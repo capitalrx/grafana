@@ -31,9 +31,6 @@ export interface TracesPanelOptions {
 
 export const TracesPanel = ({ data, options, replaceVariables }: PanelProps<TracesPanelOptions>) => {
   const topOfViewRef = useRef<HTMLDivElement>(null);
-  // Build the trace from all series, not just the first one, so that panels using a Mixed datasource with
-  // multiple queries (e.g. spans for the same trace coming from different tracing datasources) show a single
-  // combined trace.
   const traceProp = useMemo(() => transformDataFrames(data.series), [data.series]);
   const dataSource = useAsync(async () => {
     const uid = data.request?.targets?.[0]?.datasource?.uid ?? options?.datasource?.uid;
@@ -44,8 +41,6 @@ export const TracesPanel = ({ data, options, replaceVariables }: PanelProps<Trac
 
     return await getDataSourceSrv().get(uid);
   });
-  // For each frame, resolve the datasource that produced it (matching on refId against the panel's targets)
-  // so span links can use the correct datasource for spans that came from a query other than the first one.
   const dataFrameDataSourceUids = useMemo(
     () =>
       data.series.map((frame) => {

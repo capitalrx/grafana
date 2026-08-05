@@ -27,21 +27,10 @@ function toFrameArray(frames?: DataFrame | DataFrame[]): DataFrame[] {
   return Array.isArray(frames) ? frames : [frames];
 }
 
-/**
- * Transforms a single trace data frame. Kept for callers that only ever deal with a single frame
- * (e.g. a single tracing datasource query). See {@link transformTraceDataFrames} for the multi-frame case.
- */
 export function transformTraceDataFrame(frame: DataFrame): TraceResponse | null {
   return transformTraceDataFrames([frame]);
 }
 
-/**
- * Transforms one or more trace data frames into a single combined trace response. Multiple frames occur
- * when a panel uses a Mixed datasource with more than one query, e.g. spans for the same trace coming from
- * different tracing datasources. Each resulting span records which frame (dataFrameIndex) it came from so
- * span links (e.g. "Logs for this span") can resolve the correct linked datasource for that specific span
- * instead of always using the datasource of the first query.
- */
 export function transformTraceDataFrames(frames: DataFrame[]): TraceResponse | null {
   const processes: Record<string, TraceProcess> = {};
   const spans: TraceResponse['spans'] = [];
@@ -84,7 +73,6 @@ export function transformTraceDataFrames(frames: DataFrame[]): TraceResponse | n
         references,
         logs: s.logs?.map((l) => ({ ...l, timestamp: l.timestamp * 1000 })) || [],
         dataFrameRowIndex: index,
-        // Only tag a span with its originating frame index when the trace was built from multiple frames.
         dataFrameIndex: frames.length > 1 ? frameIndex : undefined,
       });
     });

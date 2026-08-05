@@ -1691,9 +1691,6 @@ describe('dataFrame links', () => {
   });
 
   it('resolves field-level (e.g. correlation) links against the span\'s own originating frame, not the first frame', () => {
-    // Simulates a Mixed datasource panel (e.g. Quickwit tracing datasource, which has no built-in
-    // "trace to logs" jsonData config and instead relies on correlations/field-level links) where
-    // spans come from more than one frame, each linked to a different logs datasource.
     const frame0 = createMultiLinkDataFrame();
     const frame1 = createDataFrame({
       fields: [

@@ -76,12 +76,6 @@ type Props = {
   spanFilters?: TraceSearchProps;
   timeRange: TimeRange;
   hideHeaderDetails?: boolean;
-  /**
-   * Datasource uid backing each entry in `dataFrames`, by index. Used when a trace is built from more than
-   * one frame (e.g. a panel using a Mixed datasource with multiple queries) so span links, such as "Logs for
-   * this span", can resolve the correct linked datasource for the specific datasource each span came from
-   * instead of always using the datasource of the first query.
-   */
   dataFrameDataSourceUids?: Array<string | undefined>;
 };
 
@@ -160,10 +154,6 @@ export function TraceView(props: Props) {
   const traceToProfilesOptions = traceToProfilesData?.tracesToProfiles;
   const spanBarOptions: SpanBarOptionsData | undefined = instanceSettings?.jsonData;
 
-  // When a trace is made up of spans from more than one datasource (e.g. a panel using a Mixed datasource
-  // with multiple queries), build a lookup of each involved datasource's own trace to logs options so span
-  // links can resolve the correct linked logs datasource per span, instead of always using the datasource
-  // that was used to query/view the trace (`instanceSettings` above).
   const dataFrameDataSourceUids = props.dataFrameDataSourceUids;
   const traceToLogsOptionsByDataSourceUid = useMemo(() => {
     if (!dataFrameDataSourceUids) {

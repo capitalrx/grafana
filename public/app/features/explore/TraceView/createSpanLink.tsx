@@ -51,22 +51,10 @@ export function createSpanLinkFactory({
 }: {
   splitOpenFn: SplitOpen;
   traceToLogsOptions?: TraceToLogsOptionsV2;
-  /**
-   * Resolves the trace to logs options for a specific span. Useful when a trace is made up of spans from
-   * multiple tracing datasources (e.g. a panel using a Mixed datasource), where each span may need to link
-   * to a different logs datasource than the one configured on the "primary" datasource. Falls back to
-   * `traceToLogsOptions` when not provided or when it returns undefined for a given span.
-   */
   getTraceToLogsOptionsForSpan?: (span: TraceSpan) => TraceToLogsOptionsV2 | undefined;
   traceToMetricsOptions?: TraceToMetricsOptions;
   traceToProfilesOptions?: TraceToProfilesOptions;
   dataFrame?: DataFrame;
-  /**
-   * All the data frames a trace was built from (e.g. when a panel uses a Mixed datasource with multiple
-   * queries, each merged into a single trace). Used so span links driven by field-level `config.links`
-   * (e.g. correlations) resolve against the specific frame each span actually came from, rather than
-   * always the first/primary one. Falls back to `[dataFrame]` when not provided.
-   */
   dataFrames?: DataFrame[];
   createFocusSpanLink?: (traceId: string, spanId: string) => LinkModel<Field>;
   trace: Trace;
@@ -98,8 +86,6 @@ export function createSpanLinkFactory({
   return function SpanLink(span: TraceSpan): SpanLinkDef[] | undefined {
     let spanLinks = createSpanLinks(span);
 
-    // Resolve the correct originating frame for this specific span (relevant for e.g. Mixed datasource
-    // panels), since field-level `config.links` (e.g. correlations) can differ per query/datasource.
     const spanDataFrame = getDataFrameForSpan(span);
     const hasLinks = spanDataFrame.fields.some((f) => Boolean(f.config.links?.length));
 
@@ -126,9 +112,6 @@ export function createSpanLinkFactory({
             field,
             rowIndex: span.dataFrameRowIndex!,
             splitOpenFn,
-            // Default to a 2 minute window around the span when the link doesn't define its own range.
-            // Default to a 2 minute window around the span, except for pyroscope links which already
-            // apply their own +/-60s adjustment on top of a 0 base (see getTimeRangeFromSpan).
             range: getTimeRangeFromSpan(
               span,
               shouldCreatePyroscopeLink ? undefined : { startMs: -120000, endMs: 120000 },
@@ -204,10 +187,6 @@ function legacyCreateSpanLinkFactory(
     let query: DataQuery | undefined;
     let tags = '';
 
-    // Resolve the trace to logs options for this specific span. Spans within a trace can originate from
-    // different tracing datasources (e.g. a panel using a Mixed datasource with multiple queries), each of
-    // which may be linked to a different logs datasource. Fall back to the "primary" traceToLogsOptions
-    // (from the datasource that was used to query/view the trace) when there is no per-span override.
     const spanTraceToLogsOptions = getTraceToLogsOptionsForSpan?.(span) ?? traceToLogsOptions;
     let logsDataSourceSettings: DataSourceInstanceSettings<DataSourceJsonData> | undefined;
     if (spanTraceToLogsOptions?.datasourceUid) {
@@ -266,7 +245,6 @@ function legacyCreateSpanLinkFactory(
             range: getTimeRangeFromSpan(
               span,
               {
-                // Default to a 2 minute window around the span when no explicit time shift is configured.
                 startMs: spanTraceToLogsOptions.spanStartTimeShift
                   ? rangeUtil.intervalToMs(spanTraceToLogsOptions.spanStartTimeShift)
                   : -120000,
