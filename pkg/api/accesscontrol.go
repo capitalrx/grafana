@@ -43,18 +43,16 @@ func (hs *HTTPServer) declareFixedRoles() error {
 		return err
 	}
 
-	//nolint:staticcheck // ViewersCanEdit is deprecated but still used for backward compatibility
 	return hs.accesscontrolService.DeclareFixedRoles(
-		FixedRoleRegistrations(hs.Cfg.ViewersCanEdit, hs.License.FeatureEnabled("dspermissions.enforcement"))...)
+		FixedRoleRegistrations(hs.License.FeatureEnabled("dspermissions.enforcement"))...)
 }
 
 // FixedRoleRegistrations returns all HTTP API role registrations with grants
 // adjusted for the running instance.
 //
-// viewersCanEdit: when true the datasources explorer role also grants Viewer.
 // dsPermissionsEnforced: when false (OSS / enterprise without license) the
 // datasources reader role is granted to Viewer.
-func FixedRoleRegistrations(viewersCanEdit, dsPermissionsEnforced bool) []ac.RoleRegistration {
+func FixedRoleRegistrations(dsPermissionsEnforced bool) []ac.RoleRegistration {
 	provisioningWriterRole := ac.RoleRegistration{
 		Role: ac.RoleDTO{
 			Name:        "fixed:provisioning:writer",
@@ -71,10 +69,7 @@ func FixedRoleRegistrations(viewersCanEdit, dsPermissionsEnforced bool) []ac.Rol
 		Grants: []string{ac.RoleGrafanaAdmin},
 	}
 
-	explorerGrants := []string{string(org.RoleEditor)}
-	if viewersCanEdit {
-		explorerGrants = append(explorerGrants, string(org.RoleViewer))
-	}
+	explorerGrants := []string{string(org.RoleEditor), string(org.RoleViewer)}
 	datasourcesExplorerRole := ac.RoleRegistration{
 		Role: ac.RoleDTO{
 			Name:        datasourcesExplorerRoleName,
