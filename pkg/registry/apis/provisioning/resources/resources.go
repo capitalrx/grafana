@@ -4,7 +4,6 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"slices"
 	"sync"
 
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
@@ -197,6 +196,13 @@ func (r *ResourcesManager) WriteResourceFileFromObject(ctx context.Context, obj 
 		fileName = safepath.Join(options.Path, fileName)
 	}
 
+	// The folder path is derived from folder titles, which are not sanitized.
+	// Reject any unsafe path (traversal, absolute, too deep) before it reaches
+	// the backend, using the same validation enforced on the import side.
+	if err := IsPathSupported(fileName); err != nil {
+		return "", fmt.Errorf("unsafe export path %q: %w", fileName, err)
+	}
+
 	parsed := ParsedResource{
 		Info: &repository.FileInfo{
 			Path: fileName,
@@ -289,7 +295,7 @@ func (r *ResourcesManager) writeResourceFromParsed(ctx context.Context, path, re
 	r.addResource(id, path)
 
 	// For resources that exist in folders, set the header annotation
-	if slices.Contains(SupportsFolderAnnotation, parsed.GVR.GroupResource()) {
+	if supportsFolderAnnotation(r.clients.SupportedResources(), parsed.GVK) {
 		// Make sure the parent folders exist.
 		// For _folder.json the resource IS the folder, so its parent is one level above.
 		folderPath := path

@@ -277,6 +277,9 @@ func (hs *HTTPServer) handleUpdateUser(ctx context.Context, cmd user.UpdateUserC
 		if errors.Is(err, user.ErrCaseInsensitive) {
 			return response.Error(http.StatusConflict, "Update would result in user login conflict", err)
 		}
+		if errors.Is(err, user.ErrUserAlreadyExists) {
+			return response.Error(http.StatusConflict, "Login or email is already in use", err)
+		}
 		return response.ErrOrFallback(http.StatusInternalServerError, "Failed to update user", err)
 	}
 
@@ -578,8 +581,6 @@ func redirectToChangePassword(c *contextmodel.ReqContext) {
 	c.Redirect("/profile/password", 302)
 }
 
-// swagger:route PUT /user/helpflags/{flag_id} signed_in_user setHelpFlag
-//
 // Set user help flag.
 //
 // Responses:
@@ -613,8 +614,6 @@ func (hs *HTTPServer) SetHelpFlag(c *contextmodel.ReqContext) response.Response 
 	return response.JSON(http.StatusOK, &util.DynMap{"message": "Help flag set", "helpFlags1": *bitmask})
 }
 
-// swagger:route GET /user/helpflags/clear signed_in_user clearHelpFlags
-//
 // Clear user help flag.
 //
 // Responses:
@@ -788,7 +787,6 @@ type GetSignedInUserTeamListResponse struct {
 	Body []*team.TeamDTO `json:"body"`
 }
 
-// swagger:response helpFlagResponse
 type HelpFlagResponse struct {
 	// The response message
 	// in: body

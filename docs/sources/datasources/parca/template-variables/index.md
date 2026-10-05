@@ -20,6 +20,10 @@ review_date: 2026-04-10
 
 # Parca template variables
 
+{{< admonition type="warning" >}}
+This plugin is deprecated and will only receive critical security updates. Support will end on January 2, 2027.
+{{< /admonition >}}
+
 Instead of hard-coding label values in your profiling queries, you can use template variables to create dynamic, reusable dashboards. Variables appear as drop-down menus at the top of the dashboard, making it easy to switch between services, instances, or environments without editing queries.
 
 For an introduction to template variables, refer to the [Variables](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/dashboards/variables/) documentation.
@@ -107,7 +111,7 @@ Parca template variable support has the following limitations:
 
 - **No query variable support:** You can't use Parca as a data source for populating variable options. Define values manually with custom variables or use another data source.
 - **Label selector only:** Variables are interpolated in the label selector field. The profile type drop-down doesn't support variables.
-- **No free-form filters:** Parca doesn't support [free-form filters](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/dashboards/variables/add-template-variables/#add-ad-hoc-filters).
+- **No free-form filters:** Parca doesn't support free-form [filters](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/visualizations/dashboards/build-dashboards/filter-group-by/).
 
 ## Next steps
 

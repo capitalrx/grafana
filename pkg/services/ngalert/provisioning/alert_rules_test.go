@@ -1544,6 +1544,22 @@ func TestDeleteAlertRule(t *testing.T) {
 			deletes := getDeleteQueries(ruleStore)
 			require.Empty(t, deletes)
 		})
+		t.Run("delete of non-existent rule is idempotent", func(t *testing.T) {
+			service, ruleStore, _, ac := initServiceWithData(t)
+
+			ac.CanWriteAllRulesFunc = func(ctx context.Context, user identity.Requester) (bool, error) {
+				return false, nil
+			}
+
+			err := service.DeleteAlertRule(context.Background(), u, "nonexistent-uid", groupProvenance)
+			require.NoError(t, err, "non-admin delete of non-existent rule should be idempotent")
+
+			require.Len(t, ac.Calls, 1)
+			assert.Equal(t, "CanWriteAllRules", ac.Calls[0].Method)
+
+			deletes := getDeleteQueries(ruleStore)
+			require.Empty(t, deletes, "no store delete when rule already gone")
+		})
 	})
 
 	// NoGroup-specific behaviors
@@ -1980,6 +1996,22 @@ func TestListAlertRules(t *testing.T) {
 			assert.Equal(t, "HasAccessInFolder", ac.Calls[1].Method)
 			assert.Equal(t, "HasAccessInFolder", ac.Calls[2].Method)
 		})
+
+		t.Run("should return no rules when no folders are accessible", func(t *testing.T) {
+			service, ruleStore, _, ac := initServiceWithData(t)
+			ac.CanReadAllRulesFunc = func(ctx context.Context, user identity.Requester) (bool, error) {
+				return false, nil
+			}
+			ac.HasAccessInFolderFunc = func(ctx context.Context, user identity.Requester, folder models.Namespaced) (bool, error) {
+				return false, nil
+			}
+
+			rules, _, token, err := service.ListAlertRules(context.Background(), u, ListAlertRulesOptions{})
+			require.NoError(t, err)
+			require.Empty(t, rules)
+			require.Empty(t, token)
+			require.Empty(t, ruleStore.RecordedOps)
+		})
 	})
 
 	t.Run("GroupFilter", func(t *testing.T) {
@@ -2106,6 +2138,24 @@ func TestListAlertRules(t *testing.T) {
 				got = append(got, r.UID)
 			}
 			require.ElementsMatch(t, expected, got)
+		})
+
+		t.Run("Include when user cannot read requested folder should return no rules", func(t *testing.T) {
+			service, ruleStore, _, ac := initServiceWithData(t)
+			ac.CanReadAllRulesFunc = func(ctx context.Context, user identity.Requester) (bool, error) {
+				return false, nil
+			}
+			ac.HasAccessInFolderFunc = func(ctx context.Context, user identity.Requester, folder models.Namespaced) (bool, error) {
+				return folder.GetNamespaceUID() == groupKey2.NamespaceUID, nil
+			}
+
+			rules, _, token, err := service.ListAlertRules(context.Background(), u, ListAlertRulesOptions{
+				FolderFilter: ListRuleStringFilter{Include: []string{"inaccessible-folder"}},
+			})
+			require.NoError(t, err)
+			require.Empty(t, rules)
+			require.Empty(t, token)
+			require.Empty(t, ruleStore.RecordedOps)
 		})
 
 		t.Run("Exclude should return rules not in the specified folders", func(t *testing.T) {
@@ -3213,6 +3263,24 @@ func TestDeleteRuleGroups(t *testing.T) {
 
 		deletes := getDeletedRules(t, ruleStore)
 		require.Empty(t, deletes)
+	})
+
+	t.Run("succeeds even when quota is exceeded", func(t *testing.T) {
+		filterOpts := &FilterOptions{
+			NamespaceUIDs: []string{"namespace1"},
+			RuleGroups:    []string{"group1"},
+		}
+
+		service, _, _, ac := initServiceWithData(t)
+		ac.CanWriteAllRulesFunc = func(ctx context.Context, user identity.Requester) (bool, error) {
+			return true, nil
+		}
+		checker := &MockQuotaChecker{}
+		checker.EXPECT().LimitExceeded()
+		service.quotas = checker
+
+		err := service.DeleteRuleGroups(context.Background(), u, models.ProvenanceAPI, filterOpts)
+		require.NoError(t, err)
 	})
 }
 

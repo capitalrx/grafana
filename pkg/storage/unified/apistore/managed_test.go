@@ -2,6 +2,9 @@ package apistore
 
 import (
 	"context"
+	"net/http"
+	"net/http/httptest"
+	"net/url"
 	"testing"
 
 	"github.com/go-jose/go-jose/v4/jwt"
@@ -9,6 +12,7 @@ import (
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime"
+	clientrest "k8s.io/client-go/rest"
 
 	authnlib "github.com/grafana/authlib/authn"
 	authtypes "github.com/grafana/authlib/types"
@@ -18,6 +22,7 @@ import (
 	"github.com/grafana/grafana/pkg/apimachinery/identity"
 	"github.com/grafana/grafana/pkg/apimachinery/utils"
 	serviceauthn "github.com/grafana/grafana/pkg/services/authn"
+	"github.com/grafana/grafana/pkg/storage/unified/resourcepb"
 )
 
 func TestManagedAuthorizer(t *testing.T) {
@@ -397,6 +402,189 @@ func TestManagedAuthorizer(t *testing.T) {
 	}
 }
 
+func TestManagedResourceCommitMessage(t *testing.T) {
+	tests := []struct {
+		name        string
+		objectName  string
+		annotations map[string]string
+		action      resourcepb.WatchEvent_Type
+		want        string
+	}{
+		{
+			name:       "uses grafana.app/message annotation when set (MODIFIED)",
+			objectName: "dash-uid",
+			annotations: map[string]string{
+				utils.AnnoKeyMessage: "Custom commit message",
+			},
+			action: resourcepb.WatchEvent_MODIFIED,
+			want:   "Custom commit message",
+		},
+		{
+			name:       "annotation wins over action-specific fallback (DELETED)",
+			objectName: "dash-uid",
+			annotations: map[string]string{
+				utils.AnnoKeyMessage: "Custom delete message",
+			},
+			action: resourcepb.WatchEvent_DELETED,
+			want:   "Custom delete message",
+		},
+		{
+			name:        "MODIFIED falls back to 'Update <name>' when annotation is absent",
+			objectName:  "dash-uid",
+			annotations: nil,
+			action:      resourcepb.WatchEvent_MODIFIED,
+			want:        "Update dash-uid",
+		},
+		{
+			name:        "ADDED falls back to 'Create <name>' when annotation is absent",
+			objectName:  "dash-uid",
+			annotations: nil,
+			action:      resourcepb.WatchEvent_ADDED,
+			want:        "Create dash-uid",
+		},
+		{
+			name:        "DELETED falls back to 'Delete <name>' when annotation is absent",
+			objectName:  "dash-uid",
+			annotations: nil,
+			action:      resourcepb.WatchEvent_DELETED,
+			want:        "Delete dash-uid",
+		},
+		{
+			name:       "MODIFIED falls back to 'Update <name>' when annotation is an empty string",
+			objectName: "dash-uid",
+			annotations: map[string]string{
+				utils.AnnoKeyMessage: "",
+			},
+			action: resourcepb.WatchEvent_MODIFIED,
+			want:   "Update dash-uid",
+		},
+		{
+			name:       "preserves whitespace-only annotation verbatim",
+			objectName: "dash-uid",
+			annotations: map[string]string{
+				utils.AnnoKeyMessage: "   ",
+			},
+			action: resourcepb.WatchEvent_MODIFIED,
+			want:   "   ",
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			obj := &dashboard.Dashboard{
+				ObjectMeta: v1.ObjectMeta{
+					Name:        tt.objectName,
+					Annotations: tt.annotations,
+				},
+			}
+			accessor, err := utils.MetaAccessor(obj)
+			require.NoError(t, err)
+			require.Equal(t, tt.want, managedResourceCommitMessage(accessor, tt.action))
+		})
+	}
+}
+
+// fakeRestConfigProvider returns a rest.Config pointing at an arbitrary host,
+// used so tests can capture proxied REST requests with an httptest.Server.
+type fakeRestConfigProvider struct {
+	host string
+}
+
+func (f *fakeRestConfigProvider) GetRestConfig(_ context.Context) (*clientrest.Config, error) {
+	return &clientrest.Config{Host: f.host}, nil
+}
+
+func TestHandleManagedResourceRouting_ForwardsCommitMessage(t *testing.T) {
+	tests := []struct {
+		name        string
+		action      resourcepb.WatchEvent_Type
+		annotations map[string]string
+		wantMethod  string
+		wantMessage string
+	}{
+		{
+			name:   "MODIFIED uses grafana.app/message annotation",
+			action: resourcepb.WatchEvent_MODIFIED,
+			annotations: map[string]string{
+				utils.AnnoKeyManagerKind:     string(utils.ManagerKindRepo),
+				utils.AnnoKeyManagerIdentity: "my-repo",
+				utils.AnnoKeySourcePath:      "dashboards/dash.json",
+				utils.AnnoKeyMessage:         "Custom commit message",
+			},
+			wantMethod:  http.MethodPut,
+			wantMessage: "Custom commit message",
+		},
+		{
+			name:   "MODIFIED falls back to 'Update <name>' when annotation is absent",
+			action: resourcepb.WatchEvent_MODIFIED,
+			annotations: map[string]string{
+				utils.AnnoKeyManagerKind:     string(utils.ManagerKindRepo),
+				utils.AnnoKeyManagerIdentity: "my-repo",
+				utils.AnnoKeySourcePath:      "dashboards/dash.json",
+			},
+			wantMethod:  http.MethodPut,
+			wantMessage: "Update dash-uid",
+		},
+		{
+			name:   "ADDED also forwards the commit message",
+			action: resourcepb.WatchEvent_ADDED,
+			annotations: map[string]string{
+				utils.AnnoKeyManagerKind:     string(utils.ManagerKindRepo),
+				utils.AnnoKeyManagerIdentity: "my-repo",
+				utils.AnnoKeySourcePath:      "dashboards/dash.json",
+				utils.AnnoKeyMessage:         "Create dash.json",
+			},
+			wantMethod:  http.MethodPost,
+			wantMessage: "Create dash.json",
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			var captured struct {
+				method string
+				path   string
+				query  url.Values
+			}
+			server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+				captured.method = r.Method
+				captured.path = r.URL.Path
+				captured.query = r.URL.Query()
+				// Return a 5xx so the caller short-circuits before reaching
+				// the post-write s.Get call (which would need a full store).
+				http.Error(w, "intentional test failure", http.StatusInternalServerError)
+			}))
+			t.Cleanup(server.Close)
+
+			s := &Storage{configProvider: &fakeRestConfigProvider{host: server.URL}}
+			obj := &dashboard.Dashboard{
+				ObjectMeta: v1.ObjectMeta{
+					Name:        "dash-uid",
+					Namespace:   "default",
+					Annotations: tt.annotations,
+				},
+			}
+
+			err := s.handleManagedResourceRouting(
+				context.Background(),
+				errResourceIsManagedInRepository,
+				tt.action,
+				"/default/dashboards/dash-uid",
+				obj,
+				&dashboard.Dashboard{},
+			)
+			// The test server returns 500; surface that as a non-nil error.
+			require.Error(t, err)
+
+			require.Equal(t, tt.wantMethod, captured.method, "HTTP method")
+			require.Contains(t, captured.path, "/namespaces/default/repositories/my-repo/files/dashboards/dash.json",
+				"request path should target the provisioning files endpoint")
+			require.Equal(t, tt.wantMessage, captured.query.Get("message"), "message query parameter")
+			require.Equal(t, "true", captured.query.Get("skipDryRun"), "skipDryRun query parameter should be forwarded")
+		})
+	}
+}
+
 func TestEnsureSameRepoManager(t *testing.T) {
 	tests := []struct {
 		name            string
@@ -511,4 +699,126 @@ func TestEnsureSameRepoManager(t *testing.T) {
 			}
 		})
 	}
+}
+
+// TestClassicFileProvisioningAssignment covers the gate on assigning classic-file-provisioning
+// provenance. It fires only where the provenance is acquired, so delete, rewrite-in-place
+// (allowUiUpdates) and annotation removal must all keep working.
+func TestClassicFileProvisioningAssignment(t *testing.T) {
+	user := &identity.StaticRequester{Type: authtypes.TypeUser, UserUID: "uuu"}
+	_, serviceIdentity := identity.WithServiceIdentity(context.Background(), 1)
+
+	classicFP := func(mutate ...func(map[string]string)) *dashboard.Dashboard {
+		annotations := map[string]string{
+			utils.AnnoKeyManagerKind:     string(utils.ManagerKindClassicFP), // nolint:staticcheck
+			utils.AnnoKeyManagerIdentity: "default",
+			utils.AnnoKeySourcePath:      "/etc/grafana/provisioning/dashboards/x.json",
+		}
+		for _, m := range mutate {
+			m(annotations)
+		}
+		return &dashboard.Dashboard{ObjectMeta: v1.ObjectMeta{Annotations: annotations}}
+	}
+	unmanaged := func() *dashboard.Dashboard { return &dashboard.Dashboard{} }
+
+	const forbidden = "Can not set the classic-file-provisioning resource manager"
+
+	tests := []struct {
+		name string
+		auth authtypes.AuthInfo
+		obj  runtime.Object
+		old  runtime.Object // nil => exercise the create path
+		err  string
+	}{
+		{
+			// The vulnerability.
+			name: "user can not forge classic-file-provisioning on create",
+			auth: user,
+			obj:  classicFP(),
+			err:  forbidden,
+		},
+		{
+			name: "file provisioner can create classic-file-provisioning resource",
+			auth: serviceIdentity,
+			obj:  classicFP(),
+		},
+		{
+			name: "user can still create an unmanaged resource",
+			auth: user,
+			obj:  unmanaged(),
+		},
+		{
+			// Same forgery, via update.
+			name: "user can not add classic-file-provisioning to an unmanaged resource",
+			auth: user,
+			obj:  classicFP(),
+			old:  unmanaged(),
+			err:  forbidden,
+		},
+		{
+			name: "file provisioner can add classic-file-provisioning to an unmanaged resource",
+			auth: serviceIdentity,
+			obj:  classicFP(),
+			old:  unmanaged(),
+		},
+		{
+			name: "user can update a resource that already carries the manager",
+			auth: user,
+			obj:  classicFP(func(a map[string]string) { a[utils.AnnoKeySourcePath] = "/etc/grafana/provisioning/dashboards/y.json" }),
+			old:  classicFP(),
+		},
+		{
+			name: "user can update a resource the manager allows edits on",
+			auth: user,
+			obj:  classicFP(func(a map[string]string) { a[utils.AnnoKeyManagerAllowsEdits] = "true" }),
+			old:  classicFP(func(a map[string]string) { a[utils.AnnoKeyManagerAllowsEdits] = "true" }),
+		},
+		{
+			// Recovery path for anything forged before the gate shipped.
+			name: "user can remove the classic-file-provisioning manager",
+			auth: user,
+			obj:  unmanaged(),
+			old:  classicFP(),
+		},
+		{
+			// Scoped to classic-FP: plugin provenance is set by /api/dashboards/import as
+			// the signed-in user, so gating it would break plugin dashboard import.
+			name: "user can still set plugin provenance",
+			auth: user,
+			obj: &dashboard.Dashboard{ObjectMeta: v1.ObjectMeta{Annotations: map[string]string{
+				utils.AnnoKeyManagerKind:     string(utils.ManagerKindPlugin),
+				utils.AnnoKeyManagerIdentity: "grafana-clock-panel",
+			}}},
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			obj, err := utils.MetaAccessor(tt.obj)
+			require.NoError(t, err)
+
+			if tt.old == nil {
+				err = checkManagerPropertiesOnCreate(tt.auth, obj)
+			} else {
+				old, oldErr := utils.MetaAccessor(tt.old)
+				require.NoError(t, oldErr)
+				err = checkManagerPropertiesOnUpdateSpec(tt.auth, obj, old)
+			}
+
+			if tt.err == "" {
+				require.NoError(t, err)
+				return
+			}
+			require.Error(t, err)
+			require.Contains(t, err.Error(), tt.err)
+		})
+	}
+
+	// Delete is unchanged: gating here would break admin deletes of genuinely provisioned
+	// resources, which are protected above storage.
+	t.Run("delete of a classic-file-provisioning resource is unchanged", func(t *testing.T) {
+		obj, err := utils.MetaAccessor(classicFP())
+		require.NoError(t, err)
+		require.NoError(t, checkManagerPropertiesOnDelete(user, obj))
+	})
 }

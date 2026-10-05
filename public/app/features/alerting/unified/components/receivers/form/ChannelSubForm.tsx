@@ -64,7 +64,7 @@ export function ChannelSubForm<R extends ChannelValues>({
   customValidators = {},
 }: Props<R>): JSX.Element {
   const styles = useStyles2(getStyles);
-  const { control, watch, register, trigger, formState, setValue, getValues } =
+  const { control, watch, register, trigger, formState, setValue, getValues, unregister } =
     useFormContext<ReceiverFormValues<CloudChannelValues | GrafanaChannelValues>>();
 
   const channelFieldPath = `items.${integrationIndex}` as const;
@@ -173,7 +173,9 @@ export function ChannelSubForm<R extends ChannelValues>({
     const fieldPath = settingsPath.startsWith(`${channelFieldPath}.settings.`)
       ? settingsPath.slice(`${channelFieldPath}.settings.`.length)
       : settingsPath;
-    setValue(`${settingsFieldPath}.${fieldPath}`, undefined);
+    const fullPath = `${settingsFieldPath}.${fieldPath}` as const;
+    unregister(fullPath);
+    setValue(fullPath, undefined);
   };
 
   const typeOptions = useMemo((): SelectableValue[] => {
@@ -407,7 +409,7 @@ const getStyles = (theme: GrafanaTheme2) => ({
     margin: theme.spacing(2, 0),
     padding: theme.spacing(1),
     border: `solid 1px ${theme.colors.border.medium}`,
-    borderRadius: theme.shape.radius.default,
+    borderRadius: theme.shape.radius.lg,
   }),
   topRow: css({
     display: 'flex',

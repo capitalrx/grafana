@@ -252,7 +252,7 @@ func TestIntegrationLegacySupport(t *testing.T) {
 			input: map[string]any{
 				"panels": []any{}, // this used to be a panic
 			},
-			expect: "Dashboard is missing required title property",
+			expect: "Dashboard spec is missing required title property",
 		}}
 		for _, tc := range testCases {
 			t.Run(tc.name, func(t *testing.T) {
@@ -514,6 +514,45 @@ func TestIntegrationLegacySupport(t *testing.T) {
 	}, &dtos.DashboardFullWithMeta{})
 	require.Equal(t, 200, rsp.Response.StatusCode)
 	require.Equal(t, dashboardV0.VERSION, rsp.Result.Meta.APIVersion)
+
+	//---------------------------------------------------------
+	// Reject creating a second dashboard that reuses an existing
+	// grafana.app/deprecatedInternalID. Without admission enforcement, two
+	// dashboards could end up sharing the same legacy id (the symptom was
+	// /api/dashboards/db returning 500 with "unexpected number of dashboards
+	// for id N. found: 2. desired: 1" on any later overwrite).
+	//---------------------------------------------------------
+	t.Run("reject duplicate deprecatedInternalID on create", func(t *testing.T) {
+		const sharedID = int64(99999)
+
+		newDashboardWithID := func(name string) *unstructured.Unstructured {
+			return &unstructured.Unstructured{
+				Object: map[string]any{
+					"apiVersion": "dashboard.grafana.app/v1",
+					"kind":       "Dashboard",
+					"metadata": map[string]any{
+						"name": name,
+					},
+					"spec": map[string]any{
+						"id":            sharedID,
+						"title":         name,
+						"schemaVersion": int64(36),
+					},
+				},
+			}
+		}
+
+		first, err := clientV1.Resource.Create(ctx, newDashboardWithID("dup-id-a"), metav1.CreateOptions{})
+		require.NoError(t, err, "first create with spec.id should succeed")
+		require.Equal(t, "99999", first.GetLabels()[utils.LabelKeyDeprecatedInternalID], //nolint:staticcheck
+			"mutation hook should lift spec.id onto the label")
+
+		_, err = clientV1.Resource.Create(ctx, newDashboardWithID("dup-id-b"), metav1.CreateOptions{})
+		require.Error(t, err, "second create with same spec.id must be rejected")
+		require.True(t, errors.IsConflict(err),
+			"expected HTTP 409 Conflict, got %T: %v", err, err)
+		require.Contains(t, err.Error(), "deprecatedInternalID=99999")
+	})
 }
 
 func TestIntegrationListPagination(t *testing.T) {
@@ -909,7 +948,10 @@ func TestIntegrationDashboardDeleteGracefulDegradation(t *testing.T) {
 		require.True(t, errors.IsNotFound(err), "dashboard should be gone after deletion")
 	})
 
-	t.Run("provisioned dashboard is still protected from deletion", func(t *testing.T) {
+	// Deletion of a genuinely provisioned dashboard is covered by
+	// TestIntegrationUpdatingProvisionionedDashboards in pkg/tests/api/dashboards. It cannot
+	// be covered here: the provisioner needs search, so it fails to start in this env.
+	t.Run("user can not forge classic-file-provisioning provenance", func(t *testing.T) {
 		dash := &unstructured.Unstructured{Object: map[string]interface{}{
 			"spec": map[string]interface{}{
 				"title":         "gd-test-provisioned",
@@ -920,26 +962,23 @@ func TestIntegrationDashboardDeleteGracefulDegradation(t *testing.T) {
 		created, err := client.Resource.Create(ctx, dash, metav1.CreateOptions{})
 		require.NoError(t, err)
 
-		// Mark as classic file provisioned
 		meta, err := utils.MetaAccessor(created)
 		require.NoError(t, err)
 		meta.SetManagerProperties(utils.ManagerProperties{
 			Kind:     utils.ManagerKindClassicFP, //nolint:staticcheck
 			Identity: "test-provisioner",
 		})
-		updated, err := client.Resource.Update(ctx, created, metav1.UpdateOptions{})
-		require.NoError(t, err)
 
-		// Verify manager properties are persisted
-		updatedMeta, err := utils.MetaAccessor(updated)
-		require.NoError(t, err)
-		mgr, managed := updatedMeta.GetManagerProperties()
-		require.True(t, managed, "dashboard should be marked as managed after update")
-		require.Equal(t, utils.ManagerKindClassicFP, mgr.Kind) //nolint:staticcheck
-		require.Equal(t, "test-provisioner", mgr.Identity)
+		_, err = client.Resource.Update(ctx, created, metav1.UpdateOptions{})
+		require.Error(t, err, "a user must not be able to assign the classic-file-provisioning manager")
+		require.True(t, errors.IsForbidden(err), "expected forbidden, got %v", err)
 
-		// Delete should be blocked even without search
-		err = client.Resource.Delete(ctx, created.GetName(), metav1.DeleteOptions{})
-		require.Error(t, err, "provisioned dashboard delete should be blocked")
+		// The forged annotations must not have persisted.
+		fetched, err := client.Resource.Get(ctx, created.GetName(), metav1.GetOptions{})
+		require.NoError(t, err)
+		fetchedMeta, err := utils.MetaAccessor(fetched)
+		require.NoError(t, err)
+		_, managed := fetchedMeta.GetManagerProperties()
+		require.False(t, managed, "forged manager properties must not persist")
 	})
 }

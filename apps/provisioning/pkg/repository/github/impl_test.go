@@ -341,10 +341,11 @@ func TestGithubClient_GetCommits(t *testing.T) {
 			// Create a mock client
 			factory := ProvideFactory()
 			factory.Client = tt.mockHandler
-			client := factory.New(context.Background(), "")
+			client, err := factory.New(context.Background(), tt.owner, tt.repository, "")
+			assert.NoError(t, err)
 
 			// Call the method being tested
-			commits, err := client.Commits(context.Background(), tt.owner, tt.repository, tt.branch, tt.path)
+			commits, err := client.Commits(context.Background(), tt.branch, tt.path)
 
 			// Check the error
 			if tt.wantErr != nil {
@@ -518,10 +519,11 @@ func TestGithubClient_ListWebhooks(t *testing.T) {
 			// Create a mock client
 			factory := ProvideFactory()
 			factory.Client = tt.mockHandler
-			client := factory.New(context.Background(), "")
+			client, err := factory.New(context.Background(), tt.owner, tt.repository, "")
+			assert.NoError(t, err)
 
 			// Call the method being tested
-			webhooks, err := client.ListWebhooks(context.Background(), tt.owner, tt.repository)
+			webhooks, err := client.ListWebhooks(context.Background())
 
 			// Check the error
 			if tt.wantErr != nil {
@@ -715,6 +717,108 @@ func TestGithubClient_CreateWebhook(t *testing.T) {
 			want:    WebhookConfig{},
 			wantErr: errors.New("GitHub API error (HTTP 500: Internal server error)"),
 		},
+		{
+			name: "hook already exists is adopted by URL",
+			mockHandler: mockhub.NewMockedHTTPClient(
+				mockhub.WithRequestMatchHandler(
+					mockhub.PostReposHooksByOwnerByRepo,
+					http.HandlerFunc(func(w http.ResponseWriter, _ *http.Request) {
+						w.WriteHeader(http.StatusUnprocessableEntity)
+						require.NoError(t, json.NewEncoder(w).Encode(github.ErrorResponse{
+							Response: &http.Response{StatusCode: http.StatusUnprocessableEntity},
+							Message:  "Validation Failed",
+							Errors:   []github.Error{{Resource: "Hook", Code: "custom", Message: "Hook already exists on this repository"}},
+						}))
+					}),
+				),
+				mockhub.WithRequestMatchHandler(
+					mockhub.GetReposHooksByOwnerByRepo,
+					http.HandlerFunc(func(w http.ResponseWriter, _ *http.Request) {
+						hooks := []*github.Hook{
+							{ID: github.Ptr(int64(111)), Config: &github.HookConfig{URL: github.Ptr("https://other.example.com/webhook")}},
+							{ID: github.Ptr(int64(456)), Config: &github.HookConfig{URL: github.Ptr("https://example.com/webhook")}},
+						}
+						w.WriteHeader(http.StatusOK)
+						require.NoError(t, json.NewEncoder(w).Encode(hooks))
+					}),
+				),
+				mockhub.WithRequestMatchHandler(
+					mockhub.PatchReposHooksByOwnerByRepoByHookId,
+					http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+						// The adopted hook must be reset to our secret and events.
+						body, err := io.ReadAll(r.Body)
+						require.NoError(t, err)
+						hook := &github.Hook{}
+						require.NoError(t, json.Unmarshal(body, hook))
+						assert.Equal(t, "secret123", hook.Config.GetSecret())
+						assert.Equal(t, []string{"push", "pull_request"}, hook.Events)
+
+						w.WriteHeader(http.StatusOK)
+						require.NoError(t, json.NewEncoder(w).Encode(&github.Hook{
+							ID:     github.Ptr(int64(456)),
+							Events: []string{"push", "pull_request"},
+							Active: github.Ptr(true),
+							Config: &github.HookConfig{URL: github.Ptr("https://example.com/webhook"), ContentType: github.Ptr("json")},
+						}))
+					}),
+				),
+			),
+			owner:      "test-owner",
+			repository: "test-repo",
+			config: WebhookConfig{
+				Events:      []string{"push", "pull_request"},
+				Active:      true,
+				URL:         "https://example.com/webhook",
+				ContentType: "json",
+				Secret:      "secret123",
+			},
+			want: WebhookConfig{
+				ID:          456,
+				Events:      []string{"push", "pull_request"},
+				Active:      true,
+				URL:         "https://example.com/webhook",
+				ContentType: "json",
+				Secret:      "secret123",
+			},
+			wantErr: nil,
+		},
+		{
+			name: "hook already exists but no url match returns sentinel",
+			mockHandler: mockhub.NewMockedHTTPClient(
+				mockhub.WithRequestMatchHandler(
+					mockhub.PostReposHooksByOwnerByRepo,
+					http.HandlerFunc(func(w http.ResponseWriter, _ *http.Request) {
+						w.WriteHeader(http.StatusUnprocessableEntity)
+						require.NoError(t, json.NewEncoder(w).Encode(github.ErrorResponse{
+							Response: &http.Response{StatusCode: http.StatusUnprocessableEntity},
+							Message:  "Validation Failed",
+							Errors:   []github.Error{{Resource: "Hook", Code: "custom", Message: "Hook already exists on this repository"}},
+						}))
+					}),
+				),
+				mockhub.WithRequestMatchHandler(
+					mockhub.GetReposHooksByOwnerByRepo,
+					http.HandlerFunc(func(w http.ResponseWriter, _ *http.Request) {
+						hooks := []*github.Hook{
+							{ID: github.Ptr(int64(111)), Config: &github.HookConfig{URL: github.Ptr("https://other.example.com/webhook")}},
+						}
+						w.WriteHeader(http.StatusOK)
+						require.NoError(t, json.NewEncoder(w).Encode(hooks))
+					}),
+				),
+			),
+			owner:      "test-owner",
+			repository: "test-repo",
+			config: WebhookConfig{
+				Events:      []string{"push", "pull_request"},
+				Active:      true,
+				URL:         "https://example.com/webhook",
+				ContentType: "json",
+				Secret:      "secret123",
+			},
+			want:    WebhookConfig{},
+			wantErr: ErrWebhookAlreadyExists,
+		},
 	}
 
 	for _, tt := range tests {
@@ -722,10 +826,11 @@ func TestGithubClient_CreateWebhook(t *testing.T) {
 			// Create a mock client
 			factory := ProvideFactory()
 			factory.Client = tt.mockHandler
-			client := factory.New(context.Background(), "")
+			client, err := factory.New(context.Background(), tt.owner, tt.repository, "")
+			assert.NoError(t, err)
 
 			// Call the method being tested
-			got, err := client.CreateWebhook(context.Background(), tt.owner, tt.repository, tt.config)
+			got, err := client.CreateWebhook(context.Background(), tt.config)
 
 			// Check the error
 			if tt.wantErr != nil {
@@ -898,10 +1003,11 @@ func TestGithubClient_GetWebhook(t *testing.T) {
 			// Create a mock client
 			factory := ProvideFactory()
 			factory.Client = tt.mockHandler
-			client := factory.New(context.Background(), "")
+			client, err := factory.New(context.Background(), tt.owner, tt.repository, "")
+			assert.NoError(t, err)
 
 			// Call the method being tested
-			got, err := client.GetWebhook(context.Background(), tt.owner, tt.repository, tt.webhookID)
+			got, err := client.GetWebhook(context.Background(), tt.webhookID)
 
 			// Check the error
 			if tt.wantErr != nil {
@@ -1040,10 +1146,11 @@ func TestGithubClient_DeleteWebhook(t *testing.T) {
 			// Create a mock client
 			factory := ProvideFactory()
 			factory.Client = tt.mockHandler
-			client := factory.New(context.Background(), "")
+			client, err := factory.New(context.Background(), tt.owner, tt.repository, "")
+			assert.NoError(t, err)
 
 			// Call the method being tested
-			err := client.DeleteWebhook(context.Background(), tt.owner, tt.repository, tt.webhookID)
+			err = client.DeleteWebhook(context.Background(), tt.webhookID)
 
 			// Check the error
 			if tt.wantErr != nil {
@@ -1233,10 +1340,11 @@ func TestGithubClient_EditWebhook(t *testing.T) {
 			// Create a mock client
 			factory := ProvideFactory()
 			factory.Client = tt.mockHandler
-			client := factory.New(context.Background(), "")
+			client, err := factory.New(context.Background(), tt.owner, tt.repository, "")
+			assert.NoError(t, err)
 
 			// Call the method being tested
-			err := client.EditWebhook(context.Background(), tt.owner, tt.repository, tt.config)
+			err = client.EditWebhook(context.Background(), tt.config)
 
 			// Check the error
 			if tt.wantErr != nil {
@@ -1416,10 +1524,11 @@ func TestGithubClient_ListPullRequestFiles(t *testing.T) {
 			// Create a mock client
 			factory := ProvideFactory()
 			factory.Client = tt.mockHandler
-			client := factory.New(context.Background(), "")
+			client, err := factory.New(context.Background(), tt.owner, tt.repository, "")
+			assert.NoError(t, err)
 
 			// Call the method being tested
-			files, err := client.ListPullRequestFiles(context.Background(), tt.owner, tt.repository, tt.number)
+			files, err := client.ListPullRequestFiles(context.Background(), tt.number)
 
 			// Check the error
 			if tt.wantErr != nil {
@@ -1535,10 +1644,11 @@ func TestCreatePullRequestComment(t *testing.T) {
 			// Create a mock client
 			factory := ProvideFactory()
 			factory.Client = tt.mockHandler
-			client := factory.New(context.Background(), "")
+			client, err := factory.New(context.Background(), tt.owner, tt.repository, "")
+			assert.NoError(t, err)
 
 			// Call the method being tested
-			err := client.CreatePullRequestComment(context.Background(), tt.owner, tt.repository, tt.number, tt.body)
+			err = client.CreatePullRequestComment(context.Background(), tt.number, tt.body)
 
 			// Check the error
 			if tt.wantErr != nil {
@@ -2296,10 +2406,12 @@ func TestGithubClient_GetRulesets(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			ctx := context.Background()
 			client := &githubClient{
-				gh: github.NewClient(tt.mockHandler),
+				gh:    github.NewClient(tt.mockHandler),
+				owner: tt.owner,
+				repo:  tt.repository,
 			}
 
-			got, err := client.GetRulesets(ctx, tt.owner, tt.repository, tt.branch)
+			got, err := client.GetRulesets(ctx, tt.branch)
 
 			if tt.wantErr != nil {
 				require.ErrorIs(t, err, tt.wantErr)
@@ -2354,8 +2466,8 @@ func TestGithubClient_GetRulesets_DeduplicatesParentRulesetFetch(t *testing.T) {
 		),
 	)
 
-	client := &githubClient{gh: github.NewClient(mockHandler)}
-	got, err := client.GetRulesets(context.Background(), "test-owner", "test-repo", "main")
+	client := &githubClient{gh: github.NewClient(mockHandler), owner: "test-owner", repo: "test-repo"}
+	got, err := client.GetRulesets(context.Background(), "main")
 
 	require.NoError(t, err)
 	assert.Nil(t, got)
@@ -2630,10 +2742,11 @@ func TestGithubClient_GetRepository(t *testing.T) {
 			// Create a mock client
 			factory := ProvideFactory()
 			factory.Client = tt.mockHandler
-			client := factory.New(context.Background(), "")
+			client, err := factory.New(context.Background(), tt.owner, tt.repository, "")
+			assert.NoError(t, err)
 
 			// Call the method being tested
-			got, err := client.GetRepository(context.Background(), tt.owner, tt.repository)
+			got, err := client.GetRepository(context.Background())
 
 			// Check the error
 			if tt.wantErr != nil {
