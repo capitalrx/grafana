@@ -162,7 +162,7 @@ func setup(t *testing.T) *serviceTestStruct {
 			serviceTest.dashboardProvisionerInstantiations++
 			return serviceTest.mock, nil
 		},
-		func(context.Context, string, datasources.BaseDataSourceService, datasources.CorrelationsStore, org.Service) error {
+		func(context.Context, string, datasources.BaseDataSourceService, datasources.CorrelationsStore, org.Service, datasources.AccessSetter) error {
 			return nil
 		},
 		func(context.Context, string, pluginstore.Store, pluginsettings.Service, org.Service) error {

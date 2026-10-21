@@ -674,7 +674,7 @@ func Initialize(ctx context.Context, cfg *setting.Cfg, opts Options, apiOpts api
 		return nil, err
 	}
 	pluginInstaller := manager4.ProvideInstaller(pluginManagementCfg, inMemory, loaderLoader, repoManager, serviceregistrationService, acimplService)
-	ossProvider := guardian.ProvideGuardian()
+	ossProvider := guardian.ProvideGuardian(cfg, accessControl)
 	cacheServiceImpl := service6.ProvideCacheService(cacheService, sqlStore, ossProvider)
 	shortURLService := shorturlimpl.ProvideService(sqlStore)
 	queryHistoryService := queryhistory.ProvideService(cfg, sqlStore, routeRegisterImpl, accessControl, featureToggles, eventualRestConfigProvider)
@@ -718,7 +718,7 @@ func Initialize(ctx context.Context, cfg *setting.Cfg, opts Options, apiOpts api
 	if err != nil {
 		return nil, err
 	}
-	provisioningServiceImpl, err := provisioning.ProvideService(accessControl, cfg, sqlStore, pluginstoreService, dBstore, serviceService, notificationService, dashboardProvisioningService, service13, correlationsService, dashboardService, folderimplService, service12, quotaService, secretsService, orgService, userimplService, receiverPermissionsService, teamimplService, teamPermissionsService, tracingService, dualwriteService, promTypeMigrationProviderImpl, serverLockService, routePermissionsService)
+	provisioningServiceImpl, err := provisioning.ProvideService(accessControl, cfg, sqlStore, pluginstoreService, dBstore, serviceService, notificationService, dashboardProvisioningService, service13, correlationsService, dashboardService, folderimplService, service12, quotaService, secretsService, orgService, userimplService, receiverPermissionsService, teamimplService, teamPermissionsService, datasourcePermissionsService, tracingService, dualwriteService, promTypeMigrationProviderImpl, serverLockService, routePermissionsService)
 	if err != nil {
 		return nil, err
 	}
@@ -1394,7 +1394,7 @@ func InitializeForTest(ctx context.Context, t sqlutil.ITestDB, testingT interfac
 		return nil, err
 	}
 	pluginInstaller := manager4.ProvideInstaller(pluginManagementCfg, inMemory, loaderLoader, repoManager, serviceregistrationService, acimplService)
-	ossProvider := guardian.ProvideGuardian()
+	ossProvider := guardian.ProvideGuardian(cfg, accessControl)
 	cacheServiceImpl := service6.ProvideCacheService(cacheService, sqlStore, ossProvider)
 	userAuthTokenService, err := authimpl.ProvideUserAuthTokenService(ctx, sqlStore, serverLockService, quotaService, secretsService, configProvider, tracingService, featureToggles)
 	if err != nil {
@@ -1442,7 +1442,7 @@ func InitializeForTest(ctx context.Context, t sqlutil.ITestDB, testingT interfac
 	if err != nil {
 		return nil, err
 	}
-	provisioningServiceImpl, err := provisioning.ProvideService(accessControl, cfg, sqlStore, pluginstoreService, dBstore, serviceService, notificationService, dashboardProvisioningService, service13, correlationsService, dashboardService, folderimplService, service12, quotaService, secretsService, orgService, userimplService, receiverPermissionsService, teamimplService, teamPermissionsService, tracingService, dualwriteService, promTypeMigrationProviderImpl, serverLockService, routePermissionsService)
+	provisioningServiceImpl, err := provisioning.ProvideService(accessControl, cfg, sqlStore, pluginstoreService, dBstore, serviceService, notificationService, dashboardProvisioningService, service13, correlationsService, dashboardService, folderimplService, service12, quotaService, secretsService, orgService, userimplService, receiverPermissionsService, teamimplService, teamPermissionsService, datasourcePermissionsService, tracingService, dualwriteService, promTypeMigrationProviderImpl, serverLockService, routePermissionsService)
 	if err != nil {
 		return nil, err
 	}

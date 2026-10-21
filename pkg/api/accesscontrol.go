@@ -45,7 +45,7 @@ func (hs *HTTPServer) declareFixedRoles() error {
 	}
 
 	return hs.accesscontrolService.DeclareFixedRoles(
-		FixedRoleRegistrations(hs.License.FeatureEnabled("dspermissions.enforcement"))...)
+		FixedRoleRegistrations(hs.License.FeatureEnabled("dspermissions.enforcement") || hs.Cfg.RBAC.DatasourcePermissionsEnforced)...)
 }
 
 // FixedRoleRegistrations returns all HTTP API role registrations with grants

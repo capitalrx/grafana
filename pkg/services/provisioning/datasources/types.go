@@ -49,6 +49,8 @@ type upsertDataSourceFromConfig struct {
 	Editable        bool
 	UID             string
 	IsPrunable      bool
+	// Teams that may query the data source. Empty means everyone.
+	Teams []string
 }
 
 type configsV0 struct {
@@ -115,6 +117,7 @@ type upsertDataSourceFromConfigV1 struct {
 	Editable        values.BoolValue      `json:"editable" yaml:"editable"`
 	UID             values.StringValue    `json:"uid" yaml:"uid"`
 	IsPrunable      values.BoolValue
+	Teams           []values.StringValue `json:"teams" yaml:"teams"`
 }
 
 func (cfg *configsV1) mapToDatasourceFromConfig(apiVersion int64) *configs {
@@ -127,7 +130,14 @@ func (cfg *configsV1) mapToDatasourceFromConfig(apiVersion int64) *configs {
 	}
 
 	for _, ds := range cfg.Datasources {
+		var teams []string
+		for _, t := range ds.Teams {
+			if name := t.Value(); name != "" {
+				teams = append(teams, name)
+			}
+		}
 		r.Datasources = append(r.Datasources, &upsertDataSourceFromConfig{
+			Teams:           teams,
 			OrgID:           ds.OrgID.Value(),
 			Name:            ds.Name.Value(),
 			Type:            ds.Type.Value(),
