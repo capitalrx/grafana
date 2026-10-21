@@ -69,6 +69,7 @@ func ProvideService(
 	userService user.Service,
 	resourcePermissions accesscontrol.ReceiverPermissionsService,
 	teamService team.Service,
+	teamPermissions accesscontrol.TeamPermissionsService,
 	tracer tracing.Tracer,
 	dual dualwrite.Service,
 	promTypeMigrationProvider promtypemigration.PromTypeMigrationProvider,
@@ -100,6 +101,7 @@ func ProvideService(
 		userService:                  userService,
 		folderService:                folderService,
 		teamService:                  teamService,
+		teamPermissions:              teamPermissions,
 		resourcePermissions:          resourcePermissions,
 		tracer:                       tracer,
 		migratePrometheusType:        promTypeMigrationProvider.Run,
@@ -246,7 +248,7 @@ type ProvisioningServiceImpl struct {
 	provisionDatasources         func(context.Context, string, datasources.BaseDataSourceService, datasources.CorrelationsStore, org.Service) error
 	provisionPlugins             func(context.Context, string, pluginstore.Store, pluginsettings.Service, org.Service) error
 	provisionAlerting            func(context.Context, prov_alerting.ProvisionerConfig) error
-	provisionTeams               func(context.Context, string, team.Service) error
+	provisionTeams               func(context.Context, string, teams.Services) error
 	mutex                        sync.Mutex
 	dashboardProvisioningService dashboardservice.DashboardProvisioningService
 	dashboardService             dashboardservice.DashboardService
@@ -257,6 +259,7 @@ type ProvisioningServiceImpl struct {
 	secretService                secrets.Service //nolint:staticcheck // SA1019: Legacy envelope encryption for single-tenant feature
 	folderService                folder.Service
 	teamService                  team.Service
+	teamPermissions              accesscontrol.TeamPermissionsService
 	resourcePermissions          accesscontrol.ReceiverPermissionsService
 	routesPermissions            accesscontrol.RoutePermissionsService
 	tracer                       tracing.Tracer
@@ -398,7 +401,12 @@ func (ps *ProvisioningServiceImpl) ProvisionTeams(ctx context.Context) error {
 	ps.mutex.Lock()
 	defer ps.mutex.Unlock()
 	teamPath := filepath.Join(ps.Cfg.ProvisioningPath, "teams")
-	if err := ps.provisionTeams(ctx, teamPath, ps.teamService); err != nil {
+	if err := ps.provisionTeams(ctx, teamPath, teams.Services{
+		Teams:           ps.teamService,
+		Users:           ps.userService,
+		Orgs:            ps.orgService,
+		TeamPermissions: ps.teamPermissions,
+	}); err != nil {
 		err = fmt.Errorf("%v: %w", "team provisioning error", err)
 		ps.log.Error("Failed to provision teams", "error", err)
 		return err

@@ -28,6 +28,7 @@ var (
 	ScopeProvisionersDatasources   = ac.Scope("provisioners", "datasources")
 	ScopeProvisionersNotifications = ac.Scope("provisioners", "notifications")
 	ScopeProvisionersAlertRules    = ac.Scope("provisioners", "alerting")
+	ScopeProvisionersTeams         = ac.Scope("provisioners", "teams")
 )
 
 const (
