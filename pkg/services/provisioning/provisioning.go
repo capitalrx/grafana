@@ -70,6 +70,7 @@ func ProvideService(
 	resourcePermissions accesscontrol.ReceiverPermissionsService,
 	teamService team.Service,
 	teamPermissions accesscontrol.TeamPermissionsService,
+	datasourcePermissions accesscontrol.DatasourcePermissionsService,
 	tracer tracing.Tracer,
 	dual dualwrite.Service,
 	promTypeMigrationProvider promtypemigration.PromTypeMigrationProvider,
@@ -102,6 +103,7 @@ func ProvideService(
 		folderService:                folderService,
 		teamService:                  teamService,
 		teamPermissions:              teamPermissions,
+		datasourcePermissions:        datasourcePermissions,
 		resourcePermissions:          resourcePermissions,
 		tracer:                       tracer,
 		migratePrometheusType:        promTypeMigrationProvider.Run,
@@ -120,6 +122,11 @@ func ProvideService(
 }
 
 func (ps *ProvisioningServiceImpl) starting(ctx context.Context) error {
+	if err := ps.ProvisionTeams(ctx); err != nil {
+		ps.log.Error("Failed to provision teams", "error", err)
+		return err
+	}
+
 	if err := ps.ProvisionDatasources(ctx); err != nil {
 		ps.log.Error("Failed to provision data sources", "error", err)
 		return err
@@ -132,11 +139,6 @@ func (ps *ProvisioningServiceImpl) starting(ctx context.Context) error {
 
 	if err := ps.ProvisionAlerting(ctx); err != nil {
 		ps.log.Error("Failed to provision alerting", "error", err)
-		return err
-	}
-
-	if err := ps.ProvisionTeams(ctx); err != nil {
-		ps.log.Error("Failed to provision teams", "error", err)
 		return err
 	}
 
@@ -207,7 +209,7 @@ type ProvisioningService interface {
 // Used for testing purposes
 func newProvisioningServiceImpl(
 	newDashboardProvisioner dashboards.DashboardProvisionerFactory,
-	provisionDatasources func(context.Context, string, datasources.BaseDataSourceService, datasources.CorrelationsStore, org.Service) error,
+	provisionDatasources func(context.Context, string, datasources.BaseDataSourceService, datasources.CorrelationsStore, org.Service, datasources.AccessSetter) error,
 	provisionPlugins func(context.Context, string, pluginstore.Store, pluginsettings.Service, org.Service) error,
 	migratePrometheusType func(context.Context) error,
 ) (*ProvisioningServiceImpl, error) {
@@ -245,7 +247,7 @@ type ProvisioningServiceImpl struct {
 	pollingCtxCancel             context.CancelFunc
 	newDashboardProvisioner      dashboards.DashboardProvisionerFactory
 	dashboardProvisioner         dashboards.DashboardProvisioner
-	provisionDatasources         func(context.Context, string, datasources.BaseDataSourceService, datasources.CorrelationsStore, org.Service) error
+	provisionDatasources         func(context.Context, string, datasources.BaseDataSourceService, datasources.CorrelationsStore, org.Service, datasources.AccessSetter) error
 	provisionPlugins             func(context.Context, string, pluginstore.Store, pluginsettings.Service, org.Service) error
 	provisionAlerting            func(context.Context, prov_alerting.ProvisionerConfig) error
 	provisionTeams               func(context.Context, string, teams.Services) error
@@ -260,6 +262,7 @@ type ProvisioningServiceImpl struct {
 	folderService                folder.Service
 	teamService                  team.Service
 	teamPermissions              accesscontrol.TeamPermissionsService
+	datasourcePermissions        accesscontrol.DatasourcePermissionsService
 	resourcePermissions          accesscontrol.ReceiverPermissionsService
 	routesPermissions            accesscontrol.RoutePermissionsService
 	tracer                       tracing.Tracer
@@ -287,7 +290,7 @@ func (ps *ProvisioningServiceImpl) ProvisionDatasources(ctx context.Context) err
 	ps.mutex.Lock()
 	defer ps.mutex.Unlock()
 	datasourcePath := filepath.Join(ps.Cfg.ProvisioningPath, "datasources")
-	if err := ps.provisionDatasources(ctx, datasourcePath, ps.datasourceService, ps.correlationsService, ps.orgService); err != nil {
+	if err := ps.provisionDatasources(ctx, datasourcePath, ps.datasourceService, ps.correlationsService, ps.orgService, &datasourceAccess{teams: ps.teamService, permissions: ps.datasourcePermissions, log: ps.log}); err != nil {
 		err = fmt.Errorf("%v: %w", "Datasource provisioning error", err)
 		ps.log.Error("Failed to provision data sources", "error", err)
 		return err

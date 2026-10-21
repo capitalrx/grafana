@@ -20,6 +20,12 @@ type BaseDataSourceService interface {
 	DeleteDataSource(ctx context.Context, cmd *datasources.DeleteDataSourceCommand) error
 }
 
+// AccessSetter restricts who can query a provisioned data source.
+type AccessSetter interface {
+	// SetTeamAccess limits querying to the named teams (plus Admins). With no teams, everyone can query.
+	SetTeamAccess(ctx context.Context, orgID int64, uid string, teams []string) error
+}
+
 type CorrelationsStore interface {
 	DeleteCorrelationsBySourceUID(ctx context.Context, cmd correlations.DeleteCorrelationsBySourceUIDCommand) error
 	CreateCorrelation(ctx context.Context, cmd correlations.CreateCorrelationCommand) (correlations.Correlation, error)
@@ -33,8 +39,8 @@ var (
 
 // Provision scans a directory for provisioning config files
 // and provisions the datasource in those files.
-func Provision(ctx context.Context, configDirectory string, dsService BaseDataSourceService, correlationsStore CorrelationsStore, orgService org.Service) error {
-	dc := newDatasourceProvisioner(log.New("provisioning.datasources"), dsService, correlationsStore, orgService)
+func Provision(ctx context.Context, configDirectory string, dsService BaseDataSourceService, correlationsStore CorrelationsStore, orgService org.Service, access AccessSetter) error {
+	dc := newDatasourceProvisioner(log.New("provisioning.datasources"), dsService, correlationsStore, orgService, access)
 	return dc.applyChanges(ctx, configDirectory)
 }
 
@@ -45,14 +51,16 @@ type DatasourceProvisioner struct {
 	cfgProvider       *configReader
 	dsService         BaseDataSourceService
 	correlationsStore CorrelationsStore
+	access            AccessSetter
 }
 
-func newDatasourceProvisioner(log log.Logger, dsService BaseDataSourceService, correlationsStore CorrelationsStore, orgService org.Service) DatasourceProvisioner {
+func newDatasourceProvisioner(log log.Logger, dsService BaseDataSourceService, correlationsStore CorrelationsStore, orgService org.Service, access AccessSetter) DatasourceProvisioner {
 	return DatasourceProvisioner{
 		log:               log,
 		cfgProvider:       &configReader{log: log, orgService: orgService},
 		dsService:         dsService,
 		correlationsStore: correlationsStore,
+		access:            access,
 	}
 }
 
@@ -71,8 +79,11 @@ func (dc *DatasourceProvisioner) provisionDataSources(ctx context.Context, cfg *
 		if errors.Is(err, datasources.ErrDataSourceNotFound) {
 			insertCmd := createInsertCommand(ds)
 			dc.log.Info("inserting datasource from configuration", "name", insertCmd.Name, "uid", insertCmd.UID)
-			_, err = dc.dsService.AddDataSource(ctx, insertCmd)
+			created, err := dc.dsService.AddDataSource(ctx, insertCmd)
 			if err != nil {
+				return err
+			}
+			if err := dc.setAccess(ctx, ds, created); err != nil {
 				return err
 			}
 		} else {
@@ -85,9 +96,22 @@ func (dc *DatasourceProvisioner) provisionDataSources(ctx context.Context, cfg *
 					return err
 				}
 			}
+			if err := dc.setAccess(ctx, ds, dataSource); err != nil {
+				return err
+			}
 		}
 	}
 
+	return nil
+}
+
+func (dc *DatasourceProvisioner) setAccess(ctx context.Context, ds *upsertDataSourceFromConfig, dataSource *datasources.DataSource) error {
+	if dc.access == nil || dataSource == nil {
+		return nil
+	}
+	if err := dc.access.SetTeamAccess(ctx, ds.OrgID, dataSource.UID, ds.Teams); err != nil {
+		return fmt.Errorf("failed to set access for datasource %q: %w", ds.Name, err)
+	}
 	return nil
 }
 

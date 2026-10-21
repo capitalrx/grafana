@@ -34,8 +34,19 @@ type DatasourcePermissionsService struct {
 	store resourcepermissions.Store
 }
 
+// GetPermissions returns the managed team and built-in role permissions that grant query access to a data source.
 func (e DatasourcePermissionsService) GetPermissions(ctx context.Context, user identity.Requester, resourceID string) ([]accesscontrol.ResourcePermission, error) {
-	return nil, nil
+	ctx, span := tracer.Start(ctx, "accesscontrol.ossaccesscontrol.GetPermissions")
+	defer span.End()
+
+	return e.store.GetResourcePermissions(ctx, user.GetOrgID(), resourcepermissions.GetResourcePermissionsQuery{
+		User:              user,
+		Actions:           DatasourceQueryActions,
+		Resource:          datasources.ScopeRoot,
+		ResourceID:        resourceID,
+		ResourceAttribute: "uid",
+		OnlyManaged:       true,
+	})
 }
 
 func (e DatasourcePermissionsService) SetUserPermission(ctx context.Context, orgID int64, user accesscontrol.User, resourceID, permission string) (*accesscontrol.ResourcePermission, error) {
@@ -50,7 +61,8 @@ func (e DatasourcePermissionsService) SetBuiltInRolePermission(ctx context.Conte
 	return nil, nil
 }
 
-// SetPermissions sets managed permissions for a datasource in OSS. This ensures that Viewers and Editors maintain query access to a data source
+// SetPermissions sets managed query permissions for a datasource in OSS, for built-in roles and teams.
+// An empty permission removes the assignment. This also ensures that Viewers and Editors maintain query access to a data source
 // if an OSS/unlicensed instance is upgraded to Enterprise/licensed.
 // https://github.com/grafana/identity-access-team/issues/672
 func (e DatasourcePermissionsService) SetPermissions(ctx context.Context, orgID int64, resourceID string, commands ...accesscontrol.SetResourcePermissionCommand) ([]accesscontrol.ResourcePermission, error) {
@@ -59,14 +71,22 @@ func (e DatasourcePermissionsService) SetPermissions(ctx context.Context, orgID 
 
 	dbCommands := make([]resourcepermissions.SetResourcePermissionsCommand, 0, len(commands))
 	for _, cmd := range commands {
-		// Only set query permissions for built-in roles; do not set permissions for data sources with * as UID, as this would grant wildcard permissions
-		if cmd.Permission != "Query" || cmd.BuiltinRole == "" || resourceID == "*" {
+		// Do not set permissions for data sources with * as UID, as this would grant wildcard permissions
+		if resourceID == "*" || (cmd.BuiltinRole == "" && cmd.TeamID == 0) {
 			continue
 		}
-		actions := DatasourceQueryActions
+		if cmd.Permission != "Query" && cmd.Permission != "" {
+			continue
+		}
+
+		var actions []string
+		if cmd.Permission == "Query" {
+			actions = DatasourceQueryActions
+		}
 
 		dbCommands = append(dbCommands, resourcepermissions.SetResourcePermissionsCommand{
 			BuiltinRole: cmd.BuiltinRole,
+			TeamID:      cmd.TeamID,
 			SetResourcePermissionCommand: resourcepermissions.SetResourcePermissionCommand{
 				Actions:           actions,
 				Resource:          datasources.ScopeRoot,

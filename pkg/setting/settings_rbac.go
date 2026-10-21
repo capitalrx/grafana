@@ -12,6 +12,9 @@ type RBACSettings struct {
 	PermissionCache bool
 	// Enable Permission validation during role creation and provisioning
 	PermissionValidationEnabled bool
+	// DatasourcePermissionsEnforced stops granting every Viewer and Editor query
+	// access to all data sources, so access is decided by per data source permissions.
+	DatasourcePermissionsEnforced bool
 	// Reset basic roles permissions on start-up
 	ResetBasicRoles bool
 	// RBAC single organization. This configuration option is subject to change.
@@ -47,6 +50,7 @@ func (cfg *Cfg) readRBACSettings() {
 	rbac := cfg.Raw.Section("rbac")
 	s.PermissionCache = rbac.Key("permission_cache").MustBool(true)
 	s.PermissionValidationEnabled = rbac.Key("permission_validation_enabled").MustBool(false)
+	s.DatasourcePermissionsEnforced = rbac.Key("datasource_permissions_enforced").MustBool(false)
 	s.ResetBasicRoles = rbac.Key("reset_basic_roles").MustBool(false)
 	s.SingleOrganization = rbac.Key("single_organization").MustBool(false)
 	s.PluginsCleanup = util.SplitString(rbac.Key("plugins_cleanup").MustString(""))
