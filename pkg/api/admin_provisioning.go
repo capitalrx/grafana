@@ -85,3 +85,11 @@ func (hs *HTTPServer) AdminProvisioningReloadAlerting(c *contextmodel.ReqContext
 	}
 	return response.Success("Alerting config reloaded")
 }
+
+func (hs *HTTPServer) AdminProvisioningReloadTeams(c *contextmodel.ReqContext) response.Response {
+	err := hs.ProvisioningService.ProvisionTeams(c.Req.Context())
+	if err != nil {
+		return response.Error(http.StatusInternalServerError, "", err)
+	}
+	return response.Success("Teams config reloaded")
+}

@@ -15,7 +15,7 @@ ARG JS_SRC=js-builder
 # By using FROM instructions we can delegate dependency updates to dependabot
 FROM 727574948438.dkr.ecr.us-east-1.amazonaws.com/capitalrx_base_hardened_alpine:latest AS alpine-base
 FROM ubuntu:24.04 AS ubuntu-base
-FROM golang:1.26.6-alpine AS go-builder-base
+FROM --platform=${BUILDPLATFORM} golang:1.26.6-alpine AS go-builder-base
 FROM --platform=${JS_PLATFORM} node:24-alpine AS js-builder-base
 FROM gcr.io/distroless/static-debian13 AS distroless-base
 # Javascript build stage
@@ -64,6 +64,8 @@ ARG BUILD_BRANCH=""
 ARG SOURCE_DATE_EPOCH=""
 ARG GO_BUILD_TAGS="oss"
 ARG WIRE_TAGS="oss"
+ARG TARGETOS
+ARG TARGETARCH
 
 RUN if command -v apk > /dev/null 2>&1; then \
   apk add --no-cache \
@@ -106,7 +108,9 @@ ENV SOURCE_DATE_EPOCH=${SOURCE_DATE_EPOCH}
 
 RUN --mount=type=cache,target=/go/pkg/mod \
     --mount=type=cache,target=/root/.cache/go-build \
-    make build-go GO_BUILD_TAGS=${GO_BUILD_TAGS} WIRE_TAGS=${WIRE_TAGS}
+    CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} \
+    make build-go GO_BUILD_TAGS=${GO_BUILD_TAGS} WIRE_TAGS=${WIRE_TAGS} && \
+    cp ./bin/${TARGETOS}/${TARGETARCH}/grafana ./bin/grafana
 
 RUN mkdir -p data/plugins-bundled
 

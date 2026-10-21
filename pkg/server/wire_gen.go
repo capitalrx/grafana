@@ -707,6 +707,10 @@ func Initialize(ctx context.Context, cfg *setting.Cfg, opts Options, apiOpts api
 	if err != nil {
 		return nil, err
 	}
+	teamPermissionsService, err := ossaccesscontrol.ProvideTeamPermissions(cfg, featureToggles, routeRegisterImpl, sqlStore, accessControl, ossLicensingService, acimplService, teamimplService, userimplService, actionSetService, eventualRestConfigProvider)
+	if err != nil {
+		return nil, err
+	}
 	azurePromMigrationService := promtypemigration.ProvideAzurePromMigrationService(service13, inMemory, repoManager, pluginInstaller, cfg)
 	amazonPromMigrationService := promtypemigration.ProvideAmazonPromMigrationService(service13, inMemory, repoManager, pluginInstaller, cfg)
 	promTypeMigrationProviderImpl := promtypemigration.ProvidePromTypeMigrationProvider(serverLockService, featureToggles, azurePromMigrationService, amazonPromMigrationService)
@@ -714,7 +718,7 @@ func Initialize(ctx context.Context, cfg *setting.Cfg, opts Options, apiOpts api
 	if err != nil {
 		return nil, err
 	}
-	provisioningServiceImpl, err := provisioning.ProvideService(accessControl, cfg, sqlStore, pluginstoreService, dBstore, serviceService, notificationService, dashboardProvisioningService, service13, correlationsService, dashboardService, folderimplService, service12, quotaService, secretsService, orgService, userimplService, receiverPermissionsService, teamimplService, tracingService, dualwriteService, promTypeMigrationProviderImpl, serverLockService, routePermissionsService)
+	provisioningServiceImpl, err := provisioning.ProvideService(accessControl, cfg, sqlStore, pluginstoreService, dBstore, serviceService, notificationService, dashboardProvisioningService, service13, correlationsService, dashboardService, folderimplService, service12, quotaService, secretsService, orgService, userimplService, receiverPermissionsService, teamimplService, teamPermissionsService, tracingService, dualwriteService, promTypeMigrationProviderImpl, serverLockService, routePermissionsService)
 	if err != nil {
 		return nil, err
 	}
@@ -1007,10 +1011,6 @@ func Initialize(ctx context.Context, cfg *setting.Cfg, opts Options, apiOpts api
 		return nil, err
 	}
 	apiregistryService := apiregistry.ProvideRegistryServiceSink(dashboardsAPIBuilder, dataSourceAPIBuilder, folderAPIBuilder, identityAccessManagementAPIBuilder, queryAPIBuilder, userStorageAPIBuilder, apiBuilder, collectionsAPIBuilder, provisioningAPIBuilder, ofrepAPIBuilder, appPluginAPIBuilder, dependencyRegisterer, provisioningDependencyRegisterer)
-	teamPermissionsService, err := ossaccesscontrol.ProvideTeamPermissions(cfg, featureToggles, routeRegisterImpl, sqlStore, accessControl, ossLicensingService, acimplService, teamimplService, userimplService, actionSetService, eventualRestConfigProvider)
-	if err != nil {
-		return nil, err
-	}
 	teamAPI := teamapi.ProvideTeamAPI(routeRegisterImpl, teamimplService, acimplService, accessControl, teamPermissionsService, userimplService, ossLicensingService, cfg, prefService, k8sHandler, dashboardService, featureToggles, eventualRestConfigProvider)
 	cloudmigrationService, err := cloudmigrationimpl.ProvideService(cfg, httpclientProvider, featureToggles, sqlStore, service13, secretsKVStore, secretsService, routeRegisterImpl, registerer, tracingService, dashboardService, folderimplService, pluginstoreService, service12, accessControl, acimplService, kvStore, libraryElementService, alertNG)
 	if err != nil {
@@ -1431,6 +1431,10 @@ func InitializeForTest(ctx context.Context, t sqlutil.ITestDB, testingT interfac
 	if err != nil {
 		return nil, err
 	}
+	teamPermissionsService, err := ossaccesscontrol.ProvideTeamPermissions(cfg, featureToggles, routeRegisterImpl, sqlStore, accessControl, ossLicensingService, acimplService, teamimplService, userimplService, actionSetService, eventualRestConfigProvider)
+	if err != nil {
+		return nil, err
+	}
 	azurePromMigrationService := promtypemigration.ProvideAzurePromMigrationService(service13, inMemory, repoManager, pluginInstaller, cfg)
 	amazonPromMigrationService := promtypemigration.ProvideAmazonPromMigrationService(service13, inMemory, repoManager, pluginInstaller, cfg)
 	promTypeMigrationProviderImpl := promtypemigration.ProvidePromTypeMigrationProvider(serverLockService, featureToggles, azurePromMigrationService, amazonPromMigrationService)
@@ -1438,7 +1442,7 @@ func InitializeForTest(ctx context.Context, t sqlutil.ITestDB, testingT interfac
 	if err != nil {
 		return nil, err
 	}
-	provisioningServiceImpl, err := provisioning.ProvideService(accessControl, cfg, sqlStore, pluginstoreService, dBstore, serviceService, notificationService, dashboardProvisioningService, service13, correlationsService, dashboardService, folderimplService, service12, quotaService, secretsService, orgService, userimplService, receiverPermissionsService, teamimplService, tracingService, dualwriteService, promTypeMigrationProviderImpl, serverLockService, routePermissionsService)
+	provisioningServiceImpl, err := provisioning.ProvideService(accessControl, cfg, sqlStore, pluginstoreService, dBstore, serviceService, notificationService, dashboardProvisioningService, service13, correlationsService, dashboardService, folderimplService, service12, quotaService, secretsService, orgService, userimplService, receiverPermissionsService, teamimplService, teamPermissionsService, tracingService, dualwriteService, promTypeMigrationProviderImpl, serverLockService, routePermissionsService)
 	if err != nil {
 		return nil, err
 	}
@@ -1740,10 +1744,6 @@ func InitializeForTest(ctx context.Context, t sqlutil.ITestDB, testingT interfac
 		return nil, err
 	}
 	apiregistryService := apiregistry.ProvideRegistryServiceSink(dashboardsAPIBuilder, dataSourceAPIBuilder, folderAPIBuilder, identityAccessManagementAPIBuilder, queryAPIBuilder, userStorageAPIBuilder, apiBuilder, collectionsAPIBuilder, provisioningAPIBuilder, ofrepAPIBuilder, appPluginAPIBuilder, dependencyRegisterer, provisioningDependencyRegisterer)
-	teamPermissionsService, err := ossaccesscontrol.ProvideTeamPermissions(cfg, featureToggles, routeRegisterImpl, sqlStore, accessControl, ossLicensingService, acimplService, teamimplService, userimplService, actionSetService, eventualRestConfigProvider)
-	if err != nil {
-		return nil, err
-	}
 	teamAPI := teamapi.ProvideTeamAPI(routeRegisterImpl, teamimplService, acimplService, accessControl, teamPermissionsService, userimplService, ossLicensingService, cfg, prefService, k8sHandler, dashboardService, featureToggles, eventualRestConfigProvider)
 	cloudmigrationService, err := cloudmigrationimpl.ProvideService(cfg, httpclientProvider, featureToggles, sqlStore, service13, secretsKVStore, secretsService, routeRegisterImpl, registerer, tracingService, dashboardService, folderimplService, pluginstoreService, service12, accessControl, acimplService, kvStore, libraryElementService, alertNG)
 	if err != nil {

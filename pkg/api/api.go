@@ -560,6 +560,7 @@ func (hs *HTTPServer) registerRoutes() {
 		adminRoute.Post("/provisioning/plugins/reload", authorize(ac.EvalPermission(ActionProvisioningReload, ScopeProvisionersPlugins)), routing.Wrap(hs.AdminProvisioningReloadPlugins))
 		adminRoute.Post("/provisioning/datasources/reload", authorize(ac.EvalPermission(ActionProvisioningReload, ScopeProvisionersDatasources)), routing.Wrap(hs.AdminProvisioningReloadDatasources))
 		adminRoute.Post("/provisioning/alerting/reload", authorize(ac.EvalPermission(ActionProvisioningReload, ScopeProvisionersAlertRules)), routing.Wrap(hs.AdminProvisioningReloadAlerting))
+		adminRoute.Post("/provisioning/teams/reload", authorize(ac.EvalPermission(ActionProvisioningReload, ScopeProvisionersTeams)), routing.Wrap(hs.AdminProvisioningReloadTeams))
 	}, reqSignedIn)
 
 	// Administering users
