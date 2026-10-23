@@ -57,20 +57,15 @@ func TestSources_List(t *testing.T) {
 
 		require.Equal(t, srcs[1].PluginClass(ctx), plugins.ClassExternal)
 		if localSrc, ok := srcs[1].(*sources.LocalSource); ok {
-			require.Equal(t, localSrc.Paths(), []string{
-				filepath.Join(testdata, "pluginRootWithDist", "datasource"),
-			})
+			require.Equal(t, localSrc.Paths(), []string{filepath.Join(testdata, "test-app")}, "plugin setting paths load before the plugins directory")
 		} else {
 			t.Fatalf("Expected LocalSource, got %T", srcs[1])
 		}
-		sig, exists = srcs[1].DefaultSignature(ctx, "")
-		require.False(t, exists)
-		require.Equal(t, plugins.Signature{}, sig)
 
 		require.Equal(t, srcs[2].PluginClass(ctx), plugins.ClassExternal)
 		if localSrc, ok := srcs[2].(*sources.LocalSource); ok {
 			require.Equal(t, localSrc.Paths(), []string{
-				filepath.Join(testdata, "pluginRootWithDist", "dist"),
+				filepath.Join(testdata, "pluginRootWithDist", "datasource"),
 			})
 		} else {
 			t.Fatalf("Expected LocalSource, got %T", srcs[2])
@@ -82,12 +77,24 @@ func TestSources_List(t *testing.T) {
 		require.Equal(t, srcs[3].PluginClass(ctx), plugins.ClassExternal)
 		if localSrc, ok := srcs[3].(*sources.LocalSource); ok {
 			require.Equal(t, localSrc.Paths(), []string{
-				filepath.Join(testdata, "pluginRootWithDist", "panel"),
+				filepath.Join(testdata, "pluginRootWithDist", "dist"),
 			})
 		} else {
 			t.Fatalf("Expected LocalSource, got %T", srcs[3])
 		}
 		sig, exists = srcs[3].DefaultSignature(ctx, "")
+		require.False(t, exists)
+		require.Equal(t, plugins.Signature{}, sig)
+
+		require.Equal(t, srcs[4].PluginClass(ctx), plugins.ClassExternal)
+		if localSrc, ok := srcs[4].(*sources.LocalSource); ok {
+			require.Equal(t, localSrc.Paths(), []string{
+				filepath.Join(testdata, "pluginRootWithDist", "panel"),
+			})
+		} else {
+			t.Fatalf("Expected LocalSource, got %T", srcs[4])
+		}
+		sig, exists = srcs[4].DefaultSignature(ctx, "")
 		require.False(t, exists)
 		require.Equal(t, plugins.Signature{}, sig)
 	})
