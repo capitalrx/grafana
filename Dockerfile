@@ -276,6 +276,10 @@ RUN if [ ! "$(getent group "$GF_GID")" ]; then \
 COPY --link --from=grafana-assets /usr/share/grafana /usr/share/grafana
 COPY --link --from=grafana-plugins /usr/share/grafana/data /usr/share/grafana/data
 
+# Plugins built from source (see scripts/build-custom-plugins.sh), loaded via
+# `[plugin.<id>] path = ...` because /var/lib/grafana is shadowed by the k8s data volume.
+COPY --chown=472:0 custom-plugins/ /usr/share/grafana/plugins-custom/
+
 RUN grafana server -v | sed -e 's/Version //' > /.grafana-version
 RUN chmod 644 /.grafana-version
 
@@ -338,6 +342,10 @@ RUN if [ ! "$(getent group "$GF_GID")" ]; then \
 COPY --link --from=grafana-assets /usr/share/grafana /usr/share/grafana
 COPY --link --from=grafana-plugins /usr/share/grafana/data /usr/share/grafana/data
 
+# Plugins built from source (see scripts/build-custom-plugins.sh), loaded via
+# `[plugin.<id>] path = ...` because /var/lib/grafana is shadowed by the k8s data volume.
+COPY --chown=472:0 custom-plugins/ /usr/share/grafana/plugins-custom/
+
 RUN grafana server -v | sed -e 's/Version //' > /.grafana-version
 RUN chmod 644 /.grafana-version
 
@@ -390,6 +398,10 @@ COPY --chown=${GF_UID}:${GF_GID} --from=distroless-prep /usr/share/grafana/.aws 
 COPY --chown=${GF_UID}:${GF_GID} --from=distroless-prep /usr/share/grafana/data /usr/share/grafana/data
 COPY --link --from=grafana-assets /usr/share/grafana /usr/share/grafana
 COPY --link --from=grafana-plugins /usr/share/grafana/data /usr/share/grafana/data
+
+# Plugins built from source (see scripts/build-custom-plugins.sh), loaded via
+# `[plugin.<id>] path = ...` because /var/lib/grafana is shadowed by the k8s data volume.
+COPY --chown=472:0 custom-plugins/ /usr/share/grafana/plugins-custom/
 COPY --from=distroless-prep /.grafana-version /.grafana-version
 
 EXPOSE 3000
