@@ -33,8 +33,10 @@ func (s *Service) List(_ context.Context) []plugins.PluginSource {
 			s.corePluginPaths(),
 		),
 	}
-	r = append(r, s.externalPluginSources()...)
+	// Explicit [plugin.<id>] path sources load before the plugins directory, so a plugin baked into the
+	// image wins over a stale copy of the same ID on the plugins volume (the registry keeps the first one).
 	r = append(r, s.pluginSettingSources()...)
+	r = append(r, s.externalPluginSources()...)
 	return r
 }
 

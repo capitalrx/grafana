@@ -33,8 +33,8 @@ func extractPluginSettings(sections []*ini.Section) config.PluginSettings {
 
 var (
 	defaultPreinstallPlugins = map[string]InstallPlugin{
-		// Default preinstalled plugins
-		"grafana-lokiexplore-app":      {ID: "grafana-lokiexplore-app"},
+		// Default preinstalled plugins. grafana-lokiexplore-app is omitted: this fork bakes a Quickwit build of it
+		// into the image, and the catalog version must not be installed (or auto-updated) over it.
 		"grafana-pyroscope-app":        {ID: "grafana-pyroscope-app"},
 		"grafana-exploretraces-app":    {ID: "grafana-exploretraces-app"},
 		"grafana-metricsdrilldown-app": {ID: "grafana-metricsdrilldown-app"},
