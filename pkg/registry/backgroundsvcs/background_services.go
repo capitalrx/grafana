@@ -38,6 +38,7 @@ import (
 	pluginStore "github.com/grafana/grafana/pkg/services/pluginsintegration/pluginstore"
 	"github.com/grafana/grafana/pkg/services/provisioning"
 	"github.com/grafana/grafana/pkg/services/publicdashboards"
+	"github.com/grafana/grafana/pkg/services/queryaudit"
 	"github.com/grafana/grafana/pkg/services/rendering"
 	secretsMigrations "github.com/grafana/grafana/pkg/services/secrets/kvstore/migrations"
 	secretsManager "github.com/grafana/grafana/pkg/services/secrets/manager"
@@ -81,6 +82,7 @@ func ProvideBackgroundServiceRegistry(
 	installSync installsync.Syncer,
 	zanzanaService *authz.EmbeddedZanzanaService,
 	sqlStore *sqlstore.SQLStore,
+	queryAudit *queryaudit.Service,
 	// Need to make sure these are initialized, is there a better place to put them?
 	_ dashboardsnapshots.Service,
 	_ serviceaccounts.Service,
@@ -132,6 +134,7 @@ func ProvideBackgroundServiceRegistry(
 		installSync,
 		zanzanaService,
 		sqlStore,
+		queryAudit,
 	)
 }
 

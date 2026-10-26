@@ -589,6 +589,8 @@ type Cfg struct {
 
 	SecureSocksDSProxy SecureSocksDSProxySettings
 
+	QueryAudit QueryAuditSettings
+
 	// SAML Auth
 	SAMLAuthEnabled            bool
 	SAMLSkipOrgRoleSync        bool
@@ -1558,6 +1560,10 @@ func (cfg *Cfg) parseINIFile(iniFile *ini.File) error {
 	}
 
 	if err := readDataProxySettings(iniFile, cfg); err != nil {
+		return err
+	}
+
+	if err := readQueryAuditSettings(iniFile, cfg); err != nil {
 		return err
 	}
 
