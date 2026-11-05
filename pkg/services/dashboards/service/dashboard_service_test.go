@@ -660,7 +660,60 @@ func TestUnprovisionDashboard(t *testing.T) {
 	}).Return(dashWithoutAnnotations, nil)
 	k8sCliMock.On("GetNamespace", mock.Anything).Return("default")
 	k8sCliMock.On("GetUsersFromMeta", mock.Anything, mock.Anything).Return(map[string]*user.User{}, nil)
-	k8sCliMock.On("Search", mock.Anything, mock.Anything, mock.Anything).Return(&resourcepb.ResourceSearchResponse{
+	k8sCliMock.On("Search", mock.Anything, mock.Anything, mock.Anything).Return(unprovisionSearchResponse(), nil)
+	err := service.UnprovisionDashboard(ctx, 1)
+	require.NoError(t, err)
+	k8sCliMock.AssertExpectations(t)
+}
+
+func TestUnprovisionV2Dashboard(t *testing.T) {
+	service := &DashboardServiceImpl{
+		cfg: setting.NewCfg(),
+		orgService: &orgtest.FakeOrgService{
+			ExpectedOrgs: []*org.OrgDTO{{ID: 1}},
+		},
+	}
+
+	ctx, k8sCliMock := setupK8sDashboardTests(service)
+	dash := &unstructured.Unstructured{Object: map[string]any{
+		"apiVersion": "dashboard.grafana.app/v2beta1",
+		"kind":       "Dashboard",
+		"metadata": map[string]any{
+			"name": "uid",
+			"annotations": map[string]any{
+				utils.AnnoKeyManagerKind:     utils.ManagerKindClassicFP, // nolint:staticcheck
+				utils.AnnoKeyManagerIdentity: "test",
+				utils.AnnoKeySourcePath:      "path/to/file",
+			},
+		},
+		"spec": map[string]any{"title": "v2 dashboard", "elements": map[string]any{}},
+	}}
+	k8sCliMock.On("Get", mock.Anything, mock.Anything, mock.Anything, mock.Anything, mock.Anything).Return(dash, nil)
+	// should stay a v2 dashboard, only without the provisioning annotations
+	dashWithoutAnnotations := &unstructured.Unstructured{Object: map[string]any{
+		"apiVersion": "dashboard.grafana.app/v2beta1",
+		"kind":       "Dashboard",
+		"metadata": map[string]any{
+			"name":        "uid",
+			"namespace":   "default",
+			"annotations": map[string]any{},
+		},
+		"spec": map[string]any{"title": "v2 dashboard", "elements": map[string]any{}},
+	}}
+	k8sCliMock.On("Update", mock.Anything, dashWithoutAnnotations, mock.Anything, metav1.UpdateOptions{
+		FieldValidation: metav1.FieldValidationIgnore,
+	}).Return(dashWithoutAnnotations, nil)
+	k8sCliMock.On("GetNamespace", mock.Anything).Return("default")
+	k8sCliMock.On("GetUsersFromMeta", mock.Anything, mock.Anything).Return(map[string]*user.User{}, nil)
+	k8sCliMock.On("Search", mock.Anything, mock.Anything, mock.Anything).Return(unprovisionSearchResponse(), nil)
+
+	err := service.UnprovisionDashboard(ctx, 1)
+	require.NoError(t, err)
+	k8sCliMock.AssertExpectations(t)
+}
+
+func unprovisionSearchResponse() *resourcepb.ResourceSearchResponse {
+	return &resourcepb.ResourceSearchResponse{
 		Results: &resourcepb.ResourceTable{
 			Columns: []*resourcepb.ResourceTableColumnDefinition{
 				{
@@ -686,10 +739,7 @@ func TestUnprovisionDashboard(t *testing.T) {
 			},
 		},
 		TotalHits: 1,
-	}, nil)
-	err := service.UnprovisionDashboard(ctx, 1)
-	require.NoError(t, err)
-	k8sCliMock.AssertExpectations(t)
+	}
 }
 
 func TestGetDashboardsByPluginID(t *testing.T) {
@@ -836,6 +886,77 @@ func TestSaveProvisionedDashboard(t *testing.T) {
 	require.NoError(t, err)
 	require.NotNil(t, dashboard)
 	k8sCliMock.AssertExpectations(t)
+}
+
+func TestSaveProvisionedV2Dashboard(t *testing.T) {
+	cfg := setting.NewCfg()
+	cfg.MinRefreshInterval = "5s"
+	service := &DashboardServiceImpl{
+		cfg: cfg,
+		folderService: &foldertest.FakeService{
+			ExpectedFolder: &folder.Folder{
+				ID:  0,
+				UID: "general",
+			},
+		},
+		ac:       actest.FakeAccessControl{ExpectedEvaluate: true},
+		log:      log.NewNopLogger(),
+		features: featuremgmt.WithFeatures(),
+	}
+
+	v2APIVersion := "dashboard.grafana.app/v2beta1"
+	query := &dashboards.SaveDashboardDTO{
+		OrgID: 1,
+		User:  &user.SignedInUser{UserID: 1},
+		Dashboard: &dashboards.Dashboard{
+			UID:        "uid",
+			Title:      "v2 dashboard",
+			OrgID:      1,
+			APIVersion: v2APIVersion,
+			// the legacy parser injects id/uid/version into the spec
+			Data: simplejson.NewFromAny(map[string]any{
+				"title":        "v2 dashboard",
+				"uid":          "uid",
+				"id":           0,
+				"version":      0,
+				"elements":     map[string]any{},
+				"timeSettings": map[string]any{"autoRefresh": "1s"},
+			}),
+		},
+	}
+	stored := unstructured.Unstructured{Object: map[string]any{
+		"apiVersion": v2APIVersion,
+		"kind":       "Dashboard",
+		"metadata":   map[string]any{"name": "uid"},
+		"spec":       map[string]any{"title": "v2 dashboard"},
+	}}
+
+	ctx, k8sCliMock := setupK8sDashboardTests(service)
+	k8sCliMock.On("Get", mock.Anything, mock.Anything, mock.Anything, mock.Anything, mock.Anything).Return(&stored, nil)
+	k8sCliMock.On("GetUsersFromMeta", mock.Anything, mock.Anything).Return(map[string]*user.User{}, nil)
+	k8sCliMock.On("GetNamespace", mock.Anything).Return("default")
+
+	var saved *unstructured.Unstructured
+	k8sCliMock.On("Update", mock.Anything, mock.Anything, mock.Anything, metav1.UpdateOptions{
+		FieldValidation: metav1.FieldValidationStrict,
+	}).Run(func(args mock.Arguments) {
+		saved = args.Get(1).(*unstructured.Unstructured)
+	}).Return(&stored, nil)
+
+	dashboard, err := service.SaveProvisionedDashboard(ctx, query, &dashboards.DashboardProvisioning{Name: "provider", ExternalID: "/dashboards/v2.json"})
+	require.NoError(t, err)
+	require.NotNil(t, dashboard)
+	k8sCliMock.AssertExpectations(t)
+
+	require.NotNil(t, saved)
+	require.Equal(t, v2APIVersion, saved.GetAPIVersion())
+	spec := saved.Object["spec"].(map[string]any)
+	require.NotContains(t, spec, "id")
+	require.NotContains(t, spec, "uid")
+	require.NotContains(t, spec, "version")
+	require.NotContains(t, spec, "refresh")
+	autoRefresh, _, _ := unstructured.NestedString(spec, "timeSettings", "autoRefresh")
+	require.Equal(t, "5s", autoRefresh, "refresh below the minimum interval should be raised in timeSettings")
 }
 
 func TestSaveDashboard(t *testing.T) {
@@ -1876,6 +1997,40 @@ func TestLegacySaveCommandToUnstructured(t *testing.T) {
 		// folder annotation should not be set if not inside a folder
 		assert.Equal(t, result.GetAnnotations(), map[string]string(nil))
 	})
+
+	t.Run("v2 dashboards keep their API version and drop legacy-only fields", func(t *testing.T) {
+		cmd := &dashboards.SaveDashboardCommand{
+			FolderUID:  "folder-uid",
+			APIVersion: "dashboard.grafana.app/v2beta1",
+			Dashboard: simplejson.NewFromAny(map[string]any{
+				"title":    "v2 dashboard",
+				"uid":      "test-uid",
+				"id":       int64(12),
+				"version":  int64(3),
+				"elements": map[string]any{},
+			}),
+		}
+		result, err := LegacySaveCommandToUnstructured(cmd, namespace)
+		require.NoError(t, err)
+		assert.Equal(t, "test-uid", result.GetName())
+		assert.Equal(t, "dashboard.grafana.app/v2beta1", result.GetAPIVersion())
+		assert.Equal(t, map[string]any{"title": "v2 dashboard", "elements": map[string]any{}}, result.Object["spec"])
+		assert.Equal(t, map[string]string{utils.AnnoKeyFolder: "folder-uid"}, result.GetAnnotations())
+	})
+}
+
+func TestIsV2DashboardAPIVersion(t *testing.T) {
+	for apiVersion, expected := range map[string]bool{
+		"":                               false,
+		"v0alpha1":                       false,
+		"dashboard.grafana.app/v0alpha1": false,
+		"dashboard.grafana.app/v1beta1":  false,
+		"v2beta1":                        true,
+		"dashboard.grafana.app/v2alpha1": true,
+		"dashboard.grafana.app/v2beta1":  true,
+	} {
+		assert.Equal(t, expected, isV2DashboardAPIVersion(apiVersion), apiVersion)
+	}
 }
 
 func TestSetDefaultPermissionsAfterCreate(t *testing.T) {

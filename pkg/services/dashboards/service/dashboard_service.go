@@ -989,10 +989,14 @@ func (dr *DashboardServiceImpl) SaveProvisionedDashboard(ctx context.Context, dt
 	ctx, span := tracer.Start(ctx, "dashboards.service.SaveProvisionedDashboard")
 	defer span.End()
 
-	if err := dr.ValidateDashboardRefreshInterval(dr.cfg.MinRefreshInterval, dto.Dashboard.Data.Get("refresh").MustString("")); err != nil {
+	refreshPath := []string{"refresh"}
+	if isV2DashboardAPIVersion(dto.Dashboard.APIVersion) {
+		refreshPath = []string{"timeSettings", "autoRefresh"}
+	}
+	if err := dr.ValidateDashboardRefreshInterval(dr.cfg.MinRefreshInterval, dto.Dashboard.Data.GetPath(refreshPath...).MustString("")); err != nil {
 		dr.log.Warn("Changing refresh interval for provisioned dashboard to minimum refresh interval", "dashboardUid",
 			dto.Dashboard.UID, "dashboardTitle", dto.Dashboard.Title, "minRefreshInterval", dr.cfg.MinRefreshInterval)
-		dto.Dashboard.Data.Set("refresh", dr.cfg.MinRefreshInterval)
+		dto.Dashboard.Data.SetPath(refreshPath, dr.cfg.MinRefreshInterval)
 	}
 
 	ctx, ident := identity.WithServiceIdentity(ctx, dto.OrgID)
@@ -1168,13 +1172,29 @@ func (dr *DashboardServiceImpl) UnprovisionDashboard(ctx context.Context, dashbo
 			continue
 		}
 
+		// Re-read v2 dashboards in their stored version: saving the v0alpha1 view back
+		// would silently convert the stored dashboard from v2 to v0alpha1.
+		var apiVersion string
+		storedVersion, err := dr.getStoredDashboardVersion(ctx, dash.UID, org.ID)
+		if err != nil {
+			return err
+		}
+		if isV2DashboardAPIVersion(storedVersion) {
+			dash, err = dr.getDashboardThroughK8s(ctx, &dashboards.GetDashboardQuery{OrgID: org.ID, UID: dash.UID, K8sGetAPIVersion: storedVersion})
+			if err != nil {
+				return err
+			}
+			apiVersion = dashboardv0.GROUP + "/" + storedVersion
+		}
+
 		_, err = dr.saveProvisionedDashboardThroughK8s(ctx, &dashboards.SaveDashboardCommand{
-			OrgID:     org.ID,
-			PluginID:  dash.PluginID,
-			FolderUID: dash.FolderUID,
-			FolderID:  dash.FolderID, // nolint:staticcheck
-			UpdatedAt: time.Now(),
-			Dashboard: dash.Data,
+			OrgID:      org.ID,
+			PluginID:   dash.PluginID,
+			FolderUID:  dash.FolderUID,
+			FolderID:   dash.FolderID, // nolint:staticcheck
+			UpdatedAt:  time.Now(),
+			Dashboard:  dash.Data,
+			APIVersion: apiVersion,
 		}, nil, true)
 		if err != nil {
 			return err
@@ -1816,13 +1836,17 @@ func (dr *DashboardServiceImpl) saveProvisionedDashboardThroughK8s(ctx context.C
 	meta.SetManagerProperties(m)
 	meta.SetSourceProperties(s)
 
+	fieldValidation := v1.FieldValidationIgnore
+	if !unprovision {
+		fieldValidation = provisionedDashboardFieldValidation(cmd.APIVersion)
+	}
 	out, err := dr.k8sclient.Update(ctx, obj, cmd.OrgID, v1.UpdateOptions{
-		FieldValidation: v1.FieldValidationIgnore,
+		FieldValidation: fieldValidation,
 	})
 	if err != nil && apierrors.IsNotFound(err) {
 		// Create if it doesn't already exist.
 		out, err = dr.k8sclient.Create(ctx, obj, cmd.OrgID, v1.CreateOptions{
-			FieldValidation: v1.FieldValidationIgnore,
+			FieldValidation: fieldValidation,
 		})
 		if err != nil {
 			return nil, err
@@ -2354,12 +2378,20 @@ func LegacySaveCommandToUnstructured(cmd *dashboards.SaveDashboardCommand, names
 		return finalObj, err
 	}
 
-	// update the version
-	version, ok := obj["version"].(float64)
-	if !ok || version == 0 {
-		obj["version"] = 1
-	} else if !cmd.Overwrite {
-		obj["version"] = version + 1
+	if isV2DashboardAPIVersion(cmd.APIVersion) {
+		// The legacy model injects id/uid/version into the body. They are not part of
+		// the v2 schema, and unlike v0/v1 the v2 admission hooks do not strip them.
+		delete(obj, "id")
+		delete(obj, "uid")
+		delete(obj, "version")
+	} else {
+		// update the version
+		version, ok := obj["version"].(float64)
+		if !ok || version == 0 {
+			obj["version"] = 1
+		} else if !cmd.Overwrite {
+			obj["version"] = version + 1
+		}
 	}
 
 	finalObj.Object["spec"] = obj
@@ -2385,6 +2417,41 @@ func LegacySaveCommandToUnstructured(cmd *dashboards.SaveDashboardCommand, names
 	}
 
 	return finalObj, nil
+}
+
+// dashboardVersionFromAPIVersion accepts both "dashboard.grafana.app/v2beta1" and "v2beta1".
+func dashboardVersionFromAPIVersion(apiVersion string) string {
+	if i := strings.LastIndex(apiVersion, "/"); i >= 0 {
+		return apiVersion[i+1:]
+	}
+	return apiVersion
+}
+
+// getStoredDashboardVersion returns the version (e.g. "v2beta1") a dashboard is persisted in,
+// which can differ from the version it is read through.
+func (dr *DashboardServiceImpl) getStoredDashboardVersion(ctx context.Context, uid string, orgID int64) (string, error) {
+	out, err := dr.k8sclient.Get(ctx, uid, orgID, v1.GetOptions{})
+	if err != nil {
+		return "", err
+	}
+	if stored, _, _ := unstructured.NestedString(out.Object, "status", "conversion", "storedVersion"); stored != "" {
+		return dashboardVersionFromAPIVersion(stored), nil
+	}
+	return out.GroupVersionKind().Version, nil
+}
+
+func isV2DashboardAPIVersion(apiVersion string) bool {
+	return strings.HasPrefix(dashboardVersionFromAPIVersion(apiVersion), "v2")
+}
+
+// provisionedDashboardFieldValidation enforces the v2 schema on provisioned v2 dashboards so an
+// invalid file is rejected (and logged by the provisioner) instead of being saved and breaking
+// in the UI. v0/v1 keep the lenient behaviour existing provisioned dashboards depend on.
+func provisionedDashboardFieldValidation(apiVersion string) string {
+	if isV2DashboardAPIVersion(apiVersion) {
+		return v1.FieldValidationStrict
+	}
+	return v1.FieldValidationIgnore
 }
 
 func getFolderUIDs(hits []dashboardv0.DashboardHit) []string {
