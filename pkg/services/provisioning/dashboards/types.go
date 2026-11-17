@@ -77,7 +77,8 @@ func createDashboardJSON(data *simplejson.Json, lastModified time.Time, cfg *con
 	metrics.MFolderIDsServiceCount.WithLabelValues(metrics.Provisioning).Inc()
 	// nolint:staticcheck
 	dash.Dashboard.FolderID = folderID
-	if dash.Dashboard.FolderUID != "" && folderUID != dash.Dashboard.FolderUID {
+	isK8sFormat := dash.Dashboard.APIVersion != ""
+	if !isK8sFormat && dash.Dashboard.FolderUID != "" && folderUID != dash.Dashboard.FolderUID {
 		return nil, fmt.Errorf("dashboard folderUID (%q) does not match provisioning provider folderUID (%q)", dash.Dashboard.FolderUID, folderUID)
 	}
 	dash.Dashboard.FolderUID = folderUID

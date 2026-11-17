@@ -123,7 +123,7 @@ func TestCreateDashboardJSON(t *testing.T) {
 			assert.Equal(t, folderUID, result.Dashboard.FolderUID)
 		})
 
-		t.Run("not matching is an error", func(t *testing.T) {
+		t.Run("not matching uses the provider folder for k8s-format dashboards", func(t *testing.T) {
 			cfg := &config{
 				OrgID: 1,
 			}
@@ -145,9 +145,9 @@ func TestCreateDashboardJSON(t *testing.T) {
 
 			result, err := createDashboardJSON(dashboardJSON, lastModified, cfg, folderID, folderUID)
 
-			require.Error(t, err)
-			assert.Nil(t, result)
-			assert.Contains(t, err.Error(), "dashboard folderUID")
+			require.NoError(t, err)
+			require.NotNil(t, result)
+			assert.Equal(t, folderUID, result.Dashboard.FolderUID)
 		})
 
 		t.Run("not set is OK", func(t *testing.T) {
